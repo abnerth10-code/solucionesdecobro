@@ -3,11 +3,490 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Soluciones de Cobro</title>
+  <title>Soluciones de Cobro Oaxaca</title>
+  <meta name="description" content="Terminales de cobro, asesoría local y soluciones de pago para negocios en Oaxaca.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #17212b;
+      background: #f7fafc;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .header {
+      background: white;
+      border-bottom: 1px solid #dfe7ee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0b1f3a;
+      font-weight: 800;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #ffd23f;
+      border: 2px solid #0b1f3a;
+      font-weight: 900;
+    }
+
+    .menu {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .menu a {
+      color: #17212b;
+    }
+
+    .menu a:hover {
+      color: #006ddf;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .btn-primary {
+      background: #006ddf;
+      color: white;
+    }
+
+    .btn-yellow {
+      background: #ffd23f;
+      color: #0b1f3a;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff, #eef6ff 55%, #f4efe8);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #edf5ff;
+      color: #0056b3;
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #0b1f3a;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1;
+    }
+
+    .hero p {
+      font-size: 21px;
+      color: #334453;
+      max-width: 650px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .visual {
+      min-height: 360px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fff8cf, #edf8ff);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(11,31,58,.15);
+    }
+
+    .terminal {
+      position: absolute;
+      right: 70px;
+      bottom: 55px;
+      width: 190px;
+      height: 250px;
+      border-radius: 16px 16px 28px 28px;
+      background: #ffd23f;
+      border: 4px solid #0b1f3a;
+      transform: rotate(-3deg);
+    }
+
+    .terminal:before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 22px;
+      right: 22px;
+      height: 90px;
+      border-radius: 8px;
+      border: 3px solid #0b1f3a;
+      background: white;
+    }
+
+    .terminal:after {
+      content: "Cobro aprobado";
+      position: absolute;
+      top: 145px;
+      left: 18px;
+      right: 18px;
+      text-align: center;
+      color: #0b1f3a;
+      font-weight: 900;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      color: #0b1f3a;
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+
+    .intro {
+      color: #5c6a76;
+      font-size: 18px;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dfe7ee;
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(11,31,58,.06);
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #edf5ff;
+      color: #006ddf;
+      border-radius: 8px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: #0b1f3a;
+    }
+
+    .card p {
+      margin: 0;
+      color: #5c6a76;
+    }
+
+    .band {
+      background: white;
+      border-top: 1px solid #dfe7ee;
+      border-bottom: 1px solid #dfe7ee;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid #dfe7ee;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 16px;
+      border-bottom: 1px solid #dfe7ee;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #edf5ff;
+      color: #0b1f3a;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #0b1f3a, #0056b3);
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact p {
+      color: #d7e6f8;
+    }
+
+    footer {
+      background: #08172a;
+      color: #d6e2ee;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .nav,
+      .hero-inner {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-inner {
+        display: block;
+      }
+
+      .visual {
+        margin-top: 32px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .actions .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .terminal {
+        right: 40px;
+        width: 150px;
+        height: 210px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Soluciones de Cobro Oaxaca</h1>
-  <p>Mi sitio ya está publicado correctamente.</p>
-  <a href="https://mpago.li/2j1nqHG">Comprar terminal</a>
+  <header class="header">
+    <div class="nav">
+      <a class="brand" href="#inicio">
+        <span class="logo">SC</span>
+        <span>Soluciones de Cobro Oaxaca</span>
+      </a>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#terminales">Terminales</a>
+        <a href="#comparativa">Comparativa</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Asesoría local para negocios en Oaxaca</span>
+          <h1>Acepta tarjetas sin complicarte.</h1>
+          <p>Te ayudo a elegir, comprar y empezar a usar tu terminal de cobro para vender más, cobrar con tarjeta y modernizar tu negocio.</p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar con mi link</a>
+            <a class="btn btn-yellow" href="#comparativa">Comparar opciones</a>
+            <a class="btn btn-primary" href="https://www.facebook.com/terminalesdecobrooaxaca" target="_blank" rel="noopener">Ver Facebook</a>
+          </div>
+        </div>
+
+        <div class="visual">
+          <div class="terminal"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Pensado para comercios que quieren vender más.</h2>
+      <p class="intro">La primera etapa del sitio se enfoca en terminales de Mercado Pago. Después crecerá hacia comparativas y más soluciones de cobro.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">$</div>
+          <h3>Terminales</h3>
+          <p>Opciones para tiendas, consultorios, restaurantes, repartidores y servicios locales.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">i</div>
+          <h3>Información clara</h3>
+          <p>Comisiones, requisitos y dudas frecuentes explicadas sin lenguaje bancario complicado.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">↗</div>
+          <h3>Comparativas</h3>
+          <p>Ayuda para entender cuándo conviene una terminal moderna o una bancaria tradicional.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">+</div>
+          <h3>Escalable</h3>
+          <p>Listo para añadir links de pago, pasarelas, bancos y nuevas herramientas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" id="terminales">
+      <div class="section">
+        <h2>Terminales para empezar a cobrar.</h2>
+        <p class="intro">Estos espacios quedan preparados para cambiar fotos, precios, fichas técnicas y botones conforme definamos tu catálogo.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Point Smart 2</h3>
+            <p>Para negocios que quieren una terminal completa, moderna y con pantalla táctil.</p>
+          </article>
+
+          <article class="card">
+            <h3>Point Mini</h3>
+            <p>Una opción práctica para empezar, moverte o atender pedidos fuera del mostrador.</p>
+          </article>
+
+          <article class="card">
+            <h3>Más soluciones</h3>
+            <p>Links de pago, cobros en línea, comparadores y sistemas alternativos.</p>
+          </article>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comparativa">
+      <h2>Comparativa rápida.</h2>
+      <p class="intro">Una guía sencilla para comparar terminales modernas, terminales bancarias y soluciones digitales.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Mercado Pago</th>
+            <th>Terminal bancaria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Perfil ideal</td>
+            <td>Negocios que quieren empezar rápido y sin trámites pesados.</td>
+            <td>Empresas con operación bancaria más formal o volumen alto.</td>
+          </tr>
+          <tr>
+            <td>Contratación</td>
+            <td>Compra en línea mediante link de referido.</td>
+            <td>Normalmente requiere solicitud con banco y aprobación.</td>
+          </tr>
+          <tr>
+            <td>Costos fijos</td>
+            <td>Enfocada en evitar renta mensual.</td>
+            <td>Puede incluir renta, mínimos o condiciones por contrato.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="preguntas">
+      <h2>Preguntas frecuentes.</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>¿La terminal tiene renta mensual?</h3>
+          <p>La propuesta inicial se enfoca en terminales que no dependan de una renta mensual.</p>
+        </article>
+
+        <article class="card">
+          <h3>¿Puedo comprar desde internet?</h3>
+          <p>Sí. El botón de compra dirige a tu link de Mercado Pago para continuar con el proceso oficial.</p>
+        </article>
+
+        <article class="card">
+          <h3>¿Me ayudan a elegir cuál comprar?</h3>
+          <p>Sí. La página tendrá guía por tipo de negocio, volumen de ventas y forma de cobrar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="section">
+        <h2>¿Quieres cobrar con tarjeta en tu negocio?</h2>
+        <p>Compra tu terminal o revisa la página de Facebook para pedir asesoría local en Oaxaca.</p>
+        <div class="actions">
+          <a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
+          <a class="btn btn-primary" href="https://www.facebook.com/terminalesdecobrooaxaca" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Soluciones de Cobro Oaxaca · Asesoría independiente para soluciones de cobro.
+  </footer>
 </body>
 </html>
