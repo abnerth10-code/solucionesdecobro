@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soluciones de Cobro Oaxaca</title>
-  <meta name="description" content="Terminales de cobro, asesoría local y soluciones de pago para negocios en Oaxaca.">
+  <meta name="description" content="Terminales de cobro, asesoria local y soluciones de pago para negocios en Oaxaca.">
 
   <style>
     body {
@@ -88,6 +88,21 @@
     .btn-yellow {
       background: #ffd23f;
       color: #0b1f3a;
+    }
+
+    .btn-light {
+      background: #edf5ff;
+      color: #0b1f3a;
+    }
+
+    .btn-whatsapp {
+      background: #128c4a;
+      color: white;
+    }
+
+    .btn-instagram {
+      background: #d83f87;
+      color: white;
     }
 
     .hero {
@@ -204,6 +219,10 @@
       gap: 16px;
     }
 
+    .cards-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .card {
       background: white;
       border: 1px solid #dfe7ee;
@@ -232,6 +251,13 @@
     .card p {
       margin: 0;
       color: #5c6a76;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #006ddf;
+      font-weight: 800;
     }
 
     .band {
@@ -298,13 +324,15 @@
         margin-top: 32px;
       }
 
-      .cards {
+      .cards,
+      .cards-3 {
         grid-template-columns: 1fr 1fr;
       }
     }
 
     @media (max-width: 560px) {
-      .cards {
+      .cards,
+      .cards-3 {
         grid-template-columns: 1fr;
       }
 
@@ -330,12 +358,13 @@
         <span>Soluciones de Cobro Oaxaca</span>
       </a>
 
-      <nav class="menu" aria-label="Navegación principal">
+      <nav class="menu" aria-label="Navegacion principal">
         <a href="#inicio">Inicio</a>
         <a href="#terminales">Terminales</a>
         <a href="#comparativa">Comparativa</a>
         <a href="#preguntas">Preguntas</a>
         <a href="#contacto">Contacto</a>
+        <a href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener">Instagram</a>
         <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
       </nav>
     </div>
@@ -345,14 +374,14 @@
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <span class="eyebrow">Asesoría local para negocios en Oaxaca</span>
+          <span class="eyebrow">Asesoria local para negocios en Oaxaca</span>
           <h1>Acepta tarjetas sin complicarte.</h1>
-          <p>Te ayudo a elegir, comprar y empezar a usar tu terminal de cobro para vender más, cobrar con tarjeta y modernizar tu negocio.</p>
+          <p>Te ayudo a elegir, comprar y empezar a usar tu terminal de cobro para vender mas, cobrar con tarjeta y modernizar tu negocio.</p>
 
           <div class="actions">
             <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar con mi link</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20de%20Soluciones%20de%20Cobro%20y%20quiero%20informacion%20sobre%20terminales." target="_blank" rel="noopener">WhatsApp Oaxaca</a>
             <a class="btn btn-yellow" href="#comparativa">Comparar opciones</a>
-            <a class="btn btn-primary" href="https://www.facebook.com/terminalesdecobrooaxaca" target="_blank" rel="noopener">Ver Facebook</a>
           </div>
         </div>
 
@@ -363,8 +392,8 @@
     </section>
 
     <section class="section">
-      <h2>Pensado para comercios que quieren vender más.</h2>
-      <p class="intro">La primera etapa del sitio se enfoca en terminales de Mercado Pago. Después crecerá hacia comparativas y más soluciones de cobro.</p>
+      <h2>Pensado para comercios que quieren vender mas.</h2>
+      <p class="intro">La primera etapa del sitio se enfoca en terminales de Mercado Pago. Despues crecera hacia comparativas y mas soluciones de cobro.</p>
 
       <div class="cards">
         <article class="card">
@@ -375,20 +404,20 @@
 
         <article class="card">
           <div class="icon">i</div>
-          <h3>Información clara</h3>
+          <h3>Informacion clara</h3>
           <p>Comisiones, requisitos y dudas frecuentes explicadas sin lenguaje bancario complicado.</p>
         </article>
 
         <article class="card">
-          <div class="icon">↗</div>
+          <div class="icon">+</div>
           <h3>Comparativas</h3>
-          <p>Ayuda para entender cuándo conviene una terminal moderna o una bancaria tradicional.</p>
+          <p>Ayuda para entender cuando conviene una terminal moderna o una bancaria tradicional.</p>
         </article>
 
         <article class="card">
-          <div class="icon">+</div>
+          <div class="icon">*</div>
           <h3>Escalable</h3>
-          <p>Listo para añadir links de pago, pasarelas, bancos y nuevas herramientas.</p>
+          <p>Listo para anadir links de pago, pasarelas, bancos y nuevas herramientas.</p>
         </article>
       </div>
     </section>
@@ -396,34 +425,35 @@
     <section class="band" id="terminales">
       <div class="section">
         <h2>Terminales para empezar a cobrar.</h2>
-        <p class="intro">Estos espacios quedan preparados para cambiar fotos, precios, fichas técnicas y botones conforme definamos tu catálogo.</p>
+        <p class="intro">Estos espacios quedan preparados para cambiar fotos, precios, fichas tecnicas y botones conforme definamos tu catalogo.</p>
 
-        <div class="cards">
+        <div class="cards cards-3">
           <article class="card">
             <h3>Point Smart 2</h3>
-            <p>Para negocios que quieren una terminal completa, moderna y con pantalla táctil.</p>
+            <p>Para negocios que quieren una terminal completa, moderna y con pantalla tactil.</p>
           </article>
 
           <article class="card">
             <h3>Point Mini</h3>
-            <p>Una opción práctica para empezar, moverte o atender pedidos fuera del mostrador.</p>
+            <p>Una opcion practica para empezar, moverte o atender pedidos fuera del mostrador.</p>
           </article>
 
           <article class="card">
-            <h3>Más soluciones</h3>
-            <p>Links de pago, cobros en línea, comparadores y sistemas alternativos.</p>
+            <h3>Mas soluciones</h3>
+            <p>Links de pago, cobros en linea, comparadores y sistemas alternativos.</p>
           </article>
         </div>
 
         <div class="actions">
           <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal ahora</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20asesoria%20para%20comprar%20una%20terminal%20de%20cobro." target="_blank" rel="noopener">Pedir asesoria por WhatsApp</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="comparativa">
-      <h2>Comparativa rápida.</h2>
-      <p class="intro">Una guía sencilla para comparar terminales modernas, terminales bancarias y soluciones digitales.</p>
+      <h2>Comparativa rapida.</h2>
+      <p class="intro">Una guia sencilla para comparar terminales modernas, terminales bancarias y soluciones digitales.</p>
 
       <table>
         <thead>
@@ -436,18 +466,18 @@
         <tbody>
           <tr>
             <td>Perfil ideal</td>
-            <td>Negocios que quieren empezar rápido y sin trámites pesados.</td>
-            <td>Empresas con operación bancaria más formal o volumen alto.</td>
+            <td>Negocios que quieren empezar rapido y sin tramites pesados.</td>
+            <td>Empresas con operacion bancaria mas formal o volumen alto.</td>
           </tr>
           <tr>
-            <td>Contratación</td>
-            <td>Compra en línea mediante link de referido.</td>
-            <td>Normalmente requiere solicitud con banco y aprobación.</td>
+            <td>Contratacion</td>
+            <td>Compra en linea mediante link de referido.</td>
+            <td>Normalmente requiere solicitud con banco y aprobacion.</td>
           </tr>
           <tr>
             <td>Costos fijos</td>
             <td>Enfocada en evitar renta mensual.</td>
-            <td>Puede incluir renta, mínimos o condiciones por contrato.</td>
+            <td>Puede incluir renta, minimos o condiciones por contrato.</td>
           </tr>
         </tbody>
       </table>
@@ -455,38 +485,68 @@
 
     <section class="section" id="preguntas">
       <h2>Preguntas frecuentes.</h2>
-      <div class="cards">
+      <div class="cards cards-3">
         <article class="card">
-          <h3>¿La terminal tiene renta mensual?</h3>
+          <h3>La terminal tiene renta mensual?</h3>
           <p>La propuesta inicial se enfoca en terminales que no dependan de una renta mensual.</p>
         </article>
 
         <article class="card">
-          <h3>¿Puedo comprar desde internet?</h3>
-          <p>Sí. El botón de compra dirige a tu link de Mercado Pago para continuar con el proceso oficial.</p>
+          <h3>Puedo comprar desde internet?</h3>
+          <p>Si. El boton de compra dirige a tu link de Mercado Pago para continuar con el proceso oficial.</p>
         </article>
 
         <article class="card">
-          <h3>¿Me ayudan a elegir cuál comprar?</h3>
-          <p>Sí. La página tendrá guía por tipo de negocio, volumen de ventas y forma de cobrar.</p>
+          <h3>Me ayudan a elegir cual comprar?</h3>
+          <p>Si. La pagina tendra guia por tipo de negocio, volumen de ventas y forma de cobrar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="redes">
+      <h2>Redes y atencion directa.</h2>
+      <p class="intro">Sigueme para ver publicaciones, resolver dudas y pedir asesoria si estas en Oaxaca o quieres comprar una terminal por internet.</p>
+
+      <div class="cards cards-3">
+        <article class="card">
+          <div class="icon">f</div>
+          <h3>Facebook</h3>
+          <p>Refuerza lo que ves en la pagina con publicaciones, novedades y atencion por la comunidad local.</p>
+          <a class="card-link" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener">Abrir Facebook</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">ig</div>
+          <h3>Instagram</h3>
+          <p>Contenido visual, avisos y avances de las soluciones de cobro que iremos integrando.</p>
+          <a class="card-link" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener">Abrir Instagram</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">wa</div>
+          <h3>WhatsApp</h3>
+          <p>Contacto directo para dudas, asesoria local y orientacion antes de comprar.</p>
+          <a class="card-link" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20y%20tengo%20una%20duda%20sobre%20terminales%20de%20cobro." target="_blank" rel="noopener">Enviar WhatsApp</a>
         </article>
       </div>
     </section>
 
     <section class="contact" id="contacto">
       <div class="section">
-        <h2>¿Quieres cobrar con tarjeta en tu negocio?</h2>
-        <p>Compra tu terminal o revisa la página de Facebook para pedir asesoría local en Oaxaca.</p>
+        <h2>Quieres cobrar con tarjeta en tu negocio?</h2>
+        <p>Compra tu terminal, escribeme por WhatsApp si eres de Oaxaca o sigueme en redes para resolver dudas antes de decidir.</p>
         <div class="actions">
           <a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
-          <a class="btn btn-primary" href="https://www.facebook.com/terminalesdecobrooaxaca" target="_blank" rel="noopener">Facebook</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20informacion%20sobre%20terminales%20de%20cobro%20en%20Oaxaca." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-light" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener">Facebook</a>
+          <a class="btn btn-instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    Soluciones de Cobro Oaxaca · Asesoría independiente para soluciones de cobro.
+    Soluciones de Cobro Oaxaca · WhatsApp 951 182 5881 · Asesoria independiente para soluciones de cobro.
   </footer>
 </body>
 </html>
