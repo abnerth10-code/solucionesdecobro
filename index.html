@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Soluciones de Cobro Oaxaca</title>
+  <title>Soluciones de Cobro</title>
   <meta name="description" content="Terminales de cobro, asesoria local y soluciones de pago para negocios en Oaxaca.">
+  <link rel="icon" type="image/png" href="assets/logo-soluciones-de-cobro%201x1.png">
 
   <style>
     body {
@@ -16,7 +17,13 @@
     }
 
     a {
+      color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     .header {
@@ -24,36 +31,46 @@
       border-bottom: 1px solid #dfe7ee;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
     }
 
     .nav {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
-      padding: 16px 20px;
+      padding: 14px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 22px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       color: #0b1f3a;
       font-weight: 800;
+      min-width: 230px;
     }
 
-    .logo {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
       border-radius: 8px;
-      background: #ffd23f;
-      border: 2px solid #0b1f3a;
-      font-weight: 900;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .brand-name small {
+      display: block;
+      margin-top: 2px;
+      color: #5c6a76;
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .menu {
@@ -61,15 +78,12 @@
       gap: 14px;
       align-items: center;
       flex-wrap: wrap;
+      justify-content: flex-end;
       font-weight: 700;
       font-size: 15px;
     }
 
-    .menu a {
-      color: #17212b;
-    }
-
-    .menu a:hover {
+    .menu a:not(.btn):hover {
       color: #006ddf;
     }
 
@@ -78,6 +92,7 @@
       padding: 12px 18px;
       border-radius: 8px;
       font-weight: 800;
+      text-align: center;
     }
 
     .btn-primary {
@@ -110,12 +125,12 @@
     }
 
     .hero-inner {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
       padding: 70px 20px;
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 40px;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 44px;
       align-items: center;
     }
 
@@ -150,7 +165,7 @@
     }
 
     .visual {
-      min-height: 360px;
+      min-height: 390px;
       border-radius: 8px;
       background: linear-gradient(135deg, #fff8cf, #edf8ff);
       position: relative;
@@ -158,39 +173,59 @@
       box-shadow: 0 18px 50px rgba(11,31,58,.15);
     }
 
-    .terminal {
-      position: absolute;
-      right: 70px;
-      bottom: 55px;
-      width: 190px;
-      height: 250px;
-      border-radius: 16px 16px 28px 28px;
-      background: #ffd23f;
-      border: 4px solid #0b1f3a;
-      transform: rotate(-3deg);
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #fff8cf, #edf8ff);
     }
 
-    .terminal:before {
-      content: "";
+    .visual-note {
       position: absolute;
-      top: 25px;
-      left: 22px;
-      right: 22px;
-      height: 90px;
-      border-radius: 8px;
-      border: 3px solid #0b1f3a;
-      background: white;
-    }
-
-    .terminal:after {
-      content: "Cobro aprobado";
-      position: absolute;
-      top: 145px;
       left: 18px;
+      bottom: 18px;
+      max-width: 260px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      background: rgba(11, 31, 58, .92);
+      color: white;
+      font-size: 14px;
+    }
+
+    .visual-note strong {
+      color: #ffd23f;
+    }
+
+    .social-rail {
+      position: fixed;
       right: 18px;
-      text-align: center;
+      top: 40%;
+      z-index: 15;
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid #dfe7ee;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 12px 30px rgba(11,31,58,.12);
+    }
+
+    .social-rail a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
       color: #0b1f3a;
+      background: #edf5ff;
       font-weight: 900;
+      font-size: 14px;
+    }
+
+    .social-rail a:hover {
+      color: white;
+      background: #006ddf;
     }
 
     .section {
@@ -308,7 +343,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .nav,
       .hero-inner {
         grid-template-columns: 1fr;
@@ -328,9 +363,21 @@
       .cards-3 {
         grid-template-columns: 1fr 1fr;
       }
+
+      .social-rail {
+        position: static;
+        display: flex;
+        width: fit-content;
+        margin: 18px 20px 0;
+      }
     }
 
     @media (max-width: 560px) {
+      .brand-logo {
+        width: 54px;
+        height: 54px;
+      }
+
       .cards,
       .cards-3 {
         grid-template-columns: 1fr;
@@ -338,13 +385,11 @@
 
       .actions .btn {
         width: 100%;
-        text-align: center;
       }
 
-      .terminal {
-        right: 40px;
-        width: 150px;
-        height: 210px;
+      .hero-image,
+      .visual {
+        min-height: 300px;
       }
     }
   </style>
@@ -354,21 +399,24 @@
   <header class="header">
     <div class="nav">
       <a class="brand" href="#inicio">
-        <span class="logo">SC</span>
-        <span>Soluciones de Cobro Oaxaca</span>
+        <img class="brand-logo" src="assets/logo-soluciones-de-cobro%201x1.png" alt="Logo de Soluciones de Cobro">
+        <span class="brand-name">Soluciones de Cobro <small>Asesoria local en Oaxaca</small></span>
       </a>
 
       <nav class="menu" aria-label="Navegacion principal">
         <a href="#inicio">Inicio</a>
         <a href="#terminales">Terminales</a>
-        <a href="#comparativa">Comparativa</a>
+        <a href="#comparativa">Compara</a>
         <a href="#preguntas">Preguntas</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener">Instagram</a>
         <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
       </nav>
     </div>
   </header>
+
+  <aside class="social-rail" aria-label="Redes sociales">
+    <a href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <a href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+  </aside>
 
   <main id="inicio">
     <section class="hero">
@@ -386,7 +434,8 @@
         </div>
 
         <div class="visual">
-          <div class="terminal"></div>
+          <img class="hero-image" src="assets/hero-terminal-soluciones-cobro.svg" alt="Terminal de cobro en un mostrador de negocio">
+          <div class="visual-note"><strong>Mas formas de cobrar.</strong><br>Terminales, links de pago y soluciones digitales.</div>
         </div>
       </div>
     </section>
@@ -452,7 +501,7 @@
     </section>
 
     <section class="section" id="comparativa">
-      <h2>Comparativa rapida.</h2>
+      <h2>Compara antes de elegir.</h2>
       <p class="intro">Una guia sencilla para comparar terminales modernas, terminales bancarias y soluciones digitales.</p>
 
       <table>
@@ -546,7 +595,7 @@
   </main>
 
   <footer>
-    Soluciones de Cobro Oaxaca · WhatsApp 951 182 5881 · Asesoria independiente para soluciones de cobro.
+    Soluciones de Cobro · WhatsApp 951 182 5881 · Asesoria independiente para soluciones de cobro en Oaxaca.
   </footer>
 </body>
 </html>
