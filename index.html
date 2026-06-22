@@ -4,14 +4,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soluciones de Cobro</title>
-  <meta name="description" content="Terminales de cobro, asesoria local y soluciones de pago para negocios en Oaxaca.">
+  <meta name="description" content="Compara terminales, bancos y soluciones de cobro para elegir la mejor opcion para tu negocio.">
   <link rel="icon" type="image/png" href="assets/logo-soluciones-de-cobro%201x1.png">
 
   <style>
+    :root {
+      --ink: #0b1f3a;
+      --text: #283847;
+      --muted: #607080;
+      --line: #dfe7ee;
+      --paper: #ffffff;
+      --soft: #f4f8fc;
+      --blue: #006ddf;
+      --yellow: #ffd23f;
+      --whatsapp: #25D366;
+      --facebook: #0866FF;
+      --instagram: #FF0069;
+      --visa: #1A1F71;
+      --mastercard: #EB001B;
+      --amex: #2E77BC;
+      --mp: #00B1EA;
+      --google: #4285F4;
+      --gmail: #EA4335;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #17212b;
+      color: var(--text);
       background: #f7fafc;
       line-height: 1.6;
     }
@@ -20,17 +44,18 @@
     img { display: block; max-width: 100%; }
 
     .header {
-      background: white;
-      border-bottom: 1px solid #dfe7ee;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
+      backdrop-filter: blur(10px);
     }
 
     .nav {
       max-width: 1180px;
       margin: auto;
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -41,14 +66,14 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      color: #0b1f3a;
-      font-weight: 800;
+      color: var(--ink);
+      font-weight: 900;
       min-width: 230px;
     }
 
     .brand-logo {
-      width: 64px;
-      height: 64px;
+      width: 58px;
+      height: 58px;
       object-fit: contain;
       border-radius: 8px;
     }
@@ -58,9 +83,9 @@
     .brand-name small {
       display: block;
       margin-top: 2px;
-      color: #5c6a76;
+      color: var(--muted);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .menu {
@@ -69,11 +94,11 @@
       align-items: center;
       flex-wrap: wrap;
       justify-content: flex-end;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 15px;
     }
 
-    .menu a:not(.btn):hover { color: #006ddf; }
+    .menu a:not(.btn):hover { color: var(--blue); }
 
     .btn {
       display: inline-flex;
@@ -81,25 +106,32 @@
       justify-content: center;
       gap: 8px;
       padding: 12px 18px;
+      border: 0;
       border-radius: 8px;
-      font-weight: 800;
+      font: inherit;
+      font-weight: 900;
       text-align: center;
+      cursor: pointer;
     }
 
-    .btn-primary { background: #006ddf; color: white; }
-    .btn-yellow { background: #ffd23f; color: #0b1f3a; }
-    .btn-light { background: #edf5ff; color: #0b1f3a; }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-yellow { background: var(--yellow); color: var(--ink); }
+    .btn-light { background: #edf5ff; color: var(--ink); }
     .btn-whatsapp { background: #128c4a; color: white; }
-    .btn-instagram { background: #d83f87; color: white; }
+    .btn-dark { background: var(--ink); color: white; }
 
-    .hero { background: linear-gradient(135deg, #ffffff, #eef6ff 55%, #f4efe8); }
+    .hero {
+      background:
+        radial-gradient(circle at 80% 10%, rgba(255,210,63,.3), transparent 28%),
+        linear-gradient(135deg, #ffffff, #eef6ff 58%, #f6f0e6);
+    }
 
     .hero-inner {
       max-width: 1180px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 74px 20px 58px;
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.02fr .98fr;
       gap: 44px;
       align-items: center;
     }
@@ -110,21 +142,32 @@
       color: #0056b3;
       padding: 7px 10px;
       border-radius: 8px;
-      font-weight: 800;
+      font-weight: 900;
       margin-bottom: 18px;
     }
 
     h1 {
       margin: 0;
-      color: #0b1f3a;
-      font-size: clamp(42px, 7vw, 78px);
+      color: var(--ink);
+      font-size: clamp(42px, 7vw, 76px);
       line-height: 1;
+      letter-spacing: 0;
     }
+
+    h2 {
+      color: var(--ink);
+      font-size: clamp(31px, 5vw, 48px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      letter-spacing: 0;
+    }
+
+    h3 { color: var(--ink); margin: 0 0 8px; }
 
     .hero p {
       font-size: 21px;
       color: #334453;
-      max-width: 650px;
+      max-width: 660px;
     }
 
     .actions {
@@ -155,7 +198,7 @@
       position: absolute;
       left: 18px;
       bottom: 18px;
-      max-width: 260px;
+      max-width: 292px;
       padding: 14px 16px;
       border-radius: 8px;
       background: rgba(11, 31, 58, .92);
@@ -163,15 +206,31 @@
       font-size: 14px;
     }
 
-    .visual-note strong { color: #ffd23f; }
+    .visual-note strong { color: var(--yellow); }
 
-    .svg-icon {
-      width: 20px;
-      height: 20px;
+    .quick-proof {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 20px 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .proof-item {
+      background: rgba(255,255,255,.75);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .proof-item small {
       display: block;
-      flex: 0 0 auto;
-      fill: currentColor;
-      stroke: currentColor;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 3px;
     }
 
     .social-rail {
@@ -182,7 +241,7 @@
       display: grid;
       gap: 10px;
       padding: 10px;
-      border: 1px solid #dfe7ee;
+      border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 255, 255, .94);
       box-shadow: 0 12px 30px rgba(11,31,58,.12);
@@ -194,13 +253,26 @@
       display: grid;
       place-items: center;
       border-radius: 8px;
-      color: white;
-      font-weight: 900;
     }
 
-    .social-facebook { background: #1877f2; }
-    .social-instagram { background: #d83f87; }
-    .social-whatsapp { background: #128c4a; }
+    .brand-mask {
+      width: 22px;
+      height: 22px;
+      display: block;
+      background: currentColor;
+      -webkit-mask: var(--logo) center / contain no-repeat;
+      mask: var(--logo) center / contain no-repeat;
+    }
+
+    .facebook { color: var(--facebook); }
+    .instagram { color: var(--instagram); }
+    .whatsapp { color: var(--whatsapp); }
+    .visa { color: var(--visa); }
+    .mastercard { color: var(--mastercard); }
+    .amex { color: var(--amex); }
+    .mp { color: var(--mp); }
+    .google { color: var(--google); }
+    .gmail { color: var(--gmail); }
 
     .section {
       max-width: 1100px;
@@ -208,18 +280,11 @@
       padding: 70px 20px;
     }
 
-    h2 {
-      color: #0b1f3a;
-      font-size: clamp(32px, 5vw, 50px);
-      line-height: 1.1;
-      margin: 0 0 16px;
-    }
-
     .intro {
-      color: #5c6a76;
+      color: var(--muted);
       font-size: 18px;
-      max-width: 720px;
-      margin-bottom: 28px;
+      max-width: 760px;
+      margin: 0 0 28px;
     }
 
     .cards {
@@ -232,12 +297,14 @@
     .cards-2 { grid-template-columns: repeat(2, 1fr); }
 
     .card {
-      background: white;
-      border: 1px solid #dfe7ee;
+      background: var(--paper);
+      border: 1px solid var(--line);
       border-radius: 8px;
       padding: 22px;
       box-shadow: 0 10px 30px rgba(11,31,58,.06);
     }
+
+    .card p { margin: 0; color: var(--muted); }
 
     .icon {
       width: 42px;
@@ -245,85 +312,200 @@
       display: grid;
       place-items: center;
       background: #edf5ff;
-      color: #006ddf;
+      color: var(--blue);
       border-radius: 8px;
       font-weight: 900;
       margin-bottom: 14px;
     }
 
-    .icon svg { width: 22px; height: 22px; }
-    .icon-whatsapp { background: #e9f8ef; color: #128c4a; }
-    .icon-facebook { background: #edf5ff; color: #1877f2; }
-    .icon-instagram { background: #fff0f7; color: #d83f87; }
-
-    .card h3 { margin: 0 0 8px; color: #0b1f3a; }
-    .card p { margin: 0; color: #5c6a76; }
-
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-      color: #006ddf;
-      font-weight: 800;
-    }
-
     .band {
       background: white;
-      border-top: 1px solid #dfe7ee;
-      border-bottom: 1px solid #dfe7ee;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .payment-strip {
-      display: flex;
-      flex-wrap: wrap;
+    .logo-cloud {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
       gap: 10px;
       margin-top: 28px;
-      padding: 18px;
-      border: 1px solid #dfe7ee;
-      border-radius: 8px;
-      background: #ffffff;
     }
 
-    .payment-badge {
-      min-width: 92px;
+    .logo-tile {
+      min-height: 74px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: white;
+    }
+
+    .logo-tile .brand-mask {
+      width: 54px;
+      height: 32px;
+    }
+
+    .logo-tile img {
+      max-width: 72px;
+      max-height: 34px;
+      object-fit: contain;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
       padding: 10px 12px;
-      border: 1px solid #dfe7ee;
       border-radius: 8px;
-      background: #f7fafc;
-      color: #0b1f3a;
-      font-size: 13px;
-      font-weight: 900;
-      text-align: center;
-      letter-spacing: .04em;
+      background: var(--soft);
+      color: var(--text);
+      font-weight: 700;
     }
-
-    .payment-badge.visa { color: #153e90; }
-    .payment-badge.mastercard { color: #b45309; }
-    .payment-badge.amex { color: #006ddf; }
-    .payment-badge.carnet { color: #b91c1c; }
-    .payment-badge.digital { color: #128c4a; }
 
     table {
       width: 100%;
       border-collapse: collapse;
       background: white;
-      border: 1px solid #dfe7ee;
+      border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
 
     th, td {
       padding: 16px;
-      border-bottom: 1px solid #dfe7ee;
+      border-bottom: 1px solid var(--line);
       text-align: left;
       vertical-align: top;
     }
 
-    th { background: #edf5ff; color: #0b1f3a; }
+    th { background: #edf5ff; color: var(--ink); }
+    td:first-child { font-weight: 900; color: var(--ink); }
+
+    .diagnostic {
+      background: linear-gradient(135deg, #07192e, #0f3f73);
+      color: white;
+    }
+
+    .diagnostic h2 { color: white; }
+    .diagnostic .intro { color: #d8e7f7; }
+
+    .diagnostic-shell {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .diagnostic-panel {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    legend {
+      font-weight: 900;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .option input { position: absolute; opacity: 0; pointer-events: none; }
+
+    .option span {
+      display: block;
+      padding: 11px 12px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,.08);
+      color: #eef7ff;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .option input:checked + span {
+      background: white;
+      color: var(--ink);
+      border-color: white;
+    }
+
+    .diagnostic-result {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 8px;
+      background: white;
+      color: var(--ink);
+      display: none;
+    }
+
+    .diagnostic-result.show { display: block; }
+
+    .diagnostic-result h3 { font-size: 25px; }
+    .diagnostic-result p { color: var(--muted); }
+
+    .result-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .result-tags span {
+      background: #edf5ff;
+      color: #0056b3;
+      border-radius: 8px;
+      padding: 6px 9px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .faq details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-bottom: 10px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .faq p { color: var(--muted); margin-bottom: 0; }
 
     .contact {
-      background: linear-gradient(135deg, #0b1f3a, #0056b3);
+      background: linear-gradient(135deg, var(--ink), #0056b3);
       color: white;
     }
 
@@ -337,10 +519,7 @@
       align-items: center;
     }
 
-    .contact-channels {
-      display: grid;
-      gap: 12px;
-    }
+    .contact-channels { display: grid; gap: 12px; }
 
     .channel {
       display: flex;
@@ -350,26 +529,19 @@
       border-radius: 8px;
       background: rgba(255,255,255,.1);
       color: white;
-      font-weight: 800;
+      font-weight: 900;
     }
+
+    .channel .brand-mask { width: 24px; height: 24px; }
 
     .notice {
       background: #f1f6fb;
-      border-top: 1px solid #dfe7ee;
+      border-top: 1px solid var(--line);
     }
 
     .notice .section { padding-top: 34px; padding-bottom: 34px; }
-
-    .notice h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .notice p {
-      margin: 0;
-      color: #5c6a76;
-      font-size: 14px;
-    }
+    .notice h2 { font-size: 22px; margin-bottom: 8px; }
+    .notice p { margin: 0; color: var(--muted); font-size: 14px; }
 
     footer {
       background: #08172a;
@@ -379,40 +551,32 @@
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
-      .nav,
-      .hero-inner {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-inner { display: block; }
-      .visual { margin-top: 32px; }
-
-      .cards,
-      .cards-3,
-      .cards-2,
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .contact-grid { grid-template-columns: 1fr; }
-
-      .social-rail {
-        position: static;
-        display: flex;
-        width: fit-content;
-        margin: 18px 20px 0;
-      }
+    @media (max-width: 980px) {
+      .hero-inner,
+      .diagnostic-shell,
+      .contact-grid,
+      .product-grid { grid-template-columns: 1fr; }
+      .quick-proof { grid-template-columns: 1fr; }
+      .cards, .cards-3, .cards-2 { grid-template-columns: 1fr 1fr; }
+      .logo-cloud { grid-template-columns: repeat(4, 1fr); }
+      .social-rail { position: static; display: flex; width: fit-content; margin: 18px 20px 0; }
     }
 
-    @media (max-width: 560px) {
-      .brand-logo { width: 54px; height: 54px; }
+    @media (max-width: 620px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .brand-logo { width: 52px; height: 52px; }
+      .menu { justify-content: flex-start; }
       .cards, .cards-3, .cards-2 { grid-template-columns: 1fr; }
+      .logo-cloud { grid-template-columns: repeat(2, 1fr); }
       .actions .btn { width: 100%; }
       .hero-image, .visual { min-height: 300px; }
-      .payment-badge { flex: 1 1 130px; }
+      th, td { display: block; width: 100%; }
+      th:not(:first-child) { display: none; }
+      tr { display: block; border-bottom: 1px solid var(--line); }
+      td { border-bottom: 0; }
+      td::before { display: block; font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 900; }
+      td:nth-child(2)::before { content: "Agregadores"; }
+      td:nth-child(3)::before { content: "Banca / Hibridos"; }
     }
   </style>
 </head>
@@ -428,6 +592,7 @@
       <nav class="menu" aria-label="Navegacion principal">
         <a href="#inicio">Inicio</a>
         <a href="#terminales">Terminales</a>
+        <a href="#diagnostico">Diagnostico</a>
         <a href="#comparativa">Compara</a>
         <a href="#preguntas">Preguntas</a>
         <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
@@ -436,126 +601,248 @@
   </header>
 
   <aside class="social-rail" aria-label="Redes sociales">
-    <a class="social-facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 8.2H17V4.4c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.6 2-5.6 5.8v3.1H4.3v4.3H8V24h4.5v-6.6h3.7l.6-4.3h-4.3V10.4c0-1.2.3-2.2 2-2.2Z"/></svg>
-    </a>
-    <a class="social-instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke-width="2"/><circle cx="17" cy="7" r="1.2" stroke="none"/></svg>
-    </a>
-    <a class="social-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20de%20Soluciones%20de%20Cobro%20y%20quiero%20informacion." target="_blank" rel="noopener" aria-label="WhatsApp">
-      <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.3 8.3 0 0 0-7.2 12.4L3.7 20.5l4.7-1.1A8.4 8.4 0 1 0 12 3.5Zm0 2a6.3 6.3 0 0 1 5.3 9.7 6.4 6.4 0 0 1-7.9 2.2l-.6-.3-2.4.6.6-2.3-.3-.6A6.3 6.3 0 0 1 12 5.5Zm-2.3 3c-.2 0-.6.1-.9.5-.3.4-.9 1-.9 2.1s.9 2.2 1 2.4c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.7-.4l-1.7-.8c-.3-.1-.6-.2-.8.2l-.6.8c-.2.3-.4.3-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-.8-1.8c-.2-.4-.4-.4-.7-.4h-.5Z"/></svg>
-    </a>
+    <a class="facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><span class="brand-mask" style="--logo: url('assets/logos/facebook.svg')"></span></a>
+    <a class="instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><span class="brand-mask" style="--logo: url('assets/logos/instagram.svg')"></span></a>
+    <a class="whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20de%20Soluciones%20de%20Cobro%20y%20quiero%20informacion." target="_blank" rel="noopener" aria-label="WhatsApp"><span class="brand-mask" style="--logo: url('assets/logos/whatsapp.svg')"></span></a>
   </aside>
 
   <main id="inicio">
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <span class="eyebrow">Asesoria local para negocios en Oaxaca</span>
-          <h1>Acepta tarjetas sin complicarte.</h1>
-          <p>Te ayudo a elegir, comprar y empezar a usar tu terminal de cobro para vender mas, cobrar con tarjeta y modernizar tu negocio.</p>
+          <span class="eyebrow">Terminales, bancos y soluciones digitales</span>
+          <h1>Elige como cobrar sin perderte entre comisiones.</h1>
+          <p>Te ayudo a comparar opciones de cobro para tu negocio: terminales modernas, banca tradicional, links de pago y alternativas digitales.</p>
 
           <div class="actions">
-            <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar con mi link</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20de%20Soluciones%20de%20Cobro%20y%20quiero%20informacion%20sobre%20terminales." target="_blank" rel="noopener">WhatsApp Oaxaca</a>
-            <a class="btn btn-yellow" href="#comparativa">Comparar opciones</a>
+            <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20asesoria%20para%20elegir%20una%20solucion%20de%20cobro." target="_blank" rel="noopener">Pedir asesoria</a>
+            <a class="btn btn-yellow" href="#diagnostico">Hacer diagnostico</a>
           </div>
         </div>
 
         <div class="visual">
           <img class="hero-image" src="assets/hero-terminal-soluciones-cobro.svg" alt="Terminal de cobro en un mostrador de negocio">
-          <div class="visual-note"><strong>Mas formas de cobrar.</strong><br>Terminales, links de pago y soluciones digitales.</div>
+          <div class="visual-note"><strong>Decision honesta.</strong><br>Si te conviene Mercado Pago, te lo digo. Si te conviene banco, tambien.</div>
         </div>
+      </div>
+
+      <div class="quick-proof" aria-label="Beneficios principales">
+        <div class="proof-item">Sin lenguaje bancario <small>Comparativas claras para decidir rapido.</small></div>
+        <div class="proof-item">Enfoque local <small>Asesoria en Oaxaca y compra por internet.</small></div>
+        <div class="proof-item">Crecimiento futuro <small>Terminales, links, pasarelas y mas opciones.</small></div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Pensado para comercios que quieren vender mas.</h2>
-      <p class="intro">La primera etapa del sitio se enfoca en terminales de Mercado Pago. Despues crecera hacia comparativas y mas soluciones de cobro.</p>
+      <h2>Primero claridad. Despues la terminal.</h2>
+      <p class="intro">No todas las soluciones de cobro sirven para el mismo negocio. La diferencia esta en tus ventas, requisitos fiscales, urgencia del dinero y forma de operar.</p>
 
       <div class="cards">
-        <article class="card"><div class="icon">$</div><h3>Terminales</h3><p>Opciones para tiendas, consultorios, restaurantes, repartidores y servicios locales.</p></article>
-        <article class="card"><div class="icon">i</div><h3>Informacion clara</h3><p>Comisiones, requisitos y dudas frecuentes explicadas sin lenguaje bancario complicado.</p></article>
-        <article class="card"><div class="icon">+</div><h3>Comparativas</h3><p>Ayuda para entender cuando conviene una terminal moderna o una bancaria tradicional.</p></article>
-        <article class="card"><div class="icon">*</div><h3>Escalable</h3><p>Listo para anadir links de pago, pasarelas, bancos y nuevas herramientas.</p></article>
+        <article class="card"><div class="icon">1</div><h3>Hardware a la medida</h3><p>Terminales para mostrador, movilidad, eventos, repartidores y servicios profesionales.</p></article>
+        <article class="card"><div class="icon">2</div><h3>Transparencia</h3><p>Comisiones, rentas, penalizaciones y tiempos de deposito explicados sin rodeos.</p></article>
+        <article class="card"><div class="icon">3</div><h3>Comparacion real</h3><p>Agregadores, bancos, hibridos y soluciones digitales vistos con sus ventajas y limites.</p></article>
+        <article class="card"><div class="icon">4</div><h3>Ecosistema</h3><p>La pagina crecera hacia links de pago, pasarelas, billeteras y cobranza recurrente.</p></article>
       </div>
     </section>
 
     <section class="band" id="terminales">
       <div class="section">
-        <h2>Terminales para empezar a cobrar.</h2>
-        <p class="intro">Estos espacios quedan preparados para cambiar fotos, precios, fichas tecnicas y botones conforme definamos tu catalogo.</p>
+        <h2>Terminal destacada para empezar.</h2>
+        <p class="intro">La primera etapa se enfoca en terminales de Mercado Pago, pero la recomendacion final depende del perfil de tu negocio.</p>
 
-        <div class="cards cards-3">
-          <article class="card"><h3>Point Smart 2</h3><p>Para negocios que quieren una terminal completa, moderna y con pantalla tactil.</p></article>
-          <article class="card"><h3>Point Mini</h3><p>Una opcion practica para empezar, moverte o atender pedidos fuera del mostrador.</p></article>
-          <article class="card"><h3>Mas soluciones</h3><p>Links de pago, cobros en linea, comparadores y sistemas alternativos.</p></article>
-        </div>
+        <div class="product-grid">
+          <article class="card">
+            <h3>Point Smart 2</h3>
+            <p>Una terminal completa para negocios que quieren cobrar con tarjeta, imprimir comprobantes y operar con pantalla tactil.</p>
+            <ul class="feature-list">
+              <li>Pantalla touch y operacion autonoma.</li>
+              <li>Conexion WiFi y red movil segun disponibilidad.</li>
+              <li>Comprobantes impresos o digitales.</li>
+              <li>Util para mostrador, servicios y negocios con movimiento.</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Ver precio vigente</a>
+            </div>
+          </article>
 
-        <div class="payment-strip" aria-label="Medios de pago mencionados de forma informativa">
-          <span class="payment-badge visa">VISA</span>
-          <span class="payment-badge mastercard">MASTERCARD</span>
-          <span class="payment-badge amex">AMEX</span>
-          <span class="payment-badge carnet">CARNET</span>
-          <span class="payment-badge digital">SPEI</span>
-          <span class="payment-badge digital">CoDi</span>
-          <span class="payment-badge digital">LINK DE PAGO</span>
-          <span class="payment-badge digital">NFC</span>
-        </div>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal ahora</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20asesoria%20para%20comprar%20una%20terminal%20de%20cobro." target="_blank" rel="noopener">Pedir asesoria por WhatsApp</a>
+          <article class="card">
+            <h3>Medios y marcas que iremos comparando</h3>
+            <p>Integramos logotipos reales como referencia visual para medios de pago y canales digitales relacionados.</p>
+            <div class="logo-cloud" aria-label="Logotipos de medios de pago y canales digitales">
+              <div class="logo-tile visa"><span class="brand-mask" style="--logo: url('assets/logos/visa.svg')"></span></div>
+              <div class="logo-tile mastercard"><span class="brand-mask" style="--logo: url('assets/logos/mastercard.svg')"></span></div>
+              <div class="logo-tile amex"><span class="brand-mask" style="--logo: url('assets/logos/amex.svg')"></span></div>
+              <div class="logo-tile"><img src="assets/logos/Carnet.png" alt="Carnet"></div>
+              <div class="logo-tile mp"><span class="brand-mask" style="--logo: url('assets/logos/mercadopago.svg')"></span></div>
+              <div class="logo-tile google"><span class="brand-mask" style="--logo: url('assets/logos/googlepay.svg')"></span></div>
+              <div class="logo-tile google"><span class="brand-mask" style="--logo: url('assets/logos/google.svg')"></span></div>
+              <div class="logo-tile gmail"><span class="brand-mask" style="--logo: url('assets/logos/gmail.svg')"></span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <section class="diagnostic" id="diagnostico">
+      <div class="section diagnostic-shell">
+        <div>
+          <span class="eyebrow">Diagnostico rapido</span>
+          <h2>Que solucion de cobro te conviene?</h2>
+          <p class="intro">Responde 10 preguntas rapidas. No pedimos datos personales; al final obtienes una orientacion y puedes mandarla por WhatsApp para revisarla conmigo.</p>
+          <div class="diagnostic-result" id="diagnosticResult" aria-live="polite">
+            <h3 id="resultTitle">Resultado</h3>
+            <p id="resultText"></p>
+            <div class="result-tags" id="resultTags"></div>
+            <a class="btn btn-whatsapp" id="resultWhatsapp" href="https://wa.me/529511825881" target="_blank" rel="noopener">Enviar mi perfil por WhatsApp</a>
+          </div>
+        </div>
+
+        <form class="diagnostic-panel form-grid" id="diagnosticForm">
+          <fieldset>
+            <legend>1. Como esta tu formalidad fiscal?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="formalidad" value="informal" required><span>Aun no tengo RFC/constancia lista</span></label>
+              <label class="option"><input type="radio" name="formalidad" value="fisica"><span>Persona fisica con RFC</span></label>
+              <label class="option"><input type="radio" name="formalidad" value="moral"><span>Persona moral o empresa constituida</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Cuanto esperas cobrar con tarjeta al mes?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="volumen" value="bajo" required><span>Menos de $10,000</span></label>
+              <label class="option"><input type="radio" name="volumen" value="medio"><span>Entre $10,000 y $25,000</span></label>
+              <label class="option"><input type="radio" name="volumen" value="alto"><span>Mas de $25,000 de forma estable</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Tus ventas son estables?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="estabilidad" value="variable" required><span>Son variables o por temporada</span></label>
+              <label class="option"><input type="radio" name="estabilidad" value="estable"><span>Son bastante constantes</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Que tan rapido necesitas el dinero?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="liquidez" value="inmediata" required><span>Lo mas rapido posible, incluso fines de semana</span></label>
+              <label class="option"><input type="radio" name="liquidez" value="normal"><span>Puedo esperar 24 a 48 horas habiles</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>5. Cual es tu ticket promedio?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="ticket" value="bajo" required><span>Menor a $800</span></label>
+              <label class="option"><input type="radio" name="ticket" value="medio"><span>Entre $800 y $2,500</span></label>
+              <label class="option"><input type="radio" name="ticket" value="alto"><span>Mayor a $2,500</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>6. Usaras meses sin intereses?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="msi" value="no" required><span>Casi nunca</span></label>
+              <label class="option"><input type="radio" name="msi" value="ocasional"><span>Solo a veces</span></label>
+              <label class="option"><input type="radio" name="msi" value="frecuente"><span>Frecuentemente o en tickets altos</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>7. Donde cobras principalmente?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="operacion" value="mostrador" required><span>Mostrador o punto fijo</span></label>
+              <label class="option"><input type="radio" name="operacion" value="movil"><span>A domicilio, eventos o repartidores</span></label>
+              <label class="option"><input type="radio" name="operacion" value="online"><span>En redes, links, tienda en linea o remoto</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>8. En que etapa esta tu negocio?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="etapa" value="emprende" required><span>Estoy empezando o probando mercado</span></label>
+              <label class="option"><input type="radio" name="etapa" value="crece"><span>Ya vendo y quiero ordenar mis cobros</span></label>
+              <label class="option"><input type="radio" name="etapa" value="consolidado"><span>Ya tengo volumen y necesito optimizar costos</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>9. Que prefieres?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="preferencia" value="simple" required><span>Requisitos simples aunque la comision sea mayor</span></label>
+              <label class="option"><input type="radio" name="preferencia" value="costo"><span>Buscar tasa baja aunque el tramite sea mas complejo</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>10. Que necesitas agregar pronto?</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="futuro" value="terminal" required><span>Solo terminal fisica por ahora</span></label>
+              <label class="option"><input type="radio" name="futuro" value="link"><span>Links de pago o cobro por redes</span></label>
+              <label class="option"><input type="radio" name="futuro" value="recurrente"><span>Suscripciones, membresias o cobranza recurrente</span></label>
+            </div>
+          </fieldset>
+
+          <button class="btn btn-yellow" type="submit">Ver mi recomendacion</button>
+        </form>
+      </div>
+    </section>
+
     <section class="section" id="comparativa">
-      <h2>Compara antes de elegir.</h2>
-      <p class="intro">Una guia sencilla para comparar terminales modernas, terminales bancarias y soluciones digitales.</p>
+      <h2>Compara sin casarte con una sola opcion.</h2>
+      <p class="intro">La lectura honesta es simple: los agregadores son veloces y flexibles; la banca puede ser mas barata si ya tienes volumen, formalidad y estabilidad.</p>
 
       <table>
-        <thead><tr><th>Aspecto</th><th>Mercado Pago</th><th>Terminal bancaria</th></tr></thead>
+        <thead><tr><th>Criterio</th><th>Agregadores / FinTech</th><th>Banca tradicional / Hibridos</th></tr></thead>
         <tbody>
-          <tr><td>Perfil ideal</td><td>Negocios que quieren empezar rapido y sin tramites pesados.</td><td>Empresas con operacion bancaria mas formal o volumen alto.</td></tr>
-          <tr><td>Contratacion</td><td>Compra en linea mediante link de referido.</td><td>Normalmente requiere solicitud con banco y aprobacion.</td></tr>
-          <tr><td>Costos fijos</td><td>Enfocada en evitar renta mensual.</td><td>Puede incluir renta, minimos o condiciones por contrato.</td></tr>
+          <tr><td>Mejor para</td><td>Emprendedores, negocios nuevos, ventas variables, movilidad y baja friccion.</td><td>Negocios formales, volumen estable, tickets altos y necesidad de negociar tasa.</td></tr>
+          <tr><td>Alta</td><td>Rapida, digital y con pocos requisitos.</td><td>Mas documentacion, validacion fiscal y tiempos de aprobacion.</td></tr>
+          <tr><td>Costos fijos</td><td>Normalmente sin renta mensual, pero con comision por transaccion mas alta.</td><td>Puede tener renta, cuenta vinculada, saldos minimos o penalizaciones.</td></tr>
+          <tr><td>Deposito</td><td>Suele priorizar disponibilidad rapida o 24/7 segun proveedor y plan.</td><td>Puede operar en 24 a 48 horas habiles segun banco y condiciones.</td></tr>
+          <tr><td>Meses sin intereses</td><td>Util si es ocasional, pero puede encarecerse en plazos largos.</td><td>Mejor opcion cuando los MSI son frecuentes y el ticket es alto.</td></tr>
+          <tr><td>Riesgo a revisar</td><td>Contracargos, retenciones, sobretasas MSI y comision fija alta.</td><td>Penalizacion por baja facturacion, tramites, renta y condiciones contractuales.</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section class="section" id="preguntas">
-      <h2>Preguntas frecuentes.</h2>
-      <div class="cards cards-3">
-        <article class="card"><h3>La terminal tiene renta mensual?</h3><p>La propuesta inicial se enfoca en terminales que no dependan de una renta mensual.</p></article>
-        <article class="card"><h3>Puedo comprar desde internet?</h3><p>Si. El boton de compra dirige a tu link de Mercado Pago para continuar con el proceso oficial.</p></article>
-        <article class="card"><h3>Me ayudan a elegir cual comprar?</h3><p>Si. La pagina tendra guia por tipo de negocio, volumen de ventas y forma de cobrar.</p></article>
+    <section class="band" id="preguntas">
+      <div class="section faq">
+        <h2>Preguntas frecuentes.</h2>
+        <p class="intro">Esta seccion crecera con dudas reales de clientes. Por ahora responde las decisiones que mas afectan tu eleccion.</p>
+
+        <details open><summary>Si vendo poco, me conviene una terminal bancaria?</summary><p>No siempre. Si tus ventas con tarjeta son variables o menores a $25,000 mensuales, una terminal bancaria puede traer rentas o penalizaciones. Un agregador puede ser mas simple para empezar.</p></details>
+        <details><summary>Cuando conviene considerar banco o modelo hibrido?</summary><p>Cuando ya tienes formalidad fiscal, ventas estables, volumen suficiente y quieres optimizar tasa a cambio de cumplir mas requisitos.</p></details>
+        <details><summary>Los meses sin intereses son gratis para el comercio?</summary><p>No necesariamente. En muchos esquemas generan costos adicionales. Si vendes tickets altos con MSI frecuentes, hay que revisar la opcion con mucho cuidado.</p></details>
+        <details><summary>Me puedes ayudar si estoy en Oaxaca?</summary><p>Si. La asesoria local es parte del enfoque de Soluciones de Cobro. Tambien puedes comprar por internet usando el link oficial.</p></details>
       </div>
     </section>
 
     <section class="contact" id="contacto">
       <div class="section contact-grid">
         <div>
-          <h2>Contacto directo y compra.</h2>
-          <p>Compra tu terminal con el link oficial o escribeme por WhatsApp si estas en Oaxaca y quieres resolver dudas antes de decidir.</p>
+          <h2>Listo para elegir mejor?</h2>
+          <p>Compra tu terminal con el link oficial o mandame tu perfil por WhatsApp para revisar que opcion te conviene segun tu negocio.</p>
           <div class="actions">
             <a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20informacion%20sobre%20terminales%20de%20cobro%20en%20Oaxaca." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20informacion%20sobre%20soluciones%20de%20cobro." target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
 
         <div class="contact-channels" aria-label="Canales de contacto">
-          <a class="channel" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20y%20tengo%20una%20duda%20sobre%20terminales%20de%20cobro." target="_blank" rel="noopener"><span class="icon icon-whatsapp"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.3 8.3 0 0 0-7.2 12.4L3.7 20.5l4.7-1.1A8.4 8.4 0 1 0 12 3.5Z"/></svg></span>WhatsApp 951 182 5881</a>
-          <a class="channel" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener"><span class="icon icon-facebook"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 8.2H17V4.4c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.6 2-5.6 5.8v3.1H4.3v4.3H8V24h4.5v-6.6h3.7l.6-4.3h-4.3V10.4c0-1.2.3-2.2 2-2.2Z"/></svg></span>Facebook</a>
-          <a class="channel" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener"><span class="icon icon-instagram"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke-width="2"/></svg></span>Instagram</a>
+          <a class="channel whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20y%20quiero%20asesoria." target="_blank" rel="noopener"><span class="brand-mask" style="--logo: url('assets/logos/whatsapp.svg')"></span>WhatsApp 951 182 5881</a>
+          <a class="channel facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener"><span class="brand-mask" style="--logo: url('assets/logos/facebook.svg')"></span>Facebook</a>
+          <a class="channel instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener"><span class="brand-mask" style="--logo: url('assets/logos/instagram.svg')"></span>Instagram</a>
         </div>
       </div>
     </section>
 
     <section class="notice" aria-label="Aviso sobre marcas">
       <div class="section">
-        <h2>Aviso sobre marcas y referencias</h2>
-        <p>Los nombres, logotipos, marcas y elementos visuales mencionados en esta pagina pertenecen a sus respectivos propietarios. Su uso es solo informativo, descriptivo o comparativo. Soluciones de Cobro no se presenta como propietario de dichas marcas ni implica patrocinio, afiliacion o respaldo oficial, salvo que se indique expresamente. Las condiciones, comisiones, disponibilidad y caracteristicas de cada servicio pueden cambiar; antes de comprar, revisa la informacion vigente del proveedor correspondiente.</p>
+        <h2>Aviso sobre marcas, comisiones y referencias</h2>
+        <p>Los nombres, logotipos, marcas y elementos visuales mencionados en esta pagina pertenecen a sus respectivos propietarios. Su uso es informativo, descriptivo o comparativo y no implica patrocinio, afiliacion o respaldo oficial salvo que se indique expresamente. Las condiciones, comisiones, tasas, plazos, promociones, disponibilidad y requisitos pueden cambiar; antes de contratar o comprar, revisa la informacion vigente del proveedor correspondiente.</p>
       </div>
     </section>
   </main>
@@ -563,5 +850,89 @@
   <footer>
     Soluciones de Cobro · WhatsApp 951 182 5881 · Asesoria independiente para soluciones de cobro en Oaxaca.
   </footer>
+
+  <script>
+    const form = document.getElementById('diagnosticForm');
+    const result = document.getElementById('diagnosticResult');
+    const title = document.getElementById('resultTitle');
+    const text = document.getElementById('resultText');
+    const tags = document.getElementById('resultTags');
+    const whatsapp = document.getElementById('resultWhatsapp');
+
+    const labels = {
+      informal: 'Sin RFC/constancia lista', fisica: 'Persona fisica', moral: 'Persona moral',
+      bajo: 'Volumen bajo', medio: 'Volumen medio', alto: 'Volumen alto',
+      variable: 'Ventas variables', estable: 'Ventas estables', inmediata: 'Liquidez inmediata', normal: 'Espera 24-48h',
+      no: 'Sin MSI', ocasional: 'MSI ocasional', frecuente: 'MSI frecuente',
+      mostrador: 'Mostrador', movil: 'Movilidad', online: 'Cobro remoto', emprende: 'Emprendimiento', crece: 'En crecimiento', consolidado: 'Consolidado',
+      simple: 'Requisitos simples', costo: 'Optimizar tasa', terminal: 'Terminal fisica', link: 'Links de pago', recurrente: 'Cobranza recurrente'
+    };
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const scores = { agregador: 0, banca: 0, hibrido: 0, digital: 0 };
+
+      if (data.formalidad === 'informal') scores.agregador += 5;
+      if (data.formalidad === 'fisica') { scores.agregador += 2; scores.hibrido += 1; }
+      if (data.formalidad === 'moral') { scores.banca += 3; scores.hibrido += 3; }
+
+      if (data.volumen === 'bajo') scores.agregador += 4;
+      if (data.volumen === 'medio') { scores.agregador += 2; scores.hibrido += 1; }
+      if (data.volumen === 'alto') { scores.banca += 4; scores.hibrido += 3; }
+
+      if (data.estabilidad === 'variable') scores.agregador += 3;
+      if (data.estabilidad === 'estable') { scores.banca += 2; scores.hibrido += 2; }
+      if (data.liquidez === 'inmediata') scores.agregador += 3;
+      if (data.liquidez === 'normal') scores.banca += 1;
+      if (data.ticket === 'alto') { scores.banca += 2; scores.hibrido += 1; }
+      if (data.msi === 'frecuente') scores.banca += 4;
+      if (data.msi === 'ocasional') scores.agregador += 1;
+      if (data.operacion === 'movil') scores.agregador += 3;
+      if (data.operacion === 'online') { scores.digital += 4; scores.agregador += 1; }
+      if (data.etapa === 'emprende') scores.agregador += 3;
+      if (data.etapa === 'consolidado') { scores.banca += 3; scores.hibrido += 2; }
+      if (data.preferencia === 'simple') scores.agregador += 3;
+      if (data.preferencia === 'costo') { scores.banca += 3; scores.hibrido += 2; }
+      if (data.futuro === 'link') scores.digital += 3;
+      if (data.futuro === 'recurrente') scores.digital += 5;
+      if (data.futuro === 'terminal') scores.agregador += 1;
+
+      const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+      const profiles = {
+        agregador: {
+          title: 'Te conviene empezar con una solucion tipo agregador',
+          text: 'Tu perfil apunta a una opcion rapida, simple y flexible. Puede convenirte Mercado Pago, Clip, NetPay u otra terminal moderna, revisando comisiones y condiciones vigentes.',
+          tags: ['Alta rapida', 'Baja friccion', 'Bueno para empezar']
+        },
+        banca: {
+          title: 'Te conviene comparar banca tradicional',
+          text: 'Tu perfil tiene volumen, formalidad o uso de MSI que puede justificar una terminal bancaria. Hay que revisar rentas, penalizaciones y requisitos antes de decidir.',
+          tags: ['Volumen estable', 'Tasa negociable', 'Requisitos mayores']
+        },
+        hibrido: {
+          title: 'Te conviene revisar un modelo hibrido',
+          text: 'Tu negocio puede necesitar tecnologia moderna con una estructura mas formal. Getnet, Konfio u opciones similares pueden ser interesantes si cumples volumen y requisitos.',
+          tags: ['Tecnologia + formalidad', 'Revision de contrato', 'Posible tasa preferencial']
+        },
+        digital: {
+          title: 'Te conviene sumar soluciones digitales',
+          text: 'Tu operacion apunta a links de pago, cobro remoto, pasarelas o cobranza recurrente. Puede combinarse con una terminal fisica si tambien cobras en mostrador.',
+          tags: ['Links de pago', 'Cobro remoto', 'Escalable']
+        }
+      };
+
+      const profile = profiles[winner];
+      title.textContent = profile.title;
+      text.textContent = profile.text;
+      tags.innerHTML = profile.tags.map(tag => `<span>${tag}</span>`).join('');
+
+      const answerText = Object.entries(data).map(([key, value]) => `${key}: ${labels[value] || value}`).join(' | ');
+      const message = `Hola, hice el diagnostico en Soluciones de Cobro. Resultado: ${profile.title}. Mis respuestas: ${answerText}`;
+      whatsapp.href = `https://wa.me/529511825881?text=${encodeURIComponent(message)}`;
+      result.classList.add('show');
+      result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
 </body>
 </html>
