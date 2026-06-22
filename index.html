@@ -72,12 +72,7 @@
       min-width: 310px;
     }
 
-    .brand-logo {
-      width: 88px;
-      height: 70px;
-      object-fit: contain;
-    }
-
+    .brand-logo { width: 88px; height: 70px; object-fit: contain; }
     .brand-name { font-size: 25px; line-height: 1.05; letter-spacing: 0; }
 
     .brand-name small {
@@ -164,12 +159,7 @@
     }
 
     h3 { color: var(--ink); margin: 0 0 8px; }
-
-    .hero p {
-      font-size: 21px;
-      color: #334453;
-      max-width: 650px;
-    }
+    .hero p { font-size: 21px; color: #334453; max-width: 650px; }
 
     .actions {
       display: flex;
@@ -263,24 +253,11 @@
       margin: 0 0 28px;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+    .band {
+      background: white;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
-
-    .cards-3 { grid-template-columns: repeat(3, 1fr); }
-    .cards-2 { grid-template-columns: repeat(2, 1fr); }
-
-    .card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 22px;
-      box-shadow: 0 10px 30px rgba(11,31,58,.06);
-    }
-
-    .card p { margin: 0; color: var(--muted); }
 
     .icon {
       width: 42px;
@@ -292,12 +269,6 @@
       border-radius: 8px;
       font-weight: 900;
       margin-bottom: 14px;
-    }
-
-    .band {
-      background: white;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
     }
 
     .benefit-grid {
@@ -320,6 +291,118 @@
       font-size: 18px;
       margin-bottom: 8px;
     }
+
+    .products-section { background: #fff; }
+
+    .products-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      position: relative;
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 20px;
+      box-shadow: 0 12px 32px rgba(11,31,58,.07);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 42px rgba(11,31,58,.12);
+    }
+
+    .product-card.featured {
+      border: 2px solid var(--blue);
+      background: linear-gradient(180deg, #ffffff, #f6fbff);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
+      padding: 6px 9px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .product-badge.yellow { background: var(--yellow); color: var(--ink); }
+
+    .product-media {
+      height: 210px;
+      display: grid;
+      place-items: center;
+      margin: 16px 0 18px;
+      border-radius: 8px;
+      background: radial-gradient(circle, #fff7cf 0, #f3f8ff 58%, #ffffff 100%);
+    }
+
+    .product-media img {
+      max-height: 188px;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 18px rgba(11,31,58,.18));
+    }
+
+    .product-card h3 { font-size: 24px; }
+    .product-subtitle { display: block; color: var(--muted); font-weight: 800; margin-bottom: 10px; }
+    .product-card p { color: var(--muted); margin: 0 0 14px; }
+
+    .specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 20px;
+    }
+
+    .specs span {
+      border-radius: 8px;
+      background: #eef4fa;
+      color: var(--text);
+      padding: 6px 8px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .price-note {
+      color: var(--ink);
+      font-weight: 900;
+      margin: 0 0 10px;
+    }
+
+    .product-actions {
+      display: grid;
+      gap: 9px;
+      margin-top: auto;
+    }
+
+    .advisor-card {
+      background: linear-gradient(135deg, #0b1f3a, #0056b3);
+      color: white;
+    }
+
+    .advisor-card h3, .advisor-card p, .advisor-card .product-subtitle, .advisor-card .price-note { color: white; }
+    .advisor-card .product-media { background: rgba(255,255,255,.12); }
+    .advisor-card .specs span { background: rgba(255,255,255,.16); color: white; }
 
     .payment-panel {
       background: white;
@@ -389,11 +472,7 @@
       background: #fbfdff;
     }
 
-    legend {
-      padding: 0 6px;
-      font-weight: 900;
-      color: var(--ink);
-    }
+    legend { padding: 0 6px; font-weight: 900; color: var(--ink); }
 
     .options {
       display: grid;
@@ -454,12 +533,7 @@
     .profile-banca .result-visual { background: #e8f1ff; border-color: #9ac5ff; }
     .profile-hibrido .result-visual { background: #e7fbf5; border-color: #8ce0c5; }
 
-    .result-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0;
-    }
+    .result-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
 
     .result-tags span {
       background: var(--blue-soft);
@@ -478,12 +552,7 @@
       margin-bottom: 10px;
     }
 
-    .faq summary {
-      cursor: pointer;
-      color: var(--ink);
-      font-weight: 900;
-    }
-
+    .faq summary { cursor: pointer; color: var(--ink); font-weight: 900; }
     .faq p { color: var(--muted); margin-bottom: 0; }
 
     .contact {
@@ -516,11 +585,7 @@
 
     .channel .brand-mask { width: 24px; height: 24px; }
 
-    .notice {
-      background: #f1f6fb;
-      border-top: 1px solid var(--line);
-    }
-
+    .notice { background: #f1f6fb; border-top: 1px solid var(--line); }
     .notice .section { padding-top: 34px; padding-bottom: 34px; }
     .notice h2 { font-size: 22px; margin-bottom: 8px; }
     .notice p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -558,11 +623,15 @@
       font-weight: 800;
     }
 
+    @media (max-width: 1100px) {
+      .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (max-width: 980px) {
       .hero-inner, .contact-grid { grid-template-columns: 1fr; }
-      .cards, .cards-3, .cards-2, .benefit-grid { grid-template-columns: 1fr 1fr; }
+      .benefit-grid { grid-template-columns: 1fr 1fr; }
       .logo-cloud { grid-template-columns: repeat(3, 1fr); }
-      .diagnostic-head { display: block; }
+      .diagnostic-head, .products-head { display: block; }
     }
 
     @media (max-width: 700px) {
@@ -574,7 +643,7 @@
       .hero-inner { padding-top: 54px; }
       .hero p { font-size: 19px; }
       .actions .btn { width: 100%; }
-      .cards, .cards-3, .cards-2, .benefit-grid, .form-grid { grid-template-columns: 1fr; }
+      .benefit-grid, .form-grid, .products-grid { grid-template-columns: 1fr; }
       .logo-cloud { grid-template-columns: repeat(2, 1fr); }
       .hero-image, .visual { min-height: 300px; }
       .social-rail { right: 10px; top: 52%; padding: 8px; gap: 8px; }
@@ -583,6 +652,7 @@
       .diagnostic-result { grid-template-columns: 1fr; text-align: center; }
       .result-visual { margin: auto; }
       .top-link { right: 10px; bottom: 10px; width: 42px; height: 42px; }
+      .product-media { height: 190px; }
     }
   </style>
 </head>
@@ -633,7 +703,7 @@
       </div>
     </section>
 
-    <section class="section" id="terminales">
+    <section class="section" id="beneficios">
       <h2>Beneficios clave de una terminal moderna.</h2>
       <p class="intro">Antes de elegir modelo, conviene entender qué puede resolver una terminal para tu operación diaria.</p>
 
@@ -642,6 +712,85 @@
         <article class="benefit-card"><div class="icon">2</div><strong>Comprobantes para tus clientes</strong><p>Puede enviar comprobantes digitales y, según el modelo, imprimir tickets físicos.</p></article>
         <article class="benefit-card"><div class="icon">3</div><strong>Conectividad para operar</strong><p>Algunos modelos trabajan con WiFi, red móvil o conexión al celular, según el tipo de terminal.</p></article>
         <article class="benefit-card"><div class="icon">4</div><strong>Control de ventas</strong><p>Ayuda a revisar cobros, movimientos y reportes desde una plataforma digital.</p></article>
+      </div>
+    </section>
+
+    <section class="products-section" id="terminales">
+      <div class="section">
+        <div class="products-head">
+          <div>
+            <span class="eyebrow">Terminales disponibles</span>
+            <h2>Elige tu terminal según tu forma de vender.</h2>
+            <p class="intro">Compara modelos para mostrador, movilidad o primeros cobros. Si no sabes cuál elegir, usa el diagnóstico o escríbeme por WhatsApp.</p>
+          </div>
+          <a class="btn btn-secondary" href="#diagnostico">No sé cuál elegir</a>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card featured">
+            <span class="product-badge">Recomendada</span>
+            <div class="product-media"><img src="assets/Smartpoint2.webp" alt="Point Smart 2"></div>
+            <div>
+              <h3>Point Smart 2</h3>
+              <span class="product-subtitle">La más completa</span>
+              <p>Para negocios que quieren pantalla táctil, operación autónoma y comprobantes impresos o digitales.</p>
+              <div class="specs"><span>WiFi</span><span>Red móvil</span><span>Imprime ticket</span><span>Pantalla touch</span></div>
+            </div>
+            <div class="product-actions">
+              <p class="price-note">Ver precio vigente en Mercado Pago</p>
+              <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar</a>
+              <a class="btn btn-outline" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20saber%20si%20la%20Point%20Smart%202%20me%20conviene." target="_blank" rel="noopener">Pedir asesoría</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-badge yellow">Popular</span>
+            <div class="product-media"><img src="assets/Point-air.webp" alt="Point Air"></div>
+            <div>
+              <h3>Point Air</h3>
+              <span class="product-subtitle">Práctica e independiente</span>
+              <p>Para vender con movilidad y cobrar sin depender tanto del celular, con una terminal ligera.</p>
+              <div class="specs"><span>WiFi</span><span>Red móvil</span><span>Digital</span><span>Ligera</span></div>
+            </div>
+            <div class="product-actions">
+              <p class="price-note">Ver precio vigente en Mercado Pago</p>
+              <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar</a>
+              <a class="btn btn-outline" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20saber%20si%20la%20Point%20Air%20me%20conviene." target="_blank" rel="noopener">Pedir asesoría</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-badge yellow">Para empezar</span>
+            <div class="product-media"><img src="assets/point%20mini.webp" alt="Point Mini"></div>
+            <div>
+              <h3>Point Mini</h3>
+              <span class="product-subtitle">Compacta y ligera</span>
+              <p>Ideal para emprendedores, ventas ocasionales o negocios que quieren iniciar con bajo costo.</p>
+              <div class="specs"><span>Bluetooth</span><span>Compacta</span><span>Usa celular</span><span>Portátil</span></div>
+            </div>
+            <div class="product-actions">
+              <p class="price-note">Ver precio vigente en Mercado Pago</p>
+              <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar</a>
+              <a class="btn btn-outline" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20saber%20si%20la%20Point%20Mini%20me%20conviene." target="_blank" rel="noopener">Pedir asesoría</a>
+            </div>
+          </article>
+
+          <article class="product-card advisor-card">
+            <span class="product-badge yellow">Guía rápida</span>
+            <div class="product-media"><img src="assets/multi-mlm-hero.png" alt="Opciones de terminales Mercado Pago"></div>
+            <div>
+              <h3>No sé cuál elegir</h3>
+              <span class="product-subtitle">Te ayudo a decidir</span>
+              <p>Si tienes dudas por tu giro, ventas o forma de operar, responde el diagnóstico y mándame tu perfil.</p>
+              <div class="specs"><span>Diagnóstico</span><span>WhatsApp</span><span>Asesoría local</span></div>
+            </div>
+            <div class="product-actions">
+              <p class="price-note">Orientación antes de comprar</p>
+              <a class="btn btn-yellow" href="#diagnostico">Hacer diagnóstico</a>
+              <a class="btn btn-outline" href="https://wa.me/529511825881?text=Hola%2C%20no%20sé%20qué%20terminal%20elegir.%20¿Me%20puedes%20orientar%3F" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -674,107 +823,24 @@
 
         <form class="diagnostic-panel" id="diagnosticForm">
           <div class="form-grid">
-            <fieldset>
-              <legend>1. ¿Cuál es tu situación fiscal?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="formalidad" value="informal" required><span>Sin RFC</span></label>
-                <label class="option"><input type="radio" name="formalidad" value="fisica"><span>Persona física con RFC</span></label>
-                <label class="option"><input type="radio" name="formalidad" value="moral"><span>Persona moral</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>2. ¿Cuánto cobras o esperas cobrar en un mes?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="volumen" value="bajo" required><span>Menos de $10,000</span></label>
-                <label class="option"><input type="radio" name="volumen" value="medio"><span>Entre $10,000 y $25,000</span></label>
-                <label class="option"><input type="radio" name="volumen" value="alto"><span>Más de $25,000 de forma constante</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>3. ¿Tus ventas son estables?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="estabilidad" value="variable" required><span>Son variables o por temporada</span></label>
-                <label class="option"><input type="radio" name="estabilidad" value="estable"><span>Son bastante constantes</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>4. ¿Qué tan rápido necesitas recibir el dinero?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="liquidez" value="inmediata" required><span>Lo más rápido posible</span></label>
-                <label class="option"><input type="radio" name="liquidez" value="normal"><span>Puedo esperar 24 a 48 horas hábiles</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>5. ¿La mayoría de tus ventas son de monto alto?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="monto" value="bajo" required><span>No, normalmente son ventas pequeñas</span></label>
-                <label class="option"><input type="radio" name="monto" value="medio"><span>A veces, depende del cliente</span></label>
-                <label class="option"><input type="radio" name="monto" value="alto"><span>Sí, vendo productos o servicios de monto alto</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>6. ¿Ofreces meses sin intereses?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="msi" value="no" required><span>Casi nunca</span></label>
-                <label class="option"><input type="radio" name="msi" value="ocasional"><span>Solo a veces</span></label>
-                <label class="option"><input type="radio" name="msi" value="frecuente"><span>Frecuentemente</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>7. ¿Dónde cobras principalmente?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="operacion" value="mostrador" required><span>Mostrador o punto fijo</span></label>
-                <label class="option"><input type="radio" name="operacion" value="movil"><span>A domicilio, eventos o repartidores</span></label>
-                <label class="option"><input type="radio" name="operacion" value="online"><span>En redes, links o a distancia</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>8. ¿En qué etapa está tu negocio?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="etapa" value="emprende" required><span>Estoy empezando</span></label>
-                <label class="option"><input type="radio" name="etapa" value="crece"><span>Ya vendo y quiero ordenar mis cobros</span></label>
-                <label class="option"><input type="radio" name="etapa" value="consolidado"><span>Ya tengo volumen y quiero optimizar costos</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>9. ¿Qué prefieres?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="preferencia" value="simple" required><span>Requisitos simples aunque la comisión sea mayor</span></label>
-                <label class="option"><input type="radio" name="preferencia" value="costo"><span>Buscar tasa baja aunque el trámite sea más complejo</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>10. ¿Qué necesitas agregar pronto?</legend>
-              <div class="options">
-                <label class="option"><input type="radio" name="futuro" value="terminal" required><span>Solo terminal física por ahora</span></label>
-                <label class="option"><input type="radio" name="futuro" value="link"><span>Links de pago o cobro por redes</span></label>
-                <label class="option"><input type="radio" name="futuro" value="recurrente"><span>Suscripciones o cobranza recurrente</span></label>
-              </div>
-            </fieldset>
+            <fieldset><legend>1. ¿Cuál es tu situación fiscal?</legend><div class="options"><label class="option"><input type="radio" name="formalidad" value="informal" required><span>Sin RFC</span></label><label class="option"><input type="radio" name="formalidad" value="fisica"><span>Persona física con RFC</span></label><label class="option"><input type="radio" name="formalidad" value="moral"><span>Persona moral</span></label></div></fieldset>
+            <fieldset><legend>2. ¿Cuánto cobras o esperas cobrar en un mes?</legend><div class="options"><label class="option"><input type="radio" name="volumen" value="bajo" required><span>Menos de $10,000</span></label><label class="option"><input type="radio" name="volumen" value="medio"><span>Entre $10,000 y $25,000</span></label><label class="option"><input type="radio" name="volumen" value="alto"><span>Más de $25,000 de forma constante</span></label></div></fieldset>
+            <fieldset><legend>3. ¿Tus ventas son estables?</legend><div class="options"><label class="option"><input type="radio" name="estabilidad" value="variable" required><span>Son variables o por temporada</span></label><label class="option"><input type="radio" name="estabilidad" value="estable"><span>Son bastante constantes</span></label></div></fieldset>
+            <fieldset><legend>4. ¿Qué tan rápido necesitas recibir el dinero?</legend><div class="options"><label class="option"><input type="radio" name="liquidez" value="inmediata" required><span>Lo más rápido posible</span></label><label class="option"><input type="radio" name="liquidez" value="normal"><span>Puedo esperar 24 a 48 horas hábiles</span></label></div></fieldset>
+            <fieldset><legend>5. ¿La mayoría de tus ventas son de monto alto?</legend><div class="options"><label class="option"><input type="radio" name="monto" value="bajo" required><span>No, normalmente son ventas pequeñas</span></label><label class="option"><input type="radio" name="monto" value="medio"><span>A veces, depende del cliente</span></label><label class="option"><input type="radio" name="monto" value="alto"><span>Sí, vendo productos o servicios de monto alto</span></label></div></fieldset>
+            <fieldset><legend>6. ¿Ofreces meses sin intereses?</legend><div class="options"><label class="option"><input type="radio" name="msi" value="no" required><span>Casi nunca</span></label><label class="option"><input type="radio" name="msi" value="ocasional"><span>Solo a veces</span></label><label class="option"><input type="radio" name="msi" value="frecuente"><span>Frecuentemente</span></label></div></fieldset>
+            <fieldset><legend>7. ¿Dónde cobras principalmente?</legend><div class="options"><label class="option"><input type="radio" name="operacion" value="mostrador" required><span>Mostrador o punto fijo</span></label><label class="option"><input type="radio" name="operacion" value="movil"><span>A domicilio, eventos o repartidores</span></label><label class="option"><input type="radio" name="operacion" value="online"><span>En redes, links o a distancia</span></label></div></fieldset>
+            <fieldset><legend>8. ¿En qué etapa está tu negocio?</legend><div class="options"><label class="option"><input type="radio" name="etapa" value="emprende" required><span>Estoy empezando</span></label><label class="option"><input type="radio" name="etapa" value="crece"><span>Ya vendo y quiero ordenar mis cobros</span></label><label class="option"><input type="radio" name="etapa" value="consolidado"><span>Ya tengo volumen y quiero optimizar costos</span></label></div></fieldset>
+            <fieldset><legend>9. ¿Qué prefieres?</legend><div class="options"><label class="option"><input type="radio" name="preferencia" value="simple" required><span>Requisitos simples aunque la comisión sea mayor</span></label><label class="option"><input type="radio" name="preferencia" value="costo"><span>Buscar tasa baja aunque el trámite sea más complejo</span></label></div></fieldset>
+            <fieldset><legend>10. ¿Qué necesitas agregar pronto?</legend><div class="options"><label class="option"><input type="radio" name="futuro" value="terminal" required><span>Solo terminal física por ahora</span></label><label class="option"><input type="radio" name="futuro" value="link"><span>Links de pago o cobro por redes</span></label><label class="option"><input type="radio" name="futuro" value="recurrente"><span>Suscripciones o cobranza recurrente</span></label></div></fieldset>
           </div>
 
-          <div class="actions">
-            <button class="btn btn-primary" type="submit">Ver mi recomendación</button>
-          </div>
+          <div class="actions"><button class="btn btn-primary" type="submit">Ver mi recomendación</button></div>
         </form>
 
         <div class="diagnostic-result" id="diagnosticResult" aria-live="polite">
           <div class="result-visual" id="resultVisual" aria-hidden="true"></div>
-          <div>
-            <h3 id="resultTitle">Resultado</h3>
-            <p id="resultText"></p>
-            <div class="result-tags" id="resultTags"></div>
-            <a class="btn btn-whatsapp" id="resultWhatsapp" href="https://wa.me/529511825881" target="_blank" rel="noopener">Enviar mi perfil por WhatsApp</a>
-          </div>
+          <div><h3 id="resultTitle">Resultado</h3><p id="resultText"></p><div class="result-tags" id="resultTags"></div><a class="btn btn-whatsapp" id="resultWhatsapp" href="https://wa.me/529511825881" target="_blank" rel="noopener">Enviar mi perfil por WhatsApp</a></div>
         </div>
       </div>
     </section>
@@ -783,16 +849,15 @@
       <div class="section faq">
         <h2>Preguntas frecuentes.</h2>
         <p class="intro">Aquí reunimos dudas comunes para que puedas decidir con más calma antes de comprar una terminal o contratar una solución de cobro.</p>
-
-        <details open><summary>¿Necesito RFC para comprar o usar una terminal?</summary><p>Depende del proveedor y del tipo de solución. Algunas opciones permiten empezar con requisitos simples; otras piden RFC, constancia fiscal, cuenta bancaria y validaciones adicionales. Si ya tienes RFC, normalmente podrás ordenar mejor tus cobros y documentación.</p></details>
+        <details open><summary>¿Necesito RFC para comprar o usar una terminal?</summary><p>Depende del proveedor y del tipo de solución. Algunas opciones permiten empezar con requisitos simples; otras piden RFC, constancia fiscal, cuenta bancaria y validaciones adicionales.</p></details>
         <details><summary>¿Qué es un agregador de pagos?</summary><p>Es una empresa que facilita aceptar pagos sin contratar directamente una terminal bancaria tradicional. Suele pedir menos requisitos y permite empezar rápido, aunque normalmente cobra una comisión por transacción más alta.</p></details>
-        <details><summary>¿Cuándo conviene una terminal bancaria tradicional?</summary><p>Puede convenir cuando el negocio ya es formal, tiene ventas constantes, factura más de $25,000 mensuales con tarjeta y busca negociar una tasa menor. Hay que revisar rentas, penalizaciones, saldos mínimos y requisitos.</p></details>
-        <details><summary>¿Qué es un modelo híbrido?</summary><p>Es una opción intermedia: combina tecnología moderna con condiciones más parecidas a la banca. Puede ser útil para negocios formales con volumen estable, pero suele depender de evaluación, historial o metas de facturación.</p></details>
-        <details><summary>¿Las terminales tienen renta mensual?</summary><p>Algunas soluciones modernas se enfocan en evitar renta mensual. En banca tradicional puede haber renta, penalizaciones por baja facturación o costos ligados a cuentas. Siempre conviene revisar condiciones vigentes.</p></details>
-        <details><summary>¿Cuánto tarda en caer el dinero?</summary><p>En soluciones modernas puede ser muy rápido, incluso con disponibilidad amplia según el proveedor. En banca tradicional puede tomar 24 a 48 horas hábiles. También depende del plan, cuenta y condiciones comerciales.</p></details>
+        <details><summary>¿Cuándo conviene una terminal bancaria tradicional?</summary><p>Puede convenir cuando el negocio ya es formal, tiene ventas constantes, factura más de $25,000 mensuales con tarjeta y busca negociar una tasa menor.</p></details>
+        <details><summary>¿Qué es un modelo híbrido?</summary><p>Es una opción intermedia: combina tecnología moderna con condiciones más parecidas a la banca. Puede ser útil para negocios formales con volumen estable.</p></details>
+        <details><summary>¿Las terminales tienen renta mensual?</summary><p>Algunas soluciones modernas se enfocan en evitar renta mensual. En banca tradicional puede haber renta, penalizaciones por baja facturación o costos ligados a cuentas.</p></details>
+        <details><summary>¿Cuánto tarda en caer el dinero?</summary><p>En soluciones modernas puede ser muy rápido, incluso con disponibilidad amplia según el proveedor. En banca tradicional puede tomar 24 a 48 horas hábiles.</p></details>
         <details><summary>¿Los meses sin intereses son gratis para el comercio?</summary><p>No necesariamente. Pueden generar costos adicionales o sobretasas. Si vendes productos de monto alto y usas MSI con frecuencia, conviene comparar con especial cuidado.</p></details>
         <details><summary>¿Qué pasa si vendo poco con una terminal bancaria?</summary><p>Algunos bancos aplican rentas o penalizaciones si no alcanzas una facturación mínima. Por eso, si tus ventas son variables, una solución sin renta puede ser más cómoda para empezar.</p></details>
-        <details><summary>¿Puedo cobrar fuera de mi local?</summary><p>Sí, pero necesitas elegir el tipo correcto de terminal. Hay opciones para mostrador, movilidad, eventos, repartidores o servicios a domicilio. La conectividad es clave.</p></details>
+        <details><summary>¿Puedo cobrar fuera de mi local?</summary><p>Sí, pero necesitas elegir el tipo correcto de terminal. Hay opciones para mostrador, movilidad, eventos, repartidores o servicios a domicilio.</p></details>
         <details><summary>¿Me puedes ayudar si estoy en Oaxaca?</summary><p>Sí. La asesoría local es parte del enfoque de Soluciones de Cobro. También puedes comprar por internet usando el link oficial y pedir orientación por WhatsApp.</p></details>
       </div>
     </section>
@@ -802,12 +867,8 @@
         <div>
           <h2>¿Listo para elegir mejor?</h2>
           <p>Compra tu terminal con el link oficial o mándame tu perfil por WhatsApp para revisar qué opción te conviene según tu negocio.</p>
-          <div class="actions">
-            <a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20informacion%20sobre%20soluciones%20de%20cobro." target="_blank" rel="noopener">WhatsApp</a>
-          </div>
+          <div class="actions"><a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><a class="btn btn-whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20informacion%20sobre%20soluciones%20de%20cobro." target="_blank" rel="noopener">WhatsApp</a></div>
         </div>
-
         <div class="contact-channels" aria-label="Canales de contacto">
           <a class="channel whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20y%20quiero%20asesoria." target="_blank" rel="noopener"><span class="brand-mask" style="--logo: url('assets/logos/whatsapp.svg')"></span>WhatsApp 951 182 5881</a>
           <a class="channel facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener"><span class="brand-mask" style="--logo: url('assets/logos/facebook.svg')"></span>Facebook</a>
@@ -817,21 +878,14 @@
     </section>
 
     <section class="notice" aria-label="Aviso sobre marcas">
-      <div class="section">
-        <h2>Aviso sobre marcas, comisiones y referencias</h2>
-        <p>Los nombres, logotipos, marcas y elementos visuales mencionados en esta página pertenecen a sus respectivos propietarios. Su uso es informativo, descriptivo o comparativo y no implica patrocinio, afiliación o respaldo oficial salvo que se indique expresamente. Las condiciones, comisiones, tasas, plazos, promociones, disponibilidad y requisitos pueden cambiar; antes de contratar o comprar, revisa la información vigente del proveedor correspondiente.</p>
-      </div>
+      <div class="section"><h2>Aviso sobre marcas, comisiones y referencias</h2><p>Los nombres, logotipos, marcas y elementos visuales mencionados en esta página pertenecen a sus respectivos propietarios. Su uso es informativo, descriptivo o comparativo y no implica patrocinio, afiliación o respaldo oficial salvo que se indique expresamente. Las condiciones, comisiones, tasas, plazos, promociones, disponibilidad y requisitos pueden cambiar; antes de contratar o comprar, revisa la información vigente del proveedor correspondiente.</p></div>
     </section>
   </main>
 
   <a class="top-link" href="#inicio" aria-label="Subir al inicio">↑</a>
 
   <footer>
-    <div class="footer-links">
-      <a href="#preguntas">Preguntas</a>
-      <a href="compara.html" target="_blank" rel="noopener">Compara</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+    <div class="footer-links"><a href="#preguntas">Preguntas</a><a href="compara.html" target="_blank" rel="noopener">Compara</a><a href="#contacto">Contacto</a></div>
     Soluciones de Cobro · WhatsApp 951 182 5881 · Venta y asesoría integral.
   </footer>
 
@@ -845,14 +899,7 @@
     const resultVisual = document.getElementById('resultVisual');
 
     const labels = {
-      informal: 'Sin RFC', fisica: 'Persona física con RFC', moral: 'Persona moral',
-      bajo: 'Bajo', medio: 'Medio', alto: 'Alto', variable: 'Ventas variables', estable: 'Ventas constantes',
-      inmediata: 'Necesita dinero rápido', normal: 'Puede esperar 24 a 48 horas',
-      no: 'Casi nunca usa MSI', ocasional: 'MSI ocasional', frecuente: 'MSI frecuente',
-      mostrador: 'Mostrador', movil: 'Movilidad', online: 'Cobro a distancia',
-      emprende: 'Está empezando', crece: 'En crecimiento', consolidado: 'Consolidado',
-      simple: 'Prefiere requisitos simples', costo: 'Prefiere optimizar tasa',
-      terminal: 'Terminal física', link: 'Links de pago', recurrente: 'Cobranza recurrente'
+      informal: 'Sin RFC', fisica: 'Persona física con RFC', moral: 'Persona moral', bajo: 'Bajo', medio: 'Medio', alto: 'Alto', variable: 'Ventas variables', estable: 'Ventas constantes', inmediata: 'Necesita dinero rápido', normal: 'Puede esperar 24 a 48 horas', no: 'Casi nunca usa MSI', ocasional: 'MSI ocasional', frecuente: 'MSI frecuente', mostrador: 'Mostrador', movil: 'Movilidad', online: 'Cobro a distancia', emprende: 'Está empezando', crece: 'En crecimiento', consolidado: 'Consolidado', simple: 'Prefiere requisitos simples', costo: 'Prefiere optimizar tasa', terminal: 'Terminal física', link: 'Links de pago', recurrente: 'Cobranza recurrente'
     };
 
     const avatarSvg = {
@@ -865,7 +912,6 @@
       event.preventDefault();
       const data = Object.fromEntries(new FormData(form).entries());
       const scores = { agregador: 0, banca: 0, hibrido: 0 };
-
       if (data.formalidad === 'informal') scores.agregador += 5;
       if (data.formalidad === 'fisica') { scores.agregador += 2; scores.hibrido += 1; }
       if (data.formalidad === 'moral') { scores.banca += 3; scores.hibrido += 3; }
@@ -890,21 +936,9 @@
 
       const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
       const profiles = {
-        agregador: {
-          title: 'Perfil recomendado: terminal moderna o agregador',
-          text: 'Un agregador es una solución que te permite cobrar rápido con menos requisitos, como una terminal moderna o link de pago. Es ideal si estás empezando, vendes de forma variable o prefieres simplicidad.',
-          tags: ['Menos requisitos', 'Inicio rápido', 'Buena opción para emprender']
-        },
-        banca: {
-          title: 'Perfil recomendado: banca tradicional',
-          text: 'Tu perfil apunta a un negocio con mayor formalidad o volumen. Puede convenirte comparar terminales bancarias para buscar una tasa menor, cuidando rentas, saldos mínimos y penalizaciones.',
-          tags: ['Volumen estable', 'Posible tasa menor', 'Más requisitos']
-        },
-        hibrido: {
-          title: 'Perfil recomendado: modelo híbrido',
-          text: 'Un modelo híbrido combina tecnología moderna con condiciones más formales. Puede funcionar si ya tienes estructura fiscal, ventas constantes y quieres equilibrar facilidad con mejores condiciones.',
-          tags: ['Tecnología moderna', 'Condiciones negociables', 'Revisión de contrato']
-        }
+        agregador: { title: 'Perfil recomendado: terminal moderna o agregador', text: 'Un agregador es una solución que te permite cobrar rápido con menos requisitos, como una terminal moderna o link de pago. Es ideal si estás empezando, vendes de forma variable o prefieres simplicidad.', tags: ['Menos requisitos', 'Inicio rápido', 'Buena opción para emprender'] },
+        banca: { title: 'Perfil recomendado: banca tradicional', text: 'Tu perfil apunta a un negocio con mayor formalidad o volumen. Puede convenirte comparar terminales bancarias para buscar una tasa menor, cuidando rentas, saldos mínimos y penalizaciones.', tags: ['Volumen estable', 'Posible tasa menor', 'Más requisitos'] },
+        hibrido: { title: 'Perfil recomendado: modelo híbrido', text: 'Un modelo híbrido combina tecnología moderna con condiciones más formales. Puede funcionar si ya tienes estructura fiscal, ventas constantes y quieres equilibrar facilidad con mejores condiciones.', tags: ['Tecnología moderna', 'Condiciones negociables', 'Revisión de contrato'] }
       };
 
       const profile = profiles[winner];
