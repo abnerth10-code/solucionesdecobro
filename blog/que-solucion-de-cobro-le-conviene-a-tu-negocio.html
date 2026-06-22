@@ -9,23 +9,13 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     .article-hero{background:linear-gradient(135deg,#fff 0%,#edf8ff 62%,#fff8dd 100%);border-bottom:1px solid var(--line)}
-    .article-hero-inner{max-width:var(--max);margin:auto;padding:62px 20px 42px;display:grid;grid-template-columns:1fr .92fr;gap:36px;align-items:center}
-    .article-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px;color:var(--muted);font-weight:800}
-    .article-hero h1{font-size:clamp(38px,5vw,64px)}
-    .article-hero-image{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#fff}
-    .article-hero-image img{width:100%;height:420px;object-fit:cover}
-    .article-layout{max-width:980px;margin:auto;padding:56px 20px;background:#fff}
-    .article-content{font-size:19px;color:#2b3d50}
-    .article-content h2{margin-top:46px;font-size:clamp(28px,3.4vw,42px)}
-    .article-content p{margin:16px 0}.article-content ul,.article-content ol{padding-left:24px}.article-content li{margin:8px 0}
-    .article-content strong{color:var(--ink)}
-    .article-image{margin:34px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 34px rgba(7,29,54,.08);background:#f8fbff}
-    .article-image img{width:100%;max-height:520px;object-fit:cover}.article-image figcaption{padding:12px 16px;color:var(--muted);font-size:14px;background:#fff}
-    .article-callout{margin:32px 0;padding:22px;border:1px solid #cfeeff;border-radius:var(--r);background:linear-gradient(135deg,#f6fcff,#fff);box-shadow:0 10px 24px rgba(7,29,54,.05)}
-    .article-callout h3{margin-bottom:8px}.article-quote{font-size:24px;line-height:1.35;color:var(--ink);font-weight:900;border-left:6px solid var(--yellow);padding-left:18px;margin:34px 0}
-    .article-cta{margin-top:46px;padding:28px;border-radius:var(--r);background:linear-gradient(135deg,var(--ink),#0058ba);color:#fff}.article-cta h2{color:#fff;margin-top:0}.article-cta p{color:#dcecff}.article-cta .actions{margin-top:18px}
-    .breadcrumb{max-width:var(--max);margin:auto;padding:16px 20px;color:var(--muted);font-size:14px;font-weight:800}.breadcrumb a{color:var(--blue-dark)}
-    @media(max-width:880px){.article-hero-inner{grid-template-columns:1fr}.article-hero-image img{height:auto}.article-layout{padding-top:36px}.article-content{font-size:18px}}
+    .article-hero-inner{max-width:var(--max);margin:auto;padding:56px 20px 42px;display:grid;grid-template-columns:1fr .92fr;gap:36px;align-items:center}
+    .article-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px;color:var(--muted);font-weight:800}.article-hero h1{font-size:clamp(38px,5vw,64px)}
+    .article-hero-image,.article-image{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}.article-hero-image img,.article-image img{width:100%;height:auto;object-fit:contain;background:#fff}
+    .article-layout{max-width:920px;margin:auto;padding:52px 20px;background:#fff}.article-content{font-size:19px;color:#2b3d50}.article-content h2{margin-top:42px;font-size:clamp(28px,3.4vw,40px)}.article-content p{margin:15px 0}.article-content ul,.article-content ol{padding-left:24px}.article-content li{margin:7px 0}.article-content strong{color:var(--ink)}
+    .article-image{margin:30px 0;box-shadow:0 14px 34px rgba(7,29,54,.08)}.article-image figcaption{padding:12px 16px;color:var(--muted);font-size:14px;background:#fff}.article-callout{margin:30px 0;padding:22px;border:1px solid #cfeeff;border-radius:var(--r);background:linear-gradient(135deg,#f6fcff,#fff);box-shadow:0 10px 24px rgba(7,29,54,.05)}
+    .article-quote{font-size:24px;line-height:1.35;color:var(--ink);font-weight:900;border-left:6px solid var(--yellow);padding-left:18px;margin:32px 0}.article-cta{margin-top:42px;padding:28px;border-radius:var(--r);background:linear-gradient(135deg,var(--ink),#0058ba);color:#fff}.article-cta h2{color:#fff;margin-top:0}.article-cta p{color:#dcecff}.article-cta .actions{margin-top:18px}.breadcrumb{max-width:var(--max);margin:auto;padding:16px 20px;color:var(--muted);font-size:14px;font-weight:800}.breadcrumb a{color:var(--blue-dark)}
+    @media(max-width:880px){.article-hero-inner{grid-template-columns:1fr}.article-layout{padding-top:36px}.article-content{font-size:18px}}
   </style>
 </head>
 <body>
@@ -37,142 +27,56 @@
       <div class="article-hero-inner">
         <div>
           <span class="eyebrow">Guía sencilla</span>
-          <div class="article-meta"><span>Soluciones de Cobro</span><span>22 de junio de 2026</span><span>Lectura: 6 min</span></div>
+          <div class="article-meta"><span>Soluciones de Cobro</span><span>22 de junio de 2026</span><span>Lectura: 4 min</span></div>
           <h1>¿Qué solución de cobro le conviene a tu negocio?</h1>
-          <p class="lead">Guía sencilla para elegir entre terminal, banco, link de pago o una opción híbrida.</p>
+          <p class="lead">Una guía rápida para elegir entre terminal, banco, link de pago o una opción híbrida.</p>
           <div class="actions"><a class="btn btn-primary" href="../index.html#diagnostico">Hacer diagnóstico</a><a class="btn btn-white" href="../compara.html">Ver comparativa</a></div>
         </div>
-        <figure class="article-hero-image">
-          <img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.png" alt="Opciones de cobro para elegir la solución adecuada para un negocio">
-        </figure>
+        <figure class="article-hero-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.png" alt="Opciones de cobro para elegir la solución adecuada para un negocio"></figure>
       </div>
     </section>
 
     <article class="article-layout">
       <div class="article-content">
-        <p>Aceptar pagos con tarjeta ya no es exclusivo de negocios grandes. Hoy un comercio pequeño, un profesional independiente, un restaurante, una tienda de ropa, un repartidor o un negocio de servicios puede empezar a cobrar con terminal, link de pago o soluciones digitales sin pasar por tantos trámites como antes.</p>
-        <p>Pero aquí empieza el problema: <strong>no todas las soluciones de cobro le convienen a todos los negocios</strong>.</p>
-        <p>Elegir solo por el precio de la terminal, por una promoción o porque “alguien la recomendó” puede salir caro si no revisas antes las comisiones, los requisitos, los tiempos de depósito, la forma en que vendes y el tipo de clientes que atiendes.</p>
-        <p>En Soluciones de Cobro creemos que antes de comprar una terminal o contratar un servicio, primero debes entender qué necesita realmente tu negocio.</p>
+        <p>Aceptar tarjeta, mandar links de pago o contratar una terminal bancaria puede ayudarte a vender mejor. El problema es que no todas las soluciones funcionan para el mismo negocio.</p>
+        <p>Elegir solo por precio, promoción o recomendación puede salir caro si no revisas comisiones, requisitos, depósitos y la forma real en que vendes.</p>
 
-        <h2>Una terminal no es solo un aparato</h2>
-        <p>Muchas personas piensan que comprar una terminal es simplemente elegir el equipo más barato o el más bonito. En realidad, la terminal es solo una parte de la decisión.</p>
-        <p>Antes de elegir, conviene revisar:</p>
+        <h2>Primero revisa cómo opera tu negocio</h2>
+        <p>Antes de comprar una terminal, responde lo básico:</p>
         <ul>
-          <li>Cuánto vendes al mes.</li>
-          <li>Si tus ventas son estables o variables.</li>
-          <li>Qué margen de ganancia tienes por venta.</li>
-          <li>Si necesitas cobrar en mostrador, a domicilio, en eventos o por redes sociales.</li>
-          <li>Qué tan rápido necesitas recibir tu dinero.</li>
-          <li>Si puedes cumplir requisitos fiscales o bancarios.</li>
-          <li>Si quieres ofrecer meses sin intereses.</li>
-          <li>Qué tan importante es tener ticket impreso, reportes o soporte.</li>
+          <li>¿Cuánto cobras al mes?</li>
+          <li>¿Tus ventas son constantes o por temporada?</li>
+          <li>¿Qué margen te queda por venta?</li>
+          <li>¿Cobras en mostrador, a domicilio, en eventos o por redes?</li>
+          <li>¿Necesitas recibir el dinero rápido?</li>
+          <li>¿Puedes cumplir requisitos fiscales o bancarios?</li>
         </ul>
-        <figure class="article-image">
-          <img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.png" alt="Elementos que conviene revisar antes de contratar una solución de cobro">
-          <figcaption>Antes de comprar, revisa el costo completo de operar: comisión, depósito, requisitos y forma de venta.</figcaption>
-        </figure>
-        <p>Una buena solución de cobro debe ayudarte a vender más, pero también debe cuidar tu utilidad. Cobrar con tarjeta puede facilitar la compra para tus clientes, pero si no revisas bien los costos, podrías estar pagando más de lo que imaginas.</p>
+        <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.png" alt="Elementos que conviene revisar antes de contratar una solución de cobro"><figcaption>La mejor opción no siempre es la más barata: importa el costo completo de operar.</figcaption></figure>
 
-        <h2>Opción rápida de cobro: buena para empezar, pero no siempre la más barata</h2>
-        <p>Las opciones rápidas de cobro, como algunas terminales modernas o proveedores que agrupan pagos, suelen ser atractivas porque permiten empezar con menos requisitos.</p>
-        <p>Pueden ser útiles si:</p>
-        <ul>
-          <li>Estás iniciando.</li>
-          <li>No quieres trámites bancarios largos.</li>
-          <li>Necesitas movilidad.</li>
-          <li>Vendes en ferias, entregas, eventos o servicios a domicilio.</li>
-          <li>Quieres activar una solución de forma sencilla.</li>
-          <li>Todavía no tienes un volumen alto de ventas.</li>
-        </ul>
-        <p>Su principal ventaja es la facilidad. En muchos casos puedes comprar el equipo, activarlo y comenzar a cobrar sin una estructura complicada.</p>
-        <p>Pero hay que ser claros: esa facilidad puede venir acompañada de una comisión más alta por transacción. Para un negocio que vende poco o está empezando, puede tener sentido. Para un negocio con ventas constantes y volumen alto, tal vez convenga comparar otras opciones.</p>
+        <h2>Cuatro caminos para cobrar</h2>
+        <p>La decisión normalmente cae en una de estas opciones:</p>
+        <div class="article-callout">
+          <h3>Terminal moderna</h3><p>Buena para empezar rápido, cobrar en movilidad y evitar trámites pesados.</p>
+          <h3>Banca tradicional</h3><p>Puede convenir si ya tienes volumen, formalidad fiscal y buscas mejores condiciones.</p>
+          <h3>Link de pago</h3><p>Útil si vendes por WhatsApp, redes sociales, catálogo o entregas locales.</p>
+          <h3>Modelo híbrido</h3><p>Equilibra tecnología moderna con condiciones más formales para negocios en crecimiento.</p>
+        </div>
+        <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/4formasdecobrar.png" alt="Cuatro formas de cobrar: terminal, banco, link de pago y modelo híbrido"><figcaption>Muchos negocios terminan usando más de una herramienta según el tipo de venta.</figcaption></figure>
 
-        <h2>Banca tradicional: puede convenir cuando ya tienes más volumen</h2>
-        <p>Las terminales bancarias tradicionales suelen pedir más requisitos. Pueden solicitar RFC, cuenta bancaria, documentación del negocio, historial, facturación o condiciones específicas.</p>
-        <p>Esto puede parecer una barrera, pero para ciertos negocios puede valer la pena.</p>
-        <p>Una solución bancaria puede convenir si:</p>
-        <ul>
-          <li>Ya tienes ventas constantes.</li>
-          <li>Tu negocio está formalizado.</li>
-          <li>Tienes buen volumen mensual.</li>
-          <li>Buscas negociar mejores condiciones.</li>
-          <li>Puedes cumplir requisitos fiscales y bancarios.</li>
-          <li>Te importa reducir el costo por transacción.</li>
-          <li>No te afecta esperar 24 o 48 horas para recibir el dinero.</li>
-        </ul>
-        <p>El punto importante es no asumir que “banco” siempre significa mejor ni que “terminal moderna” siempre significa más cara. Todo depende de tu operación, tu volumen y las condiciones reales del contrato.</p>
-        <p>También hay que revisar detalles que muchas veces se pasan por alto: renta mensual, mínimos de facturación, penalizaciones, cargos por baja actividad, plazos de depósito, contracargos y soporte técnico.</p>
+        <h2>La pregunta correcta</h2>
+        <div class="article-quote">No preguntes “¿cuál terminal es mejor?”. Pregunta: “¿qué solución de cobro le conviene a mi negocio en este momento?”.</div>
+        <p>No es lo mismo una cafetería con mostrador fijo que un servicio a domicilio. No es lo mismo vender diario que vender por temporada. Tampoco es igual cobrar tickets pequeños que servicios de alto valor.</p>
 
-        <h2>Links de pago y cobro digital: útiles si vendes por redes o a distancia</h2>
-        <p>No todos los negocios necesitan una terminal física desde el primer día.</p>
-        <p>Si vendes por WhatsApp, Instagram, Facebook, catálogo digital o entregas a domicilio, un link de pago puede ser una alternativa práctica para empezar a aceptar tarjeta sin depender de un punto físico.</p>
-        <p>Puede servirte si:</p>
-        <ul>
-          <li>Tomas pedidos por mensaje.</li>
-          <li>Vendes productos por redes sociales.</li>
-          <li>Haces entregas locales.</li>
-          <li>Das servicios y cobras anticipos.</li>
-          <li>Quieres mandar una liga de pago al cliente.</li>
-          <li>No siempre tienes al cliente frente a ti.</li>
-        </ul>
-        <figure class="article-image">
-          <img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/4formasdecobrar.png" alt="Cuatro formas de cobrar: terminal, banco, link de pago y modelo híbrido">
-          <figcaption>Para muchos negocios, la respuesta no es una sola herramienta: puede ser una combinación entre terminal, link de pago y opción bancaria.</figcaption>
-        </figure>
-        <p>El link de pago no sustituye a una terminal en todos los casos, pero puede complementar muy bien tu operación. Para algunos negocios, la mejor solución no es elegir solo una herramienta, sino combinar terminal física, link de pago y transferencia según el tipo de venta.</p>
-
-        <h2>Modelos híbridos: cuando tu negocio está creciendo</h2>
-        <p>Entre una opción rápida y una terminal bancaria tradicional también existen soluciones híbridas.</p>
-        <p>Estas pueden combinar tecnología moderna, activación digital, reportes, herramientas de gestión y condiciones más formales. Pueden ser útiles para negocios que ya no están empezando, pero todavía no quieren o no pueden entrar a un esquema bancario tradicional completo.</p>
-        <p>Un modelo híbrido puede tener sentido si:</p>
-        <ul>
-          <li>Ya tienes ventas constantes.</li>
-          <li>Quieres ordenar tus cobros.</li>
-          <li>Necesitas mejores herramientas de control.</li>
-          <li>Buscas equilibrio entre facilidad y condiciones.</li>
-          <li>Estás comparando varias opciones antes de comprometerte.</li>
-        </ul>
-        <p>Aquí la clave es revisar con cuidado el contrato, las comisiones, los tiempos de depósito, el soporte y las condiciones por volumen.</p>
-
-        <div class="article-quote">La pregunta correcta no es “¿cuál terminal es mejor?”, sino “¿cuál solución de cobro le conviene a mi negocio en este momento?”.</div>
-
-        <p>No es lo mismo una cafetería con mostrador fijo que un estilista que cobra a domicilio. No es lo mismo una tienda con ventas diarias que un negocio que vende por temporada. No es lo mismo cobrar tickets pequeños que cobrar servicios de alto valor.</p>
-        <p>Por eso, antes de recomendar una terminal o una solución, conviene hacer un diagnóstico básico.</p>
-        <p>Estas son algunas preguntas que deberías responder:</p>
-        <ol>
-          <li>¿Tu negocio ya tiene RFC o estás empezando informalmente?</li>
-          <li>¿Cuánto esperas cobrar al mes?</li>
-          <li>¿Tus ventas son constantes o variables?</li>
-          <li>¿Necesitas recibir el dinero de inmediato?</li>
-          <li>¿Cuál es tu margen de ganancia por venta?</li>
-          <li>¿Quieres ofrecer meses sin intereses?</li>
-          <li>¿Cobras en local, a domicilio, en eventos o por redes?</li>
-          <li>¿Estás empezando o ya tienes volumen?</li>
-          <li>¿Prefieres menos trámites o mejores condiciones aunque pidan más requisitos?</li>
-        </ol>
-        <figure class="article-image">
-          <img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/diagnostico.png" alt="Diagnóstico rápido para elegir solución de cobro">
-          <figcaption>El diagnóstico ayuda a perfilar tu negocio antes de comprar una terminal o contratar un servicio.</figcaption>
-        </figure>
-        <p>Responder esto ayuda a evitar compras impulsivas y decisiones basadas solo en promociones.</p>
+        <h2>Haz un diagnóstico antes de comprar</h2>
+        <p>Un diagnóstico rápido te ayuda a evitar compras impulsivas. En pocos minutos puedes perfilar si te conviene empezar con una terminal moderna, comparar un modelo híbrido o revisar banca tradicional.</p>
+        <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/diagnostico.png" alt="Diagnóstico rápido para elegir solución de cobro"><figcaption>Responder unas cuantas preguntas evita decidir solo por promoción o precio.</figcaption></figure>
 
         <h2>Regla rápida para decidir</h2>
-        <div class="article-callout">
-          <h3>Si estás empezando</h3>
-          <p>Si quieres cobrar sin complicarte, una opción rápida puede ser una buena primera solución.</p>
-          <h3>Si ya vendes de forma constante</h3>
-          <p>Si tienes margen suficiente, puedes comparar modelos híbridos.</p>
-          <h3>Si tienes volumen y formalidad fiscal</h3>
-          <p>Vale la pena revisar banca tradicional y comparar condiciones reales.</p>
-        </div>
-        <p>Pero no tomes la decisión solo por el precio del equipo. Revisa el costo completo de operar: comisión, IVA, renta, depósito, requisitos, soporte, contracargos y facilidad para tus clientes.</p>
-
-        <h2>En Soluciones de Cobro te ayudamos a decidir con claridad</h2>
-        <p>Soluciones de Cobro nace para ayudarte a comparar opciones de cobro sin lenguaje complicado.</p>
-        <p>No se trata solo de vender una terminal. Se trata de entender cómo vendes, cuánto cobras, qué necesita tu negocio y qué opción puede ayudarte a operar mejor.</p>
-        <p>Si estás en Oaxaca, también puedes pedir orientación directa para revisar tu caso antes de comprar.</p>
-        <p>Puedes comenzar con el diagnóstico rápido de la página y compartir tus respuestas por WhatsApp para recibir una recomendación más clara.</p>
+        <ul>
+          <li>Si estás empezando y quieres facilidad, revisa una opción rápida.</li>
+          <li>Si ya vendes de forma constante, compara modelos híbridos.</li>
+          <li>Si tienes volumen y formalidad fiscal, vale la pena revisar bancos.</li>
+        </ul>
         <p><strong>Antes de comprar una terminal, compara. Antes de contratar, pregunta. Y antes de decidir, entiende el costo real de cobrar.</strong></p>
 
         <div class="article-cta">
