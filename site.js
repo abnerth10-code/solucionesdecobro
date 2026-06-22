@@ -1,4 +1,14 @@
 (() => {
+  const smoothStyle = document.createElement('style');
+  smoothStyle.textContent = `
+    @media(max-width:680px){
+      .nav{transition:min-height .42s ease,padding .42s ease !important;}
+      .brand,.menu{transition:max-height .46s ease,opacity .34s ease,transform .42s ease !important;}
+      .header-actions{transition:margin .42s ease !important;}
+    }
+  `;
+  document.head.appendChild(smoothStyle);
+
   const header = document.querySelector('.header');
   if (header) {
     const compactItems = [
