@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compara soluciones de cobro | Soluciones de Cobro</title>
+  <meta name="description" content="Comparativa de terminales modernas, banca tradicional, modelos híbridos y soluciones digitales para elegir cómo cobrar.">
+  <link rel="icon" type="image/png" href="assets/logo-soluciones-de-cobro%201x1.png">
+  <style>
+    :root {
+      --ink: #0b1f3a;
+      --text: #283847;
+      --muted: #607080;
+      --line: #dfe7ee;
+      --paper: #ffffff;
+      --soft: #f4f8fc;
+      --blue: #006ddf;
+      --yellow: #ffd23f;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: #f7fafc; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    .header { background: white; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+    .nav { max-width: 1180px; margin: auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 900; }
+    .brand img { width: 78px; height: 58px; object-fit: contain; }
+    .brand span { font-size: 22px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: 8px; background: var(--blue); color: white; font-weight: 900; }
+
+    .hero { background: linear-gradient(135deg, #ffffff, #eef6ff 60%, #fff8d8); border-bottom: 1px solid var(--line); }
+    .section { max-width: 1180px; margin: auto; padding: 58px 20px; }
+    .eyebrow { display: inline-block; background: #edf5ff; color: #0056b3; padding: 7px 10px; border-radius: 8px; font-weight: 900; margin-bottom: 16px; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(40px, 6vw, 70px); line-height: 1.02; letter-spacing: 0; }
+    h2 { color: var(--ink); font-size: clamp(28px, 4vw, 42px); margin: 0 0 14px; line-height: 1.1; }
+    h3 { color: var(--ink); margin: 0 0 8px; }
+    .intro { color: var(--muted); font-size: 19px; max-width: 850px; }
+
+    .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 20px; box-shadow: 0 10px 28px rgba(11,31,58,.06); }
+    .card p { margin: 0; color: var(--muted); }
+    .tag { display: inline-block; padding: 5px 9px; border-radius: 8px; background: #edf5ff; color: #0056b3; font-weight: 900; font-size: 13px; margin-bottom: 12px; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: white; }
+    table { width: 100%; border-collapse: collapse; min-width: 980px; }
+    th, td { padding: 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #edf5ff; color: var(--ink); font-size: 14px; }
+    td:first-child { color: var(--ink); font-weight: 900; }
+    .note { margin-top: 16px; color: var(--muted); font-size: 14px; }
+
+    .decision { background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .decision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .decision .card:nth-child(1) { border-left: 5px solid var(--yellow); }
+    .decision .card:nth-child(2) { border-left: 5px solid var(--blue); }
+
+    footer { background: #08172a; color: #d6e2ee; padding: 24px 20px; text-align: center; font-size: 14px; }
+
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .summary-grid, .decision-grid { grid-template-columns: 1fr; }
+      .brand img { width: 70px; }
+      .brand span { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <a class="brand" href="index.html#inicio"><img src="assets/logo-soluciones-de-cobro%201x1.png" alt="Logo de Soluciones de Cobro"><span>Soluciones de Cobro</span></a>
+      <a class="btn" href="index.html#diagnostico">Hacer diagnóstico</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="section">
+        <span class="eyebrow">Comparativa ampliada</span>
+        <h1>Compara antes de contratar.</h1>
+        <p class="intro">Esta guía resume cuándo conviene una terminal moderna, banca tradicional, un modelo híbrido o una solución digital. La mejor decisión depende de tu formalidad fiscal, volumen, liquidez y forma de vender.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Lectura rápida</h2>
+      <div class="summary-grid">
+        <article class="card"><span class="tag">Agregadores</span><h3>Para empezar rápido</h3><p>Útiles si quieres pocos requisitos, ventas variables, movilidad o disponibilidad rápida del dinero. La comisión suele ser más alta.</p></article>
+        <article class="card"><span class="tag">Banca tradicional</span><h3>Para volumen estable</h3><p>Puede convenir si tienes formalidad fiscal, ventas constantes y buscas una tasa menor. Revisa rentas, saldos mínimos y penalizaciones.</p></article>
+        <article class="card"><span class="tag">Híbridos</span><h3>Para negocios en crecimiento</h3><p>Combinan tecnología moderna con condiciones más formales. Pueden ofrecer mejores tasas si cumples volumen, historial o evaluación.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Matriz comparativa</h2>
+      <p class="intro">Los datos son una guía de análisis. Las condiciones reales pueden cambiar por proveedor, giro, contrato, promoción, volumen y fecha de contratación.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Proveedor</th>
+              <th>Tipo</th>
+              <th>Tasa base aproximada</th>
+              <th>Hardware</th>
+              <th>Requisitos</th>
+              <th>Plazo de liquidación</th>
+              <th>Riesgos o costos a revisar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Afirme TPV</td><td>Banco</td><td>Débito 1.9%, crédito 2.4%, Amex 2.95% aprox.</td><td>Renta mensual aprox. $180 MXN</td><td>SAT, RFC, acta constitutiva y cuenta Afirme</td><td>24 a 48 horas hábiles</td><td>Penalización por facturación baja, saldo mínimo e inscripción.</td></tr>
+            <tr><td>Banorte TPV</td><td>Banco</td><td>Variable por giro, aprox. 2.5% a 6.33%</td><td>Renta aprox. $100 a $300 MXN</td><td>RFC formal y cuenta de cheques Banorte</td><td>24 a 48 horas hábiles</td><td>Penalización por baja facturación, bajo saldo y cargos mínimos.</td></tr>
+            <tr><td>BBVA TPV</td><td>Banco</td><td>General aprox. 2.15% a 2.50%</td><td>Primera TPV puede variar; adicionales con costo mensual</td><td>Cuenta PyME, cédula fiscal y validación bancaria</td><td>24 horas hábiles aprox.</td><td>Cargo mensual si no se alcanza facturación mínima en ciertos planes.</td></tr>
+            <tr><td>Citibanamex iAcepta</td><td>Banco</td><td>Promedio aprox. 2.5%</td><td>Compra física aprox. $799 MXN</td><td>RFC formal y cuenta Citibanamex</td><td>24 horas hábiles aprox.</td><td>Costo de afiliación inicial en contratos estándar.</td></tr>
+            <tr><td>Getnet</td><td>Híbrido</td><td>Negociable aprox. 1.5% a 2.5%</td><td>Esquema mixto según volumen</td><td>RFC o identificación, según producto</td><td>Puede operar 365 días según condiciones</td><td>Tasa dinámica ligada a metas de facturación.</td></tr>
+            <tr><td>Konfío</td><td>Híbrido</td><td>Rango aprox. 2.5% a 3.5%</td><td>Adquisición directa de hardware</td><td>RFC para emisión de CFDI y evaluación</td><td>24 horas o 365 días según plan</td><td>Tasa condicionada a riesgo, historial o evaluación crediticia.</td></tr>
+            <tr><td>Mercado Pago / Clip / similares</td><td>Agregador</td><td>Comisión fija por transacción, normalmente más alta que banca</td><td>Compra de dispositivo o terminal según modelo</td><td>Requisitos más simples</td><td>Disponibilidad rápida según proveedor</td><td>Revisar comisión final, MSI, contracargos, retenciones y promociones vigentes.</td></tr>
+            <tr><td>NetPay Smart</td><td>Agregador</td><td>Base aprox. 3.5% + IVA en algunos esquemas</td><td>Venta directa o renta indexada</td><td>CLABE, INE y validación básica</td><td>24 horas hábiles o 24/7 según plan</td><td>Tarjetas internacionales y condiciones de red pueden tener costos específicos.</td></tr>
+            <tr><td>PayPal México</td><td>Digital / POS</td><td>Puede superar 3.95% + cargo fijo en ciertos casos</td><td>Sin hardware físico obligatorio</td><td>Validación de cuenta bancaria e identidad</td><td>Retiro manual 24 a 72 horas</td><td>Comisiones por conversión, divisas y posibles retenciones precautorias.</td></tr>
+            <tr><td>Tapipay / domiciliación</td><td>Digital recurrente</td><td>Variable por contrato</td><td>Sin TPV física</td><td>Contrato y modelo de cobranza recurrente</td><td>Depende del esquema</td><td>Revisar ganancia mínima mensual y condiciones de adhesión.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Nota: esta tabla no sustituye la revisión contractual. Antes de decidir, confirma términos vigentes, IVA, comisiones, depósitos, penalizaciones y requisitos directamente con el proveedor.</p>
+    </section>
+
+    <section class="decision">
+      <div class="section">
+        <h2>Regla práctica para decidir</h2>
+        <div class="decision-grid">
+          <article class="card"><h3>Si estás empezando</h3><p>Si no tienes todos los requisitos fiscales, vendes de forma variable, necesitas movilidad o quieres cobrar rápido, normalmente conviene iniciar con una terminal moderna o agregador.</p></article>
+          <article class="card"><h3>Si ya tienes volumen</h3><p>Si facturas de forma estable, tienes formalidad fiscal y usas meses sin intereses con frecuencia, conviene comparar banca o modelos híbridos para optimizar costos.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Soluciones de Cobro · Comparativa informativa · Revisa condiciones vigentes antes de contratar.
+  </footer>
+</body>
+</html>
