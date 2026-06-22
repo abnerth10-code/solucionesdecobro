@@ -7,25 +7,44 @@
   <meta name="description" content="Guías prácticas sobre terminales, comisiones, bancos, links de pago y soluciones de cobro para negocios.">
   <link rel="icon" type="image/png" href="assets/logo-soluciones-de-cobro%201x1.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-thumb{width:100%;height:190px;object-fit:cover;border-radius:8px;margin-bottom:16px;border:1px solid var(--line);background:#f8fbff}
+    .article-card.featured-post{grid-column:span 2;background:linear-gradient(135deg,#fff,#f5fbff)}
+    @media(max-width:680px){.article-card.featured-post{grid-column:auto}.article-thumb{height:210px}}
+  </style>
 </head>
 <body>
-  <header class="header"><div class="nav"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-soluciones-de-cobro%201x1.png" alt="Logo de Soluciones de Cobro"><span class="brand-name">Soluciones de Cobro <small>Venta y asesoría integral</small></span></a><nav class="menu"><a href="index.html">Inicio</a><a href="terminales.html">Terminales</a><a href="index.html#diagnostico">Diagnóstico</a><a href="compara.html">Compara</a><a href="blog.html">Blog</a></nav><div class="header-actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><div class="mobile-social"><a class="mini-social facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener"><span class="brand-mask" style="--logo:url('assets/logos/facebook.svg')"></span></a><a class="mini-social instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener"><span class="brand-mask" style="--logo:url('assets/logos/instagram.svg')"></span></a><a class="mini-social whatsapp" href="https://wa.me/529511825881" target="_blank" rel="noopener"><span class="brand-mask" style="--logo:url('assets/logos/whatsapp.svg')"></span></a></div></div></div></header>
+  <header class="header"><div class="nav"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-soluciones-de-cobro%201x1.png" alt="Logo de Soluciones de Cobro"><span class="brand-name">Soluciones de Cobro <small>Venta y asesoría integral</small></span></a><nav class="menu"><a href="index.html">Inicio</a><a href="terminales.html">Terminales</a><a href="index.html#diagnostico">Diagnóstico</a><a href="compara.html">Compara</a><a href="blog.html">Blog</a></nav><div class="header-actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><div class="mobile-social"><a class="mini-social facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><span class="brand-mask" style="--logo:url('assets/logos/facebook.svg')"></span></a><a class="mini-social instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><span class="brand-mask" style="--logo:url('assets/logos/instagram.svg')"></span></a><a class="mini-social whatsapp" href="https://wa.me/529511825881" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="brand-mask" style="--logo:url('assets/logos/whatsapp.svg')"></span></a></div></div></div></header>
 
   <main>
-    <section class="hero"><div class="hero-inner" style="grid-template-columns:1fr"><div><span class="eyebrow">Blog</span><h1>Guías para cobrar mejor.</h1><p class="lead">Este espacio crecerá con artículos simples y útiles sobre terminales, comisiones, pagos con tarjeta, links de pago, bancos y decisiones de cobro para negocios.</p></div></div></section>
+    <section class="hero"><div class="hero-inner" style="grid-template-columns:1fr"><div><span class="eyebrow">Blog</span><h1>Guías para cobrar mejor.</h1><p class="lead">Artículos simples y útiles sobre terminales, comisiones, pagos con tarjeta, links de pago, bancos y decisiones de cobro para negocios.</p></div></div></section>
 
     <section class="section">
+      <h2>Guías publicadas</h2>
+      <div class="blog-grid">
+        <article class="card article-card featured-post">
+          <img class="article-thumb" src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.png" alt="Guía para elegir una solución de cobro para negocio">
+          <span class="pill">Decisión</span>
+          <h3>¿Qué solución de cobro le conviene a tu negocio?</h3>
+          <p class="muted">Guía sencilla para elegir entre terminal, banco, link de pago o una opción híbrida según ventas, requisitos, liquidez y forma de operar.</p>
+          <div class="actions"><a class="btn btn-primary" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">Leer guía</a><a class="btn btn-soft" href="index.html#diagnostico">Hacer diagnóstico</a></div>
+        </article>
+        <article class="card article-card"><span class="pill">Compara</span><h3>Antes de comprar, entiende el costo real de cobrar</h3><p class="muted">La primera guía del blog conecta con la comparativa y el diagnóstico para ayudarte a tomar una decisión más clara.</p><div class="actions"><a class="btn btn-soft" href="compara.html">Ver comparativa</a></div></article>
+      </div>
+    </section>
+
+    <section class="section section-tight">
       <h2>Próximas guías</h2>
       <div class="blog-grid">
         <article class="card article-card"><span class="pill">Terminales</span><h3>Point Smart 2, Point Air o Point Mini: ¿cuál elegir?</h3><p class="muted">Una guía para entender qué terminal conviene según tu tipo de negocio, movilidad y necesidad de comprobantes.</p><div class="actions"><a class="btn btn-soft" href="terminales.html">Ver terminales</a></div></article>
         <article class="card article-card"><span class="pill">Comisiones</span><h3>¿Qué significa 3.5% + IVA en una venta?</h3><p class="muted">Explicación sencilla de comisiones, IVA, depósito neto y costos que debes revisar antes de contratar.</p><div class="actions"><a class="btn btn-soft" href="compara.html">Ver comparativa</a></div></article>
-        <article class="card article-card"><span class="pill">Decisión</span><h3>Terminal moderna vs banco: regla rápida para decidir</h3><p class="muted">Cuándo conviene empezar rápido y cuándo vale la pena buscar una terminal bancaria tradicional.</p><div class="actions"><a class="btn btn-soft" href="index.html#diagnostico">Hacer diagnóstico</a></div></article>
+        <article class="card article-card"><span class="pill">Bancos</span><h3>Terminal moderna vs banco: regla rápida para decidir</h3><p class="muted">Cuándo conviene empezar rápido y cuándo vale la pena buscar una terminal bancaria tradicional.</p><div class="actions"><a class="btn btn-soft" href="index.html#diagnostico">Hacer diagnóstico</a></div></article>
       </div>
     </section>
 
     <section class="blue-band"><div class="section split"><div><h2>¿Por qué tener blog?</h2><p class="lead">El blog ayudará a que Google entienda la página, resolverá dudas frecuentes y dará confianza a clientes que todavía no están listos para comprar.</p></div><div class="list"><div class="list-item"><div class="icon">1</div><div><h3>Educa antes de vender</h3><p>La gente compra con más calma cuando entiende costos y requisitos.</p></div></div><div class="list-item"><div class="icon">2</div><div><h3>Mejora posicionamiento</h3><p>Cada guía puede atraer búsquedas como “qué terminal me conviene” o “comisiones de terminales”.</p></div></div><div class="list-item"><div class="icon">3</div><div><h3>Genera confianza</h3><p>Una página que explica bien se siente menos improvisada y más profesional.</p></div></div></div></div></section>
   </main>
-  <footer><div class="footer-links"><a href="index.html">Inicio</a><a href="terminales.html">Terminales</a><a href="compara.html">Compara</a></div>Soluciones de Cobro · Blog en construcción.</footer>
+  <footer><div class="footer-links"><a href="index.html">Inicio</a><a href="terminales.html">Terminales</a><a href="compara.html">Compara</a></div>Soluciones de Cobro · Blog.</footer>
   <script src="site.js"></script>
 </body>
 </html>
