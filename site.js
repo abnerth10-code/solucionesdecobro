@@ -63,23 +63,32 @@
 
   const requiredNames = ['formalidad','volumen','estabilidad','liquidez','margen','msi','operacion','etapa','preferencia'];
   const total = requiredNames.length;
+  let progressText;
+  let progressPercent;
+  let progressFill;
+  let progressSteps = [];
 
-  progress.innerHTML = `
-    <div class="progress-label">
-      <span id="progressText">0 de ${total} respuestas</span>
-      <span class="progress-percent" id="progressPercent">0%</span>
-    </div>
-    <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
-    <div class="progress-steps" id="progressSteps" aria-hidden="true">${requiredNames.map(() => '<span></span>').join('')}</div>
-  `;
+  const buildProgress = () => {
+    progress.innerHTML = `
+      <div class="progress-label">
+        <span id="progressText">0 de ${total} respuestas</span>
+        <span class="progress-percent" id="progressPercent">0%</span>
+      </div>
+      <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
+      <div class="progress-steps" id="progressSteps" aria-hidden="true">${requiredNames.map(() => '<span></span>').join('')}</div>
+    `;
 
-  const progressText = document.getElementById('progressText');
-  const progressPercent = document.getElementById('progressPercent');
-  const progressFill = document.getElementById('progressFill');
-  const progressSteps = Array.from(document.querySelectorAll('#progressSteps span'));
+    progressText = document.getElementById('progressText');
+    progressPercent = document.getElementById('progressPercent');
+    progressFill = document.getElementById('progressFill');
+    progressSteps = Array.from(document.querySelectorAll('#progressSteps span'));
+  };
+
   const questionCards = Array.from(form.querySelectorAll('.q-card'));
 
   const renderProgress = () => {
+    if (!progressFill || !progressFill.isConnected) buildProgress();
+
     const answered = requiredNames.filter((name) => form.querySelector(`input[name="${name}"]:checked`)).length;
     const percent = Math.round((answered / total) * 100);
 
@@ -96,6 +105,7 @@
     });
   };
 
+  buildProgress();
   form.addEventListener('change', () => window.requestAnimationFrame(renderProgress));
   form.addEventListener('submit', () => window.requestAnimationFrame(renderProgress));
   renderProgress();
