@@ -46,7 +46,7 @@
         if (lastDirection !== 'up') upwardGestures = 0;
         upwardGestures += 1;
         lastDirection = 'up';
-        if (upwardGestures >= 3) setCompact(false);
+        if (upwardGestures >= 5) setCompact(false);
       }
 
       lastY = currentY;
