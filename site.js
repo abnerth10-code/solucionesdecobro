@@ -1,4 +1,32 @@
 (() => {
+  const GA_MEASUREMENT_ID = 'G-49P7XY0Z7W';
+
+  if (!window.__solucionesCobroAnalyticsLoaded) {
+    window.__solucionesCobroAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+
+    const gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(gaScript);
+
+    window.gtag('js', new Date());
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_title: document.title,
+      page_path: window.location.pathname + window.location.search
+    });
+  }
+
+  const trackEvent = (eventName, params = {}) => {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, {
+      ...params,
+      page_location: window.location.href,
+      page_title: document.title
+    });
+  };
+
   const smoothStyle = document.createElement('style');
   smoothStyle.textContent = `
     :root{--navy:#071d36;--blue:#0073e6;--sky:#19aeea;--yellow:#ffd23f;--line:#cfe4f7;--muted:#53687f;}
@@ -199,6 +227,25 @@
     compactHeader();
   }
 
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+
+    const href = link.getAttribute('href') || '';
+    const text = (link.textContent || link.getAttribute('aria-label') || '').trim().slice(0, 80);
+    const url = new URL(link.href, window.location.href);
+    const payload = { link_text: text, link_url: url.href };
+
+    if (href.includes('mpago.li')) trackEvent('click_comprar_terminal', payload);
+    else if (url.hostname.includes('wa.me')) trackEvent('click_whatsapp', payload);
+    else if (url.hostname.includes('facebook.com')) trackEvent('click_facebook', payload);
+    else if (url.hostname.includes('instagram.com')) trackEvent('click_instagram', payload);
+    else if (href.includes('#diagnostico')) trackEvent('click_diagnostico', payload);
+    else if (href.includes('compara.html')) trackEvent('click_comparativa', payload);
+    else if (href.includes('terminales.html')) trackEvent('click_terminales', payload);
+    else if (href.includes('blog')) trackEvent('click_blog', payload);
+  });
+
   const form = document.getElementById('diagnosticForm');
   const progress = document.getElementById('diagnosticProgress');
   if (!form || !progress) return;
@@ -212,6 +259,7 @@
   let progressFill;
   let progressSteps = [];
   let hasShownResult = false;
+  let lastTrackedResult = '';
 
   const buildProgress = () => {
     progress.innerHTML = `
@@ -289,6 +337,7 @@
 
     return {
       rapida: {
+        key: 'terminal_moderna',
         title: 'Recomendación: terminal moderna',
         text: 'Empieza por Mercado Pago Point; después compara Clip y NetPay. Es la ruta más ágil si buscas menos trámites, movilidad e inicio rápido.',
         tags: ['Mercado Pago Point', 'Clip', 'NetPay', 'Inicio rápido'],
@@ -297,6 +346,7 @@
         ctaClass: 'btn btn-primary'
       },
       hibrida: {
+        key: 'modelo_hibrido',
         title: 'Recomendación: modelo híbrido',
         text: 'Revisa opciones como Getnet o Konfío. Pueden servir si ya vendes más, quieres formalidad y buscas condiciones intermedias.',
         tags: ['Getnet', 'Konfío', 'Negocio en crecimiento', 'Contrato claro'],
@@ -305,6 +355,7 @@
         ctaClass: 'btn btn-primary'
       },
       banca: {
+        key: 'tpv_bancaria',
         title: 'Recomendación: TPV bancaria',
         text: 'Compara BBVA, Banorte y Citibanamex. Puede convenirte si tienes RFC, cuenta, ventas constantes y buscas negociar condiciones.',
         tags: ['BBVA TPV', 'Banorte TPV', 'Citibanamex', 'Volumen estable'],
@@ -339,6 +390,15 @@
     cta.href = result.ctaHref;
     cta.className = result.ctaClass;
     res.classList.add('show');
+
+    if (lastTrackedResult !== result.key) {
+      lastTrackedResult = result.key;
+      trackEvent('diagnostico_resultado', {
+        recommendation: result.key,
+        recommendation_title: result.title
+      });
+    }
+
     if (!hasShownResult) {
       hasShownResult = true;
       setTimeout(() => res.scrollIntoView({ behavior: 'smooth', block: 'center' }), 220);
@@ -354,6 +414,12 @@
     hasShownResult = false;
     const card = event.target.closest('.q-card');
     const index = questionCards.indexOf(card);
+
+    trackEvent('diagnostico_respuesta', {
+      question: event.target.name,
+      answer: event.target.value,
+      answered_count: answeredCount()
+    });
 
     window.requestAnimationFrame(() => {
       renderProgress();
