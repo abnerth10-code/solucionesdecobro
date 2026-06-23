@@ -1,13 +1,33 @@
 (() => {
   const smoothStyle = document.createElement('style');
   smoothStyle.textContent = `
-    .brand-logo{width:132px!important;height:86px!important;}
-    .stat-sales{background:radial-gradient(circle at 8% 16%,rgba(255,210,63,.35),transparent 26%),linear-gradient(135deg,#ffffff,#eef9ff 65%,#fff7d7)!important;}
-    .stat-icon{background:linear-gradient(135deg,#ffd23f,#19aeea)!important;color:#071d36!important;box-shadow:0 14px 30px rgba(25,174,234,.22);}
-    .feature-grid{align-items:stretch;}
-    .feature-card{position:relative;overflow:hidden;min-height:270px;background:radial-gradient(circle at 88% 12%,rgba(25,174,234,.18),transparent 34%),radial-gradient(circle at 10% 90%,rgba(255,210,63,.28),transparent 28%),#fff;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
-    .feature-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px rgba(7,29,54,.12);border-color:#bfe8ff;}
-    .feature-card .icon{width:62px;height:62px;font-size:26px;color:#fff;box-shadow:0 14px 30px rgba(7,29,54,.14);}
+    .brand-logo{width:142px!important;height:92px!important;}
+    .hero-compact{padding-top:54px!important;padding-bottom:54px!important;}
+    .hero-compact .hero-inner{gap:42px!important;}
+    .sales-impact{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:stretch;margin:0 0 54px;}
+    .impact-copy,.impact-metric{border:1px solid #cfe4f7;border-radius:24px;background:#fff;box-shadow:0 18px 44px rgba(7,29,54,.08);}
+    .impact-copy{padding:34px;background:linear-gradient(135deg,#fff,#f2fbff 68%,#fff8dc);}
+    .impact-copy h2{font-size:clamp(32px,4vw,54px);margin:12px 0 12px;}
+    .impact-copy p{font-size:20px;line-height:1.65;color:#53687f;margin:0;}
+    .impact-metric{position:relative;overflow:hidden;padding:30px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 78% 12%,rgba(255,210,63,.55),transparent 34%),linear-gradient(145deg,#071d36,#075fb8);color:#fff;}
+    .impact-metric:before{content:"";position:absolute;inset:auto -40px -60px auto;width:180px;height:180px;border-radius:999px;background:rgba(25,174,234,.35);filter:blur(4px);}
+    .impact-metric span{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#cfeeff;}
+    .impact-metric strong{font-size:clamp(48px,6vw,76px);line-height:.95;margin:12px 0;color:#ffd23f;}
+    .impact-metric small{font-size:15px;line-height:1.45;color:#e7f4ff;position:relative;}
+    .media-feature-grid{align-items:stretch;}
+    .media-card{position:relative;overflow:hidden;min-height:330px;padding:28px!important;display:flex;flex-direction:column;justify-content:flex-end;color:#fff!important;background:#071d36!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 22px 50px rgba(7,29,54,.16)!important;transition:transform .22s ease,box-shadow .22s ease;}
+    .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.06);transform:scale(1.03);transition:transform .35s ease,filter .35s ease;}
+    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.08),rgba(7,29,54,.74) 58%,rgba(7,29,54,.94));}
+    .media-card:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(7,29,54,.2)!important;}
+    .media-card:hover:before{transform:scale(1.08);filter:saturate(1.1) blur(1px);}
+    .media-card h3,.media-card p,.media-card .icon{position:relative;z-index:1;}
+    .media-card h3{color:#fff!important;font-size:25px;}
+    .media-card p{color:#eaf6ff!important;font-size:17px;line-height:1.55;margin-bottom:0;}
+    .media-card .icon{width:62px;height:62px;font-size:26px;color:#fff;box-shadow:0 14px 30px rgba(7,29,54,.26);margin-bottom:auto;}
+    .media-hardware:before{background-image:url('assets/Smartpoint2.webp');background-position:center 38%;}
+    .media-info:before{background-image:url('assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.png');}
+    .media-compare:before{background-image:url('assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/4formasdecobrar.png');}
+    .media-growth:before{background-image:url('assets/multi-mlm-hero.png');}
     .icon-terminal{background:linear-gradient(135deg,#0073e6,#19aeea)!important;}
     .icon-info{background:linear-gradient(135deg,#18a058,#25D366)!important;}
     .icon-compare{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
@@ -21,20 +41,33 @@
     .step-mode .option span{padding:16px 18px;font-size:18px;}
     .diagnostic-nav{display:flex;gap:12px;justify-content:center;margin-top:18px;}
     .diagnostic-nav .btn[disabled]{opacity:.45;cursor:not-allowed;}
-    #diagnosticSubmit{display:none;}
-    #diagnosticSubmit.show{display:inline-flex;}
+    #diagnosticSubmit{display:none!important;}
+    .result.show{animation:resultIn .32s ease both;}
+    .result-tags span:first-child{background:#fff8dc;color:#071d36;border-color:#ffd23f;}
     @keyframes questionIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes resultIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .payment-band{background:linear-gradient(135deg,#fff,#f3fbff 68%,#fff8dd)!important;}
-    .payment-cloud{grid-template-columns:repeat(6,minmax(120px,1fr))!important;gap:16px!important;}
-    .payment-cloud .logo-tile{min-height:108px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06);}
-    .payment-cloud .logo-tile .brand-mask{width:96px!important;height:54px!important;}
-    .payment-cloud .logo-tile img{max-width:112px!important;max-height:58px!important;}
+    .payment-cloud{grid-template-columns:repeat(6,minmax(132px,1fr))!important;gap:18px!important;}
+    .payment-cloud .logo-tile{min-height:118px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06);background:#fff;}
+    .payment-cloud .logo-tile .brand-mask{width:108px!important;height:62px!important;}
+    .payment-cloud .logo-tile img{max-width:124px!important;max-height:66px!important;}
     .article-hero-image img,.article-image img{height:auto!important;max-height:none!important;object-fit:contain!important;background:#fff;}
+    @media(max-width:900px){
+      .sales-impact{grid-template-columns:1fr;}
+      .media-feature-grid{grid-template-columns:1fr 1fr!important;}
+    }
     @media(max-width:680px){
-      .brand-logo{width:144px!important;height:92px!important;}
-      .nav{transition:min-height .42s ease,padding .42s ease !important;}
-      .brand,.menu{transition:max-height .46s ease,opacity .34s ease,transform .42s ease !important;}
-      .header-actions{transition:margin .42s ease !important;}
+      .brand-logo{width:150px!important;height:96px!important;}
+      .hero-compact{padding-top:36px!important;padding-bottom:38px!important;}
+      .hero-compact h1{font-size:clamp(50px,15vw,68px)!important;}
+      .nav{transition:min-height .52s ease,padding .52s ease !important;}
+      .brand,.menu{transition:max-height .58s ease,opacity .44s ease,transform .52s ease !important;}
+      .header-actions{transition:margin .52s ease !important;}
+      .sales-impact{margin-bottom:38px;}
+      .impact-copy,.impact-metric{border-radius:20px;padding:24px;}
+      .impact-copy p{font-size:17px;}
+      .media-feature-grid{grid-template-columns:1fr!important;}
+      .media-card{min-height:280px;}
       .diagnostic-stepper .diagnostic-progress{top:78px;}
       .step-mode{min-height:390px;}
       .step-mode .q-card{padding:22px;}
@@ -42,7 +75,7 @@
       .step-mode .option span{font-size:16px;}
       .diagnostic-nav{display:grid;grid-template-columns:1fr;}
       .payment-cloud{grid-template-columns:repeat(2,1fr)!important;}
-      .payment-cloud .logo-tile{min-height:96px;}
+      .payment-cloud .logo-tile{min-height:104px;}
     }
   `;
   document.head.appendChild(smoothStyle);
@@ -111,6 +144,7 @@
   let progressPercent;
   let progressFill;
   let progressSteps = [];
+  let hasShownResult = false;
 
   const buildProgress = () => {
     progress.innerHTML = `
@@ -134,14 +168,14 @@
       card.classList.toggle('answered-past', cardIndex < currentStep && Boolean(card.querySelector('input:checked')));
     });
     const back = document.getElementById('diagnosticBack');
-    const submit = document.getElementById('diagnosticSubmit');
     if (back) back.disabled = currentStep === 0;
-    if (submit) submit.classList.toggle('show', currentStep === questionCards.length - 1);
   };
+
+  const answeredCount = () => requiredNames.filter((name) => form.querySelector(`input[name="${name}"]:checked`)).length;
 
   const renderProgress = () => {
     if (!progressFill || !progressFill.isConnected) buildProgress();
-    const answered = requiredNames.filter((name) => form.querySelector(`input[name="${name}"]:checked`)).length;
+    const answered = answeredCount();
     const percent = Math.round((answered / total) * 100);
 
     progressText.textContent = `${answered} de ${total} respuestas`;
@@ -174,37 +208,25 @@
 
     const winner = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0];
     return {
-      rapida: ['Perfil recomendado: terminal moderna', 'Te conviene explorar opciones rápidas de cobro, como terminales modernas o links de pago. Son útiles para empezar con menos requisitos y operar con agilidad.', ['Menos requisitos', 'Inicio rápido', 'Movilidad']],
-      hibrida: ['Perfil recomendado: modelo híbrido', 'Puede convenirte una solución intermedia: tecnología moderna con condiciones más formales. Buena para negocios que ya crecen y quieren ordenar cobros.', ['Equilibrio', 'Tecnología', 'Revisión de contrato']],
-      banca: ['Perfil recomendado: banca tradicional', 'Tu perfil apunta a comparar bancos: volumen estable, formalidad fiscal y búsqueda de mejores condiciones. Revisa rentas, mínimos y penalizaciones.', ['Volumen estable', 'Más requisitos', 'Costos a revisar']]
+      rapida: [
+        'Recomendación: terminal moderna',
+        'Te conviene empezar comparando Mercado Pago Point, Clip y NetPay, en ese orden. Son opciones ágiles para vender con menos requisitos, moverte entre mostrador, entregas o redes, y activar cobros sin un proceso bancario pesado.',
+        ['Mercado Pago Point', 'Clip', 'NetPay', 'Inicio rápido']
+      ],
+      hibrida: [
+        'Recomendación: modelo híbrido',
+        'Revisa Getnet y Konfío como opciones intermedias: combinan tecnología moderna con evaluación más formal, contrato y condiciones útiles para negocios que ya están creciendo.',
+        ['Getnet', 'Konfío', 'Negocio en crecimiento', 'Contrato claro']
+      ],
+      banca: [
+        'Recomendación: TPV bancaria',
+        'Compara BBVA TPV, Banorte TPV y Citibanamex. Puede convenirte si ya tienes RFC, cuenta, ventas constantes y buscas negociar mejores condiciones revisando renta, mínimos y tiempos de depósito.',
+        ['BBVA TPV', 'Banorte TPV', 'Citibanamex', 'Volumen estable']
+      ]
     }[winner];
   };
 
-  buildProgress();
-  showStep(0);
-  renderProgress();
-
-  form.addEventListener('change', (event) => {
-    if (!event.target.matches('input[type="radio"]')) return;
-    window.requestAnimationFrame(renderProgress);
-    const card = event.target.closest('.q-card');
-    const index = questionCards.indexOf(card);
-    if (index >= 0 && index < questionCards.length - 1) {
-      setTimeout(() => {
-        showStep(index + 1);
-        renderProgress();
-      }, 180);
-    }
-  });
-
-  const back = document.getElementById('diagnosticBack');
-  if (back) back.addEventListener('click', () => {
-    showStep(currentStep - 1);
-    renderProgress();
-  });
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  const showRecommendation = () => {
     renderProgress();
 
     const missingIndex = requiredNames.findIndex((name) => !form.querySelector(`input[name="${name}"]:checked`));
@@ -226,6 +248,45 @@
     tags.innerHTML = result[2].map((tag) => `<span>${tag}</span>`).join('');
     wa.href = 'https://wa.me/529511825881?text=' + encodeURIComponent('Hola, hice el diagnóstico en Soluciones de Cobro. Resultado: ' + result[0]);
     res.classList.add('show');
-    res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (!hasShownResult) {
+      hasShownResult = true;
+      setTimeout(() => res.scrollIntoView({ behavior: 'smooth', block: 'center' }), 220);
+    }
+  };
+
+  buildProgress();
+  showStep(0);
+  renderProgress();
+
+  form.addEventListener('change', (event) => {
+    if (!event.target.matches('input[type="radio"]')) return;
+    hasShownResult = false;
+    const card = event.target.closest('.q-card');
+    const index = questionCards.indexOf(card);
+
+    window.requestAnimationFrame(() => {
+      renderProgress();
+      if (answeredCount() === total) {
+        showRecommendation();
+        return;
+      }
+      if (index >= 0 && index < questionCards.length - 1) {
+        setTimeout(() => {
+          showStep(index + 1);
+          renderProgress();
+        }, 180);
+      }
+    });
+  });
+
+  const back = document.getElementById('diagnosticBack');
+  if (back) back.addEventListener('click', () => {
+    showStep(currentStep - 1);
+    renderProgress();
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    showRecommendation();
   });
 })();
