@@ -4,6 +4,10 @@
     .brand-logo{width:142px!important;height:92px!important;}
     .hero-compact{padding-top:54px!important;padding-bottom:54px!important;}
     .hero-compact .hero-inner{gap:42px!important;}
+    .photo-card{overflow:hidden;background:#fff!important;}
+    .photo-card>img{width:100%;height:100%;min-height:440px;object-fit:cover;display:block;border-radius:inherit;}
+    .hero-photo-card{box-shadow:0 26px 64px rgba(7,29,54,.16)!important;}
+    .hero-photo-card .note-card{backdrop-filter:blur(10px);}
     .sales-impact{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:stretch;margin:0 0 54px;}
     .impact-copy,.impact-metric{border:1px solid #cfe4f7;border-radius:24px;background:#fff;box-shadow:0 18px 44px rgba(7,29,54,.08);}
     .impact-copy{padding:34px;background:linear-gradient(135deg,#fff,#f2fbff 68%,#fff8dc);}
@@ -17,21 +21,29 @@
     .media-feature-grid{align-items:stretch;}
     .media-card{position:relative;overflow:hidden;min-height:330px;padding:28px!important;display:flex;flex-direction:column;justify-content:flex-end;color:#fff!important;background:#071d36!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 22px 50px rgba(7,29,54,.16)!important;transition:transform .22s ease,box-shadow .22s ease;}
     .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.06);transform:scale(1.03);transition:transform .35s ease,filter .35s ease;}
-    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.08),rgba(7,29,54,.74) 58%,rgba(7,29,54,.94));}
+    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.12),rgba(7,29,54,.72) 58%,rgba(7,29,54,.94));}
     .media-card:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(7,29,54,.2)!important;}
     .media-card:hover:before{transform:scale(1.08);filter:saturate(1.1) blur(1px);}
     .media-card h3,.media-card p,.media-card .icon{position:relative;z-index:1;}
     .media-card h3{color:#fff!important;font-size:25px;}
     .media-card p{color:#eaf6ff!important;font-size:17px;line-height:1.55;margin-bottom:0;}
     .media-card .icon{width:62px;height:62px;font-size:26px;color:#fff;box-shadow:0 14px 30px rgba(7,29,54,.26);margin-bottom:auto;}
-    .media-hardware:before{background-image:url('assets/Smartpoint2.webp');background-position:center 38%;}
-    .media-info:before{background-image:url('assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.png');}
-    .media-compare:before{background-image:url('assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/4formasdecobrar.png');}
-    .media-growth:before{background-image:url('assets/multi-mlm-hero.png');}
+    .media-hardware:before{background-image:url('assets/hero/catalogo-terminales.png');background-position:center 46%;}
+    .media-info:before{background-image:url('assets/hero/asesoria-personalizada.png');}
+    .media-compare:before{background-image:url('assets/hero/comparativa-soluciones.png');}
+    .media-growth:before{background-image:url('assets/hero/diagnostico-cobro.png');}
     .icon-terminal{background:linear-gradient(135deg,#0073e6,#19aeea)!important;}
     .icon-info{background:linear-gradient(135deg,#18a058,#25D366)!important;}
     .icon-compare{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
     .icon-growth{background:linear-gradient(135deg,#ffd23f,#f59e0b)!important;color:#071d36!important;}
+    .advisory-band{background:linear-gradient(135deg,#071d36,#075fb8)!important;}
+    .advice-split{align-items:center;}
+    .advice-photo{margin:24px 0 0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.24);box-shadow:0 22px 50px rgba(0,0,0,.18);}
+    .advice-photo img{width:100%;height:280px;object-fit:cover;display:block;}
+    .advice-list .list-item{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.22)!important;backdrop-filter:blur(10px);}
+    .diagnostic-with-image{grid-template-columns:.82fr 1.18fr!important;}
+    .diagnostic-visual{margin:22px 0 0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.2);box-shadow:0 22px 42px rgba(0,0,0,.14);}
+    .diagnostic-visual img{width:100%;height:260px;object-fit:cover;display:block;}
     .diagnostic-stepper form{position:relative;}
     .diagnostic-stepper .diagnostic-progress{position:sticky;top:104px;z-index:10;}
     .step-mode{display:block;min-height:360px;}
@@ -47,19 +59,30 @@
     @keyframes questionIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
     @keyframes resultIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .payment-band{background:linear-gradient(135deg,#fff,#f3fbff 68%,#fff8dd)!important;}
-    .payment-cloud{grid-template-columns:repeat(6,minmax(132px,1fr))!important;gap:18px!important;}
+    .payment-cloud{grid-template-columns:repeat(auto-fit,minmax(132px,1fr))!important;gap:18px!important;}
     .payment-cloud .logo-tile{min-height:118px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06);background:#fff;}
     .payment-cloud .logo-tile .brand-mask{width:108px!important;height:62px!important;}
-    .payment-cloud .logo-tile img{max-width:124px!important;max-height:66px!important;}
+    .payment-cloud .logo-tile img{max-width:122px!important;max-height:64px!important;width:auto;height:auto;object-fit:contain;}
+    .expanded-payment-cloud{margin-top:28px;}
+    .terminal-hero{background:linear-gradient(135deg,#eaf8ff,#fff 60%,#fff8dd)!important;}
+    .terminal-hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:34px;align-items:center;}
+    .terminal-hero-visual{border-radius:28px;overflow:hidden;border:1px solid #cfe4f7;background:#fff;box-shadow:0 24px 60px rgba(7,29,54,.12);}
+    .terminal-hero-visual img{display:block;width:100%;height:460px;object-fit:cover;}
+    .compare-hero-inner{grid-template-columns:.95fr 1.05fr!important;align-items:center;}
+    .compare-hero-visual{border-radius:28px;overflow:hidden;border:1px solid #cfe4f7;background:#fff;box-shadow:0 24px 60px rgba(7,29,54,.12);}
+    .compare-hero-visual img{display:block;width:100%;height:440px;object-fit:cover;}
     .article-hero-image img,.article-image img{height:auto!important;max-height:none!important;object-fit:contain!important;background:#fff;}
     @media(max-width:900px){
       .sales-impact{grid-template-columns:1fr;}
       .media-feature-grid{grid-template-columns:1fr 1fr!important;}
+      .diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner{grid-template-columns:1fr!important;}
+      .terminal-hero-visual img,.compare-hero-visual img{height:auto;max-height:520px;object-fit:contain;}
     }
     @media(max-width:680px){
       .brand-logo{width:150px!important;height:96px!important;}
       .hero-compact{padding-top:36px!important;padding-bottom:38px!important;}
       .hero-compact h1{font-size:clamp(50px,15vw,68px)!important;}
+      .photo-card>img{min-height:330px;}
       .nav{transition:min-height .52s ease,padding .52s ease !important;}
       .brand,.menu{transition:max-height .58s ease,opacity .44s ease,transform .52s ease !important;}
       .header-actions{transition:margin .52s ease !important;}
@@ -68,14 +91,16 @@
       .impact-copy p{font-size:17px;}
       .media-feature-grid{grid-template-columns:1fr!important;}
       .media-card{min-height:280px;}
+      .advice-photo img,.diagnostic-visual img{height:auto;}
       .diagnostic-stepper .diagnostic-progress{top:78px;}
       .step-mode{min-height:390px;}
       .step-mode .q-card{padding:22px;}
       .step-mode .q-title{font-size:21px;}
       .step-mode .option span{font-size:16px;}
       .diagnostic-nav{display:grid;grid-template-columns:1fr;}
-      .payment-cloud{grid-template-columns:repeat(2,1fr)!important;}
+      .payment-cloud{grid-template-columns:repeat(2,1fr)!important;gap:12px!important;}
       .payment-cloud .logo-tile{min-height:104px;}
+      .payment-cloud .logo-tile img{max-width:106px!important;max-height:58px!important;}
     }
   `;
   document.head.appendChild(smoothStyle);
