@@ -1,7 +1,28 @@
 (() => {
   const GA_MEASUREMENT_ID = 'G-49P7XY0Z7W';
+  const CONSENT_KEY = 'sdc_cookie_consent';
 
-  if (!window.__solucionesCobroAnalyticsLoaded) {
+  const getConsent = () => {
+    try {
+      return window.localStorage.getItem(CONSENT_KEY);
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const setConsent = (value) => {
+    try {
+      window.localStorage.setItem(CONSENT_KEY, value);
+    } catch (error) {
+      // Si el navegador bloquea localStorage, seguimos sin romper la pagina.
+    }
+  };
+
+  const hasAnalyticsConsent = () => getConsent() === 'accepted';
+
+  const loadAnalytics = () => {
+    if (!hasAnalyticsConsent() || window.__solucionesCobroAnalyticsLoaded) return;
+
     window.__solucionesCobroAnalyticsLoaded = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
@@ -16,10 +37,12 @@
       page_title: document.title,
       page_path: window.location.pathname + window.location.search
     });
-  }
+  };
+
+  if (hasAnalyticsConsent()) loadAnalytics();
 
   const trackEvent = (eventName, params = {}) => {
-    if (typeof window.gtag !== 'function') return;
+    if (!hasAnalyticsConsent() || typeof window.gtag !== 'function') return;
     window.gtag('event', eventName, {
       ...params,
       page_location: window.location.href,
@@ -136,6 +159,13 @@
     .compare-hero-visual img{display:block;width:100%;height:440px;object-fit:cover;}
     .article-hero-image img,.article-image img{height:auto!important;max-height:none!important;object-fit:contain!important;background:#fff;}
 
+    .cookie-banner{position:fixed;left:20px;right:20px;bottom:20px;z-index:9999;display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;max-width:1120px;margin:auto;padding:18px 20px;border:1px solid #cfe4f7;border-radius:18px;background:rgba(255,255,255,.96);box-shadow:0 24px 60px rgba(7,29,54,.18);backdrop-filter:blur(14px);}
+    .cookie-banner strong{display:block;color:#071d36;font-size:18px;margin-bottom:4px;}
+    .cookie-banner p{margin:0;color:#53687f;line-height:1.45;font-size:15px;}
+    .cookie-banner a{font-weight:900;color:#0073e6;text-decoration:none;white-space:nowrap;}
+    .cookie-actions{display:flex;gap:10px;}
+    .cookie-actions .btn{height:46px;padding:0 18px;font-size:15px;}
+
     @media(max-width:900px){
       .sales-impact{grid-template-columns:1fr;}
       .media-feature-grid{grid-template-columns:1fr 1fr!important;}
@@ -193,9 +223,70 @@
       .payment-cloud .logo-tile img{max-width:108px!important;max-height:60px!important;}
       .final-cta{padding:50px 0!important;}
       .final-card{padding:22px;}
+      .cookie-banner{grid-template-columns:1fr;left:12px;right:12px;bottom:12px;padding:16px;}
+      .cookie-actions{display:grid;grid-template-columns:1fr 1fr;}
+      .cookie-banner a{white-space:normal;}
     }
   `;
   document.head.appendChild(smoothStyle);
+
+  const privacyHref = window.location.pathname.includes('/blog/') ? '../privacidad.html' : 'privacidad.html';
+
+  const injectPrivacyLinks = () => {
+    document.querySelectorAll('footer a, .footer a').forEach(() => {});
+    const footers = Array.from(document.querySelectorAll('footer, .footer'));
+    footers.forEach((footer) => {
+      if (footer.querySelector(`a[href="${privacyHref}"]`)) return;
+      const link = document.createElement('a');
+      link.href = privacyHref;
+      link.textContent = 'Privacidad';
+      link.style.marginLeft = '14px';
+      link.style.fontWeight = '900';
+      const target = footer.querySelector('.footer-links, .links, nav') || footer;
+      target.appendChild(link);
+    });
+  };
+
+  const injectCookieBanner = () => {
+    if (getConsent()) return;
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Aviso de cookies');
+    banner.innerHTML = `
+      <div>
+        <strong>Usamos cookies de analisis</strong>
+        <p>Usamos Google Analytics para saber que secciones ayudan mas y mejorar la pagina. No vendemos tus datos.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-white" type="button" data-cookie-action="rejected">Rechazar</button>
+        <button class="btn btn-primary" type="button" data-cookie-action="accepted">Aceptar</button>
+      </div>
+      <a href="${privacyHref}">Aviso de privacidad</a>
+    `;
+    document.body.appendChild(banner);
+
+    banner.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-cookie-action]');
+      if (!button) return;
+      const value = button.getAttribute('data-cookie-action');
+      setConsent(value);
+      if (value === 'accepted') loadAnalytics();
+      banner.remove();
+    });
+  };
+
+  const initPrivacy = () => {
+    injectPrivacyLinks();
+    injectCookieBanner();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPrivacy);
+  } else {
+    initPrivacy();
+  }
 
   const header = document.querySelector('.header');
   if (header) {
@@ -244,6 +335,7 @@
     else if (href.includes('compara.html')) trackEvent('click_comparativa', payload);
     else if (href.includes('terminales.html')) trackEvent('click_terminales', payload);
     else if (href.includes('blog')) trackEvent('click_blog', payload);
+    else if (href.includes('privacidad.html')) trackEvent('click_privacidad', payload);
   });
 
   const form = document.getElementById('diagnosticForm');
@@ -338,25 +430,25 @@
     return {
       rapida: {
         key: 'terminal_moderna',
-        title: 'Recomendación: terminal moderna',
-        text: 'Empieza por Mercado Pago Point; después compara Clip y NetPay. Es la ruta más ágil si buscas menos trámites, movilidad e inicio rápido.',
-        tags: ['Mercado Pago Point', 'Clip', 'NetPay', 'Inicio rápido'],
+        title: 'Recomendacion: terminal moderna',
+        text: 'Empieza por Mercado Pago Point; despues compara Clip y NetPay. Es la ruta mas agil si buscas menos tramites, movilidad e inicio rapido.',
+        tags: ['Mercado Pago Point', 'Clip', 'NetPay', 'Inicio rapido'],
         ctaText: 'Comprar terminal',
         ctaHref: buyLink,
         ctaClass: 'btn btn-primary'
       },
       hibrida: {
         key: 'modelo_hibrido',
-        title: 'Recomendación: modelo híbrido',
-        text: 'Revisa opciones como Getnet o Konfío. Pueden servir si ya vendes más, quieres formalidad y buscas condiciones intermedias.',
-        tags: ['Getnet', 'Konfío', 'Negocio en crecimiento', 'Contrato claro'],
+        title: 'Recomendacion: modelo hibrido',
+        text: 'Revisa opciones como Getnet o Konfio. Pueden servir si ya vendes mas, quieres formalidad y buscas condiciones intermedias.',
+        tags: ['Getnet', 'Konfio', 'Negocio en crecimiento', 'Contrato claro'],
         ctaText: 'Ver opciones del mercado',
         ctaHref: compareLink,
         ctaClass: 'btn btn-primary'
       },
       banca: {
         key: 'tpv_bancaria',
-        title: 'Recomendación: TPV bancaria',
+        title: 'Recomendacion: TPV bancaria',
         text: 'Compara BBVA, Banorte y Citibanamex. Puede convenirte si tienes RFC, cuenta, ventas constantes y buscas negociar condiciones.',
         tags: ['BBVA TPV', 'Banorte TPV', 'Citibanamex', 'Volumen estable'],
         ctaText: 'Ver comparativa bancaria',
