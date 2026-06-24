@@ -4,66 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Terminales de cobro | Soluciones de Cobro</title>
-  <meta name="description" content="Compara Point Smart 2, Point Air y Point Mini con asesoría para elegir la terminal correcta para tu negocio.">
+  <meta name="description" content="Compra Point Smart 2, Point Air o Point Mini con una guía clara para elegir la terminal de cobro adecuada para tu negocio.">
   <link rel="icon" type="image/png" href="assets/logo-soluciones-de-cobro%201x1.png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .terminales-page main{background:#fff}
-    .terminal-page-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#eaf8ff 0%,#f8fcff 58%,#fff7d6 100%);border-bottom:1px solid var(--line)}
-    .terminal-page-hero:before{content:"";position:absolute;inset:auto -12% -30% auto;width:520px;height:520px;border-radius:999px;background:rgba(25,174,234,.22);filter:blur(16px)}
-    .terminal-hero-grid{position:relative;display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:center;max-width:var(--max);margin:auto;padding:84px 20px 78px}
-    .terminal-page-hero h1{font-size:clamp(46px,6.2vw,86px);line-height:.98;margin:0 0 20px;color:var(--ink)}
-    .terminal-page-hero .lead{max-width:720px;color:#354b61}
-    .terminal-hero-media{position:relative;border-radius:34px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 30px 70px rgba(7,29,54,.13)}
-    .terminal-hero-media img{display:block;width:100%;height:500px;object-fit:cover;background:#fff}
-    .payment-approved{position:absolute;right:26px;bottom:26px;display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.92);border:1px solid rgba(207,228,247,.9);border-radius:20px;padding:16px 20px;box-shadow:0 18px 38px rgba(7,29,54,.16);backdrop-filter:blur(12px)}
-    .payment-approved span{display:grid;place-items:center;width:46px;height:46px;border-radius:999px;background:#18a058;color:#fff;font-size:24px;font-weight:950}.payment-approved strong{display:block;font-size:18px;color:var(--ink)}.payment-approved small{color:var(--muted);font-weight:800}
-    .terminal-products{background:#fff;padding-top:72px}
-    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section-head h2{margin:0}.section-head p{max-width:560px;margin:0;color:var(--muted);font-size:18px;line-height:1.55}
-    .product-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
-    .terminal-card{position:relative;overflow:hidden;border:1px solid #d9e8f4;border-radius:28px;background:linear-gradient(180deg,#fff,#f8fbff);box-shadow:0 18px 46px rgba(7,29,54,.08);display:flex;flex-direction:column;min-height:760px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}.terminal-card:hover{transform:translateY(-5px);box-shadow:0 28px 64px rgba(7,29,54,.14);border-color:#19aeea}.terminal-card.featured{border:3px solid #19aeea}.terminal-ribbon{position:absolute;top:0;right:0;z-index:2;background:#19aeea;color:#fff;font-weight:950;text-transform:uppercase;letter-spacing:.04em;border-radius:0 0 0 18px;padding:12px 18px;font-size:13px}.terminal-ribbon.yellow{background:#ffd23f;color:#071d36}.terminal-shot{min-height:300px;padding:46px 28px 20px;display:grid;place-items:center;background:radial-gradient(circle at 50% 18%,#fff9cf,transparent 42%)}.terminal-shot img{max-width:100%;max-height:270px;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(7,29,54,.18))}.terminal-body{padding:0 28px 30px;display:flex;flex-direction:column;flex:1}.terminal-body h2{font-size:38px;margin:0 0 6px;color:var(--ink)}.terminal-sub{font-size:21px;color:#33485e;margin:0 0 16px;font-weight:850}.offer-pill{display:inline-flex;align-items:center;gap:8px;width:max-content;background:#ff4b4b;color:#fff;border-radius:999px;padding:8px 12px;font-weight:900;margin:0 0 18px}.terminal-body p{font-size:17px;line-height:1.5;color:#53687f;margin:0 0 18px}.feature-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.feature-tags span{display:inline-flex;align-items:center;background:#eef3f8;color:#34475b;border-radius:8px;padding:8px 10px;font-size:14px;font-weight:850}.terminal-price{margin-top:auto;padding-top:10px}.price-row{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}.old-price{color:#7b8ca0;text-decoration:line-through;font-size:20px;font-weight:800}.new-price{font-size:42px;line-height:.95;color:#071d36;font-weight:950}.monthly{display:block;margin-top:8px;color:#53687f;font-weight:800}.terminal-card .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.terminal-card .btn{height:50px;padding:0 16px;font-size:16px}.terminal-note{font-size:14px;color:#6a7a8e;line-height:1.55;margin:22px 0 0}
-    .rate-strip{background:linear-gradient(135deg,#071d36,#005fc1);color:#fff;padding:58px 0}.rate-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center}.rate-card{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);border-radius:28px;padding:28px;box-shadow:0 20px 44px rgba(0,0,0,.14)}.rate-card h2,.rate-card h3{color:#fff}.rate-card p{color:#dcecff}.rate-number{display:flex;align-items:flex-end;gap:14px;margin:14px 0}.rate-number strong{font-size:86px;line-height:.85;color:#ffd23f}.rate-number span{font-size:24px;font-weight:950;color:#fff}.rate-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.rate-benefits article{border:1px solid rgba(255,255,255,.2);border-radius:20px;background:rgba(255,255,255,.1);padding:20px}.rate-benefits strong{display:block;font-size:18px;color:#fff;margin-bottom:8px}.rate-benefits small{color:#dcecff;line-height:1.45}
-    .selector-band{background:#f5f9fc}.selector-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.selector-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 14px 32px rgba(7,29,54,.06)}.selector-card .icon{width:56px;height:56px;border-radius:16px;margin-bottom:18px}.selector-card h3{font-size:22px;margin-bottom:10px}.selector-card p{font-size:16px;color:#53687f}
-    .trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.trust-card{border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 18px 44px rgba(7,29,54,.08)}.trust-card img{width:100%;height:220px;object-fit:cover;display:block}.trust-card div{padding:24px}.trust-card h3{font-size:24px;margin:0 0 10px}.trust-card p{font-size:16px;color:#53687f;margin:0}
-    .terminal-faq details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:12px}.terminal-faq summary{font-size:20px;font-weight:950;color:var(--ink);cursor:pointer}.terminal-faq p{color:#53687f;line-height:1.55}
-    @media(max-width:980px){.terminal-hero-grid,.rate-grid{grid-template-columns:1fr}.product-showcase{grid-template-columns:1fr 1fr}.selector-grid{grid-template-columns:1fr 1fr}.trust-grid{grid-template-columns:1fr}.terminal-hero-media img{height:auto}}
-    @media(max-width:680px){.terminal-hero-grid{padding:42px 20px 46px;gap:26px}.terminal-page-hero h1{font-size:43px}.terminal-page-hero .lead{font-size:18px}.terminal-hero-media{border-radius:24px}.terminal-hero-media img{height:330px}.payment-approved{left:16px;right:16px;bottom:16px;padding:12px 14px}.section-head{display:block}.section-head p{margin-top:12px}.product-showcase,.selector-grid,.rate-benefits{grid-template-columns:1fr}.terminal-card{min-height:auto;border-radius:22px}.terminal-shot{min-height:240px;padding:42px 20px 16px}.terminal-shot img{max-height:220px}.terminal-body{padding:0 22px 24px}.terminal-body h2{font-size:32px}.terminal-card .actions{grid-template-columns:1fr}.new-price{font-size:38px}.rate-number strong{font-size:70px}.trust-card img{height:190px}}
+    .terminales-page main{background:#fff;overflow:hidden}
+    .terminales-page .eyebrow{margin-bottom:16px}
+    .terminal-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#eaf8ff 0%,#f6fcff 54%,#fff4bd 100%);border-bottom:1px solid var(--line)}
+    .terminal-hero:before{content:"";position:absolute;right:-180px;top:80px;width:520px;height:520px;border-radius:999px;background:rgba(25,174,234,.2);filter:blur(10px)}
+    .terminal-hero-grid{position:relative;max-width:var(--max);margin:auto;padding:76px 20px 70px;display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}
+    .terminal-hero h1{font-size:clamp(44px,6.6vw,82px);line-height:.98;margin:0 0 20px;color:var(--ink)}
+    .terminal-hero .lead{max-width:680px;color:#354b61;font-size:21px}
+    .terminal-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .hero-product-stage{position:relative;min-height:500px;border-radius:34px;background:radial-gradient(circle at 52% 45%,#fff 0,#fff 34%,rgba(255,210,63,.34) 35%,rgba(255,210,63,.1) 58%,transparent 70%);display:grid;place-items:center;overflow:hidden}
+    .hero-product-stage:after{content:"";position:absolute;left:10%;right:10%;bottom:46px;height:42px;border-radius:50%;background:rgba(7,29,54,.16);filter:blur(18px)}
+    .hero-product-stage img{position:relative;z-index:1;max-height:470px;object-fit:contain;filter:drop-shadow(0 28px 32px rgba(7,29,54,.18))}
+    .hero-floating-card{position:absolute;left:28px;bottom:28px;z-index:2;display:flex;align-items:center;gap:14px;width:min(360px,calc(100% - 56px));padding:16px 18px;border:1px solid rgba(255,255,255,.72);border-radius:20px;background:rgba(255,255,255,.86);box-shadow:0 22px 44px rgba(7,29,54,.14);backdrop-filter:blur(14px)}
+    .hero-floating-card span{display:grid;place-items:center;width:44px;height:44px;border-radius:999px;background:#18a058;color:#fff;font-weight:950;font-size:24px}.hero-floating-card strong{display:block;color:var(--ink);font-size:18px}.hero-floating-card small{display:block;color:var(--muted);font-weight:800;line-height:1.25}
+    .terminal-nav-strip{background:#fff;border-bottom:1px solid var(--line)}
+    .terminal-nav-inner{max-width:var(--max);margin:auto;padding:14px 20px;display:flex;gap:10px;overflow:auto;scrollbar-width:none}.terminal-nav-inner::-webkit-scrollbar{display:none}.terminal-nav-inner a{white-space:nowrap;border:1px solid #cfe4f7;border-radius:999px;padding:9px 14px;font-weight:900;color:var(--blue-dark);background:#f7fcff}.terminal-nav-inner a:hover{background:#eaf8ff}
+    .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}.section-head h2{margin:0}.section-head p{max-width:560px;margin:0;color:var(--muted);font-size:18px;line-height:1.55}
+    .products-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+    .terminal-card{position:relative;overflow:hidden;border:1px solid #d9e8f4;border-radius:28px;background:#fff;box-shadow:0 18px 48px rgba(7,29,54,.08);display:flex;flex-direction:column;min-height:790px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}.terminal-card:hover{transform:translateY(-5px);box-shadow:0 28px 64px rgba(7,29,54,.14);border-color:#19aeea}.terminal-card.featured{border:3px solid #19aeea}.terminal-ribbon{position:absolute;top:0;right:0;z-index:2;border-radius:0 0 0 18px;background:#19aeea;color:#fff;padding:11px 17px;font-size:13px;font-weight:950;text-transform:uppercase;letter-spacing:.04em}.terminal-ribbon.yellow{background:#ffd23f;color:#071d36}.terminal-shot{height:330px;padding:46px 26px 18px;display:grid;place-items:center;background:linear-gradient(180deg,#f8fbff,#fff)}.terminal-card.featured .terminal-shot{background:radial-gradient(circle at 50% 34%,#fff8c9 0,#fff 44%,#f8fbff 100%)}.terminal-shot img{max-width:100%;max-height:285px;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(7,29,54,.18))}.terminal-body{padding:0 28px 30px;display:flex;flex-direction:column;flex:1}.terminal-body h2{font-size:38px;line-height:1.02;margin:0 0 4px}.terminal-sub{font-size:21px;color:#33485e;margin:0 0 16px;font-weight:850}.offer-pill{display:inline-flex;align-items:center;gap:8px;width:max-content;background:#ef4444;color:#fff;border-radius:999px;padding:8px 12px;font-weight:900;margin:0 0 18px}.terminal-body p{font-size:17px;line-height:1.5;color:#53687f;margin:0 0 18px}.feature-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.feature-tags span{display:inline-flex;align-items:center;background:#eef3f8;color:#34475b;border-radius:8px;padding:8px 10px;font-size:14px;font-weight:850}.terminal-price{margin-top:auto;padding-top:8px}.price-row{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}.old-price{color:#7b8ca0;text-decoration:line-through;font-size:20px;font-weight:800}.new-price{font-size:44px;line-height:.95;color:#071d36;font-weight:950}.monthly{display:block;margin-top:8px;color:#53687f;font-weight:800}.terminal-card .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.terminal-card .btn{height:50px;padding:0 16px;font-size:16px}.terminal-note{font-size:14px;color:#6a7a8e;line-height:1.55;margin:22px 0 0}
+    .rate-panel{background:linear-gradient(135deg,#071d36 0%,#0060c8 72%,#19aeea 100%);color:#fff}.rate-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center}.rate-main{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.22);border-radius:30px;padding:30px;background:rgba(255,255,255,.1);box-shadow:0 24px 52px rgba(0,0,0,.16);backdrop-filter:blur(10px)}.rate-main h2,.rate-main h3{color:#fff}.rate-main p{color:#dcecff}.rate-number{display:flex;align-items:flex-end;gap:12px;margin:14px 0}.rate-number strong{font-size:clamp(64px,7vw,94px);line-height:.86;color:#ffd23f}.rate-number span{font-size:24px;font-weight:950;color:#fff}.rate-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.rate-benefits article{border:1px solid rgba(255,255,255,.2);border-radius:22px;background:rgba(255,255,255,.12);padding:20px;min-height:150px}.rate-benefits strong{display:block;font-size:19px;color:#fff;margin-bottom:8px}.rate-benefits small{display:block;color:#dcecff;line-height:1.45;font-size:15px}
+    .needs-section{background:#f5f9fc}.needs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.need-card{position:relative;overflow:hidden;min-height:265px;border:1px solid #d9e8f4;border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;background:#071d36;color:#fff;box-shadow:0 16px 38px rgba(7,29,54,.08)}.need-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;opacity:.72;filter:saturate(1.05)}.need-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.08),rgba(7,29,54,.88))}.need-card h3,.need-card p,.need-card .need-icon{position:relative;z-index:1}.need-card h3{color:#fff;font-size:22px;margin:0 0 8px}.need-card p{color:#eaf6ff;margin:0;font-size:15px;line-height:1.5}.need-icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:auto;background:linear-gradient(135deg,#0073e6,#19aeea);font-weight:950;font-size:24px;box-shadow:0 12px 24px rgba(0,0,0,.2)}.need-fixed:before{background-image:url('assets/Smartpoint2.webp');background-size:contain;background-repeat:no-repeat;background-color:#eaf8ff}.need-mobile:before{background-image:url('assets/Point-air.webp');background-size:contain;background-repeat:no-repeat;background-color:#fff8dc}.need-start:before{background-image:url('assets/point%20mini.webp');background-size:contain;background-repeat:no-repeat;background-color:#f8fbff}.need-advice:before{background-image:url('assets/hero/hero-principal.png')}
+    .benefit-layout{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.benefit-photo{border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 58px rgba(7,29,54,.12);background:#fff}.benefit-photo img{width:100%;height:520px;object-fit:cover}.benefit-list{display:grid;gap:16px}.benefit-item{display:grid;grid-template-columns:58px 1fr;gap:16px;align-items:start;border:1px solid #d9e8f4;border-radius:20px;padding:18px;background:#fff;box-shadow:0 12px 28px rgba(7,29,54,.05)}.benefit-item h3{font-size:22px;margin:0 0 4px}.benefit-item p{margin:0;color:#53687f}.benefit-icon{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:#eaf8ff;color:#0073e6;font-weight:950;font-size:23px}.benefit-item:nth-child(2) .benefit-icon{background:#fff3c7;color:#071d36}.benefit-item:nth-child(3) .benefit-icon{background:#e9fbf0;color:#18a058}
+    .payment-section h2{max-width:850px}.payment-cloud{grid-template-columns:repeat(auto-fit,minmax(138px,1fr));gap:18px}.payment-cloud .logo-tile{min-height:122px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06)}.payment-cloud .logo-tile img{max-width:124px;max-height:66px;width:auto;height:auto;object-fit:contain}.payment-cloud .logo-tile .brand-mask{width:108px;height:62px}
+    .terminal-faq details{background:#fff;border-top:1px solid #cbd9e6;padding:20px 4px}.terminal-faq details:last-child{border-bottom:1px solid #cbd9e6}.terminal-faq summary{cursor:pointer;font-size:20px;font-weight:950;color:var(--ink);list-style:none}.terminal-faq summary::-webkit-details-marker{display:none}.terminal-faq summary:after{content:"+";float:right;color:var(--blue);font-size:26px;line-height:1}.terminal-faq details[open] summary:after{content:"-"}.terminal-faq p{max-width:900px;color:#53687f;line-height:1.55}
+    .terminal-final{background:linear-gradient(135deg,#071d36,#075fb8);color:#fff}.terminal-final h2,.terminal-final h3{color:#fff}.terminal-final p{color:#dcecff}.terminal-final-grid{display:grid;grid-template-columns:1fr .8fr;gap:28px;align-items:center}.terminal-final-card{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);border-radius:24px;padding:26px;box-shadow:0 22px 48px rgba(0,0,0,.16);backdrop-filter:blur(10px)}
+    @media(max-width:980px){.terminal-hero-grid,.rate-grid,.benefit-layout,.terminal-final-grid{grid-template-columns:1fr}.products-showcase{grid-template-columns:1fr 1fr}.needs-grid{grid-template-columns:1fr 1fr}.benefit-photo img{height:auto}.hero-product-stage{min-height:420px}.hero-product-stage img{max-height:400px}}
+    @media(max-width:680px){.terminal-hero-grid{padding:38px 20px 46px;gap:24px}.terminal-hero h1{font-size:42px}.terminal-hero .lead{font-size:18px;line-height:1.5}.terminal-hero-actions{display:grid;grid-template-columns:1fr;gap:10px}.hero-product-stage{min-height:360px;border-radius:24px}.hero-product-stage img{max-height:330px}.hero-floating-card{left:14px;right:14px;bottom:14px;width:auto;padding:12px 14px}.section-head{display:block}.section-head p{margin-top:12px}.products-showcase,.needs-grid,.rate-benefits{grid-template-columns:1fr}.terminal-card{min-height:auto;border-radius:22px}.terminal-shot{height:250px;padding:42px 20px 16px}.terminal-shot img{max-height:220px}.terminal-body{padding:0 22px 24px}.terminal-body h2{font-size:32px}.terminal-card .actions{grid-template-columns:1fr}.new-price{font-size:38px}.rate-main{padding:24px;border-radius:22px}.rate-number strong{font-size:64px}.benefit-item{grid-template-columns:50px 1fr}.benefit-icon{width:50px;height:50px}.payment-cloud{grid-template-columns:repeat(2,1fr);gap:12px}.payment-cloud .logo-tile{min-height:104px}.payment-cloud .logo-tile img{max-width:108px;max-height:60px}.terminal-final{padding-bottom:30px}}
   </style>
 </head>
 <body class="terminales-page">
   <header class="header"><div class="nav"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-soluciones-de-cobro%201x1.png" alt="Logo de Soluciones de Cobro"><span class="brand-name">Soluciones de Cobro <small>Venta y asesoría integral</small></span></a><nav class="menu"><a href="index.html">Inicio</a><a href="terminales.html">Terminales</a><a href="index.html#diagnostico">Diagnóstico</a><a href="compara.html">Compara</a><a href="blog.html">Blog</a></nav><div class="header-actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><div class="mobile-social"><a class="mini-social facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><span class="brand-mask" style="--logo:url('assets/logos/facebook.svg')"></span></a><a class="mini-social instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><span class="brand-mask" style="--logo:url('assets/logos/instagram.svg')"></span></a><a class="mini-social whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20asesoria%20para%20comprar%20una%20terminal." target="_blank" rel="noopener" aria-label="WhatsApp"><span class="brand-mask" style="--logo:url('assets/logos/whatsapp.svg')"></span></a></div></div></div></header>
 
   <main id="inicio">
-    <section class="terminal-page-hero">
+    <section class="terminal-hero">
       <div class="terminal-hero-grid">
         <div>
           <span class="eyebrow">Terminales Point</span>
-          <h1>Cobra rápido, seguro y sin complicarte.</h1>
-          <p class="lead">Elige entre Point Smart 2, Point Air y Point Mini según tu forma de vender: mostrador, movilidad, entregas, eventos o primeros cobros con tarjeta.</p>
-          <div class="actions"><a class="btn btn-primary" href="#productos">Elegir terminal</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20que%20me%20ayudes%20a%20elegir%20una%20terminal%20Point." target="_blank" rel="noopener">Pedir asesoría</a></div>
+          <h1>Cobra con tarjeta desde el primer día.</h1>
+          <p class="lead">Compara Point Smart 2, Point Air y Point Mini con una guía clara. La terminal ideal depende de tu negocio, tu movilidad, tus tickets y tu forma de vender.</p>
+          <div class="terminal-hero-actions"><a class="btn btn-primary" href="#productos">Ver terminales</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20que%20me%20ayudes%20a%20elegir%20una%20terminal%20Point." target="_blank" rel="noopener">Pedir asesoría</a></div>
         </div>
-        <figure class="terminal-hero-media">
+        <figure class="hero-product-stage">
           <img src="assets/multi-mlm-hero--b6703c46.png" alt="Terminales Point de Mercado Pago">
-          <figcaption class="payment-approved"><span>✓</span><div><strong>Pago aprobado</strong><small>cobros con tarjeta y medios digitales</small></div></figcaption>
+          <figcaption class="hero-floating-card"><span>✓</span><div><strong>Pago aprobado</strong><small>tarjetas, vales y medios digitales compatibles</small></div></figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section terminal-products" id="productos">
+    <nav class="terminal-nav-strip" aria-label="Secciones de terminales">
+      <div class="terminal-nav-inner"><a href="#productos">Modelos</a><a href="#tasa">Tasa y condiciones</a><a href="#guia">Cuál elegir</a><a href="#beneficios">Beneficios</a><a href="#medios">Medios de pago</a><a href="#faq-terminales">Preguntas</a></div>
+    </nav>
+
+    <section class="section" id="productos">
       <div class="section-head">
-        <div><span class="eyebrow">Modelos disponibles</span><h2>Compra tu terminal con asesoría.</h2></div>
-        <p>Precios, meses sin intereses y promociones pueden cambiar. Usa esta guía como referencia y confirma condiciones vigentes antes de comprar.</p>
+        <div><span class="eyebrow">Modelos disponibles</span><h2>Elige la terminal para tu operación.</h2></div>
+        <p>Estos precios son referencia promocional observada en la página oficial. Antes de comprar, confirma precio, meses, disponibilidad, envío y condiciones vigentes.</p>
       </div>
 
-      <div class="product-showcase">
+      <div class="products-showcase">
         <article class="terminal-card featured">
           <span class="terminal-ribbon">Más completa</span>
           <div class="terminal-shot"><img src="assets/Smartpoint2.webp" alt="Point Smart 2"></div>
           <div class="terminal-body">
             <h2>Point Smart 2</h2>
-            <p class="terminal-sub">Para negocios que quieren tickets físicos y operación completa.</p>
+            <p class="terminal-sub">La más completa para negocios con atención frecuente.</p>
             <span class="offer-pill">Oferta especial %</span>
-            <p>Cobra, imprime recibos y gestiona ventas desde una pantalla táctil. Buena opción para mostrador, restaurantes, tiendas y servicios con operación frecuente.</p>
+            <p>Cobra, imprime comprobantes y opera desde pantalla táctil. Buena opción para mostrador, restaurantes, tiendas y servicios con flujo constante.</p>
             <div class="feature-tags"><span>Imprime tickets</span><span>4G y WiFi</span><span>Pantalla táctil</span><span>Recibos digitales</span></div>
             <div class="terminal-price"><div class="price-row"><span class="old-price">$4,499</span><strong class="new-price">$549</strong></div><span class="monthly">o 6 pagos sin intereses*</span></div>
             <div class="actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20saber%20si%20Point%20Smart%202%20me%20conviene." target="_blank" rel="noopener">Preguntar</a></div>
@@ -75,9 +85,9 @@
           <div class="terminal-shot"><img src="assets/Point-air.webp" alt="Point Air"></div>
           <div class="terminal-body">
             <h2>Point Air</h2>
-            <p class="terminal-sub">Para cobrar con movilidad sin depender tanto del mostrador.</p>
+            <p class="terminal-sub">Práctica para cobrar fuera del mostrador.</p>
             <span class="offer-pill">Oferta especial %</span>
-            <p>Acepta pagos con 4G y WiFi. Funciona bien para entregas, eventos, servicios a domicilio y negocios que necesitan moverse.</p>
+            <p>Útil para entregas, eventos, consultorios, repartidores o servicios que se mueven. Pensada para cobrar con más independencia.</p>
             <div class="feature-tags"><span>4G y WiFi</span><span>Portátil</span><span>Recibos digitales</span><span>Batería práctica</span></div>
             <div class="terminal-price"><div class="price-row"><span class="old-price">$2,999</span><strong class="new-price">$249</strong></div><span class="monthly">o 12 pagos sin intereses*</span></div>
             <div class="actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20saber%20si%20Point%20Air%20me%20conviene." target="_blank" rel="noopener">Preguntar</a></div>
@@ -89,54 +99,61 @@
           <div class="terminal-shot"><img src="assets/point%20mini.webp" alt="Point Mini"></div>
           <div class="terminal-body">
             <h2>Point Mini</h2>
-            <p class="terminal-sub">La opción compacta para primeros cobros.</p>
+            <p class="terminal-sub">La compacta para primeros cobros.</p>
             <span class="offer-pill">Oferta especial %</span>
-            <p>Llévala en el bolsillo y cobra con tu celular. Ideal si quieres probar pagos con tarjeta sin invertir demasiado al inicio.</p>
+            <p>Conéctala a tu celular y empieza a cobrar con tarjeta. Ideal si quieres probar pagos digitales con una inversión inicial menor.</p>
             <div class="feature-tags"><span>Bluetooth</span><span>Ligera</span><span>Con celular</span><span>Compacta</span></div>
             <div class="terminal-price"><div class="price-row"><span class="old-price">$499</span><strong class="new-price">$109</strong></div><span class="monthly">o 3 pagos sin intereses*</span></div>
             <div class="actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20saber%20si%20Point%20Mini%20me%20conviene." target="_blank" rel="noopener">Preguntar</a></div>
           </div>
         </article>
       </div>
-      <p class="terminal-note">*Referencias tomadas de la página oficial de Mercado Pago Point. Promociones, precios, mensualidades, disponibilidad, tasas, tiempos de entrega y condiciones pueden cambiar sin previo aviso. Antes de comprar, revisa la información vigente del proveedor.</p>
+      <p class="terminal-note">*Información de referencia. Las marcas, precios, promociones, tasas, plazos, envíos, disponibilidad y requisitos pertenecen al proveedor correspondiente y pueden cambiar.</p>
     </section>
 
-    <section class="rate-strip">
+    <section class="rate-panel" id="tasa">
       <div class="section rate-grid">
-        <article class="rate-card">
-          <span class="eyebrow">Costo de cobro</span>
-          <h2>Tasa clara para ventas al contado.</h2>
+        <article class="rate-main">
+          <span class="eyebrow">Costo por venta</span>
+          <h2>Sin renta mensual y con tasa por transacción.</h2>
           <div class="rate-number"><strong>3.5%</strong><span>+ IVA</span></div>
-          <p>Mercado Pago publica esta tasa para cobros con débito y crédito al contado. Para pagos a meses, revisa tasas vigentes antes de ofrecer la opción.</p>
+          <p>Mercado Pago publica esta tasa para cobros al contado con débito y crédito. Los pagos a meses pueden manejar condiciones distintas.</p>
         </article>
         <div class="rate-benefits">
-          <article><strong>Sin renta mensual</strong><small>Pagas por transacción, no por tener la terminal.</small></article>
-          <article><strong>Menos trámites</strong><small>Puede ayudarte a empezar más rápido que una TPV bancaria tradicional.</small></article>
-          <article><strong>Dinero disponible</strong><small>El dinero llega a tu cuenta Mercado Pago según condiciones vigentes.</small></article>
+          <article><strong>Pagas cuando vendes</strong><small>No es una renta fija mensual por tener la terminal.</small></article>
+          <article><strong>Inicio más rápido</strong><small>Puede ser una ruta sencilla si aún no quieres trámites bancarios largos.</small></article>
+          <article><strong>Revisa antes de ofrecer MSI</strong><small>Meses sin intereses pueden cambiar el costo final para tu negocio.</small></article>
         </div>
       </div>
     </section>
 
-    <section class="section selector-band">
-      <div class="section-head"><div><span class="eyebrow">Guía rápida</span><h2>¿Cuál terminal te conviene?</h2></div><p>La mejor terminal depende de cómo cobras, dónde atiendes y qué comprobantes necesitas.</p></div>
-      <div class="selector-grid">
-        <article class="selector-card"><div class="icon icon-terminal" aria-hidden="true">▣</div><h3>Mostrador o local fijo</h3><p>Empieza revisando Point Smart 2 si necesitas tickets impresos y una operación más completa.</p></article>
-        <article class="selector-card"><div class="icon icon-growth" aria-hidden="true">↗</div><h3>Ventas en movimiento</h3><p>Point Air puede ser práctica para eventos, entregas, consultorios o servicios fuera del local.</p></article>
-        <article class="selector-card"><div class="icon icon-info" aria-hidden="true">$</div><h3>Primeros cobros</h3><p>Point Mini ayuda a iniciar con una opción compacta, especialmente si ya trabajas desde celular.</p></article>
-        <article class="selector-card"><div class="icon icon-compare" aria-hidden="true">↔</div><h3>¿Aún tienes dudas?</h3><p>Haz el diagnóstico o escríbeme por WhatsApp para revisar tu giro, volumen y forma de vender.</p></article>
+    <section class="section needs-section" id="guia">
+      <div class="section-head"><div><span class="eyebrow">Guía rápida</span><h2>¿Cuál terminal te conviene?</h2></div><p>No todas las terminales resuelven lo mismo. Elige por operación, no solo por precio.</p></div>
+      <div class="needs-grid">
+        <article class="need-card need-fixed"><div class="need-icon">1</div><h3>Local o mostrador</h3><p>Point Smart 2 si quieres pantalla, recibos impresos y operación más completa.</p></article>
+        <article class="need-card need-mobile"><div class="need-icon">2</div><h3>Movilidad</h3><p>Point Air si vendes en entregas, ferias, eventos o visitas a domicilio.</p></article>
+        <article class="need-card need-start"><div class="need-icon">3</div><h3>Primeros cobros</h3><p>Point Mini si quieres empezar con algo compacto y conectado a tu celular.</p></article>
+        <article class="need-card need-advice"><div class="need-icon">?</div><h3>Si tienes dudas</h3><p>Haz el diagnóstico o escríbeme para revisar giro, volumen, margen y necesidad de tickets.</p></article>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-head"><div><span class="eyebrow">Confianza</span><h2>Vende con más seguridad.</h2></div><p>Además del aparato, revisa soporte, garantía, contracargos, depósito y condiciones de uso.</p></div>
-      <div class="trust-grid">
-        <article class="trust-card"><img src="assets/hero/catalogo-terminales.png" alt="Comparación de opciones de cobro"><div><h3>Compara antes de comprar</h3><p>La terminal correcta debe encajar con tu operación, no solo con la promoción del momento.</p></div></article>
-        <article class="trust-card"><img src="assets/multi-mlm-hero--b6703c46.png" alt="Diagnóstico de solución de cobro"><div><h3>Decide con datos</h3><p>Revisamos requisitos, liquidez, margen y frecuencia de cobro para evitar compras impulsivas.</p></div></article>
-        <article class="trust-card"><img src="assets/hero/hero-principal.png" alt="Asesoría personalizada"><div><h3>Acompañamiento personalizado</h3><p>Si tienes dudas, te ayudo a elegir entre modelos y a entender condiciones antes de comprar.</p></div></article>
+    <section class="section" id="beneficios">
+      <div class="benefit-layout">
+        <figure class="benefit-photo"><img src="assets/hero/hero-principal.png" alt="Negocio cobrando con terminal"></figure>
+        <div>
+          <span class="eyebrow">Por qué usar terminal</span>
+          <h2>Más formas de cobrar, menos ventas perdidas.</h2>
+          <p class="lead">Aceptar tarjeta no solo es tener un aparato: es abrirle la puerta a clientes que no cargan efectivo o prefieren pagar digitalmente.</p>
+          <div class="benefit-list">
+            <article class="benefit-item"><div class="benefit-icon">✓</div><div><h3>Menos fricción</h3><p>El cliente paga con el medio que ya trae en la mano.</p></div></article>
+            <article class="benefit-item"><div class="benefit-icon">$</div><div><h3>Mejor control</h3><p>Revisas cobros, comprobantes y depósitos con más orden.</p></div></article>
+            <article class="benefit-item"><div class="benefit-icon">↗</div><div><h3>Escala tu operación</h3><p>Empieza con terminal y después suma links, reportes o soluciones de cobro más avanzadas.</p></div></article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section payment-section">
+    <section class="section payment-section" id="medios">
       <span class="eyebrow">Medios aceptados</span>
       <h2>La mayoría de las terminales aceptan estos medios de pago.</h2>
       <div class="logo-cloud payment-cloud expanded-payment-cloud">
@@ -154,19 +171,19 @@
     <section class="section terminal-faq" id="faq-terminales">
       <span class="eyebrow">Dudas sobre terminales</span>
       <h2>Preguntas frecuentes.</h2>
-      <details open><summary>¿Qué terminal me conviene si tengo local fijo?</summary><p>Si cobras en mostrador y necesitas comprobantes impresos, Point Smart 2 suele ser la opción más completa. Si cobras poco y quieres empezar simple, conviene comparar también Point Mini.</p></details>
-      <details><summary>¿Cuál conviene si vendo a domicilio o en eventos?</summary><p>Point Air puede ser más cómoda para movilidad porque está pensada para operar con conexión propia y WiFi. Depende de tu volumen y de si necesitas imprimir tickets.</p></details>
+      <details open><summary>¿Qué terminal me conviene si tengo local fijo?</summary><p>Si cobras en mostrador y necesitas comprobantes impresos, Point Smart 2 suele ser la opción más completa. Si cobras poco y quieres empezar simple, compara también Point Mini.</p></details>
+      <details><summary>¿Cuál conviene si vendo a domicilio o en eventos?</summary><p>Point Air puede ser cómoda para movilidad porque está pensada para operar con mayor independencia. Depende de tu volumen y de si necesitas imprimir tickets.</p></details>
       <details><summary>¿Point Mini necesita celular?</summary><p>Sí. Point Mini normalmente trabaja vinculada al celular mediante la app. Por eso es más compacta y económica.</p></details>
-      <details><summary>¿Las terminales tienen renta mensual?</summary><p>De acuerdo con la información pública de Mercado Pago, las terminales Point no tienen renta mensual; pagas la tasa por cada venta. Verifica condiciones vigentes antes de comprar.</p></details>
+      <details><summary>¿Las terminales tienen renta mensual?</summary><p>De acuerdo con la información pública de Mercado Pago, las terminales Point no tienen renta mensual; pagas una tasa por cada venta. Verifica condiciones vigentes antes de comprar.</p></details>
       <details><summary>¿Cuál es la tasa por cobrar con tarjeta?</summary><p>Mercado Pago publica 3.5% + IVA para ventas al contado con débito y crédito. Los pagos a meses pueden tener tasas distintas.</p></details>
       <details><summary>¿Puedo comprar desde esta página?</summary><p>Sí. El botón de compra te lleva al link oficial de Mercado Pago. Si antes quieres revisar qué modelo te conviene, puedes escribirme por WhatsApp.</p></details>
-      <details><summary>¿Me ayudas a elegir antes de comprar?</summary><p>Sí. Te puedo orientar con base en tu giro, volumen esperado, forma de vender, necesidad de tickets y presupuesto inicial.</p></details>
+      <details><summary>¿Qué debo revisar antes de comprar?</summary><p>Precio vigente, promoción, envío, garantía, tasas, meses sin intereses, disponibilidad y si tu negocio necesita tickets impresos.</p></details>
     </section>
 
-    <section class="contact final-cta">
-      <div class="section final-grid">
-        <div><span class="eyebrow">Siguiente paso</span><h2>Elige tu terminal con claridad.</h2><p>Compra con el link oficial o escríbeme para revisar cuál modelo encaja mejor con tu negocio.</p><div class="actions"><a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20elegir%20una%20terminal%20Point." target="_blank" rel="noopener">WhatsApp</a></div></div>
-        <div class="final-card"><h3>Antes de decidir</h3><p>Revisa precio vigente, promoción, tasa, entrega, garantía y si necesitas imprimir comprobantes.</p></div>
+    <section class="terminal-final">
+      <div class="section terminal-final-grid">
+        <div><span class="eyebrow">Siguiente paso</span><h2>Compra con claridad.</h2><p>Elige tu terminal con el link oficial o pide asesoría si quieres revisar cuál modelo encaja mejor con tu negocio.</p><div class="actions"><a class="btn btn-yellow" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><a class="btn btn-white" href="https://wa.me/529511825881?text=Hola%2C%20quiero%20elegir%20una%20terminal%20Point." target="_blank" rel="noopener">WhatsApp</a></div></div>
+        <aside class="terminal-final-card"><h3>Asesoría personalizada</h3><p>Si tienes dudas, revisamos tu giro, volumen, margen, movilidad y forma de cobrar antes de que hagas la compra.</p></aside>
       </div>
     </section>
   </main>
