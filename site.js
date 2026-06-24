@@ -126,8 +126,15 @@
     .diagnostic-nav{display:flex;gap:12px;justify-content:center;margin-top:18px;}
     .diagnostic-nav .btn[disabled]{opacity:.45;cursor:not-allowed;}
     #diagnosticSubmit{display:none!important;}
+    .diagnostic-stepper .result{border:1px solid #b9dcf7!important;border-radius:22px!important;padding:24px!important;background:radial-gradient(circle at 92% 10%,rgba(255,210,63,.22),transparent 24%),linear-gradient(135deg,#fff,#f6fbff 68%,#fff8df)!important;box-shadow:0 18px 44px rgba(7,29,54,.1)!important;}
     .result.show{animation:resultIn .32s ease both;}
-    .result-tags span:first-child{background:#fff8dc;color:#071d36;border-color:#ffd23f;}
+    .result h3{display:flex;gap:10px;align-items:center;font-size:24px!important;margin-bottom:12px!important;}
+    .result h3:before{content:"";width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,#0073e6,#19aeea);box-shadow:0 10px 22px rgba(0,115,230,.24);}
+    .result p{font-size:18px!important;line-height:1.55!important;color:#33475c!important;}
+    .result-tags a,.result-tags span{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#edf7ff;color:#0058ba;border:1px solid #cfe4f7;padding:8px 12px;font-weight:900;font-size:14px;text-decoration:none;transition:transform .18s ease,background .18s ease;}
+    .result-tags a:hover{transform:translateY(-2px);background:#dff2ff;}
+    .result-tags .tag-primary{background:#fff8dc;color:#071d36;border-color:#ffd23f;}
+    .result-actions-note{margin:4px 0 14px;color:#667789;font-size:14px;font-weight:800;}
     @keyframes questionIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
     @keyframes resultIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
@@ -416,17 +423,29 @@
       rapida: {
         key: 'terminal_moderna',
         title: 'Recomendacion: terminal moderna',
-        text: 'Empieza por Mercado Pago Point; despues compara Clip y NetPay. Es la ruta mas agil si buscas menos tramites, movilidad e inicio rapido.',
-        tags: ['Mercado Pago Point', 'Clip', 'NetPay', 'Inicio rapido'],
-        ctaText: 'Comprar terminal',
+        text: 'Empieza por Smartpoint 2; despues compara Clip y NetPay. Es una ruta agil si buscas menos tramites, movilidad e inicio rapido.',
+        tags: [
+          { label: 'Smartpoint 2', href: buyLink, primary: true },
+          { label: 'Clip', href: 'https://www.clip.mx/' },
+          { label: 'NetPay', href: 'https://netpay.mx/' },
+          { label: 'Inicio rapido' }
+        ],
+        note: 'Recomendacion inicial: compra o revisa Smartpoint 2; despues compara alternativas si quieres validar precio, comision y funciones.',
+        ctaText: 'Comprar Smartpoint 2',
         ctaHref: buyLink,
         ctaClass: 'btn btn-primary'
       },
       hibrida: {
         key: 'modelo_hibrido',
         title: 'Recomendacion: modelo hibrido',
-        text: 'Revisa opciones como Getnet o Konfio. Puede servir si ya vendes mas, quieres formalidad y buscas condiciones intermedias.',
-        tags: ['Getnet', 'Konfio', 'Negocio en crecimiento', 'Contrato claro'],
+        text: 'Revisa Getnet y Konfio. Puede servir si ya vendes mas, quieres formalidad y buscas equilibrar tecnologia con mejores condiciones.',
+        tags: [
+          { label: 'Getnet', href: 'https://www.getnet.com.mx/', primary: true },
+          { label: 'Konfio', href: 'https://konfio.mx/terminal-punto-de-venta/' },
+          { label: 'Negocio en crecimiento' },
+          { label: 'Contrato claro' }
+        ],
+        note: 'Te conviene revisar requisitos, contrato, liquidacion y costo total antes de elegir.',
         ctaText: 'Ver opciones del mercado',
         ctaHref: compareLink,
         ctaClass: 'btn btn-primary'
@@ -435,7 +454,13 @@
         key: 'tpv_bancaria',
         title: 'Recomendacion: TPV bancaria',
         text: 'Compara BBVA, Banorte y Citibanamex. Puede convenirte si tienes RFC, cuenta, ventas constantes y buscas negociar condiciones.',
-        tags: ['BBVA TPV', 'Banorte TPV', 'Citibanamex', 'Volumen estable'],
+        tags: [
+          { label: 'BBVA TPV', href: 'https://www.bbva.mx/empresas/productos/cobros-y-pagos.html', primary: true },
+          { label: 'Banorte TPV', href: 'https://www.banorte.com/' },
+          { label: 'Citibanamex', href: 'https://www.banamex.com/es/pymes/productos-y-servicios/cobros/' },
+          { label: 'Volumen estable' }
+        ],
+        note: 'Revisa la comparativa para ver enlaces oficiales, condiciones, requisitos y puntos que debes confirmar con cada banco.',
         ctaText: 'Ver comparativa bancaria',
         ctaHref: compareLink,
         ctaClass: 'btn btn-primary'
@@ -461,7 +486,19 @@
 
     title.textContent = result.title;
     text.textContent = result.text;
-    tags.innerHTML = result.tags.map((tag) => `<span>${tag}</span>`).join('');
+    tags.innerHTML = result.tags.map((tag) => {
+      const className = tag.primary ? ' class="tag-primary"' : '';
+      if (tag.href) return `<a${className} href="${tag.href}" target="_blank" rel="noopener">${tag.label}</a>`;
+      return `<span${className}>${tag.label}</span>`;
+    }).join('');
+    const existingNote = res.querySelector('.result-actions-note');
+    if (existingNote) existingNote.remove();
+    if (result.note) {
+      const note = document.createElement('p');
+      note.className = 'result-actions-note';
+      note.textContent = result.note;
+      cta.insertAdjacentElement('beforebegin', note);
+    }
     cta.textContent = result.ctaText;
     cta.href = result.ctaHref;
     cta.className = result.ctaClass;
