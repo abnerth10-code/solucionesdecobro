@@ -7,8 +7,29 @@
   <meta name="description" content="Asesoría para elegir terminales, bancos, links de pago y soluciones de cobro para negocios en Oaxaca y México.">
   <link rel="icon" type="image/png" href="assets/logo-soluciones-de-cobro%201x1.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .home-page .top-link{background:rgba(7,29,54,.56);border:1px solid rgba(255,255,255,.42);box-shadow:0 14px 30px rgba(7,29,54,.18);backdrop-filter:blur(12px)}
+    .home-page .top-link:hover{background:rgba(7,29,54,.78)}
+    .home-page .hero{border-bottom:0;background:radial-gradient(circle at 78% 18%,rgba(255,210,63,.18),transparent 32%),linear-gradient(135deg,#fff 0%,#edf8ff 62%,#fff8dd 100%)}
+    .home-page .hero-inner{padding-top:54px;padding-bottom:48px;gap:36px}
+    .home-page .hero h1{max-width:720px}.home-page .hero .lead{max-width:700px}
+    .home-page .hero-photo-card{box-shadow:0 18px 42px rgba(7,29,54,.1)}
+    .home-page .note-card{background:rgba(7,29,54,.72);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18)}
+    .home-page .growth-section{padding-top:46px;background:linear-gradient(180deg,#f5fbff 0%,#fff 100%)}
+    .home-page .sales-impact{display:grid;grid-template-columns:1.04fr .96fr;gap:20px;align-items:stretch;margin-bottom:46px}
+    .home-page .impact-copy,.home-page .impact-metric{border:1px solid #cfe4f7;border-radius:24px;background:rgba(255,255,255,.86);box-shadow:0 14px 34px rgba(7,29,54,.06)}
+    .home-page .impact-copy{padding:30px 34px;background:linear-gradient(135deg,#fff,#f8fdff 70%,#fff8dd)}
+    .home-page .impact-copy h2{font-size:clamp(32px,4.4vw,54px);margin-bottom:18px}.home-page .impact-analogy{margin:0;padding-left:18px;border-left:5px solid var(--yellow);font-size:19px;line-height:1.58;color:#53687f}
+    .home-page .impact-metric{position:relative;overflow:hidden;padding:28px 34px;color:#fff;background:radial-gradient(circle at 82% 18%,rgba(255,210,63,.45),transparent 22%),linear-gradient(135deg,#071d36,#0067ce 82%)}
+    .home-page .impact-metric span{display:block;text-transform:uppercase;letter-spacing:.18em;font-weight:950;color:#d9ecff;font-size:13px}.home-page .metric-number{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:22px 0 14px}.home-page .metric-number strong{font-size:clamp(58px,7vw,88px);line-height:.9;color:var(--yellow)}.home-page .metric-number em{font-style:normal;font-weight:950;color:#fff;font-size:24px;text-transform:uppercase}.home-page .impact-metric small{display:block;color:#e5f2ff;font-size:16px;line-height:1.45}
+    .home-page .media-feature-grid{margin-top:24px}.home-page .media-card{border-radius:24px;min-height:315px;padding:24px;background:#071d36;color:#fff;box-shadow:0 16px 38px rgba(7,29,54,.08)}.home-page .media-card:after{background:linear-gradient(180deg,rgba(7,29,54,.2),rgba(7,29,54,.9))}.home-page .media-card h3{color:#fff}.home-page .media-card p{color:#e7f2ff}.home-page .media-card .icon{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.36);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 14px 26px rgba(0,0,0,.18);backdrop-filter:blur(10px)}
+    .home-page .media-info{background:linear-gradient(135deg,#071d36,#004e9e)}.home-page .media-compare{background:linear-gradient(135deg,#071d36,#123c8f)}.home-page .media-growth{background:linear-gradient(135deg,#071d36,#075f46)}
+    .home-page .advisory-band{background:linear-gradient(135deg,#071d36,#0058ba);color:#fff}.home-page .advisory-band h2{color:#fff}.home-page .advisory-band p{color:#e2f0ff}.home-page .advice-photo{margin:26px 0 0;border:1px solid rgba(255,255,255,.22);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.08);box-shadow:0 20px 46px rgba(0,0,0,.15)}.home-page .advice-photo img{width:100%;height:360px;object-fit:cover}.home-page .advice-list .list-item{align-items:start;border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:18px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px)}.home-page .advice-list h3{color:#fff}.home-page .advice-list p{color:#dcecff}
+    @media(max-width:980px){.home-page .sales-impact{grid-template-columns:1fr}.home-page .advice-photo img{height:auto}}
+    @media(max-width:680px){.home-page .hero-inner{padding-top:34px;padding-bottom:36px;gap:24px}.home-page .hero h1{font-size:48px}.home-page .hero .lead{font-size:20px;line-height:1.48}.home-page .visual-card,.home-page .visual-card img{min-height:285px}.home-page .growth-section{padding-top:34px}.home-page .sales-impact{gap:14px;margin-bottom:34px}.home-page .impact-copy,.home-page .impact-metric{border-radius:22px}.home-page .impact-copy{padding:24px 22px}.home-page .impact-copy h2{font-size:34px}.home-page .impact-analogy{font-size:18px;line-height:1.55}.home-page .impact-metric{padding:24px 28px}.home-page .metric-number{justify-content:flex-start;gap:20px}.home-page .metric-number strong{font-size:58px}.home-page .media-feature-grid{gap:14px}.home-page .media-card{min-height:260px}.home-page .advisory-band .section{padding-top:52px;padding-bottom:52px}.home-page .top-link{width:44px;height:44px;opacity:.76}}
+  </style>
 </head>
-<body>
+<body class="home-page">
   <header class="header">
     <div class="nav">
       <a class="brand" href="index.html#inicio">
@@ -62,7 +83,7 @@
       <div class="sales-impact" aria-label="Impacto de aceptar pagos con tarjeta">
         <div class="impact-copy">
           <h2>Cobrar con tarjeta reduce fricción al momento de pagar.</h2>
-          <p class="impact-analogy">Aceptar pagos con tarjeta es como ir a la playa: ves la orilla y crees que es enorme, pero cuando te adentras en el océano, descubres su verdadera inmensidad. Lo mismo pasa en tu negocio. Pensar que los clientes que te pagan en efectivo son los únicos que puedes tener es quedarte en la orilla. Existe un océano de clientes potenciales que estás perdiendo simplemente por no ofrecer más opciones de cobro.</p>
+          <p class="impact-analogy">Aceptar tarjeta es como entrar al mar: desde la orilla parece que ya viste todo, pero al avanzar descubres un océano de clientes que no usan efectivo o prefieren pagar digitalmente. No te quedes solo con quien trae efectivo.</p>
         </div>
         <div class="impact-metric">
           <span>incremento potencial</span>
@@ -74,9 +95,9 @@
       <h2>Soluciones de cobro para negocios que quieren crecer.</h2>
       <p class="lead">Soluciones de Cobro nace para explicar, comparar y acompañarte para que tomes la mejor decisión e incrementes tus ventas. Queremos verte crecer.</p>
       <div class="grid-4 feature-grid media-feature-grid">
-        <article class="card feature-card media-card media-hardware"><div class="icon icon-terminal" aria-hidden="true">▣</div><h3>Hardware a la medida</h3><p>Porque tener la mejor terminal importa: mostrador, movilidad, eventos, repartidores o servicios profesionales no cobran igual.</p></article>
-        <article class="card feature-card media-card media-info"><div class="icon icon-info" aria-hidden="true">$</div><h3>Información clara</h3><p>Debes saber cuánto pagarás por cada venta, cuándo recibirás tu dinero y qué condiciones hay detrás de cada opción.</p></article>
-        <article class="card feature-card media-card media-compare"><div class="icon icon-compare" aria-hidden="true">↔</div><h3>Comparación real</h3><p>Comparar con información adecuada evita contratar por impulso: tasa, requisitos, soporte, depósito y contrato importan.</p></article>
+        <article class="card feature-card media-card media-hardware"><div class="icon icon-terminal" aria-hidden="true">▣</div><h3>El equipo adecuado</h3><p>La terminal ideal depende de tu operación: mostrador, movilidad, eventos, repartidores o servicios profesionales no cobran igual.</p></article>
+        <article class="card feature-card media-card media-info"><div class="icon icon-info" aria-hidden="true">▥</div><h3>Información clara</h3><p>Debes saber cuánto pagarás por cada venta, cuándo recibirás tu dinero y qué condiciones hay detrás de cada opción.</p></article>
+        <article class="card feature-card media-card media-compare"><div class="icon icon-compare" aria-hidden="true">≋</div><h3>Comparación real</h3><p>Comparar con información adecuada evita contratar por impulso: tasa, requisitos, soporte, depósito y contrato importan.</p></article>
         <article class="card feature-card media-card media-growth"><div class="icon icon-growth" aria-hidden="true">↗</div><h3>Escala tu negocio</h3><p>Empieza simple y suma links de pago, bancos, reportes o nuevas herramientas conforme creces.</p></article>
       </div>
     </section>
@@ -86,7 +107,7 @@
         <div class="advice-copy">
           <h2>¿Por qué es importante la asesoría?</h2>
           <p class="lead">Una terminal es un aspecto importante de tu negocio: te permite crecer, incrementar tus posibilidades de venta y desarrollar un sistema exitoso de cobro.</p>
-          <figure class="advice-photo"><img src="assets/hero/asesoria-personalizada.png" alt="Asesoría personalizada para elegir terminal de cobro"></figure>
+          <figure class="advice-photo"><img src="assets/hero/hero-principal.png" alt="Asesoría personalizada para elegir terminal de cobro"></figure>
         </div>
         <div class="list advice-list">
           <div class="list-item"><div class="icon icon-check" aria-hidden="true">✓</div><div><h3>Evitas comprar por impulso</h3><p>Primero revisamos qué cobras, cómo vendes y qué necesitas realmente.</p></div></div>
