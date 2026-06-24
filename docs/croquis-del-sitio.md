@@ -32,14 +32,16 @@ Función: presentar la marca, explicar el valor de aceptar tarjeta, orientar al 
 Secciones:
 
 1. Encabezado
-   - Logo grande.
+   - Logo compacto en móvil para evitar repetición con el nombre de marca.
    - Menú: Inicio, Terminales, Diagnóstico, Compara, Blog.
    - Botón principal: Comprar terminal.
    - Redes visibles en móvil junto al botón.
+   - En móvil, al empezar a bajar la página, se ocultan marca y menú; queda solo la barra de acción con comprar terminal y redes.
 
 2. Hero principal
    - Mensaje principal: `Acepta tarjetas sin complicarte.`
-   - CTA: Comprar terminal, Pedir asesoría, Hacer diagnóstico.
+   - CTA: Pedir asesoría y Hacer diagnóstico.
+   - En móvil, no duplicar el botón de compra dentro del hero porque ya queda fijo en la barra superior compacta.
    - Imagen real de negocio/terminal.
    - Recuadro: `Elección inteligente...`
 
@@ -107,6 +109,24 @@ Reglas:
 - Títulos claros y buscables.
 - Incluir llamados a diagnóstico, comparativa o compra cuando tenga sentido.
 - Evitar textos largos sin estructura.
+
+### Privacidad (`privacidad.html`)
+
+Función: informar de forma clara sobre datos, cookies, Analytics y canales de contacto.
+
+Reglas:
+
+- El encabezado no debe ser fijo o persistente; en esta página la lectura legal importa más que la conversión.
+- El contacto formal de privacidad debe ser `contacto@solucionesdecobro.com`.
+- El aviso de cookies debe sonar amable: aceptar ayuda a mejorar la página, pero el usuario puede seguir solo con cookies necesarias.
+
+## Comportamiento móvil
+
+- El header inicial debe ser compacto: logo pequeño, texto de marca legible, menú en una línea desplazable si hace falta, botón y redes alineados.
+- Al bajar desde el primer desplazamiento, el header se compacta y oculta marca y menú.
+- La barra compacta mantiene solo acción principal y redes.
+- El botón flotante para regresar al inicio debe ser visible, moderno y no competir con el botón de compra.
+- Cuidar que Safari móvil no tape botones importantes con la barra inferior del navegador.
 
 ## Diagnóstico: matriz de decisión
 
