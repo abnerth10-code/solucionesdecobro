@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 :root{
   --ink:#071d36;--text:#27384a;--muted:#667789;--line:#dce7f1;--soft:#f5f9fd;--paper:#fff;
   --blue:#0073e6;--blue-dark:#0058ba;--sky:#eaf8ff;--sky-2:#d7f2ff;--cyan:#19aeea;--yellow:#ffd23f;--green:#18a058;
@@ -22,10 +22,29 @@
 /* Header de marca compacto: usamos el isotipo como señal visual y el nombre escrito como marca principal. */
 body .header .brand{gap:12px;min-width:0}
 body .header .brand-logo{width:54px!important;height:54px!important;max-width:54px!important;border-radius:15px;object-fit:none!important;object-position:left center!important;background:#fff;box-shadow:0 10px 24px rgba(7,29,54,.08);clip-path:inset(0 0 0 0 round 15px)}
-body .header .brand-name{font-family:"Aptos Display","SF Pro Display","Segoe UI",Arial,Helvetica,sans-serif;font-size:30px;font-weight:950;letter-spacing:-.01em;line-height:1.02;white-space:nowrap}
+body .header .brand-name{font-family:'Aptos Display','SF Pro Display','Segoe UI',Arial,Helvetica,sans-serif;font-size:30px;font-weight:950;letter-spacing:-.01em;line-height:1.02;white-space:nowrap}
 body .header .brand-name small{font-size:13px;font-weight:850;letter-spacing:0;white-space:nowrap;color:#6a7a8e}
 body .header .nav{min-height:74px;gap:22px}
 body .header .menu{gap:6px}
 body .header .menu a:not(.btn){padding:8px 10px}
 @media(max-width:980px){body .header .nav{grid-template-columns:1fr;min-height:auto}body .header .brand-logo{width:50px!important;height:50px!important;max-width:50px!important}body .header .brand-name{font-size:29px}}
 @media(max-width:680px){body .header .nav{padding:10px 18px!important;gap:8px!important}body .header .brand{gap:10px!important;align-items:center!important}body .header .brand-logo{width:44px!important;height:44px!important;max-width:44px!important;border-radius:13px;box-shadow:0 8px 18px rgba(7,29,54,.08)}body .header .brand-name{font-size:26px!important;line-height:.98!important;white-space:normal!important;max-width:250px}body .header .brand-name small{font-size:12px!important;margin-top:4px!important}body .header .menu{gap:11px!important;margin-top:4px!important}body .header .menu a{font-size:14px!important;padding:4px 0!important}body .header .header-actions{margin-top:6px!important;grid-template-columns:minmax(150px,1fr) auto!important}body .header .header-actions>.btn{height:44px!important;min-height:44px!important;font-size:14px!important}body .header .mini-social{width:38px!important;height:38px!important}body .header .mini-social .brand-mask{width:20px!important;height:20px!important}body .header.compact .nav{padding:8px 14px!important}}
+
+/* Paleta 2026: sitio claro, azul dosificado y acentos cálidos. */
+:root{--ink:#071d36;--text:#2c4055;--muted:#617386;--line:#dce7f1;--soft:#f7fbff;--paper:#fff;--warm:#fffdf6;--cream:#fff8e6;--blue:#0873df;--blue-dark:#0758b5;--sky:#eef9ff;--yellow:#ffd23f;--green:#18a058}
+body{background:linear-gradient(180deg,#fbfdff 0%,#f7fbff 42%,#fffdf6 100%)}
+body .header .brand-logo{content:url('assets/logos/logo-isotipo-soluciones-cobro.png');object-fit:contain!important;object-position:center!important;padding:4px;background:#fff;border:1px solid rgba(220,231,241,.9)}
+body .hero,body .product-hero,body .compare-hero,body .blog-hero{background:radial-gradient(circle at 86% 16%,rgba(255,210,63,.18),transparent 30%),linear-gradient(135deg,#fff 0%,#f4fbff 62%,#fff8e6 100%)!important}
+body .blue-band,body .diagnostic,body .notice{background:linear-gradient(135deg,#fbfdff,#f6fbff 58%,#fffdf6)!important}
+body .final-cta,body .contact,body .advisory-band,body.terminales-page .terminal-final{background:radial-gradient(circle at 86% 20%,rgba(255,210,63,.22),transparent 30%),linear-gradient(135deg,#fff 0%,#f4fbff 58%,#fff8e6 100%)!important;color:var(--text)!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+body .final-cta h1,body .final-cta h2,body .final-cta h3,body .contact h1,body .contact h2,body .contact h3,body .advisory-band h1,body .advisory-band h2,body .advisory-band h3,body.terminales-page .terminal-final h1,body.terminales-page .terminal-final h2,body.terminales-page .terminal-final h3{color:var(--ink)!important}
+body .final-cta p,body .contact p,body .advisory-band p,body.terminales-page .terminal-final p{color:#53687f!important}
+body .channel,body .final-card,body .terminal-final-card,body .advice-list .list-item,body .contact .card{background:rgba(255,255,255,.82)!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:0 14px 34px rgba(7,29,54,.08)!important;backdrop-filter:blur(10px)}
+body .channel .brand-mask{background:currentColor!important}
+body footer{background:#f7fbff!important;color:#52687d!important;border-top:1px solid var(--line)!important}
+body footer a{color:#0758b5!important}
+body .top-link{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.45);box-shadow:0 14px 30px rgba(7,29,54,.16)!important}
+body .top-link:hover{background:rgba(7,29,54,.9)!important}
+body .btn-primary{box-shadow:0 14px 28px rgba(8,115,223,.22)}
+body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px)}
+@media(max-width:680px){body .header .brand-logo{width:42px!important;height:42px!important;max-width:42px!important;padding:3px}body .final-cta,body .contact,body .advisory-band,body.terminales-page .terminal-final{background:linear-gradient(135deg,#fff,#f7fbff 58%,#fff8e6)!important}}
