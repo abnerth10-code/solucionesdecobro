@@ -10,18 +10,35 @@ Ayudar a negocios a elegir, comparar y comprar soluciones de cobro con lenguaje 
 
 - Profesional, cercana y clara.
 - Inspiración: diseño financiero moderno, tarjetas limpias, imágenes reales de comercios, fondos claros con acentos azul, amarillo y verde.
+- La página debe sentirse luminosa: blancos, azul muy claro, crema suave y sombras limpias.
+- El azul institucional se usa como acento de confianza y acción, no como fondo dominante.
 - Evitar que parezca plantilla genérica: usar imágenes propias o generadas con intención, textos concretos y secciones bien respiradas.
 - En móvil, prioridad absoluta: lectura rápida, botones grandes, pocas distracciones y navegación compacta.
 
 ## Paleta base
 
-- Azul institucional: `#071d36`
+La marca sí vive en azul, pero el sitio no debe sentirse completamente azul. La regla es: fondo claro, azul dosificado y amarillo/verde como acentos funcionales.
+
+- Azul institucional / tinta: `#071d36`
 - Azul acción: `#0073e6`
-- Azul claro / fintech: `#19aeea`
-- Amarillo Mercado Pago: `#ffd23f`
-- Verde WhatsApp / acción secundaria: `#25D366`
-- Gris texto secundario: `#53687f`
-- Línea suave: `#cfe4f7`
+- Azul acción oscuro: `#0058ba`
+- Azul claro fintech: `#19aeea`
+- Fondo principal: `#f7fbff`
+- Blanco papel: `#ffffff`
+- Crema suave: `#fff8e6`
+- Crema cálida: `#fffdf6`
+- Línea suave: `#dce7f1`
+- Texto secundario: `#53687f`
+- Amarillo acento: `#ffd23f`
+- Verde confianza / WhatsApp: `#18a058`
+
+Uso recomendado:
+
+- Fondos de secciones: blanco, azul casi blanco o crema suave.
+- Botones principales: azul acción.
+- Avisos, métricas o detalles: amarillo acento.
+- Acciones de WhatsApp o confirmación: verde.
+- Evitar bloques grandes en azul fuerte salvo casos muy puntuales.
 
 ## Estructura actual
 
@@ -32,7 +49,8 @@ Función: presentar la marca, explicar el valor de aceptar tarjeta, orientar al 
 Secciones:
 
 1. Encabezado
-   - Logo compacto en móvil para evitar repetición con el nombre de marca.
+   - Logo compacto: isotipo `assets/logos/logo-isotipo-soluciones-cobro.png` junto al nombre escrito de la marca.
+   - Evitar repetir el logotipo completo y luego el mismo texto en grande.
    - Menú: Inicio, Terminales, Diagnóstico, Compara, Blog.
    - Botón principal: Comprar terminal.
    - Redes visibles en móvil junto al botón.
@@ -50,7 +68,7 @@ Secciones:
    - Métrica orientativa: 20% a 35% de incremento potencial, tratada como rango informativo.
 
 4. Soluciones para crecer
-   - Cuatro tarjetas visuales: Hardware, Información clara, Comparación real, Escala tu negocio.
+   - Cuatro tarjetas visuales: equipo adecuado, información clara, comparación real y escala tu negocio.
 
 5. Asesoría
    - Explica por qué una terminal no es solo un aparato.
@@ -74,6 +92,7 @@ Secciones:
    - CTA de compra y comparativa.
    - Redes y WhatsApp.
    - Aviso legal de marcas.
+   - Esta parte debe ser clara y suave, no un bloque oscuro que rompa la estética.
 
 ### Terminales (`terminales.html`)
 
@@ -122,7 +141,7 @@ Reglas:
 
 ## Comportamiento móvil
 
-- El header inicial debe ser compacto: logo pequeño, texto de marca legible, menú en una línea desplazable si hace falta, botón y redes alineados.
+- El header inicial debe ser compacto: isotipo pequeño, texto de marca legible, menú en una línea desplazable si hace falta, botón y redes alineados.
 - Al bajar desde el primer desplazamiento, el header se compacta y oculta marca y menú.
 - La barra compacta mantiene solo acción principal y redes.
 - El botón flotante para regresar al inicio debe ser visible, moderno y no competir con el botón de compra.
@@ -145,7 +164,7 @@ Resultados posibles:
 
 1. Terminal moderna
    - Para empezar rápido, vender con movilidad, operar con menos requisitos o cobrar en redes.
-   - Recomendación comercial inicial: Mercado Pago Point, luego Clip y NetPay.
+   - Recomendación comercial inicial: Smartpoint 2, luego Clip y NetPay.
 
 2. Modelo híbrido
    - Para negocios en crecimiento que quieren más estructura sin ir directo a banca tradicional.
@@ -163,3 +182,4 @@ Resultados posibles:
 - Cada sección debe responder: qué es, para quién sirve, qué hago ahora.
 - Antes de agregar una imagen, confirmar que tenga propósito: confianza, claridad, producto, comparación o acción.
 - Los logos de marcas se usan con fines informativos y deben acompañarse del aviso legal.
+- Si una sección se siente demasiado pesada, primero intentar resolver con más aire, fondo claro y jerarquía antes de agregar más color.
