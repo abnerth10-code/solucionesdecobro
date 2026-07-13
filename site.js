@@ -81,7 +81,7 @@
 
     .sales-impact{display:grid!important;grid-template-columns:1.18fr .82fr!important;gap:30px!important;align-items:stretch!important;margin:-10px 0 40px!important;}
     .impact-copy,.impact-metric{border:1px solid var(--line)!important;border-radius:28px!important;box-shadow:0 18px 44px rgba(7,29,54,.08)!important;}
-    .impact-copy{padding:36px!important;background:linear-gradient(135deg,#fff,#f6fbff 64%,#fff8df)!important;transform:translateY(-8px);}
+    .impact-copy{padding:36px!important;background:linear-gradient(135deg,#fff,#f6fbff 64%,#fff8df)!important;transform:none!important;}
     .impact-copy h2{font-size:clamp(32px,3.6vw,54px)!important;line-height:1.04!important;margin:0 0 18px!important;}
     .impact-copy p{font-size:20px!important;line-height:1.58!important;color:#42576f!important;margin:0!important;}
     .impact-analogy{position:relative;padding-left:22px!important;border-left:5px solid var(--yellow)!important;max-width:760px;}
@@ -111,13 +111,13 @@
     .icon-data:before{border:none!important;width:30px!important;height:30px!important;background:linear-gradient(135deg,currentColor 0 28%,transparent 28% 42%,currentColor 42% 64%,transparent 64% 78%,currentColor 78% 100%);border-radius:7px!important;}
     .icon-star:before{border:none!important;width:28px!important;height:28px!important;background:currentColor!important;clip-path:polygon(50% 0,61% 34%,98% 35%,68% 56%,79% 91%,50% 70%,21% 91%,32% 56%,2% 35%,39% 34%);}
     .media-hardware:before{background-image:url('${assetPrefix}assets/hero/catalogo-terminales.png');}
-    .media-info:before{background-image:url('${assetPrefix}assets/hero/hero-principal.png');}
-    .media-compare:before{background-image:url('${assetPrefix}assets/hero/diagnostico-cobro.png');}
-    .media-growth:before{background-image:url('${assetPrefix}assets/multi-mlm-hero--b6703c46.png');background-size:contain;background-repeat:no-repeat;background-color:#ecf8ff;}
-    .icon-terminal{background:linear-gradient(135deg,#0073e6,#19aeea)!important;}
-    .icon-info,.icon-check{background:linear-gradient(135deg,#18a058,#25D366)!important;}
-    .icon-compare,.icon-data{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
-    .icon-growth,.icon-star{background:linear-gradient(135deg,#ffd23f,#f59e0b)!important;color:#071d36!important;}
+    .media-info:before{background-image:url('${assetPrefix}assets/hero/diagnostico-cobro.png');}
+    .media-compare:before{background-image:url('${assetPrefix}assets/hero/comparativa-soluciones.png');}
+    .media-growth:before{background-image:url('${assetPrefix}assets/multi-mlm-hero--b6703c46.png');}
+    .icon-terminal,.icon-info,.icon-compare,.icon-growth{background:rgba(255,255,255,.16)!important;color:#fff!important;border:1px solid rgba(255,255,255,.38)!important;backdrop-filter:blur(12px)!important;}
+    .icon-check{background:linear-gradient(135deg,#18a058,#25D366)!important;}
+    .icon-data{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
+    .icon-star{background:linear-gradient(135deg,#ffd23f,#f59e0b)!important;color:#071d36!important;}
 
     .advisory-band{background:linear-gradient(135deg,#f8fcff 0%,#fff 58%,#fff8df 100%)!important;color:var(--navy)!important;padding-top:64px!important;padding-bottom:64px!important;}
     .advice-split{align-items:center!important;gap:42px!important;}
@@ -125,7 +125,7 @@
     .advisory-band .lead,.advice-list p{color:#40546a!important;}
     .advice-photo{position:relative;margin:22px 0 0!important;border-radius:28px!important;overflow:hidden!important;border:1px solid var(--line)!important;box-shadow:0 22px 50px rgba(7,29,54,.12)!important;min-height:330px!important;background:#fff!important;}
     .advice-photo img{display:block!important;width:100%!important;height:330px!important;object-fit:cover!important;}
-    .advice-photo:after{content:"Asesoría personalizada para elegir terminal de cobro";position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;border-radius:20px;background:rgba(7,29,54,.54);backdrop-filter:blur(14px);color:#fff;font-weight:900;font-size:20px;box-shadow:0 14px 34px rgba(7,29,54,.22);}
+    .advice-photo:after{content:"Asesoría para elegir con claridad";position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;border-radius:20px;background:rgba(7,29,54,.54);backdrop-filter:blur(14px);color:#fff;font-weight:900;font-size:20px;box-shadow:0 14px 34px rgba(7,29,54,.22);}
     .advice-list{gap:16px!important;}
     .advice-list .list-item{background:#fff!important;border:1px solid var(--line)!important;box-shadow:0 14px 30px rgba(7,29,54,.06)!important;}
     .advice-list .icon{font-size:0!important;display:grid!important;place-items:center!important;border-radius:14px!important;}
@@ -228,7 +228,7 @@
       .hero-photo-card .note-card{font-size:15px!important;line-height:1.45!important;}
       .sales-impact{gap:20px!important;margin:-18px 0 32px!important;}
       .impact-copy,.impact-metric{border-radius:22px!important;padding:24px!important;}
-      .impact-copy{transform:translateY(-12px);}
+      .impact-copy{transform:none!important;}
       .impact-copy h2{font-size:34px!important;line-height:1.06!important;}
       .impact-copy p{font-size:17px!important;line-height:1.56!important;}
       .metric-number{gap:12px!important;}
@@ -278,7 +278,7 @@
     setText('.impact-metric small', 'Estimación variable según giro, temporada y forma de vender.');
     setText('.growth-section h2', 'Soluciones de cobro para negocios que quieren crecer.');
     setText('.growth-section .lead', 'Te brindamos la información para que tomes la mejor decisión de acuerdo a tus necesidades e incrementes tus ventas.');
-    setText('.advisory-band .lead', 'Una terminal es un aspecto importante de tu negocio: te permite crecer, incrementar tus posibilidades de venta y desarrollar un sistema exitoso de cobro.');
+    setText('.advisory-band .lead', 'Elegir una solución de cobro no debería depender solo del precio. Analizamos cómo vendes, cuánto cobras y qué necesita tu operación para ayudarte a tomar una decisión clara, sostenible y adecuada para tu negocio.');
 
     const imageFallbacks = [
       ['.advice-photo img', `${assetPrefix}assets/hero/asesoria-personalizada.png`],
