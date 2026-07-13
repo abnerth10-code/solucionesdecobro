@@ -57,24 +57,24 @@
     body{color:var(--navy);}
 
     .header{background:rgba(255,255,255,.98)!important;border-bottom:1px solid #d7e7f5!important;box-shadow:0 10px 30px rgba(7,29,54,.04);}
-    .nav{gap:28px!important;}
+    .nav{grid-template-columns:minmax(320px,.9fr) auto auto!important;gap:22px!important;}
     .header .brand{gap:14px!important;align-items:center!important;}
     .header .brand-logo{width:58px!important;height:58px!important;object-fit:contain!important;border-radius:14px!important;background:#fff!important;box-shadow:0 10px 24px rgba(7,29,54,.08)!important;}
-    .header .brand-name{font-size:33px!important;line-height:1.02!important;letter-spacing:.012em!important;color:var(--navy)!important;}
-    .header .brand-name small{font-size:16px!important;line-height:1.1!important;margin-top:4px!important;color:#697b8e!important;}
-    .menu{gap:28px!important;}
-    .menu a{font-size:18px!important;font-weight:900!important;color:#25384d!important;}
+    .header .brand-name{font-size:30px!important;line-height:1.02!important;letter-spacing:.005em!important;color:var(--navy)!important;}
+    .header .brand-name small{font-size:15px!important;line-height:1.1!important;margin-top:4px!important;color:#697b8e!important;}
+    .menu{gap:10px!important;}
+    .menu a{font-size:17px!important;font-weight:900!important;color:#25384d!important;padding-inline:7px!important;}
     .menu a:hover{color:var(--blue)!important;}
-    .header-actions>.btn{height:58px!important;padding:0 32px!important;font-size:18px!important;border-radius:12px!important;}
+    .header-actions>.btn{height:52px!important;padding:0 20px!important;font-size:16px!important;border-radius:12px!important;}
     .mini-social{border-color:#d7e7f5!important;background:#fff!important;box-shadow:0 8px 18px rgba(7,29,54,.05)!important;}
 
     .hero-compact{padding-top:38px!important;padding-bottom:34px!important;background:linear-gradient(135deg,#f7fcff 0%,#fff 56%,#fff8dd 100%)!important;}
-    .hero-compact .hero-inner{gap:34px!important;align-items:center!important;}
-    .hero-compact h1{font-size:clamp(48px,6vw,88px)!important;line-height:1.02!important;letter-spacing:-.01em!important;margin-bottom:18px!important;background:linear-gradient(90deg,#071d36 0%,#064f9d 62%,#0073e6 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;}
+    .hero-compact .hero-inner{grid-template-columns:.9fr 1.1fr!important;gap:42px!important;align-items:center!important;}
+    .hero-compact h1{font-size:clamp(48px,5.6vw,82px)!important;line-height:1.02!important;letter-spacing:-.01em!important;margin-bottom:18px!important;background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;color:#0758b5!important;}
     .hero-compact .lead{font-size:clamp(20px,2vw,27px)!important;line-height:1.46!important;max-width:760px!important;color:#31475e!important;}
     .hero-compact .actions{gap:14px!important;}
     .photo-card{overflow:hidden;background:#fff!important;}
-    .photo-card>img{width:100%;height:100%;min-height:390px;object-fit:cover;display:block;border-radius:inherit;}
+    .photo-card>img{width:100%;height:100%;min-height:460px;object-fit:cover;display:block;border-radius:inherit;}
     .hero-photo-card{box-shadow:0 24px 58px rgba(7,29,54,.14)!important;}
     .hero-photo-card .note-card{background:rgba(7,29,54,.50)!important;backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.24);box-shadow:0 16px 34px rgba(7,29,54,.22);}
     .hero-photo-card .note-card strong{color:var(--yellow)!important;}
@@ -123,8 +123,8 @@
     .advice-split{align-items:center!important;gap:42px!important;}
     .advisory-band h2,.advisory-band h3{color:var(--navy)!important;}
     .advisory-band .lead,.advice-list p{color:#40546a!important;}
-    .advice-photo{position:relative;margin:22px 0 0!important;border-radius:28px!important;overflow:hidden!important;border:1px solid var(--line)!important;box-shadow:0 22px 50px rgba(7,29,54,.12)!important;min-height:330px!important;background:linear-gradient(180deg,rgba(7,29,54,.08),rgba(7,29,54,.18)),url('${assetPrefix}assets/hero/hero-principal.png') center/cover!important;}
-    .advice-photo img{display:none!important;}
+    .advice-photo{position:relative;margin:22px 0 0!important;border-radius:28px!important;overflow:hidden!important;border:1px solid var(--line)!important;box-shadow:0 22px 50px rgba(7,29,54,.12)!important;min-height:330px!important;background:#fff!important;}
+    .advice-photo img{display:block!important;width:100%!important;height:330px!important;object-fit:cover!important;}
     .advice-photo:after{content:"Asesoría personalizada para elegir terminal de cobro";position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;border-radius:20px;background:rgba(7,29,54,.54);backdrop-filter:blur(14px);color:#fff;font-weight:900;font-size:20px;box-shadow:0 14px 34px rgba(7,29,54,.22);}
     .advice-list{gap:16px!important;}
     .advice-list .list-item{background:#fff!important;border:1px solid var(--line)!important;box-shadow:0 14px 30px rgba(7,29,54,.06)!important;}
@@ -195,7 +195,7 @@
     @media(max-width:900px){
       .sales-impact{grid-template-columns:1fr!important;}
       .media-feature-grid{grid-template-columns:1fr 1fr!important;}
-      .diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner,.final-grid{grid-template-columns:1fr!important;}
+      .nav,.hero-compact .hero-inner,.diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner,.final-grid{grid-template-columns:1fr!important;}
       .terminal-hero-visual img,.compare-hero-visual img{height:auto;max-height:520px;object-fit:contain;}
     }
     @media(max-width:680px){
@@ -224,7 +224,6 @@
       .hero-compact .lead{font-size:18px!important;line-height:1.46!important;margin-bottom:18px!important;}
       .hero-compact .actions{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;}
       .hero-compact .actions .btn{height:52px!important;min-height:52px!important;font-size:17px!important;}
-      .hero-compact .actions .btn-primary[href*="mpago"]{display:none!important;}
       .photo-card>img{min-height:300px;}
       .hero-photo-card .note-card{font-size:15px!important;line-height:1.45!important;}
       .sales-impact{gap:20px!important;margin:-18px 0 32px!important;}
@@ -257,8 +256,12 @@
       .final-cta{padding:48px 0!important;}
       .final-card{padding:22px;}
       .top-link{width:52px!important;height:52px!important;right:14px!important;bottom:84px!important;border-radius:16px!important;opacity:.72!important;}
-      .cookie-banner{grid-template-columns:1fr;left:12px;right:12px;bottom:12px;padding:16px;}
+      .cookie-banner{grid-template-columns:1fr;left:12px;right:12px;bottom:12px;gap:10px;padding:14px 16px;}
+      .cookie-banner strong{font-size:16px;margin-bottom:2px;}
+      .cookie-banner p{font-size:13px;line-height:1.38;}
+      .cookie-banner a{font-size:13px;}
       .cookie-actions{display:grid;grid-template-columns:1fr 1fr;}
+      .cookie-actions .btn{height:42px;min-height:42px;padding:0 10px;font-size:13px;}
       .cookie-banner a{white-space:normal;}
     }
   `;
@@ -270,15 +273,15 @@
   };
 
   const applyVisualCopy = () => {
-    setText('.impact-copy h2', 'No te quedes en la orilla.');
-    setText('.impact-analogy', 'Cobrar solo en efectivo es mirar el mar desde la orilla. Al aceptar tarjeta y medios digitales, descubres más clientes, más comodidad y más oportunidades de venta.');
+    setText('.impact-copy h2', 'No te quedes cobrando solo en efectivo.');
+    setText('.impact-analogy', 'Cobrar únicamente en efectivo es como mirar el mar desde la orilla: parece suficiente, hasta que avanzas y descubres lo grande que es. Al aceptar tarjeta y medios digitales, tu negocio se abre a más clientes y a más oportunidades de venta.');
     setText('.impact-metric small', 'Estimación variable según giro, temporada y forma de vender.');
     setText('.growth-section h2', 'Soluciones de cobro para negocios que quieren crecer.');
-    setText('.growth-section .lead', 'Te ayudamos a comparar y brindamos información para que tomes la mejor decisión e incrementes tus ventas.');
+    setText('.growth-section .lead', 'Te brindamos la información para que tomes la mejor decisión de acuerdo a tus necesidades e incrementes tus ventas.');
     setText('.advisory-band .lead', 'Una terminal es un aspecto importante de tu negocio: te permite crecer, incrementar tus posibilidades de venta y desarrollar un sistema exitoso de cobro.');
 
     const imageFallbacks = [
-      ['.advice-photo img', `${assetPrefix}assets/hero/hero-principal.png`],
+      ['.advice-photo img', `${assetPrefix}assets/hero/asesoria-personalizada.png`],
       ['.compare-hero-visual img', `${assetPrefix}assets/hero/diagnostico-cobro.png`]
     ];
 
