@@ -50,7 +50,7 @@
       </a>
       <nav class="menu" aria-label="Navegación principal">
         <a href="index.html#inicio">Inicio</a>
-        <a href="index.html#diagnostico">Diagnóstico</a>
+        <a class="diagnostic-menu-link" href="index.html#diagnostico" aria-label="Hacer mi diagnóstico gratis"><span class="label-full">Hacer mi diagnóstico gratis</span><span class="label-short">Diagnóstico gratis</span></a>
         <a href="terminales.html">Terminales</a>
         <a href="compara.html">Compara</a>
         <a href="blog.html">Blog</a>
@@ -80,12 +80,12 @@
           <p class="lead">Te ayudo a comparar opciones de cobro para vender más, cobrar con tarjeta y decidir con claridad antes de comprar o contratar.</p>
           <div class="actions">
             <a class="btn btn-primary" href="compara.html#matriz">Comparar opciones</a>
-            <a class="btn btn-soft" href="#diagnostico">Hacer diagnóstico</a>
+            <a class="btn btn-soft" href="#diagnostico">Hacer mi diagnóstico gratis</a>
           </div>
         </div>
         <div class="visual-card photo-card hero-photo-card">
           <img src="assets/hero/hero-principal.png" alt="Negocio usando una terminal de cobro">
-          <div class="note-card"><strong>Elección inteligente.</strong><br>Te oriento para que tomes la mejor decisión de acuerdo a tus necesidades.</div>
+          <div class="note-card"><strong>Antes de elegir, compara.</strong><br>Comisiones, depósitos, conectividad y soporte cambian entre opciones.</div>
         </div>
       </div>
     </section>
@@ -93,8 +93,10 @@
     <section class="section growth-section">
       <div class="sales-impact" aria-label="Impacto de aceptar pagos con tarjeta">
         <div class="impact-copy">
-          <h2>No te quedes cobrando solo en efectivo.</h2>
-          <p class="impact-analogy">Cobrar únicamente en efectivo es como mirar el mar desde la orilla: parece suficiente, hasta que avanzas y descubres lo grande que es. Al aceptar tarjeta y medios digitales, tu negocio se abre a más clientes y a más oportunidades de venta.</p>
+          <span class="eyebrow">De la orilla al mar abierto</span>
+          <h2>No limites cómo pueden pagarte.</h2>
+          <p class="impact-analogy">Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera a quienes prefieren pagar con tarjeta, link o billetera digital.</p>
+          <div class="payment-path" aria-label="De solo efectivo a más oportunidades"><span><b>1</b>Solo efectivo</span><span><b>2</b>Más formas de pago</span><span><b>3</b>Más oportunidades</span></div>
         </div>
         <div class="impact-metric">
           <span>referencia orientativa</span>
@@ -104,13 +106,13 @@
         </div>
       </div>
 
-      <h2>Soluciones de cobro para negocios que quieren crecer.</h2>
-      <p class="lead">Te brindamos la información para que tomes la mejor decisión de acuerdo a tus necesidades e incrementes tus ventas.</p>
+      <h2>Crecer y tener más clientes no es suerte.</h2>
+      <p class="lead">Es tener información clara y elegir bien.</p>
       <div class="grid-4 feature-grid media-feature-grid">
-        <article class="card feature-card media-card media-hardware"><div class="icon icon-terminal" aria-hidden="true">▣</div><span class="card-kicker">Equipo</span><h3>La terminal ideal</h3><p>El equipo debe adaptarse a tu forma de vender: mostrador, movilidad, conectividad y volumen. Elegir bien evita pagar de más o quedarte corto.</p></article>
-        <article class="card feature-card media-card media-info"><div class="icon icon-info" aria-hidden="true">▥</div><span class="card-kicker">Costos y condiciones</span><h3>Información clara</h3><p>Comisión, tiempo de depósito, renta, soporte y requisitos: te explicamos el costo real antes de contratar.</p></article>
-        <article class="card feature-card media-card media-compare"><div class="icon icon-compare" aria-hidden="true">≋</div><span class="card-kicker">Decisión informada</span><h3>Comparación real</h3><p>Comparamos tasa, liquidación, conectividad, meses sin intereses, soporte y contrato para encontrar el mejor equilibrio.</p></article>
-        <article class="card feature-card media-card media-growth"><div class="icon icon-growth" aria-hidden="true">↗</div><span class="card-kicker">Escalabilidad</span><h3>De menos a más</h3><p>Empieza con lo necesario y suma terminales, links de pago o mejores planes cuando tu operación realmente lo justifique.</p></article>
+        <article class="card feature-card media-card media-hardware"><div class="icon icon-terminal" aria-hidden="true">▣</div><div class="card-copy"><span class="card-kicker">Equipo</span><h3>La terminal ideal</h3><p>El equipo debe adaptarse a tu forma de vender: mostrador, movilidad, conectividad y volumen. Elegir bien evita pagar de más o quedarte corto.</p></div></article>
+        <article class="card feature-card media-card media-info"><div class="icon icon-info" aria-hidden="true">▥</div><div class="card-copy"><span class="card-kicker">Costos y condiciones</span><h3>Información clara</h3><p>Comisión, tiempo de depósito, renta, soporte y requisitos: te explicamos el costo real antes de contratar.</p></div></article>
+        <article class="card feature-card media-card media-compare"><div class="icon icon-compare" aria-hidden="true">≋</div><div class="card-copy"><span class="card-kicker">Decisión informada</span><h3>Comparación real</h3><p>Comparamos tasa, liquidación, conectividad, meses sin intereses, soporte y contrato para encontrar el mejor equilibrio.</p></div></article>
+        <article class="card feature-card media-card media-growth"><div class="icon icon-growth" aria-hidden="true">↗</div><div class="card-copy"><span class="card-kicker">Escalabilidad</span><h3>De menos a más</h3><p>Empieza con lo necesario y suma terminales, links de pago o mejores planes cuando tu operación realmente lo justifique.</p></div></article>
       </div>
     </section>
 
@@ -125,11 +127,12 @@
           <div class="list-item"><div class="icon icon-check" aria-hidden="true">✓</div><div><h3>Evitas comprar por impulso</h3><p>Primero revisamos qué cobras, cómo vendes y qué necesitas realmente.</p></div></div>
           <div class="list-item"><div class="icon icon-data" aria-hidden="true">↯</div><div><h3>Decides con datos</h3><p>Comparamos opciones rápidas, híbridas y bancarias con lenguaje simple.</p></div></div>
           <div class="list-item"><div class="icon icon-star" aria-hidden="true">★</div><div><h3>Acompañamiento personalizado</h3><p>Revisamos tu perfil de negocio para orientarte antes de comprar o contratar.</p></div></div>
-          <div class="advice-route">
-            <span class="eyebrow">Así te asesoramos</span>
-            <h3>De tus necesidades a una decisión clara</h3>
-            <div class="route-steps"><div><b>1</b><span>Conocemos tu operación</span></div><div><b>2</b><span>Comparamos costos y condiciones</span></div><div><b>3</b><span>Te explicamos qué opción conviene</span></div></div>
-            <p>Sin presión de compra y con razones que puedas entender y comprobar.</p>
+          <div class="advice-video-shell" aria-label="Resumen visual del proceso de asesoría">
+            <div class="video-preview">
+              <div class="video-topline"><span class="video-badge">Así te asesoramos</span><span class="video-status">3 pasos</span></div>
+              <div class="video-story" aria-hidden="true"><span><b>1</b>Conocemos tu negocio</span><span><b>2</b>Comparamos opciones</span><span><b>3</b>Te explicamos por qué</span></div>
+              <div class="video-message"><small>Comparar. Entender. Elegir.</small><strong>Una solución de cobro con razones claras.</strong></div>
+            </div>
           </div>
         </div>
       </div>
@@ -166,7 +169,7 @@
         <span class="eyebrow">Compatibilidad</span>
         <h2>Medios de pago disponibles según la terminal.</h2>
         <p class="lead payment-lead">La compatibilidad cambia por modelo y proveedor. Antes de comprar verificamos cuáles acepta el equipo que te interesa.</p>
-        <div class="payment-marquee" aria-label="Ejemplos de redes, vales y wallets disponibles en distintas terminales">
+        <div class="payment-marquee" aria-label="Ejemplos de redes, vales y billeteras digitales disponibles en distintas terminales">
           <div class="payment-track"><div class="payment-set">
             <div class="logo-tile"><img src="assets/logos/visa01.svg" alt="Visa"></div>
             <div class="logo-tile"><img src="assets/logos/mastercard1.svg" alt="Mastercard"></div>
@@ -185,7 +188,6 @@
             <div class="logo-tile payment-name"><strong>TENGO!</strong></div>
           </div></div>
         </div>
-        <p class="payment-note">En la siguiente investigación confirmaremos compatibilidad exacta por terminal y sustituiremos los nombres provisionales por sus logotipos oficiales.</p>
       </div>
     </section>
 
