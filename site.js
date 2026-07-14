@@ -85,21 +85,26 @@
     .impact-copy h2{font-size:clamp(32px,3.6vw,54px)!important;line-height:1.04!important;margin:0 0 18px!important;}
     .impact-copy p{font-size:20px!important;line-height:1.58!important;color:#42576f!important;margin:0!important;}
     .impact-analogy{position:relative;padding-left:22px!important;border-left:5px solid var(--yellow)!important;max-width:760px;}
-    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:linear-gradient(140deg,rgba(7,29,54,.84),rgba(0,115,230,.83)),url('${assetPrefix}assets/hero/hero-principal.png') center/cover!important;color:#fff!important;}
+    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:radial-gradient(circle at 84% 14%,rgba(25,174,234,.30),transparent 30%),linear-gradient(145deg,#071d36,#0758b5 78%,#0073e6)!important;color:#fff!important;}
     .impact-metric:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.18);border-radius:22px;pointer-events:none;}
     .impact-metric span{font-size:13px!important;text-transform:uppercase!important;letter-spacing:.16em!important;font-weight:900!important;color:#dff4ff!important;}
     .metric-number{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:18px!important;margin:18px 0 16px!important;position:relative;z-index:1;}
     .metric-number strong{font-size:clamp(56px,6vw,84px)!important;line-height:.9!important;color:var(--yellow)!important;text-shadow:0 16px 32px rgba(0,0,0,.18);}
     .metric-number em{font-style:normal!important;font-weight:900!important;color:#fff!important;font-size:21px!important;line-height:1.6!important;text-transform:uppercase!important;}
     .impact-metric small{font-size:15px!important;line-height:1.45!important;color:#e7f4ff!important;max-width:440px;position:relative;z-index:1;}
+    .impact-symbol{position:absolute;right:34px;top:32px;width:98px;height:70px;display:flex;align-items:end;gap:7px;opacity:.28;z-index:1;}
+    .impact-symbol i{display:block;width:14px;border-radius:999px 999px 4px 4px;background:#fff;animation:impactBars 3.2s ease-in-out infinite;}
+    .impact-symbol i:nth-child(1){height:24px}.impact-symbol i:nth-child(2){height:42px;animation-delay:.18s}.impact-symbol i:nth-child(3){height:62px;animation-delay:.36s}.impact-symbol b{position:absolute;right:0;top:-12px;color:var(--yellow);font-size:42px;}
+    @keyframes impactBars{0%,100%{transform:scaleY(.84);opacity:.66}50%{transform:scaleY(1);opacity:1}}
 
     .media-feature-grid{align-items:stretch!important;gap:22px!important;}
     .media-card{position:relative!important;overflow:hidden!important;min-height:344px!important;padding:30px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;color:#fff!important;background:#071d36!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 22px 50px rgba(7,29,54,.16)!important;transition:transform .22s ease,box-shadow .22s ease!important;}
-    .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.06);transform:scale(1.03);transition:transform .35s ease,filter .35s ease;}
-    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.20),rgba(7,29,54,.48) 42%,rgba(7,29,54,.92));}
+    .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.02);transform:scale(1.03);transition:transform .35s ease,filter .35s ease;}
+    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.24),rgba(7,29,54,.70));backdrop-filter:blur(1.2px);}
     .media-card:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(7,29,54,.2)!important;}
     .media-card:hover:before{transform:scale(1.08);filter:saturate(1.1) blur(.8px);}
-    .media-card h3,.media-card p,.media-card .icon{position:relative;z-index:1;}
+    .media-card h3,.media-card p,.media-card .icon,.media-card .card-kicker{position:relative;z-index:1;}
+    .media-card .card-kicker{display:block;margin:0 0 7px;color:#d9efff;font-size:12px;font-weight:950;letter-spacing:.14em;text-transform:uppercase;}
     .media-card h3{color:#fff!important;font-size:25px!important;}
     .media-card p{color:#eaf6ff!important;font-size:17px!important;line-height:1.55!important;margin-bottom:0!important;}
     .media-card .icon{width:64px!important;height:64px!important;font-size:0!important;color:#fff!important;box-shadow:0 14px 30px rgba(7,29,54,.26)!important;margin-bottom:auto!important;display:grid!important;place-items:center!important;border-radius:18px!important;}
@@ -119,7 +124,7 @@
     .icon-data{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
     .icon-star{background:linear-gradient(135deg,#ffd23f,#f59e0b)!important;color:#071d36!important;}
 
-    .advisory-band{background:linear-gradient(135deg,#f8fcff 0%,#fff 58%,#fff8df 100%)!important;color:var(--navy)!important;padding-top:64px!important;padding-bottom:64px!important;}
+    .advisory-band{background:radial-gradient(circle at 92% 12%,rgba(255,210,63,.10),transparent 32%),radial-gradient(circle at 8% 88%,rgba(0,115,230,.05),transparent 34%),#fff!important;color:var(--navy)!important;padding-top:64px!important;padding-bottom:64px!important;}
     .advice-split{align-items:center!important;gap:42px!important;}
     .advisory-band h2,.advisory-band h3{color:var(--navy)!important;}
     .advisory-band .lead,.advice-list p{color:#40546a!important;}
@@ -129,6 +134,11 @@
     .advice-list{gap:16px!important;}
     .advice-list .list-item{background:#fff!important;border:1px solid var(--line)!important;box-shadow:0 14px 30px rgba(7,29,54,.06)!important;}
     .advice-list .icon{font-size:0!important;display:grid!important;place-items:center!important;border-radius:14px!important;}
+    .advice-route{position:relative;overflow:hidden;padding:24px;border-radius:22px;background:linear-gradient(145deg,#071d36,#0758b5);color:#fff;box-shadow:0 18px 42px rgba(7,29,54,.16);}
+    .advice-route:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-72px;top:-88px;animation:routePulse 4s ease-in-out infinite;}
+    .advice-route .eyebrow{color:#9edcff}.advice-route h3{color:#fff!important;margin:6px 0 18px!important;font-size:24px!important}.advice-route>p{margin:16px 0 0!important;color:#ddecfa!important;font-size:14px!important;}
+    .route-steps{display:grid;gap:10px;position:relative;z-index:1}.route-steps>div{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14)}.route-steps b{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--yellow);color:#071d36}.route-steps span{font-size:14px;font-weight:850;color:#fff;}
+    @keyframes routePulse{0%,100%{transform:scale(.9);opacity:.45}50%{transform:scale(1.08);opacity:.8}}
 
     .diagnostic-with-image{grid-template-columns:.82fr 1.18fr!important;}
     .diagnostic-visual{margin:22px 0 0;border-radius:22px;overflow:hidden;border:1px solid rgba(7,29,54,.12);box-shadow:0 22px 42px rgba(7,29,54,.12);}
@@ -160,6 +170,10 @@
     .payment-cloud .logo-tile{min-height:122px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06);background:#fff;}
     .payment-cloud .logo-tile .brand-mask{width:108px!important;height:62px!important;}
     .payment-cloud .logo-tile img{max-width:124px!important;max-height:66px!important;width:auto;height:auto;object-fit:contain;}
+    .payment-lead{max-width:840px;margin-bottom:26px!important}.payment-marquee{position:relative;overflow:hidden;margin-inline:calc(50% - 50vw);padding:12px 0 18px;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+    .payment-track{display:flex;width:max-content;gap:16px;animation:paymentFlow 34s linear infinite}.payment-set{display:flex;gap:16px;padding-left:16px}.payment-marquee:hover .payment-track{animation-play-state:paused}.payment-marquee .logo-tile{display:grid;place-items:center;flex:0 0 142px;width:142px;height:92px;padding:16px;border:1px solid #d8e8f6;border-radius:18px;background:#fff;box-shadow:0 12px 28px rgba(7,29,54,.07)}.payment-marquee .logo-tile img{max-width:108px;max-height:54px;width:auto;height:auto;object-fit:contain}.payment-name{text-align:center;color:#19334f}.payment-name strong{font-size:15px;line-height:1.2}.payment-note{max-width:920px;margin:8px auto 0;color:#617386;font-size:14px;line-height:1.55;text-align:center}
+    @keyframes paymentFlow{to{transform:translateX(calc(-50% - 8px))}}
+    @media(prefers-reduced-motion:reduce){.payment-track,.impact-symbol i,.advice-route:after{animation:none!important}.payment-marquee{overflow-x:auto;mask-image:none;-webkit-mask-image:none}}
 
     .final-cta{background:linear-gradient(135deg,#f8fcff,#fff 60%,#fff8dd)!important;color:var(--navy)!important;padding:62px 0!important;border-top:1px solid var(--line)!important;}
     .final-grid{display:grid;grid-template-columns:1fr .82fr;gap:34px;align-items:center;}
@@ -235,6 +249,7 @@
       .metric-number strong{font-size:57px!important;}
       .metric-number em{font-size:16px!important;}
       .impact-metric small{font-size:14px!important;}
+      .impact-symbol{right:20px;top:22px;transform:scale(.8);transform-origin:top right;}
       .media-feature-grid{grid-template-columns:1fr!important;gap:18px!important;}
       .media-card{min-height:286px!important;border-radius:20px!important;padding:24px!important;}
       .media-card .icon{width:58px!important;height:58px!important;}
@@ -242,6 +257,7 @@
       .advice-photo{min-height:285px!important;}
       .advice-photo:after{font-size:16px;left:18px;right:18px;bottom:18px;}
       .advice-list .list-item{padding:18px!important;}
+      .advice-route{padding:20px}.advice-route h3{font-size:21px!important;}
       .diagnostic-stepper .diagnostic-progress{top:70px;}
       .step-mode{min-height:390px;}
       .step-mode .q-card{padding:22px;}
@@ -250,9 +266,8 @@
       .diagnostic-nav{display:grid;grid-template-columns:1fr;}
       .payment-band{padding-top:42px!important;}
       .payment-section h2{font-size:34px!important;line-height:1.12!important;}
-      .payment-cloud{grid-template-columns:repeat(2,1fr)!important;gap:12px!important;}
-      .payment-cloud .logo-tile{min-height:104px;}
-      .payment-cloud .logo-tile img{max-width:108px!important;max-height:60px!important;}
+      .payment-marquee{margin-inline:-20px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+      .payment-marquee .logo-tile{flex-basis:124px;width:124px;height:82px}.payment-marquee .logo-tile img{max-width:96px;max-height:48px}
       .final-cta{padding:48px 0!important;}
       .final-card{padding:22px;}
       .top-link{width:52px!important;height:52px!important;right:14px!important;bottom:84px!important;border-radius:16px!important;opacity:.72!important;}
@@ -275,7 +290,7 @@
   const applyVisualCopy = () => {
     setText('.impact-copy h2', 'No te quedes cobrando solo en efectivo.');
     setText('.impact-analogy', 'Cobrar únicamente en efectivo es como mirar el mar desde la orilla: parece suficiente, hasta que avanzas y descubres lo grande que es. Al aceptar tarjeta y medios digitales, tu negocio se abre a más clientes y a más oportunidades de venta.');
-    setText('.impact-metric small', 'Estimación variable según giro, temporada y forma de vender.');
+    setText('.impact-metric small', 'Más oportunidades de venta al ofrecer opciones de pago. No es una promesa de resultados: el impacto depende del giro, temporada y forma de vender.');
     setText('.growth-section h2', 'Soluciones de cobro para negocios que quieren crecer.');
     setText('.growth-section .lead', 'Te brindamos la información para que tomes la mejor decisión de acuerdo a tus necesidades e incrementes tus ventas.');
     setText('.advisory-band .lead', 'Elegir una solución de cobro no debería depender solo del precio. Analizamos cómo vendes, cuánto cobras y qué necesita tu operación para ayudarte a tomar una decisión clara, sostenible y adecuada para tu negocio.');
@@ -337,8 +352,18 @@
     });
   };
 
+  const initPaymentMarquee = () => {
+    const track = document.querySelector('.payment-track');
+    const set = track && track.querySelector('.payment-set');
+    if (!track || !set || track.querySelectorAll('.payment-set').length > 1) return;
+    const clone = set.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  };
+
   const initPagePolish = () => {
     applyVisualCopy();
+    initPaymentMarquee();
     injectPrivacyLinks();
     injectCookieBanner();
   };
