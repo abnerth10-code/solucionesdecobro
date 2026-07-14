@@ -85,7 +85,7 @@
     .impact-copy h2{font-size:clamp(32px,3.6vw,54px)!important;line-height:1.04!important;margin:0 0 18px!important;}
     .impact-copy p{font-size:20px!important;line-height:1.58!important;color:#42576f!important;margin:0!important;}
     .impact-analogy{position:relative;padding-left:22px!important;border-left:5px solid var(--yellow)!important;max-width:760px;}
-    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:radial-gradient(circle at 84% 14%,rgba(25,174,234,.30),transparent 30%),linear-gradient(145deg,#071d36,#0758b5 78%,#0073e6)!important;color:#fff!important;}
+    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:linear-gradient(145deg,rgba(7,29,54,.76),rgba(7,88,181,.62)),url('${assetPrefix}assets/cards/impacto-pagos-tarjeta.jpg') center 56%/cover!important;color:#fff!important;}
     .impact-metric:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.18);border-radius:22px;pointer-events:none;}
     .impact-metric span{font-size:13px!important;text-transform:uppercase!important;letter-spacing:.16em!important;font-weight:900!important;color:#dff4ff!important;}
     .metric-number{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:18px!important;margin:18px 0 16px!important;position:relative;z-index:1;}
@@ -98,9 +98,9 @@
     @keyframes impactBars{0%,100%{transform:scaleY(.84);opacity:.66}50%{transform:scaleY(1);opacity:1}}
 
     .media-feature-grid{align-items:stretch!important;gap:22px!important;}
-    .media-card{position:relative!important;overflow:hidden!important;min-height:344px!important;padding:30px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;color:#fff!important;background:#071d36!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 22px 50px rgba(7,29,54,.16)!important;transition:transform .22s ease,box-shadow .22s ease!important;}
-    .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.02);transform:scale(1.03);transition:transform .35s ease,filter .35s ease;}
-    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.24),rgba(7,29,54,.70));backdrop-filter:blur(1.2px);}
+    .media-card{position:relative!important;overflow:hidden!important;min-height:430px!important;padding:30px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;color:#fff!important;background:#071d36!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 22px 50px rgba(7,29,54,.16)!important;transition:transform .22s ease,box-shadow .22s ease!important;}
+    .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center 42%;filter:saturate(1.02);transform:scale(1.015);transition:transform .35s ease,filter .35s ease;}
+    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.14),rgba(7,29,54,.34) 40%,rgba(7,29,54,.74));backdrop-filter:blur(.7px);}
     .media-card:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(7,29,54,.2)!important;}
     .media-card:hover:before{transform:scale(1.08);filter:saturate(1.1) blur(.8px);}
     .media-card h3,.media-card p,.media-card .icon,.media-card .card-kicker{position:relative;z-index:1;}
@@ -115,10 +115,10 @@
     .icon-check:before{border:none!important;width:28px!important;height:16px!important;border-left:5px solid currentColor!important;border-bottom:5px solid currentColor!important;border-radius:0!important;transform:rotate(-45deg);}
     .icon-data:before{border:none!important;width:30px!important;height:30px!important;background:linear-gradient(135deg,currentColor 0 28%,transparent 28% 42%,currentColor 42% 64%,transparent 64% 78%,currentColor 78% 100%);border-radius:7px!important;}
     .icon-star:before{border:none!important;width:28px!important;height:28px!important;background:currentColor!important;clip-path:polygon(50% 0,61% 34%,98% 35%,68% 56%,79% 91%,50% 70%,21% 91%,32% 56%,2% 35%,39% 34%);}
-    .media-hardware:before{background-image:url('${assetPrefix}assets/hero/catalogo-terminales.png');}
-    .media-info:before{background-image:url('${assetPrefix}assets/hero/diagnostico-cobro.png');}
-    .media-compare:before{background-image:url('${assetPrefix}assets/hero/comparativa-soluciones.png');}
-    .media-growth:before{background-image:url('${assetPrefix}assets/multi-mlm-hero--b6703c46.png');}
+    .media-hardware:before{background-image:url('${assetPrefix}assets/cards/tarjeta-terminal-ideal.jpg');}
+    .media-info:before{background-image:url('${assetPrefix}assets/cards/tarjeta-informacion-clara.jpg');}
+    .media-compare:before{background-image:url('${assetPrefix}assets/cards/tarjeta-comparacion-real.jpg');}
+    .media-growth:before{background-image:url('${assetPrefix}assets/cards/tarjeta-de-menos-a-mas.jpg');}
     .icon-terminal,.icon-info,.icon-compare,.icon-growth{background:rgba(255,255,255,.16)!important;color:#fff!important;border:1px solid rgba(255,255,255,.38)!important;backdrop-filter:blur(12px)!important;}
     .icon-check{background:linear-gradient(135deg,#18a058,#25D366)!important;}
     .icon-data{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
@@ -251,7 +251,7 @@
       .impact-metric small{font-size:14px!important;}
       .impact-symbol{right:20px;top:22px;transform:scale(.8);transform-origin:top right;}
       .media-feature-grid{grid-template-columns:1fr!important;gap:18px!important;}
-      .media-card{min-height:286px!important;border-radius:20px!important;padding:24px!important;}
+      .media-card{min-height:410px!important;border-radius:20px!important;padding:24px!important;}
       .media-card .icon{width:58px!important;height:58px!important;}
       .advisory-band{padding-top:44px!important;padding-bottom:48px!important;}
       .advice-photo{min-height:285px!important;}
