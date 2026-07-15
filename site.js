@@ -57,13 +57,13 @@
     body{color:var(--navy);}
 
     .header{background:rgba(255,255,255,.98)!important;border-bottom:1px solid #d7e7f5!important;box-shadow:0 10px 30px rgba(7,29,54,.04);}
-    .nav{grid-template-columns:minmax(320px,.9fr) auto auto!important;gap:22px!important;}
-    .header .brand{gap:14px!important;align-items:center!important;}
-    .header .brand-logo{width:58px!important;height:58px!important;object-fit:contain!important;border-radius:14px!important;background:#fff!important;box-shadow:0 10px 24px rgba(7,29,54,.08)!important;}
-    .header .brand-name{font-size:30px!important;line-height:1.02!important;letter-spacing:.005em!important;color:var(--navy)!important;}
+    .nav{grid-template-columns:minmax(390px,1fr) auto auto!important;gap:16px!important;}
+    .header .brand{gap:12px!important;align-items:center!important;}
+    .header .brand-logo{width:54px!important;height:54px!important;object-fit:contain!important;border-radius:14px!important;background:#fff!important;box-shadow:0 10px 24px rgba(7,29,54,.08)!important;}
+    .header .brand-name{font-size:28px!important;line-height:1.02!important;letter-spacing:.005em!important;color:var(--navy)!important;}
     .header .brand-name small{font-size:15px!important;line-height:1.1!important;margin-top:4px!important;color:#697b8e!important;}
-    .menu{gap:10px!important;}
-    .menu a{font-size:17px!important;font-weight:900!important;color:#25384d!important;padding-inline:7px!important;}
+    .menu{gap:6px!important;}
+    .menu a{font-size:16px!important;font-weight:900!important;color:#25384d!important;padding-inline:5px!important;}
     .menu a:hover{color:var(--blue)!important;}
     .header-actions>.btn{height:52px!important;padding:0 20px!important;font-size:16px!important;border-radius:12px!important;}
     .mini-social{border-color:#d7e7f5!important;background:#fff!important;box-shadow:0 8px 18px rgba(7,29,54,.05)!important;}
