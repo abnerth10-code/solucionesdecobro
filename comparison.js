@@ -9,6 +9,11 @@
 
   if (!tbody || !providers.length) return;
 
+  const requestedCategory = new URLSearchParams(window.location.search).get('tipo');
+  if (category && requestedCategory && Array.from(category.options).some((option) => option.value === requestedCategory)) {
+    category.value = requestedCategory;
+  }
+
   const normalize = (value) => String(value || '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')

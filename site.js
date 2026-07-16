@@ -87,35 +87,37 @@
     .impact-copy p{font-size:20px!important;line-height:1.58!important;color:#42576f!important;margin:0!important;}
     .impact-analogy{position:relative;padding-left:22px!important;border-left:5px solid var(--yellow)!important;max-width:760px;}
     .impact-copy .eyebrow{display:block;margin-bottom:12px;color:#0758b5;font-weight:950;letter-spacing:.13em;text-transform:uppercase;font-size:13px;}
-    .payment-path{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;}
-    .payment-path span{position:relative;display:flex;align-items:center;gap:9px;min-height:52px;padding:10px 12px;border:1px solid #cfe4f7;border-radius:14px;background:rgba(255,255,255,.82);color:#19334f;font-size:13px;font-weight:900;line-height:1.25;}
-    .payment-path span:not(:last-child):after{content:"";position:absolute;right:-9px;top:50%;width:8px;border-top:2px solid #8bc8f4;}
-    .payment-path b{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:9px;background:#e5f5ff;color:#0758b5;font-size:13px;}
+    .payment-path{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1.15fr);gap:10px;align-items:stretch;margin-top:24px;}
+    .payment-path>span:not(.path-arrow){display:grid;align-content:center;gap:4px;min-height:76px;padding:14px 16px;border:1px solid #cfe4f7;border-radius:16px;background:#fff;color:#19334f;line-height:1.25;}
+    .payment-path b{font-size:15px;font-weight:950}.payment-path small{font-size:13px;color:#617386;font-weight:800}
+    .payment-path .path-limited{border-color:#d9e2ea!important;background:#f7f9fb!important}.payment-path .path-open{border-color:#9bd3fb!important;background:#edf8ff!important;box-shadow:inset 4px 0 0 #0073e6}
+    .payment-path .path-arrow{display:grid;place-items:center;color:#0073e6;font-size:28px;font-weight:950;}
     .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:linear-gradient(145deg,rgba(7,29,54,.76),rgba(7,88,181,.62)),url('${assetPrefix}assets/cards/impacto-pagos-tarjeta.jpg') center 56%/cover!important;color:#fff!important;}
     .impact-metric:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.18);border-radius:22px;pointer-events:none;}
     .impact-metric span{font-size:13px!important;text-transform:uppercase!important;letter-spacing:.16em!important;font-weight:900!important;color:#dff4ff!important;}
     .metric-number{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:18px!important;margin:18px 0 16px!important;position:relative;z-index:1;}
     .metric-number strong{font-size:clamp(56px,6vw,84px)!important;line-height:.9!important;color:var(--yellow)!important;text-shadow:0 16px 32px rgba(0,0,0,.18);}
     .metric-number em{font-style:normal!important;font-weight:900!important;color:#fff!important;font-size:21px!important;line-height:1.6!important;text-transform:uppercase!important;}
-    .impact-metric small{font-size:15px!important;line-height:1.45!important;color:#e7f4ff!important;max-width:440px;position:relative;z-index:1;}
+    .impact-metric .metric-message{position:relative;z-index:1;margin:0 0 10px!important;color:#fff!important;font-size:18px!important;line-height:1.4!important;font-weight:900;max-width:470px}
+    .impact-metric small{font-size:13px!important;line-height:1.45!important;color:#d8e8f6!important;max-width:470px;position:relative;z-index:1;}
+    .impact-metric small strong{color:#fff}
     .impact-symbol{position:absolute;right:34px;top:32px;width:98px;height:70px;display:flex;align-items:end;gap:7px;opacity:.28;z-index:1;}
     .impact-symbol i{display:block;width:14px;border-radius:999px 999px 4px 4px;background:#fff;animation:impactBars 3.2s ease-in-out infinite;}
     .impact-symbol i:nth-child(1){height:24px}.impact-symbol i:nth-child(2){height:42px;animation-delay:.18s}.impact-symbol i:nth-child(3){height:62px;animation-delay:.36s}.impact-symbol b{position:absolute;right:0;top:-12px;color:var(--yellow);font-size:42px;}
     @keyframes impactBars{0%,100%{transform:scaleY(.84);opacity:.66}50%{transform:scaleY(1);opacity:1}}
 
     .media-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:24px!important;}
-    .media-card{--card-accent:#56b7ff;position:relative!important;overflow:hidden!important;min-height:390px!important;padding:24px!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;color:#fff!important;background:#071d36!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 22px 50px rgba(7,29,54,.14)!important;transition:transform .22s ease,box-shadow .22s ease!important;}
-    .media-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center 42%;filter:saturate(1.03);transform:scale(1.015);transition:transform .35s ease,filter .35s ease;}
-    .media-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,54,.06),rgba(7,29,54,.18));}
+    .media-card{--card-accent:#56b7ff;position:relative!important;overflow:hidden!important;min-height:430px!important;padding:0!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;color:#071d36!important;background:#fff!important;border:1px solid #d8e8f6!important;box-shadow:0 18px 44px rgba(7,29,54,.1)!important;transition:transform .22s ease,box-shadow .22s ease!important;}
+    .media-card:before{content:"";position:absolute;inset:0 0 43% 0;background-size:cover;background-position:center 42%;filter:saturate(.82) contrast(.96);transform:scale(1.01);transition:transform .35s ease,filter .35s ease;}
+    .media-card:after{content:"";position:absolute;left:0;right:0;top:53%;height:48px;z-index:0;background:linear-gradient(180deg,transparent,#fff 92%);}
     .media-card:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(7,29,54,.2)!important;}
-    .media-card:hover:before{transform:scale(1.08);filter:saturate(1.1) blur(.8px);}
+    .media-card:hover:before{transform:scale(1.045);filter:saturate(.9) contrast(1);}
     .media-card .icon,.media-card .card-copy{position:relative;z-index:1;}
-    .media-card .card-copy{width:min(78%,520px);padding:20px 22px;border:1px solid rgba(255,255,255,.24);border-left:5px solid var(--card-accent);border-radius:20px;background:rgba(7,29,54,.9);box-shadow:0 18px 34px rgba(0,0,0,.22);backdrop-filter:blur(8px);}
-    .media-info .card-copy,.media-growth .card-copy{align-self:flex-end;}
+    .media-card .card-copy{width:100%;min-height:43%;padding:24px 26px 26px;border:0;border-top:5px solid var(--card-accent);border-radius:0;background:#fff;box-shadow:none;}
     .media-card .card-kicker{display:block;margin:0 0 7px;color:var(--card-accent);font-size:12px;font-weight:950;letter-spacing:.14em;text-transform:uppercase;}
-    .media-card h3{color:#fff!important;font-size:25px!important;}
-    .media-card p{color:#eaf6ff!important;font-size:17px!important;line-height:1.55!important;margin-bottom:0!important;}
-    .media-card .icon{width:64px!important;height:64px!important;font-size:0!important;color:#fff!important;box-shadow:0 14px 30px rgba(7,29,54,.26)!important;display:grid!important;place-items:center!important;border-radius:18px!important;}
+    .media-card h3{color:#071d36!important;font-size:25px!important;}
+    .media-card p{color:#53687f!important;font-size:16px!important;line-height:1.55!important;margin-bottom:0!important;}
+    .media-card .icon{position:absolute!important;left:24px;top:24px;width:58px!important;height:58px!important;font-size:0!important;color:#fff!important;box-shadow:0 12px 28px rgba(7,29,54,.2)!important;display:grid!important;place-items:center!important;border-radius:18px!important;}
     .media-card .icon:before,.advice-list .icon:before,.result h3:before{content:"";display:block;width:28px;height:28px;border:3px solid currentColor;border-radius:7px;}
     .icon-info:before{border:none!important;width:12px!important;height:34px!important;border-radius:8px!important;background:currentColor!important;box-shadow:14px 10px 0 currentColor,-14px 18px 0 currentColor;}
     .icon-compare:before{border:none!important;width:34px!important;height:12px!important;border-radius:999px!important;background:currentColor!important;box-shadow:0 -12px 0 rgba(255,255,255,.72),0 12px 0 rgba(255,255,255,.72);}
@@ -129,24 +131,24 @@
     .media-growth:before{background-image:url('${assetPrefix}assets/cards/tarjeta-de-menos-a-mas.jpg');}
     .media-info{--card-accent:#63d3c1}.media-compare{--card-accent:#ffd23f}.media-growth{--card-accent:#8ed081}
     .media-info:before{background-position:center 46%}.media-compare:before{background-position:center 40%}.media-growth:before{background-position:center 48%}
-    .icon-terminal,.icon-info,.icon-compare,.icon-growth{background:rgba(255,255,255,.16)!important;color:#fff!important;border:1px solid rgba(255,255,255,.38)!important;backdrop-filter:blur(12px)!important;}
+    .icon-terminal,.icon-info,.icon-compare,.icon-growth{background:rgba(7,29,54,.84)!important;color:#fff!important;border:1px solid rgba(255,255,255,.52)!important;backdrop-filter:blur(12px)!important;}
     .icon-check{background:linear-gradient(135deg,#18a058,#25D366)!important;}
     .icon-data{background:linear-gradient(135deg,#1A1F71,#0073e6)!important;}
     .icon-star{background:linear-gradient(135deg,#ffd23f,#f59e0b)!important;color:#071d36!important;}
 
     .advisory-band{background:radial-gradient(circle at 94% 10%,rgba(255,210,63,.06),transparent 30%),radial-gradient(circle at 6% 90%,rgba(0,115,230,.035),transparent 32%),#fff!important;color:var(--navy)!important;padding-top:64px!important;padding-bottom:64px!important;}
-    .advice-split{align-items:center!important;gap:42px!important;}
+    .advice-split{align-items:stretch!important;gap:34px!important;grid-template-columns:.9fr 1.1fr!important;}
     .advisory-band h2,.advisory-band h3{color:var(--navy)!important;}
     .advisory-band .lead,.advice-list p{color:#40546a!important;}
     .advice-photo{position:relative;margin:22px 0 0!important;border-radius:28px!important;overflow:hidden!important;border:1px solid var(--line)!important;box-shadow:0 22px 50px rgba(7,29,54,.12)!important;min-height:330px!important;background:#fff!important;}
     .advice-photo img{display:block!important;width:100%!important;height:330px!important;object-fit:cover!important;}
     .advice-photo:after{content:"Asesoría para elegir con claridad";position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;border-radius:20px;background:rgba(7,29,54,.54);backdrop-filter:blur(14px);color:#fff;font-weight:900;font-size:20px;box-shadow:0 14px 34px rgba(7,29,54,.22);}
-    .advice-list{gap:16px!important;}
+    .advice-list{display:flex;align-items:stretch!important;min-width:0}
     .advice-list .list-item{background:#fff!important;border:1px solid var(--line)!important;box-shadow:0 14px 30px rgba(7,29,54,.06)!important;}
     .advice-list .icon{font-size:0!important;display:grid!important;place-items:center!important;border-radius:14px!important;}
-    .advice-video-shell{position:relative;overflow:hidden;min-height:330px;border-radius:26px;background:linear-gradient(145deg,#071d36,#0758b5);color:#fff;box-shadow:0 20px 46px rgba(7,29,54,.18);}
+    .advice-video-shell{position:relative;overflow:hidden;min-height:100%;width:100%;border-radius:26px;background:linear-gradient(145deg,#071d36,#0758b5);color:#fff;box-shadow:0 20px 46px rgba(7,29,54,.18);}
     .advice-video-shell:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 86% 12%,rgba(255,210,63,.24),transparent 28%),linear-gradient(115deg,transparent 0 48%,rgba(255,255,255,.05) 48% 50%,transparent 50%);background-size:auto,34px 34px;}
-    .video-preview{position:relative;z-index:1;display:flex;min-height:330px;padding:26px;flex-direction:column;justify-content:space-between;}
+    .video-preview{position:relative;z-index:1;display:flex;min-height:100%;padding:30px;flex-direction:column;justify-content:space-between;}
     .video-topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.video-badge,.video-status{display:inline-flex;align-items:center;min-height:34px;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:950;letter-spacing:.04em}.video-badge{background:#fff;color:#0758b5}.video-status{border:1px solid rgba(255,255,255,.26);color:#dff2ff;background:rgba(255,255,255,.08)}
     .video-story{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0}.video-story span{display:grid;gap:8px;min-height:104px;align-content:center;padding:14px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.09);color:#fff;font-size:13px;font-weight:850;line-height:1.25;animation:storyGlow 6s ease-in-out infinite}.video-story span:nth-child(2){animation-delay:2s}.video-story span:nth-child(3){animation-delay:4s}.video-story b{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--yellow);color:#071d36}
     .video-message{display:grid;gap:6px}.video-message small{color:#9edcff;font-size:13px;font-weight:950;text-transform:uppercase;letter-spacing:.11em}.video-message strong{max-width:520px;color:#fff;font-size:clamp(24px,2.4vw,34px);line-height:1.05}
@@ -182,10 +184,10 @@
     .payment-cloud .logo-tile{min-height:122px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06);background:#fff;}
     .payment-cloud .logo-tile .brand-mask{width:108px!important;height:62px!important;}
     .payment-cloud .logo-tile img{max-width:124px!important;max-height:66px!important;width:auto;height:auto;object-fit:contain;}
-    .payment-lead{max-width:840px;margin-bottom:26px!important}.payment-marquee{position:relative;overflow:hidden;margin-inline:calc(50% - 50vw);padding:12px 0 18px;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-    .payment-track{display:flex;width:max-content;gap:16px;animation:paymentFlow 34s linear infinite}.payment-set{display:flex;gap:16px;padding-left:16px}.payment-marquee:hover .payment-track{animation-play-state:paused}.payment-marquee .logo-tile{display:grid;place-items:center;flex:0 0 142px;width:142px;height:92px;padding:16px;border:1px solid #d8e8f6;border-radius:18px;background:#fff;box-shadow:0 12px 28px rgba(7,29,54,.07)}.payment-marquee .logo-tile img{max-width:108px;max-height:54px;width:auto;height:auto;object-fit:contain}.payment-name{text-align:center;color:#19334f}.payment-name strong{font-size:15px;line-height:1.2}
-    @keyframes paymentFlow{to{transform:translateX(calc(-50% - 8px))}}
-    @media(prefers-reduced-motion:reduce){.payment-track,.impact-symbol i,.video-story span{animation:none!important}.payment-marquee{overflow-x:auto;mask-image:none;-webkit-mask-image:none}}
+    .payment-lead{max-width:840px;margin-bottom:18px!important}.payment-carousel-controls{display:flex;justify-content:flex-end;gap:10px;margin-bottom:10px}.payment-control{display:grid;place-items:center;width:48px;height:48px;border:1px solid #b9d9f2;border-radius:14px;background:#fff;color:#0758b5;font-size:23px;font-weight:950;cursor:pointer;box-shadow:0 8px 20px rgba(7,29,54,.07)}.payment-control:hover{background:#edf8ff}.payment-control:focus-visible,.payment-marquee:focus-visible{outline:3px solid #ffbf00;outline-offset:3px}
+    .payment-marquee{position:relative;overflow-x:auto;overflow-y:hidden;margin-inline:calc(50% - 50vw);padding:12px max(20px,calc((100vw - var(--max))/2)) 22px;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#8bc8f4 #eaf4fb}
+    .payment-track{display:flex;width:max-content;gap:16px}.payment-set{display:flex;gap:16px}.payment-marquee .logo-tile{display:grid;place-items:center;flex:0 0 142px;width:142px;height:92px;padding:16px;border:1px solid #d8e8f6;border-radius:18px;background:#fff;box-shadow:0 12px 28px rgba(7,29,54,.07);scroll-snap-align:start}.payment-marquee .logo-tile img{max-width:108px;max-height:54px;width:auto;height:auto;object-fit:contain}.payment-name{text-align:center;color:#19334f}.payment-name strong{font-size:15px;line-height:1.2}
+    @media(prefers-reduced-motion:reduce){.impact-symbol i,.video-story span{animation:none!important}.payment-marquee{scroll-behavior:auto}}
 
     .final-cta{background:radial-gradient(circle at 88% 14%,rgba(255,210,63,.11),transparent 28%),radial-gradient(circle at 8% 86%,rgba(0,115,230,.07),transparent 30%),#fff!important;color:var(--navy)!important;padding:62px 0!important;border-top:1px solid var(--line)!important;}
     .final-grid{display:grid;grid-template-columns:1fr .82fr;gap:34px;align-items:center;}
@@ -221,7 +223,7 @@
     @media(max-width:900px){
       .sales-impact{grid-template-columns:1fr!important;}
       .media-feature-grid{grid-template-columns:1fr 1fr!important;}
-      .nav,.hero-compact .hero-inner,.diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner,.final-grid{grid-template-columns:1fr!important;}
+      .nav,.hero-compact .hero-inner,.diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner,.final-grid,.advice-split{grid-template-columns:1fr!important;}
       .terminal-hero-visual img,.compare-hero-visual img{height:auto;max-height:520px;object-fit:contain;}
     }
     @media(max-width:680px){
@@ -257,15 +259,15 @@
       .impact-copy{transform:none!important;}
       .impact-copy h2{font-size:34px!important;line-height:1.06!important;}
       .impact-copy p{font-size:17px!important;line-height:1.56!important;}
-      .payment-path{grid-template-columns:1fr!important}.payment-path span:not(:last-child):after{display:none}
+      .payment-path{grid-template-columns:1fr!important}.payment-path .path-arrow{min-height:30px;transform:rotate(90deg)}
       .metric-number{gap:12px!important;}
       .metric-number strong{font-size:57px!important;}
       .metric-number em{font-size:16px!important;}
       .impact-metric small{font-size:14px!important;}
       .impact-symbol{right:20px;top:22px;transform:scale(.8);transform-origin:top right;}
       .media-feature-grid{grid-template-columns:1fr!important;gap:18px!important;}
-      .media-card{min-height:410px!important;border-radius:20px!important;padding:20px!important;}
-      .media-card .card-copy{width:100%;padding:18px;border-radius:18px}.media-info .card-copy,.media-growth .card-copy{align-self:stretch}
+      .media-card{min-height:430px!important;border-radius:20px!important;padding:0!important;}
+      .media-card .card-copy{width:100%;padding:20px;border-radius:0}
       .media-card .icon{width:58px!important;height:58px!important;}
       .advisory-band{padding-top:44px!important;padding-bottom:48px!important;}
       .advice-photo{min-height:285px!important;}
@@ -281,7 +283,7 @@
       .diagnostic-nav{display:grid;grid-template-columns:1fr;}
       .payment-band{padding-top:42px!important;}
       .payment-section h2{font-size:34px!important;line-height:1.12!important;}
-      .payment-marquee{margin-inline:-20px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+      .payment-carousel-controls{justify-content:flex-start}.payment-marquee{margin-inline:-20px;padding-inline:20px}
       .payment-marquee .logo-tile{flex-basis:124px;width:124px;height:82px}.payment-marquee .logo-tile img{max-width:96px;max-height:48px}
       .final-cta{padding:48px 0!important;}
       .final-card{padding:22px;}
@@ -304,11 +306,12 @@
 
   const applyVisualCopy = () => {
     setText('.impact-copy h2', 'No limites cómo pueden pagarte.');
-    setText('.impact-analogy', 'Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera a quienes prefieren pagar con tarjeta, link o billetera digital.');
-    setText('.impact-metric small', 'Más oportunidades de venta al ofrecer opciones de pago. No es una promesa de resultados: el impacto depende del giro, temporada y forma de vender.');
+    setText('.impact-analogy', 'Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera al océano de clientes que prefieren pagar con tarjeta, link o billetera digital.');
+    setText('.impact-metric .metric-message', 'Ofrecer más opciones de pago crea más oportunidades de venta y te permite crecer.');
     setText('.growth-section h2', 'Crecer y tener más clientes no es suerte.');
     setText('.growth-section .lead', 'Es tener información clara y elegir bien.');
-    setText('.advisory-band .lead', 'Elegir una solución de cobro no debería depender solo del precio. Analizamos cómo vendes, cuánto cobras y qué necesita tu operación para ayudarte a tomar una decisión clara, sostenible y adecuada para tu negocio.');
+    setText('.advisory-band h2', 'Elige con claridad, no solo por precio.');
+    setText('.advisory-band .lead', 'Conocemos tu negocio, comparamos opciones y te explicamos por qué una alternativa puede convenirte.');
 
     const imageFallbacks = [
       ['.advice-photo img', `${assetPrefix}assets/hero/asesoria-personalizada.png`],
@@ -368,12 +371,19 @@
   };
 
   const initPaymentMarquee = () => {
-    const track = document.querySelector('.payment-track');
-    const set = track && track.querySelector('.payment-set');
-    if (!track || !set || track.querySelectorAll('.payment-set').length > 1) return;
-    const clone = set.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
+    const carousel = document.querySelector('.payment-marquee');
+    const controls = Array.from(document.querySelectorAll('[data-payment-direction]'));
+    if (!carousel || !controls.length) return;
+    const step = () => Math.min(520, Math.max(260, carousel.clientWidth * .72));
+    controls.forEach((control) => control.addEventListener('click', () => {
+      const direction = control.dataset.paymentDirection === 'previous' ? -1 : 1;
+      carousel.scrollBy({ left: direction * step(), behavior: 'smooth' });
+    }));
+    carousel.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      carousel.scrollBy({ left: (event.key === 'ArrowLeft' ? -1 : 1) * step(), behavior: 'smooth' });
+    });
   };
 
   const initPagePolish = () => {
@@ -483,7 +493,7 @@
   };
 
   const profileResult = (data) => {
-    const score = { rapida: 0, hibrida: 0, banca: 0 };
+    const score = { rapida: 0, hibrida: 0, banca: 0, pasarela: 0, softpos: 0, bnpl: 0 };
 
     if (data.formalidad === 'informal') score.rapida += 6;
     if (data.formalidad === 'fisica') { score.rapida += 2; score.hibrida += 2; }
@@ -500,29 +510,34 @@
     if (data.margen === 'alto') { score.rapida += 1; score.hibrida += 1; }
     if (data.msi === 'interesa') score.hibrida += 3;
     if (data.msi === 'frecuente') score.banca += 4;
-    if (data.operacion === 'movil' || data.operacion === 'online') score.rapida += 3;
+    if (data.operacion === 'movil') { score.rapida += 2; score.softpos += 4; }
+    if (data.operacion === 'online') { score.pasarela += 5; score.rapida += 1; }
     if (data.operacion === 'mostrador') { score.hibrida += 1; score.banca += 1; }
     if (data.preferencia === 'simple') score.rapida += 4;
     if (data.preferencia === 'costo') { score.banca += 4; score.hibrida += 2; }
+    if (data.canal === 'presencial') { score.rapida += 2; score.hibrida += 1; }
+    if (data.canal === 'links') { score.rapida += 3; score.pasarela += 2; }
+    if (data.canal === 'ecommerce') score.pasarela += 7;
+    if (data.canal === 'bnpl') score.bnpl += 8;
 
     const winner = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0];
-    const buyLink = 'https://mpago.li/2j1nqHG';
     const compareLink = isBlogArticle ? '../compara.html#matriz' : 'compara.html#matriz';
+    const categoryLink = (category) => `${compareLink.split('#')[0]}?tipo=${category}#matriz`;
 
     return {
       rapida: {
         key: 'terminal_moderna',
-        title: 'Recomendación: terminal moderna',
-        text: 'Empieza por Smartpoint 2; después compara Clip y NetPay. Es una ruta ágil si buscas menos trámites, movilidad e inicio rápido.',
+        title: 'Ruta recomendada: cobro rápido',
+        text: 'Tu perfil favorece una terminal de activación sencilla y sin renta obligatoria. Compara costo total, tiempo de depósito, movilidad y soporte antes de elegir.',
         tags: [
-          { label: 'Smartpoint 2', href: buyLink, primary: true },
+          { label: 'Mercado Pago Point', href: 'https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point', primary: true },
           { label: 'Clip', href: 'https://www.clip.mx/' },
-          { label: 'NetPay', href: 'https://netpay.mx/' },
-          { label: 'Inicio rápido' }
+          { label: 'Ualá Bis', href: 'https://www.uala.com.mx/bis' },
+          { label: 'Menos trámites' }
         ],
-        note: 'Recomendación inicial: compra o revisa Smartpoint 2; después compara alternativas si quieres validar precio, comisión y funciones.',
-        ctaText: 'Comprar Smartpoint 2',
-        ctaHref: buyLink,
+        note: 'Por qué: tus respuestas priorizan facilidad, flexibilidad o rapidez. Confirma la tasa final con IVA, los límites y el plazo de depósito.',
+        ctaText: 'Comparar opciones rápidas',
+        ctaHref: categoryLink('rapida'),
         ctaClass: 'btn btn-primary'
       },
       hibrida: {
@@ -535,9 +550,9 @@
           { label: 'Negocio en crecimiento' },
           { label: 'Contrato claro' }
         ],
-        note: 'Te conviene revisar requisitos, contrato, liquidación y costo total antes de elegir.',
+        note: 'Por qué: tu operación ya necesita más funciones, pero todavía importa conservar flexibilidad. Revisa contrato, liquidación y costo total.',
         ctaText: 'Ver opciones del mercado',
-        ctaHref: compareLink,
+        ctaHref: categoryLink('hibrida'),
         ctaClass: 'btn btn-primary'
       },
       banca: {
@@ -550,9 +565,52 @@
           { label: 'Citibanamex', href: 'https://www.banamex.com/es/pymes/productos-y-servicios/cobros/' },
           { label: 'Volumen estable' }
         ],
-        note: 'Revisa la comparativa para ver enlaces oficiales, condiciones, requisitos y puntos que debes confirmar con cada banco.',
+        note: 'Por qué: tu formalidad, volumen o estabilidad pueden ayudarte a negociar. Revisa renta, mínimos, permanencia y costo de la cuenta vinculada.',
         ctaText: 'Ver comparativa bancaria',
-        ctaHref: compareLink,
+        ctaHref: categoryLink('banca'),
+        ctaClass: 'btn btn-primary'
+      },
+      pasarela: {
+        key: 'pasarela_digital',
+        title: 'Ruta recomendada: pagos en línea',
+        text: 'Tu negocio necesita cobrar a distancia o integrar una tienda en línea. Compara pasarelas por costo por transacción, integración, antifraude, contracargos y liquidación.',
+        tags: [
+          { label: 'Openpay', href: 'https://www.openpay.mx/', primary: true },
+          { label: 'Conekta', href: 'https://www.conekta.com/' },
+          { label: 'Stripe', href: 'https://stripe.com/mx' },
+          { label: 'Venta digital' }
+        ],
+        note: 'Por qué: indicaste que vendes en línea, por links o necesitas integración. Valida costos fijos, reservas, devoluciones y soporte técnico.',
+        ctaText: 'Comparar pasarelas',
+        ctaHref: categoryLink('pasarela'),
+        ctaClass: 'btn btn-primary'
+      },
+      softpos: {
+        key: 'cobro_celular',
+        title: 'Ruta recomendada: cobrar con el celular',
+        text: 'Tu operación móvil puede beneficiarse de una solución Tap to Pay o SoftPOS, sin cargar una terminal adicional, siempre que tu teléfono y proveedor sean compatibles.',
+        tags: [
+          { label: 'Teléfono con NFC', primary: true },
+          { label: 'Operación móvil' },
+          { label: 'Sin lector adicional' }
+        ],
+        note: 'Por qué: priorizas movilidad. Confirma compatibilidad del teléfono, límites por transacción, aceptación de PIN, soporte y disponibilidad real en México.',
+        ctaText: 'Revisar opciones SoftPOS',
+        ctaHref: categoryLink('softpos'),
+        ctaClass: 'btn btn-primary'
+      },
+      bnpl: {
+        key: 'pagos_plazos',
+        title: 'Ruta recomendada: pagos a plazos sin tarjeta',
+        text: 'Un esquema BNPL puede ampliar opciones para tus clientes, pero su comisión suele ser mayor. Evalúalo solo si tu margen puede absorber el costo.',
+        tags: [
+          { label: 'Kueski Pay', href: 'https://www.kueskipay.com/para-comercios', primary: true },
+          { label: 'Aplazo', href: 'https://aplazo.mx/' },
+          { label: 'Revisar margen' }
+        ],
+        note: 'Por qué: elegiste pagos a plazos. Antes de contratar calcula el margen neto, devoluciones, liquidación y elegibilidad de tus productos.',
+        ctaText: 'Comparar opciones BNPL',
+        ctaHref: categoryLink('bnpl'),
         ctaClass: 'btn btn-primary'
       }
     }[winner];
