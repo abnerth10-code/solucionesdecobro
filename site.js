@@ -299,6 +299,44 @@
   `;
   document.head.appendChild(visualPolish);
 
+  const flatSurfacePalette = document.createElement('style');
+  flatSurfacePalette.textContent = `
+    body,
+    .hero,
+    .hero-compact,
+    .product-hero,
+    .terminal-hero,
+    .compare-hero,
+    .blog-hero,
+    .article-hero,
+    .growth-section,
+    .blue-band,
+    .diagnostic,
+    .payment-band,
+    .notice,
+    .advisory-band,
+    .final-cta,
+    .contact,
+    .terminal-final{background:#fff!important;}
+
+    .impact-copy,
+    .stat-callout,
+    .article-callout,
+    .terminal-price,
+    .comparison-table .provider-cell{background:#fff!important;}
+
+    .advice-video-shell,
+    .rate-panel,
+    .article-cta{background:#0758b5!important;}
+
+    .progress-track span,
+    .result h3:before,
+    .icon-data{background:#0873df!important;}
+    .icon-check{background:#18a058!important;}
+    .icon-star{background:#ffd23f!important;}
+  `;
+  document.head.appendChild(flatSurfacePalette);
+
   const setText = (selector, text) => {
     const element = document.querySelector(selector);
     if (element) element.textContent = text;

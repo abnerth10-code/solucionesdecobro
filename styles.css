@@ -43,9 +43,9 @@ body .header .menu a:not(.btn){padding:8px 5px;font-size:16px}
 :root{--ink:#071d36;--text:#2c4055;--muted:#617386;--line:#dce7f1;--soft:#f7fbff;--paper:#fff;--warm:#fffdf6;--cream:#fff8e6;--blue:#0873df;--blue-dark:#0758b5;--sky:#eef9ff;--yellow:#ffd23f;--green:#18a058}
 body{background:#fff}
 body .header .brand-logo{content:url('assets/logos/logo-isotipo-soluciones-cobro.png');object-fit:contain!important;object-position:center!important;padding:4px;background:#fff;border:1px solid rgba(220,231,241,.9)}
-body .hero,body .product-hero,body .compare-hero,body .blog-hero{background:radial-gradient(circle at 86% 16%,rgba(255,210,63,.18),transparent 30%),linear-gradient(135deg,#fff 0%,#f4fbff 62%,#fff8e6 100%)!important}
-body .blue-band,body .diagnostic,body .notice{background:linear-gradient(135deg,#fbfdff,#f6fbff 58%,#fffdf6)!important}
-body .final-cta,body .contact,body .advisory-band,body.terminales-page .terminal-final{background:radial-gradient(circle at 86% 20%,rgba(255,210,63,.22),transparent 30%),linear-gradient(135deg,#fff 0%,#f4fbff 58%,#fff8e6 100%)!important;color:var(--text)!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+body .hero,body .product-hero,body .compare-hero,body .blog-hero{background:#fff!important}
+body .blue-band,body .diagnostic,body .notice{background:#fff!important}
+body .final-cta,body .contact,body .advisory-band,body.terminales-page .terminal-final{background:#fff!important;color:var(--text)!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
 body .final-cta h1,body .final-cta h2,body .final-cta h3,body .contact h1,body .contact h2,body .contact h3,body .advisory-band h1,body .advisory-band h2,body .advisory-band h3,body.terminales-page .terminal-final h1,body.terminales-page .terminal-final h2,body.terminales-page .terminal-final h3{color:var(--ink)!important}
 body .final-cta p,body .contact p,body .advisory-band p,body.terminales-page .terminal-final p{color:#53687f!important}
 body .channel,body .final-card,body .terminal-final-card,body .advice-list .list-item,body .contact .card{background:rgba(255,255,255,.82)!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:0 14px 34px rgba(7,29,54,.08)!important;backdrop-filter:blur(10px)}
@@ -56,4 +56,4 @@ body .top-link{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(10px)
 body .top-link:hover{background:rgba(7,29,54,.9)!important}
 body .btn-primary{box-shadow:0 14px 28px rgba(8,115,223,.22)}
 body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px)}
-@media(max-width:680px){body .header .brand-logo{width:42px!important;height:42px!important;max-width:42px!important;padding:3px}body .final-cta,body .contact,body .advisory-band,body.terminales-page .terminal-final{background:linear-gradient(135deg,#fff,#f7fbff 58%,#fff8e6)!important}}
+@media(max-width:680px){body .header .brand-logo{width:42px!important;height:42px!important;max-width:42px!important;padding:3px}body .final-cta,body .contact,body .advisory-band,body.terminales-page .terminal-final{background:#fff!important}}
