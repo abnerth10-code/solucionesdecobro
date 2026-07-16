@@ -15,20 +15,19 @@
     <section class="hero compare-hero"><div class="hero-inner compare-hero-inner"><div><h1>Compara antes de contratar.</h1><p class="lead">Esta guía resume cuándo conviene una terminal moderna, banca tradicional, un modelo híbrido o una solución digital. La mejor decisión depende de tu formalidad fiscal, volumen, liquidez y forma de vender.</p><div class="actions"><a class="btn btn-primary" href="#matriz">Ver matriz</a><a class="btn btn-white" href="index.html#diagnostico">Hacer mi diagnóstico gratis</a></div></div><figure class="compare-hero-visual"><img src="assets/hero/hero-principal.png" alt="Negocio comparando opciones de cobro antes de contratar"></figure></div></section>
 
     <section class="section section-tight comparison-guide" aria-labelledby="como-leer">
-      <p class="eyebrow">Antes de comparar</p>
-      <h2 id="como-leer">No te fijes solamente en la comisión</h2>
-      <p class="lead">Una tasa baja puede dejar de ser conveniente si exige renta, volumen mínimo o permanencia. Lee cada opción en este orden:</p>
-      <ol class="comparison-steps">
-        <li><span>1</span><div><strong>Costo total</strong><small>Comisión, IVA, renta, cargos fijos y MSI.</small></div></li>
-        <li><span>2</span><div><strong>Forma de cobrar</strong><small>Terminal, celular, liga, tienda en línea o BNPL.</small></div></li>
-        <li><span>3</span><div><strong>Requisitos</strong><small>RFC, cuenta, volumen, documentos e integración.</small></div></li>
-        <li><span>4</span><div><strong>Liquidez</strong><small>Cuándo estará disponible el dinero de tus ventas.</small></div></li>
-        <li><span>5</span><div><strong>Riesgos y contrato</strong><small>Retenciones, mínimos, permanencia y cancelación.</small></div></li>
-      </ol>
+      <h2 id="como-leer">Una tasa baja no lo es todo.</h2>
+      <p class="lead">También debes considerar rentas mensuales, contratos forzosos, penalizaciones, trámites, tiempos de respuesta, volumen mínimo y condiciones de soporte.</p>
+      <p class="comparison-guide-intro">Aquí tienes 5 puntos importantes:</p>
+      <ul class="comparison-steps">
+        <li><span class="comparison-step-icon" aria-hidden="true">$</span><div><strong>Costo total</strong><small>Comisión, IVA, renta, cargos fijos y MSI.</small></div></li>
+        <li><span class="comparison-step-icon" aria-hidden="true">▣</span><div><strong>Forma de cobrar</strong><small>Terminal, celular, liga, tienda en línea o BNPL.</small></div></li>
+        <li><span class="comparison-step-icon" aria-hidden="true">✓</span><div><strong>Requisitos</strong><small>RFC, cuenta, volumen, documentos e integración.</small></div></li>
+        <li><span class="comparison-step-icon" aria-hidden="true">◷</span><div><strong>Liquidez</strong><small>Cuándo estará disponible el dinero de tus ventas.</small></div></li>
+        <li><span class="comparison-step-icon" aria-hidden="true">!</span><div><strong>Riesgos y contrato</strong><small>Retenciones, mínimos, permanencia y cancelación.</small></div></li>
+      </ul>
     </section>
 
     <section class="section" id="matriz">
-      <p class="eyebrow">37 proveedores</p>
       <h2>Matriz comparativa</h2>
       <p class="lead">Busca por nombre o filtra por tipo. El enlace oficial está junto al logo de cada proveedor para que puedas confirmar los términos antes de contratar.</p>
 
@@ -43,23 +42,18 @@
             <option value="all">Todos los tipos</option>
             <option value="rapida">Cobro rápido</option>
             <option value="hibrida">Modelo híbrido</option>
-            <option value="banca">Banca tradicional</option>
+            <option value="banca">Banca y adquirentes</option>
             <option value="pasarela">Pasarela digital</option>
-            <option value="adquirente">Adquirente directo</option>
-            <option value="softpos">SoftPOS</option>
             <option value="bnpl">Compra ahora, paga después</option>
           </select>
         </div>
         <button class="comparison-reset" id="comparisonReset" type="button">Limpiar filtros</button>
         <a class="comparison-download" href="assets/downloads/matriz-comparativa-soluciones-de-cobro-mexico.pdf" download>Descargar matriz en PDF</a>
-        <p class="comparison-count" id="comparisonCount" aria-live="polite">37 de 37 proveedores</p>
+        <p class="comparison-count" id="comparisonCount" aria-live="polite">37 opciones encontradas</p>
       </div>
 
-      <div class="comparison-callout" role="note">
-        <strong>Importante:</strong> las cifras marcadas como referencia provienen de la investigación compartida y pueden variar por giro, volumen, promoción, contrato o fecha. Dos productos —NuTap y el mPOS de Todito Pay— requieren confirmación de disponibilidad actual en México.
-      </div>
-
-      <div class="table-wrap comparison-table-wrap">
+      <p class="comparison-scroll-hint" id="comparisonScrollHint">Desliza horizontalmente para consultar todos los criterios.</p>
+      <div class="table-wrap comparison-table-wrap" tabindex="0" role="region" aria-describedby="comparisonScrollHint" aria-label="Matriz comparativa desplazable">
         <table class="comparison-table">
           <caption class="sr-only">Comparación de proveedores de soluciones de cobro en México</caption>
           <thead><tr><th scope="col">Proveedor</th><th scope="col">Tipo</th><th scope="col">Tasa o costo de referencia</th><th scope="col">Hardware</th><th scope="col">Requisitos</th><th scope="col">Liquidación</th><th scope="col">Qué revisar antes de contratar</th></tr></thead>
@@ -68,12 +62,15 @@
         <p class="comparison-empty" id="comparisonEmpty" hidden>No encontramos proveedores con esos filtros. Prueba otra palabra o limpia la búsqueda.</p>
         <noscript><p class="comparison-empty">Activa JavaScript para consultar y filtrar la matriz completa.</p></noscript>
       </div>
+      <div class="comparison-callout" role="note">
+        <strong>Importante:</strong> las cifras marcadas como referencia pueden variar por giro, volumen, promoción, contrato o fecha. Confirma siempre las condiciones vigentes con el proveedor. NuTap y el mPOS de Todito Pay requieren confirmar su disponibilidad actual en México.
+      </div>
       <p class="note">Esta matriz es una guía inicial, no sustituye la cotización ni la revisión contractual. Confirma IVA, tasa final, depósitos, reservas, penalizaciones, permanencia, requisitos y disponibilidad directamente con cada proveedor.</p>
     </section>
 
-    <section class="blue-band"><div class="section"><h2>Fuentes útiles sobre pagos digitales</h2><div class="grid-3"><article class="card"><h3>Pagos digitales y ventas</h3><p>Artículo compartido por ti sobre el impacto de pagos digitales en MiPyMEs, con referencia a Visa.</p><a class="source-link" href="https://dnf.com.mx/mipymes-aumentan-ventas-con-pagos-digitales-en-mas-de-60-visa/" target="_blank" rel="noopener">Leer artículo DNF / Visa</a></article><article class="card"><h3>Cobro con tarjeta</h3><p>Guía de Billpocket sobre cómo aceptar tarjeta puede ayudar a vender más y reducir fricción al pagar.</p><a class="source-link" href="https://blog.billpocket.com/post/aumenta-tus-ventas-traves-del-cobro-tarjeta" target="_blank" rel="noopener">Leer artículo Billpocket</a></article><article class="card"><h3>Úsalo como referencia</h3><p>Estos artículos ayudan a explicar por qué aceptar pagos digitales puede ser valioso, sin prometer resultados iguales para todos los negocios.</p></article></div></div></section>
+    <section class="blue-band sources-band"><div class="section"><h2>Por qué aceptar pagos digitales puede ser valioso</h2><p class="lead">Fuentes para entender sus beneficios y evaluar cada opción sin asumir que todos los negocios obtendrán el mismo resultado.</p><div class="grid-3"><article class="card"><h3>Pagos digitales y ventas</h3><p>Referencia sobre el impacto de los pagos digitales en las MiPyMEs.</p><a class="source-link" href="https://dnf.com.mx/mipymes-aumentan-ventas-con-pagos-digitales-en-mas-de-60-visa/" target="_blank" rel="noopener">Leer artículo DNF / Visa</a></article><article class="card"><h3>Cobro con tarjeta</h3><p>Guía sobre cómo aceptar tarjeta puede reducir fricción al pagar.</p><a class="source-link" href="https://blog.billpocket.com/post/aumenta-tus-ventas-traves-del-cobro-tarjeta" target="_blank" rel="noopener">Leer artículo Billpocket</a></article><article class="card"><h3>Interprétalo con cuidado</h3><p>El impacto real cambia según giro, temporada, margen y forma de vender.</p></article></div></div></section>
 
-    <section class="section"><h2>Regla práctica para decidir</h2><div class="grid-3"><article class="card"><h3>Si estás empezando</h3><p>Una opción rápida de cobro suele ser más sencilla para iniciar, probar mercado y vender sin trámites pesados.</p></article><article class="card"><h3>Si estás creciendo</h3><p>Un modelo híbrido puede ayudarte a equilibrar facilidad, tecnología y mejores condiciones.</p></article><article class="card"><h3>Si ya tienes volumen</h3><p>La banca tradicional puede competir mejor en tasa, pero revisa rentas, mínimos y contrato.</p></article></div></section>
+    <section class="section decision-rules"><h2>Reglas básicas para decidir</h2><div class="grid-3"><article class="card"><span class="card-kicker">Para comenzar</span><h3>Empieza con flexibilidad</h3><p>Una opción rápida suele facilitar el inicio y permite probar sin trámites ni compromisos pesados.</p><a href="?tipo=rapida#matriz">Ver opciones rápidas</a></article><article class="card"><span class="card-kicker">Para crecer</span><h3>Equilibra costo y herramientas</h3><p>Un modelo híbrido puede combinar facilidad, funciones y mejores condiciones para una operación en expansión.</p><a href="?tipo=hibrida#matriz">Ver modelos híbridos</a></article><article class="card"><span class="card-kicker">Para mayor volumen</span><h3>Negocia con todos los costos a la vista</h3><p>La banca y los adquirentes pueden competir en tasa; revisa también rentas, mínimos, permanencia y contrato.</p><a href="?tipo=banca#matriz">Ver banca y adquirentes</a></article></div></section>
   </main>
 
   <footer><div class="footer-links"><a href="index.html">Inicio</a><a href="terminales.html">Terminales</a><a href="blog.html">Blog</a></div>Soluciones de Cobro · Comparativa informativa · Revisa fuentes oficiales antes de contratar.</footer>

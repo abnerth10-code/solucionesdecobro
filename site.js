@@ -92,7 +92,7 @@
     .payment-path b{font-size:15px;font-weight:950}.payment-path small{font-size:13px;color:#617386;font-weight:800}
     .payment-path .path-limited{border-color:#d9e2ea!important;background:#f7f9fb!important}.payment-path .path-open{border-color:#9bd3fb!important;background:#edf8ff!important;box-shadow:inset 4px 0 0 #0073e6}
     .payment-path .path-arrow{display:grid;place-items:center;color:#0073e6;font-size:28px;font-weight:950;}
-    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:linear-gradient(145deg,rgba(7,29,54,.76),rgba(7,88,181,.62)),url('${assetPrefix}assets/cards/impacto-pagos-tarjeta.jpg') center 56%/cover!important;color:#fff!important;}
+    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background-color:rgba(7,29,54,.86)!important;background-image:url('${assetPrefix}assets/cards/impacto-pagos-tarjeta.jpg')!important;background-position:center 56%!important;background-size:cover!important;background-blend-mode:multiply!important;color:#fff!important;}
     .impact-metric:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.18);border-radius:22px;pointer-events:none;}
     .impact-metric span{font-size:13px!important;text-transform:uppercase!important;letter-spacing:.16em!important;font-weight:900!important;color:#dff4ff!important;}
     .metric-number{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:18px!important;margin:18px 0 16px!important;position:relative;z-index:1;}
@@ -165,7 +165,7 @@
     .step-mode .option span{padding:16px 18px;font-size:18px;}
     .diagnostic-nav{display:flex;gap:12px;justify-content:center;margin-top:18px;}
     .diagnostic-nav .btn[disabled]{opacity:.45;cursor:not-allowed;}
-    #diagnosticSubmit{display:none!important;}
+    #diagnosticSubmit{display:inline-flex!important;}
     .diagnostic-stepper .result{border:1px solid #b9dcf7!important;border-radius:22px!important;padding:24px!important;background:radial-gradient(circle at 92% 10%,rgba(255,210,63,.22),transparent 24%),linear-gradient(135deg,#fff,#f6fbff 68%,#fff8df)!important;box-shadow:0 18px 44px rgba(7,29,54,.1)!important;}
     .result.show{animation:resultIn .32s ease both;}
     .result h3{display:flex;gap:10px;align-items:center;font-size:24px!important;margin-bottom:12px!important;}
@@ -184,17 +184,11 @@
     .payment-cloud .logo-tile{min-height:122px;border-color:#cfe4f7;box-shadow:0 12px 28px rgba(7,29,54,.06);background:#fff;}
     .payment-cloud .logo-tile .brand-mask{width:108px!important;height:62px!important;}
     .payment-cloud .logo-tile img{max-width:124px!important;max-height:66px!important;width:auto;height:auto;object-fit:contain;}
-    .payment-lead{max-width:840px;margin-bottom:18px!important}.payment-carousel-controls{display:flex;justify-content:flex-end;gap:10px;margin-bottom:10px}.payment-control{display:grid;place-items:center;width:48px;height:48px;border:1px solid #b9d9f2;border-radius:14px;background:#fff;color:#0758b5;font-size:23px;font-weight:950;cursor:pointer;box-shadow:0 8px 20px rgba(7,29,54,.07)}.payment-control:hover{background:#edf8ff}.payment-control:focus-visible,.payment-marquee:focus-visible{outline:3px solid #ffbf00;outline-offset:3px}
+    .payment-lead{max-width:840px;margin-bottom:18px!important}.payment-marquee:focus-visible{outline:3px solid #ffbf00;outline-offset:3px}
     .payment-marquee{position:relative;overflow-x:auto;overflow-y:hidden;margin-inline:calc(50% - 50vw);padding:12px max(20px,calc((100vw - var(--max))/2)) 22px;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#8bc8f4 #eaf4fb}
     .payment-track{display:flex;width:max-content;gap:16px}.payment-set{display:flex;gap:16px}.payment-marquee .logo-tile{display:grid;place-items:center;flex:0 0 142px;width:142px;height:92px;padding:16px;border:1px solid #d8e8f6;border-radius:18px;background:#fff;box-shadow:0 12px 28px rgba(7,29,54,.07);scroll-snap-align:start}.payment-marquee .logo-tile img{max-width:108px;max-height:54px;width:auto;height:auto;object-fit:contain}.payment-name{text-align:center;color:#19334f}.payment-name strong{font-size:15px;line-height:1.2}
     @media(prefers-reduced-motion:reduce){.impact-symbol i,.video-story span{animation:none!important}.payment-marquee{scroll-behavior:auto}}
 
-    .final-cta{background:radial-gradient(circle at 88% 14%,rgba(255,210,63,.11),transparent 28%),radial-gradient(circle at 8% 86%,rgba(0,115,230,.07),transparent 30%),#fff!important;color:var(--navy)!important;padding:62px 0!important;border-top:1px solid var(--line)!important;}
-    .final-grid{display:grid;grid-template-columns:1fr .82fr;gap:34px;align-items:center;}
-    .final-cta h2,.final-cta h3{color:var(--navy)!important;}
-    .final-cta p{color:#40546a!important;}
-    .final-card{border:1px solid var(--line);background:#fff;border-radius:24px;padding:28px;box-shadow:0 18px 42px rgba(7,29,54,.08);}
-    .final-card .channels{display:grid;gap:12px;margin-top:18px;}
     .compact-notice{padding:32px 0!important;background:#f5f9fc!important;}
     .compact-notice h2{font-size:24px!important;margin-bottom:8px!important;}
     .compact-notice p{font-size:15px!important;line-height:1.6!important;max-width:980px;}
@@ -223,7 +217,7 @@
     @media(max-width:900px){
       .sales-impact{grid-template-columns:1fr!important;}
       .media-feature-grid{grid-template-columns:1fr 1fr!important;}
-      .nav,.hero-compact .hero-inner,.diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner,.final-grid,.advice-split{grid-template-columns:1fr!important;}
+      .nav,.hero-compact .hero-inner,.diagnostic-with-image,.terminal-hero-grid,.compare-hero-inner,.advice-split{grid-template-columns:1fr!important;}
       .terminal-hero-visual img,.compare-hero-visual img{height:auto;max-height:520px;object-fit:contain;}
     }
     @media(max-width:680px){
@@ -283,10 +277,8 @@
       .diagnostic-nav{display:grid;grid-template-columns:1fr;}
       .payment-band{padding-top:42px!important;}
       .payment-section h2{font-size:34px!important;line-height:1.12!important;}
-      .payment-carousel-controls{justify-content:flex-start}.payment-marquee{margin-inline:-20px;padding-inline:20px}
+      .payment-marquee{margin-inline:-20px;padding-inline:20px}
       .payment-marquee .logo-tile{flex-basis:124px;width:124px;height:82px}.payment-marquee .logo-tile img{max-width:96px;max-height:48px}
-      .final-cta{padding:48px 0!important;}
-      .final-card{padding:22px;}
       .top-link{width:52px!important;height:52px!important;right:14px!important;bottom:84px!important;border-radius:16px!important;opacity:.72!important;}
       .cookie-banner{grid-template-columns:1fr;left:12px;right:12px;bottom:12px;gap:10px;padding:14px 16px;}
       .cookie-banner strong{font-size:16px;margin-bottom:2px;}
@@ -315,7 +307,6 @@
     .payment-band,
     .notice,
     .advisory-band,
-    .final-cta,
     .contact,
     .terminal-final{background:#fff!important;}
 
@@ -325,7 +316,6 @@
     .terminal-price,
     .comparison-table .provider-cell{background:#fff!important;}
 
-    .advice-video-shell,
     .rate-panel,
     .article-cta{background:#0758b5!important;}
 
@@ -411,7 +401,7 @@
   const initPaymentMarquee = () => {
     const carousel = document.querySelector('.payment-marquee');
     const controls = Array.from(document.querySelectorAll('[data-payment-direction]'));
-    if (!carousel || !controls.length) return;
+    if (!carousel) return;
     const step = () => Math.min(520, Math.max(260, carousel.clientWidth * .72));
     controls.forEach((control) => control.addEventListener('click', () => {
       const direction = control.dataset.paymentDirection === 'previous' ? -1 : 1;
@@ -422,6 +412,30 @@
       event.preventDefault();
       carousel.scrollBy({ left: (event.key === 'ArrowLeft' ? -1 : 1) * step(), behavior: 'smooth' });
     });
+
+    let active = false;
+    let startX = 0;
+    let startScroll = 0;
+    carousel.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'touch' || event.target.closest('a,button')) return;
+      active = true;
+      startX = event.clientX;
+      startScroll = carousel.scrollLeft;
+      carousel.classList.add('is-dragging');
+      carousel.setPointerCapture(event.pointerId);
+    });
+    carousel.addEventListener('pointermove', (event) => {
+      if (!active) return;
+      carousel.scrollLeft = startScroll - (event.clientX - startX);
+    });
+    const stopDrag = (event) => {
+      if (!active) return;
+      active = false;
+      carousel.classList.remove('is-dragging');
+      if (carousel.hasPointerCapture(event.pointerId)) carousel.releasePointerCapture(event.pointerId);
+    };
+    carousel.addEventListener('pointerup', stopDrag);
+    carousel.addEventListener('pointercancel', stopDrag);
   };
 
   const initPagePolish = () => {
@@ -482,6 +496,7 @@
 
   const questionCards = Array.from(form.querySelectorAll('.q-card'));
   const requiredNames = Array.from(new Set(questionCards.flatMap((card) => Array.from(card.querySelectorAll('input[type="radio"]')).map((input) => input.name))));
+  const next = document.getElementById('diagnosticSubmit');
   const total = requiredNames.length;
   let currentStep = 0;
   let progressText;
@@ -514,6 +529,10 @@
     });
     const back = document.getElementById('diagnosticBack');
     if (back) back.disabled = currentStep === 0;
+    if (next) {
+      next.textContent = currentStep === questionCards.length - 1 ? 'Ver recomendación' : 'Siguiente';
+      next.disabled = !questionCards[currentStep].querySelector('input:checked');
+    }
   };
 
   const answeredCount = () => requiredNames.filter((name) => form.querySelector(`input[name="${name}"]:checked`)).length;
@@ -721,16 +740,7 @@
 
     window.requestAnimationFrame(() => {
       renderProgress();
-      if (answeredCount() === total) {
-        showRecommendation();
-        return;
-      }
-      if (index >= 0 && index < questionCards.length - 1) {
-        setTimeout(() => {
-          showStep(index + 1);
-          renderProgress();
-        }, 180);
-      }
+      showStep(index);
     });
   });
 
@@ -738,6 +748,19 @@
   if (back) back.addEventListener('click', () => {
     showStep(currentStep - 1);
     renderProgress();
+  });
+
+  if (next) next.addEventListener('click', () => {
+    if (!questionCards[currentStep].querySelector('input:checked')) {
+      questionCards[currentStep].querySelector('.option input')?.focus();
+      return;
+    }
+    if (currentStep === questionCards.length - 1) showRecommendation();
+    else {
+      showStep(currentStep + 1);
+      renderProgress();
+      questionCards[currentStep].querySelector('.q-title')?.focus?.();
+    }
   });
 
   form.addEventListener('submit', (event) => {
