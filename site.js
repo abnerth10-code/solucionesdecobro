@@ -92,13 +92,12 @@
     .payment-path b{font-size:15px;font-weight:950}.payment-path small{font-size:13px;color:#617386;font-weight:800}
     .payment-path .path-limited{border-color:#d9e2ea!important;background:#f7f9fb!important}.payment-path .path-open{border-color:#9bd3fb!important;background:#edf8ff!important;box-shadow:inset 4px 0 0 #0073e6}
     .payment-path .path-arrow{display:grid;place-items:center;color:#0073e6;font-size:28px;font-weight:950;}
-    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background-color:rgba(7,29,54,.86)!important;background-image:url('${assetPrefix}assets/cards/impacto-pagos-tarjeta.jpg')!important;background-position:center 56%!important;background-size:cover!important;background-blend-mode:multiply!important;color:#fff!important;}
+    .impact-metric{position:relative;overflow:hidden;padding:32px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:265px;background:#071d36!important;color:#fff!important;}
     .impact-metric:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.18);border-radius:22px;pointer-events:none;}
     .impact-metric span{font-size:13px!important;text-transform:uppercase!important;letter-spacing:.16em!important;font-weight:900!important;color:#dff4ff!important;}
     .metric-number{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:18px!important;margin:18px 0 16px!important;position:relative;z-index:1;}
     .metric-number strong{font-size:clamp(56px,6vw,84px)!important;line-height:.9!important;color:var(--yellow)!important;text-shadow:0 16px 32px rgba(0,0,0,.18);}
     .metric-number em{font-style:normal!important;font-weight:900!important;color:#fff!important;font-size:21px!important;line-height:1.6!important;text-transform:uppercase!important;}
-    .impact-metric .metric-message{position:relative;z-index:1;margin:0 0 10px!important;color:#fff!important;font-size:18px!important;line-height:1.4!important;font-weight:900;max-width:470px}
     .impact-metric small{font-size:13px!important;line-height:1.45!important;color:#d8e8f6!important;max-width:470px;position:relative;z-index:1;}
     .impact-metric small strong{color:#fff}
     .impact-symbol{position:absolute;right:34px;top:32px;width:98px;height:70px;display:flex;align-items:end;gap:7px;opacity:.28;z-index:1;}
@@ -125,10 +124,6 @@
     .icon-check:before{border:none!important;width:28px!important;height:16px!important;border-left:5px solid currentColor!important;border-bottom:5px solid currentColor!important;border-radius:0!important;transform:rotate(-45deg);}
     .icon-data:before{border:none!important;width:30px!important;height:30px!important;background:linear-gradient(135deg,currentColor 0 28%,transparent 28% 42%,currentColor 42% 64%,transparent 64% 78%,currentColor 78% 100%);border-radius:7px!important;}
     .icon-star:before{border:none!important;width:28px!important;height:28px!important;background:currentColor!important;clip-path:polygon(50% 0,61% 34%,98% 35%,68% 56%,79% 91%,50% 70%,21% 91%,32% 56%,2% 35%,39% 34%);}
-    .media-hardware:before{background-image:url('${assetPrefix}assets/cards/tarjeta-terminal-ideal.jpg');}
-    .media-info:before{background-image:url('${assetPrefix}assets/cards/tarjeta-informacion-clara.jpg');}
-    .media-compare:before{background-image:url('${assetPrefix}assets/cards/tarjeta-comparacion-real.jpg');}
-    .media-growth:before{background-image:url('${assetPrefix}assets/cards/tarjeta-de-menos-a-mas.jpg');}
     .media-info{--card-accent:#63d3c1}.media-compare{--card-accent:#ffd23f}.media-growth{--card-accent:#8ed081}
     .media-info:before{background-position:center 46%}.media-compare:before{background-position:center 40%}.media-growth:before{background-position:center 48%}
     .icon-terminal,.icon-info,.icon-compare,.icon-growth{background:rgba(7,29,54,.84)!important;color:#fff!important;border:1px solid rgba(255,255,255,.52)!important;backdrop-filter:blur(12px)!important;}
@@ -324,6 +319,53 @@
     .icon-data{background:#0873df!important;}
     .icon-check{background:#18a058!important;}
     .icon-star{background:#ffd23f!important;}
+
+    .home-page .hero,
+    .home-page .growth-section{background:#fff!important;}
+    .home-page .btn-primary{background:#0758b5!important;background-image:none!important;border-color:#0758b5!important;color:#fff!important;box-shadow:none!important;}
+    .home-page .btn-primary:hover{background:#063f82!important;border-color:#063f82!important;}
+    .home-page .btn-soft{background:#f2f7fb!important;background-image:none!important;border-color:#cbddea!important;color:#071d36!important;box-shadow:none!important;}
+    .home-page .btn-yellow,
+    .home-page .btn-white,
+    .home-page button.btn{background-image:none!important;box-shadow:none!important;}
+
+    .home-page .sales-impact{grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr)!important;gap:24px!important;margin:0 0 72px!important;}
+    .home-page .impact-copy,
+    .home-page .impact-metric{min-height:520px!important;border:1px solid #d8e5ef!important;border-radius:28px!important;box-shadow:none!important;}
+    .home-page .impact-copy{position:relative!important;isolation:isolate!important;overflow:hidden!important;padding:46px!important;background:#f6fbff!important;}
+    .home-page .impact-copy:before,
+    .home-page .impact-copy:after{content:"";position:absolute;z-index:-1;left:-12%;width:124%;border-radius:50% 50% 0 0/100% 100% 0 0;pointer-events:none;}
+    .home-page .impact-copy:before{bottom:-94px;height:210px;background:#dcefff;transform:rotate(-2deg);}
+    .home-page .impact-copy:after{bottom:-132px;height:215px;background:#c7e5fa;transform:rotate(3deg);}
+    .home-page .impact-copy .eyebrow{display:inline-flex!important;width:auto!important;margin-bottom:28px!important;padding:8px 12px!important;border:1px solid #cfe2f2!important;border-radius:999px!important;background:#fff!important;color:#0758b5!important;}
+    .home-page .impact-copy h2{max-width:620px!important;font-size:clamp(42px,4.8vw,66px)!important;letter-spacing:-.045em!important;}
+    .home-page .impact-analogy{max-width:690px!important;padding-left:0!important;border-left:0!important;color:#3e546a!important;font-size:19px!important;}
+
+    .home-page .impact-metric{justify-content:flex-start!important;padding:46px!important;background:#071d36!important;background-image:none!important;background-blend-mode:normal!important;}
+    .home-page .impact-metric .metric-title{position:relative;z-index:2;max-width:600px;margin:24px 0 10px;color:#fff!important;font-size:clamp(33px,3.6vw,50px)!important;line-height:1.02!important;letter-spacing:-.035em!important;}
+    .home-page .impact-metric>.metric-note{margin-top:auto!important;padding-top:18px!important;border-top:1px solid rgba(255,255,255,.22)!important;color:#c8d9e8!important;}
+
+    .home-page .media-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;}
+    .home-page .media-card{min-height:330px!important;padding:34px!important;justify-content:space-between!important;border:1px solid #dce6ee!important;border-radius:24px!important;background:#f5f8fa!important;color:#071d36!important;box-shadow:none!important;transform:none!important;}
+    .home-page .media-card:nth-child(2){background:#f3f8fc!important;}
+    .home-page .media-card:nth-child(3){background:#fff9e8!important;}
+    .home-page .media-card:nth-child(4){background:#f1f7f6!important;}
+    .home-page .media-card:before,
+    .home-page .media-card:after{display:none!important;background:none!important;background-image:none!important;}
+    .home-page .media-card .icon{position:static!important;width:54px!important;height:54px!important;margin:0 0 52px!important;border:0!important;border-radius:16px!important;background:#071d36!important;color:#fff!important;box-shadow:none!important;backdrop-filter:none!important;}
+    .home-page .media-card .card-copy{position:static!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;}
+    .home-page .media-card h3{color:#071d36!important;}
+    .home-page .media-card p{color:#4d6277!important;}
+
+    @media(max-width:980px){
+      .home-page .sales-impact{grid-template-columns:1fr!important;}
+    }
+    @media(max-width:680px){
+      .home-page .impact-copy,
+      .home-page .impact-metric{min-height:0!important;padding:28px 24px!important;border-radius:22px!important;}
+      .home-page .media-feature-grid{grid-template-columns:1fr!important;gap:14px!important;}
+      .home-page .media-card{min-height:300px!important;padding:28px 24px!important;}
+    }
   `;
   document.head.appendChild(flatSurfacePalette);
 
@@ -335,9 +377,9 @@
   const applyVisualCopy = () => {
     setText('.impact-copy h2', 'No limites cómo pueden pagarte.');
     setText('.impact-analogy', 'Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera al océano de clientes que prefieren pagar con tarjeta, link o billetera digital.');
-    setText('.impact-metric .metric-message', 'Ofrecer más opciones de pago crea más oportunidades de venta y te permite crecer.');
-    setText('.growth-section h2', 'Crecer y tener más clientes no es suerte.');
-    setText('.growth-section .lead', 'Es tener información clara y elegir bien.');
+    setText('.impact-metric .metric-title', 'Crecer y tener más clientes no es suerte.');
+    setText('.feature-section-title', 'Información clara para decidir mejor.');
+    setText('.feature-intro .lead', 'Comparamos el equipo, los costos, las condiciones y la capacidad de crecer.');
     setText('.advisory-band h2', 'Elige con claridad, no solo por precio.');
     setText('.advisory-band .lead', 'Conocemos tu negocio, comparamos opciones y te explicamos por qué una alternativa puede convenirte.');
 
