@@ -72,7 +72,7 @@ window.COMPARISON_PROVIDERS = [
     cost: 'Según evaluación del ejecutivo.', hardware: 'TPV bajo renta mensual.', requirements: 'Cuenta activa, RFC y posible revisión del establecimiento.', settlement: '24 horas como referencia.', review: 'Manejo de cuenta, bajo uso, renta, volumen y contrato.'
   },
   {
-    name: 'Afirme TPV', domain: 'afirme.com', url: 'https://www.afirme.com/', category: 'banca', type: 'Banca tradicional',
+    name: 'Afirme TPV', domain: 'afirme.com', url: 'https://www.afirme.com/PyME/Adquirencia/Terminal-Punto-de-Venta.html', category: 'banca', type: 'Banca tradicional',
     cost: 'Débito 1.9% y crédito 2.4% como referencia; confirmar.', hardware: 'TPV bajo renta mensual.', requirements: 'RFC, cuenta Afirme y documentación del negocio.', settlement: '24 a 48 horas como referencia.', review: 'Facturación mínima, renta, saldo, inscripción y penalizaciones.'
   },
   {
