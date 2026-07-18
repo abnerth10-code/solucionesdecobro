@@ -724,7 +724,7 @@
         tags: [
           { label: 'Mercado Pago Point', href: 'https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point', primary: true },
           { label: 'Clip', href: 'https://www.clip.mx/' },
-          { label: 'Ualá Bis', href: 'https://www.uala.com.mx/bis' },
+          { label: 'Ualá Bis', href: 'https://www.ualabis.com.mx/' },
           { label: 'Menos trámites' }
         ],
         note: 'Por qué: tus respuestas priorizan facilidad, flexibilidad, rapidez o movilidad. Confirma la tasa final con IVA, los límites, el plazo de depósito y si necesitas NFC para cobrar con el celular.',
