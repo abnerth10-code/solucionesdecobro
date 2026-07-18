@@ -42,7 +42,7 @@ body .header .menu a:not(.btn){padding:8px 5px;font-size:16px}
 /* Paleta 2026: sitio claro, azul dosificado y acentos cálidos. */
 :root{--ink:#071d36;--text:#2c4055;--muted:#617386;--line:#dce7f1;--soft:#f7fbff;--paper:#fff;--warm:#fffdf6;--cream:#fff8e6;--blue:#0873df;--blue-dark:#0758b5;--sky:#eef9ff;--yellow:#ffd23f;--green:#18a058}
 body{background:#fff}
-body .header .brand-logo{content:url('assets/logos/logo-isotipo-soluciones-cobro.png');object-fit:contain!important;object-position:center!important;padding:4px;background:#fff;border:1px solid rgba(220,231,241,.9)}
+body .header .brand-logo{content:url('assets/logos/logo-isotipo-soluciones-cobro.webp');object-fit:contain!important;object-position:center!important;padding:4px;background:#fff;border:1px solid rgba(220,231,241,.9)}
 body .hero,body .product-hero,body .compare-hero,body .blog-hero{background:#fff!important}
 body .blue-band,body .diagnostic,body .notice{background:#fff!important}
 body .contact,body .advisory-band,body.terminales-page .terminal-final{background:#fff!important;color:var(--text)!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
@@ -87,7 +87,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 .home-page .impact-metric>.metric-note{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.24)}
 .home-page .advice-split{display:grid;grid-template-columns:minmax(260px,.58fr) minmax(0,1.42fr);gap:32px;align-items:stretch}
 .home-page .advice-copy{align-self:center}
-.home-page .advice-video-shell{min-height:440px;background-color:rgba(7,29,54,.78)!important;background-image:url('assets/hero/asesoria-personalizada.png')!important;background-size:cover!important;background-position:center!important;background-blend-mode:multiply!important}
+.home-page .advice-video-shell{min-height:440px;background-color:rgba(7,29,54,.78)!important;background-image:url('assets/hero/asesoria-personalizada.webp')!important;background-size:cover!important;background-position:center!important;background-blend-mode:multiply!important}
 .home-page .advice-video-shell:before{background:rgba(7,29,54,.12)!important}
 .home-page .video-preview{padding:34px}
 .home-page .video-story span{background:rgba(255,255,255,.14);backdrop-filter:blur(6px)}

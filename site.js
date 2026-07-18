@@ -390,8 +390,8 @@
     setText('.advisory-band .lead', 'Conocemos tu negocio, comparamos opciones y te explicamos por qué una alternativa puede convenirte.');
 
     const imageFallbacks = [
-      ['.advice-photo img', `${assetPrefix}assets/hero/asesoria-personalizada.png`],
-      ['.compare-hero-visual img', `${assetPrefix}assets/hero/diagnostico-cobro.png`]
+      ['.advice-photo img', `${assetPrefix}assets/hero/asesoria-personalizada.webp`],
+      ['.compare-hero-visual img', `${assetPrefix}assets/hero/diagnostico-cobro.webp`]
     ];
 
     imageFallbacks.forEach(([selector, fallback]) => {
