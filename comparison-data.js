@@ -20,16 +20,16 @@ window.COMPARISON_PROVIDERS = [
     cost: '3.6% + IVA como referencia; confirmar plan vigente.', hardware: 'Smart TPV y otros modelos; compra única.', requirements: 'Identificación y validación de cuenta. Puede operar con tarjeta propia según producto.', settlement: '24 horas como referencia.', review: 'Disposición de efectivo, comisiones adicionales, soporte y condiciones de la cuenta.'
   },
   {
-    name: 'KiWi', domain: 'kiwi.com.mx', url: 'https://www.kiwi.com.mx/', category: 'rapida', type: 'Opción rápida de cobro',
-    cost: '3.0% + IVA como referencia; confirmar disponibilidad y tasa.', hardware: 'Lector móvil; compra única.', requirements: 'Identificación y CLABE bancaria.', settlement: '24 horas como referencia.', review: 'Cobertura de soporte, tarjetas aceptadas, costo vigente y continuidad del servicio.'
+    name: 'KiWi', domain: 'conkiwi.com', url: 'https://www.conkiwi.com/', category: 'rapida', type: 'Opción rápida de cobro',
+    cost: 'Promoción 3.2% + IVA los primeros 12 meses; después 3% + IVA sin comprar dispositivo, según sitio oficial. Confirmar vigencia de la promoción.', hardware: 'Lector móvil; se envía sin costo.', requirements: 'Identificación y CLABE bancaria.', settlement: '24 horas como referencia.', review: 'Vigencia de la promoción, tasa después de los 12 meses, tarjetas aceptadas y continuidad del servicio.'
   },
   {
-    name: 'Ualá Bis', domain: 'uala.com.mx', url: 'https://www.uala.com.mx/bis', category: 'rapida', type: 'Opción rápida de cobro',
-    cost: '2.99% + IVA como referencia; confirmar tasa vigente.', hardware: 'Terminal mPOS; compra única.', requirements: 'Identificación y cuenta Ualá activa.', settlement: 'Inmediata a cuenta Ualá, según condiciones.', review: 'Cambios de tasa, límites y dependencia del ecosistema Ualá.'
+    name: 'Ualá Bis', domain: 'ualabis.com.mx', url: 'https://www.ualabis.com.mx/', category: 'rapida', type: 'Opción rápida de cobro',
+    cost: 'Desde 1.39% + IVA según tu giro, según sitio oficial. Registro 100% digital y activación rápida.', hardware: 'Terminal mPOS y POS Pro; compra única.', requirements: 'Identificación y registro digital en Ualá Bis.', settlement: 'Inmediata a cuenta Ualá, según condiciones.', review: 'Tasa exacta según giro, límites, términos y condiciones vigentes.'
   },
   {
     name: 'Feenicia', domain: 'feenicia.com', url: 'https://feenicia.com/', category: 'rapida', type: 'Opción rápida de cobro',
-    cost: '3.4% + IVA como referencia; confirmar propuesta.', hardware: 'Terminal móvil Bluetooth; compra única.', requirements: 'RFC, CLABE e identificación.', settlement: '24 horas como referencia.', review: 'Estabilidad de la aplicación, soporte y comisiones por servicios adicionales.'
+    cost: 'Tasa fija desde 3.4% + IVA por transacción, sin montos mínimos mensuales ni penalizaciones, según sitio oficial.', hardware: 'Valkiria GO ($900) o Valkiria SO ($3,999); Bluetooth, compatible con iOS/Android.', requirements: 'Registro 100% digital en 5 minutos.', settlement: 'Depósitos a la cuenta que elijas; 24 horas hábiles como referencia.', review: 'Costo final del dispositivo, comisiones por MSI o tiempo aire, y soporte.'
   },
   {
     name: 'Ya Ganaste', domain: 'yaganaste.com', url: 'https://www.yaganaste.com/', category: 'rapida', type: 'Opción rápida de cobro',
