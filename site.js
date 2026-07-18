@@ -543,9 +543,7 @@
   if (!form || !progress) return;
 
   const questionCards = Array.from(form.querySelectorAll('.q-card'));
-  const requiredNames = Array.from(new Set(questionCards.flatMap((card) => Array.from(card.querySelectorAll('input[type="radio"]')).map((input) => input.name))));
   const next = document.getElementById('diagnosticSubmit');
-  const total = requiredNames.length;
   let currentStep = 0;
   let progressText;
   let progressPercent;
@@ -556,14 +554,38 @@
   let autoAdvanceTimer = null;
   const AUTO_ADVANCE_DELAY = 450;
 
+  const isMultiCard = (card) => Boolean(card.querySelector('input[type="checkbox"]'));
+  const cardRequiresAnswer = (card) => Boolean(card.querySelector('[required]'));
+
+  const isCardVisible = (card) => {
+    const cond = card.dataset.showIf;
+    if (!cond) return true;
+    const [name, valuesStr] = cond.split(':');
+    const allowed = valuesStr.split(',');
+    const checked = Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map((input) => input.value);
+    return allowed.some((value) => checked.includes(value));
+  };
+  const visibleCards = () => questionCards.filter(isCardVisible);
+  const getTotal = () => visibleCards().length;
+
+  const nextVisibleIndex = (from) => {
+    for (let i = from + 1; i < questionCards.length; i++) if (isCardVisible(questionCards[i])) return i;
+    return -1;
+  };
+  const prevVisibleIndex = (from) => {
+    for (let i = from - 1; i >= 0; i--) if (isCardVisible(questionCards[i])) return i;
+    return -1;
+  };
+
   const buildProgress = () => {
+    const total = getTotal();
     progress.innerHTML = `
       <div class="progress-label">
         <span id="progressText">0 de ${total} respuestas</span>
         <span class="progress-percent" id="progressPercent">0%</span>
       </div>
       <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
-      <div class="progress-steps" id="progressSteps" aria-hidden="true">${requiredNames.map(() => '<span></span>').join('')}</div>
+      <div class="progress-steps" id="progressSteps" aria-hidden="true">${Array.from({ length: total }).map(() => '<span></span>').join('')}</div>
     `;
     progressText = document.getElementById('progressText');
     progressPercent = document.getElementById('progressPercent');
@@ -578,19 +600,21 @@
       card.classList.toggle('answered-past', cardIndex < currentStep && Boolean(card.querySelector('input:checked')));
     });
     const back = document.getElementById('diagnosticBack');
-    if (back) back.disabled = currentStep === 0;
+    if (back) back.disabled = prevVisibleIndex(currentStep) === -1;
     if (next) {
-      next.textContent = currentStep === questionCards.length - 1 ? 'Ver recomendación' : 'Siguiente';
-      next.disabled = !questionCards[currentStep].querySelector('input:checked');
+      const card = questionCards[currentStep];
+      next.textContent = nextVisibleIndex(currentStep) === -1 ? 'Ver recomendación' : 'Siguiente';
+      next.disabled = cardRequiresAnswer(card) && !card.querySelector('input:checked');
     }
   };
 
-  const answeredCount = () => requiredNames.filter((name) => form.querySelector(`input[name="${name}"]:checked`)).length;
+  const answeredCount = () => visibleCards().filter((card) => card.querySelector('input:checked')).length;
 
   const renderProgress = () => {
-    if (!progressFill || !progressFill.isConnected) buildProgress();
+    buildProgress();
     const answered = answeredCount();
-    const percent = Math.round((answered / total) * 100);
+    const total = getTotal();
+    const percent = total ? Math.round((answered / total) * 100) : 0;
 
     progressText.textContent = `${answered} de ${total} respuestas`;
     progressPercent.textContent = `${percent}%`;
@@ -599,50 +623,111 @@
     questionCards.forEach((card) => card.classList.toggle('is-answered', Boolean(card.querySelector('input:checked'))));
   };
 
+  const collectFormData = () => {
+    const formData = new FormData(form);
+    const data = {};
+    questionCards.forEach((card) => {
+      const input = card.querySelector('input');
+      if (!input) return;
+      data[input.name] = isMultiCard(card) ? formData.getAll(input.name) : (formData.get(input.name) || '');
+    });
+    return data;
+  };
+
   const profileResult = (data) => {
-    const score = { rapida: 0, hibrida: 0, banca: 0, pasarela: 0, softpos: 0, bnpl: 0 };
+    const canal = Array.isArray(data.canal) ? data.canal : [];
+    const funciones = Array.isArray(data.funciones) ? data.funciones : [];
+    const compromiso = Array.isArray(data.compromiso) ? data.compromiso : [];
+    const conectividad = Array.isArray(data.conectividad) ? data.conectividad : [];
 
-    if (data.formalidad === 'informal') score.rapida += 6;
-    if (data.formalidad === 'fisica') { score.rapida += 2; score.hibrida += 2; }
-    if (data.formalidad === 'moral') { score.banca += 4; score.hibrida += 3; }
-    if (data.volumen === 'bajo') score.rapida += 4;
-    if (data.volumen === 'medio') { score.rapida += 2; score.hibrida += 3; }
-    if (data.volumen === 'alto') { score.banca += 5; score.hibrida += 3; }
-    if (data.estabilidad === 'variable') score.rapida += 3;
-    if (data.estabilidad === 'estable') { score.banca += 3; score.hibrida += 2; }
-    if (data.liquidez === 'inmediata') score.rapida += 4;
-    if (data.liquidez === 'normal') { score.banca += 1; score.hibrida += 1; }
-    if (data.margen === 'bajo') score.banca += 3;
-    if (data.margen === 'medio') score.hibrida += 2;
-    if (data.margen === 'alto') { score.rapida += 1; score.hibrida += 1; }
-    if (data.msi === 'interesa') score.hibrida += 3;
-    if (data.msi === 'frecuente') score.banca += 4;
-    if (data.operacion === 'movil') { score.rapida += 2; score.softpos += 4; }
-    if (data.operacion === 'online') { score.pasarela += 5; score.rapida += 1; }
-    if (data.operacion === 'mostrador') { score.hibrida += 1; score.banca += 1; }
-    if (data.preferencia === 'simple') score.rapida += 4;
-    if (data.preferencia === 'costo') { score.banca += 4; score.hibrida += 2; }
-    if (data.canal === 'presencial') { score.rapida += 2; score.hibrida += 1; }
-    if (data.canal === 'links') { score.rapida += 3; score.pasarela += 2; }
-    if (data.canal === 'ecommerce') score.pasarela += 7;
-    if (data.canal === 'bnpl') score.bnpl += 8;
-
-    const winner = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0];
     const compareLink = isBlogArticle ? '../compara.html#matriz' : 'compara.html#matriz';
     const categoryLink = (category) => `${compareLink.split('#')[0]}?tipo=${category}#matriz`;
+
+    // Pagos a plazos sin tarjeta es una necesidad puntual: la mostramos directo.
+    if (data.plazos === 'bnpl') {
+      return {
+        key: 'pagos_plazos',
+        title: 'Ruta recomendada: pagos a plazos sin tarjeta',
+        text: 'Un esquema BNPL puede ampliar opciones para tus clientes, pero su comisión suele ser mayor. Evalúalo solo si tu margen puede absorber el costo.',
+        tags: [
+          { label: 'Kueski Pay', href: 'https://www.kueskipay.com/para-comercios', primary: true },
+          { label: 'Aplazo', href: 'https://aplazo.mx/' },
+          { label: 'Revisar margen' }
+        ],
+        note: 'Por qué: elegiste pagos a plazos sin tarjeta. Antes de contratar calcula el margen neto, devoluciones, liquidación y elegibilidad de tus productos.',
+        ctaText: 'Comparar opciones BNPL',
+        ctaHref: categoryLink('bnpl'),
+        ctaClass: 'btn btn-primary'
+      };
+    }
+
+    const score = { rapida: 0, hibrida: 0, banca: 0, pasarela: 0 };
+
+    if (canal.includes('ecommerce')) score.pasarela += 7;
+    if (canal.includes('movil')) score.rapida += 4;
+    if (canal.includes('links')) { score.rapida += 3; score.pasarela += 2; }
+    if (canal.includes('mostrador')) { score.hibrida += 1; score.banca += 1; score.rapida += 1; }
+
+    if (data.formalidad === 'sin_rfc') score.rapida += 6;
+    if (data.formalidad === 'fisica') { score.rapida += 2; score.hibrida += 2; }
+    if (data.formalidad === 'moral') { score.banca += 4; score.hibrida += 3; }
+
+    if (data.volumen === 'bajo') score.rapida += 4;
+    if (data.volumen === 'medio') { score.rapida += 2; score.hibrida += 3; }
+    if (data.volumen === 'alto') { score.banca += 4; score.hibrida += 3; }
+    if (data.volumen === 'muy_alto') score.banca += 6;
+
+    if (data.ticket === 'alto' || data.ticket === 'muy_alto') { score.banca += 1; score.hibrida += 1; }
+    if (data.ticket === 'bajo') score.rapida += 1;
+
+    if (data.estabilidad === 'variable') score.rapida += 3;
+    if (data.estabilidad === 'temporada') score.hibrida += 1;
+    if (data.estabilidad === 'estable') { score.banca += 3; score.hibrida += 2; }
+
+    if (data.liquidez === 'mismo_dia') score.rapida += 4;
+    if (data.liquidez === 'siguiente_dia') { score.rapida += 1; score.hibrida += 1; }
+    if (data.liquidez === 'dos_dias') { score.banca += 1; score.hibrida += 1; }
+
+    if (funciones.includes('simple')) score.rapida += 3;
+    if (funciones.includes('catalogo') || funciones.includes('multiusuario')) { score.hibrida += 2; score.banca += 1; }
+    if (funciones.includes('integracion')) score.pasarela += 3;
+
+    if (compromiso.includes('comprar')) score.rapida += 3;
+    if (compromiso.includes('renta')) { score.hibrida += 2; score.banca += 2; }
+    if (compromiso.includes('ninguno')) score.rapida += 4;
+
+    if (data.prioridad === 'costo') { score.banca += 5; score.hibrida += 2; }
+    if (data.prioridad === 'liquidez') score.rapida += 5;
+    if (data.prioridad === 'facilidad') score.rapida += 5;
+    if (data.prioridad === 'flexibilidad') score.rapida += 4;
+    if (data.prioridad === 'soporte') { score.hibrida += 3; score.banca += 2; }
+    if (data.prioridad === 'funciones') { score.hibrida += 2; score.pasarela += 3; }
+
+    if (data.plazos === 'msi_frecuente') score.banca += 4;
+    if (data.plazos === 'msi_ocasional') score.hibrida += 2;
+
+    if (conectividad.includes('senal_debil')) score.rapida += 2;
+
+    if (data.plataforma && data.plataforma !== 'ninguna' && data.plataforma !== 'no_seguro') score.pasarela += 3;
+
+    // Filtros duros: descartamos categorías que hoy no puedes contratar o no aceptas.
+    if (data.formalidad === 'sin_rfc') score.banca = -Infinity;
+    if (compromiso.includes('ninguno')) { score.banca = -Infinity; score.hibrida = -Infinity; }
+
+    const winner = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0];
 
     return {
       rapida: {
         key: 'terminal_moderna',
         title: 'Ruta recomendada: cobro rápido',
-        text: 'Tu perfil favorece una terminal de activación sencilla y sin renta obligatoria. Compara costo total, tiempo de depósito, movilidad y soporte antes de elegir.',
+        text: 'Tu perfil favorece una terminal de activación sencilla y sin renta obligatoria, incluida la opción de cobrar con el celular (Tap to Pay) si te mueves seguido. Compara costo total, tiempo de depósito, movilidad y soporte antes de elegir.',
         tags: [
           { label: 'Mercado Pago Point', href: 'https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point', primary: true },
           { label: 'Clip', href: 'https://www.clip.mx/' },
           { label: 'Ualá Bis', href: 'https://www.uala.com.mx/bis' },
           { label: 'Menos trámites' }
         ],
-        note: 'Por qué: tus respuestas priorizan facilidad, flexibilidad o rapidez. Confirma la tasa final con IVA, los límites y el plazo de depósito.',
+        note: 'Por qué: tus respuestas priorizan facilidad, flexibilidad, rapidez o movilidad. Confirma la tasa final con IVA, los límites, el plazo de depósito y si necesitas NFC para cobrar con el celular.',
         ctaText: 'Comparar opciones rápidas',
         ctaHref: categoryLink('rapida'),
         ctaClass: 'btn btn-primary'
@@ -692,46 +777,18 @@
         ctaHref: categoryLink('pasarela'),
         ctaClass: 'btn btn-primary'
       },
-      softpos: {
-        key: 'cobro_celular',
-        title: 'Ruta recomendada: cobrar con el celular',
-        text: 'Tu operación móvil puede beneficiarse de una solución Tap to Pay o SoftPOS, sin cargar una terminal adicional, siempre que tu teléfono y proveedor sean compatibles.',
-        tags: [
-          { label: 'Teléfono con NFC', primary: true },
-          { label: 'Operación móvil' },
-          { label: 'Sin lector adicional' }
-        ],
-        note: 'Por qué: priorizas movilidad. Confirma compatibilidad del teléfono, límites por transacción, aceptación de PIN, soporte y disponibilidad real en México.',
-        ctaText: 'Revisar opciones SoftPOS',
-        ctaHref: categoryLink('softpos'),
-        ctaClass: 'btn btn-primary'
-      },
-      bnpl: {
-        key: 'pagos_plazos',
-        title: 'Ruta recomendada: pagos a plazos sin tarjeta',
-        text: 'Un esquema BNPL puede ampliar opciones para tus clientes, pero su comisión suele ser mayor. Evalúalo solo si tu margen puede absorber el costo.',
-        tags: [
-          { label: 'Kueski Pay', href: 'https://www.kueskipay.com/para-comercios', primary: true },
-          { label: 'Aplazo', href: 'https://aplazo.mx/' },
-          { label: 'Revisar margen' }
-        ],
-        note: 'Por qué: elegiste pagos a plazos. Antes de contratar calcula el margen neto, devoluciones, liquidación y elegibilidad de tus productos.',
-        ctaText: 'Comparar opciones BNPL',
-        ctaHref: categoryLink('bnpl'),
-        ctaClass: 'btn btn-primary'
-      }
     }[winner];
   };
 
   const showRecommendation = () => {
     renderProgress();
-    const missingIndex = requiredNames.findIndex((name) => !form.querySelector(`input[name="${name}"]:checked`));
-    if (missingIndex >= 0) {
-      showStep(missingIndex);
+    const missing = visibleCards().find((card) => cardRequiresAnswer(card) && !card.querySelector('input:checked'));
+    if (missing) {
+      showStep(questionCards.indexOf(missing));
       return;
     }
 
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = collectFormData();
     const result = profileResult(data);
     const res = document.getElementById('diagnosticResult');
     const title = document.getElementById('resultTitle');
@@ -773,12 +830,13 @@
   };
 
   const goToNextOrFinish = (index) => {
-    if (index === questionCards.length - 1) {
+    const nextIndex = nextVisibleIndex(index);
+    if (nextIndex === -1) {
       showRecommendation();
     } else {
-      showStep(index + 1);
+      showStep(nextIndex);
       renderProgress();
-      questionCards[index + 1]?.querySelector('.q-title')?.focus?.();
+      questionCards[nextIndex]?.querySelector('.q-title')?.focus?.();
     }
   };
 
@@ -787,7 +845,7 @@
   renderProgress();
 
   form.addEventListener('change', (event) => {
-    if (!event.target.matches('input[type="radio"]')) return;
+    if (!event.target.matches('input[type="radio"], input[type="checkbox"]')) return;
     hasShownResult = false;
     const card = event.target.closest('.q-card');
     const index = questionCards.indexOf(card);
@@ -803,22 +861,27 @@
       showStep(index);
     });
 
-    // Avanza sola a la siguiente pregunta poco después de elegir una opción,
-    // dejando ver brevemente la marca de seleccionado antes de cambiar.
+    // Avanza sola a la siguiente pregunta poco después de elegir una opción de radio,
+    // dejando ver brevemente la marca de seleccionado antes de cambiar. En preguntas
+    // de opción múltiple (checkbox) dejamos que el usuario avance con "Siguiente".
     window.clearTimeout(autoAdvanceTimer);
-    autoAdvanceTimer = window.setTimeout(() => goToNextOrFinish(index), AUTO_ADVANCE_DELAY);
+    if (event.target.type === 'radio') {
+      autoAdvanceTimer = window.setTimeout(() => goToNextOrFinish(index), AUTO_ADVANCE_DELAY);
+    }
   });
 
   const back = document.getElementById('diagnosticBack');
   if (back) back.addEventListener('click', () => {
     window.clearTimeout(autoAdvanceTimer);
-    showStep(currentStep - 1);
+    const prevIndex = prevVisibleIndex(currentStep);
+    if (prevIndex !== -1) showStep(prevIndex);
     renderProgress();
   });
 
   if (next) next.addEventListener('click', () => {
-    if (!questionCards[currentStep].querySelector('input:checked')) {
-      questionCards[currentStep].querySelector('.option input')?.focus();
+    const card = questionCards[currentStep];
+    if (cardRequiresAnswer(card) && !card.querySelector('input:checked')) {
+      card.querySelector('.option input')?.focus();
       return;
     }
     window.clearTimeout(autoAdvanceTimer);

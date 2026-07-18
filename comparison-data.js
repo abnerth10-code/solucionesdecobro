@@ -32,10 +32,6 @@ window.COMPARISON_PROVIDERS = [
     cost: 'Tasa fija desde 3.4% + IVA por transacción, sin montos mínimos mensuales ni penalizaciones, según sitio oficial.', hardware: 'Valkiria GO ($900) o Valkiria SO ($3,999); Bluetooth, compatible con iOS/Android.', requirements: 'Registro 100% digital en 5 minutos.', settlement: 'Depósitos a la cuenta que elijas; 24 horas hábiles como referencia.', review: 'Costo final del dispositivo, comisiones por MSI o tiempo aire, y soporte.'
   },
   {
-    name: 'Ya Ganaste', domain: 'yaganaste.com', url: 'https://www.yaganaste.com/', category: 'rapida', type: 'Opción rápida de cobro',
-    cost: 'Variable según contrato o promoción.', hardware: 'Terminal móvil; confirmar modelos disponibles.', requirements: 'Identificación y datos del negocio.', settlement: '24 horas como referencia.', review: 'Tarjetas y vales aceptados, inactividad, soporte y vigencia del producto.'
-  },
-  {
     name: 'NetPay', domain: 'netpay.com.mx', url: 'https://www.netpay.com.mx/', category: 'hibrida', type: 'Modelo híbrido',
     cost: '3.5% + IVA como referencia; confirmar plan vigente.', hardware: 'Smart POS y terminales según solución.', requirements: 'RFC, identificación, CLABE y validaciones fiscales según producto.', settlement: '24 horas o 365 días, según plan.', review: 'Licencias, software adicional, tarjetas internacionales, equipo y condiciones de red.'
   },
@@ -124,10 +120,6 @@ window.COMPARISON_PROVIDERS = [
     cost: 'Interchange++ o tasa variable según propuesta.', hardware: 'Smart POS y TPV tradicional bajo renta; también ofrece soluciones móviles.', requirements: 'RFC, acta constitutiva y perfil comercial o corporativo.', settlement: '24 horas como referencia.', review: 'Cuotas de instalación y mantenimiento, tasa, permanencia y cancelación. EVO ahora forma parte de Global Payments.'
   },
   {
-    name: 'Nu (NuTap)', domain: 'nu.com.mx', url: 'https://nu.com.mx/', category: 'softpos', type: 'SoftPOS / cobro con celular', status: 'Disponibilidad en México por confirmar',
-    cost: 'Tasa y disponibilidad comercial en México por confirmar.', hardware: 'Sin lector adicional: Tap to Pay en smartphone con NFC, donde el producto esté disponible.', requirements: 'Cuenta empresarial compatible y smartphone con NFC; confirmar compatibilidad local.', settlement: 'Por confirmar para México.', review: 'NuTap está documentado oficialmente en Brasil, pero no encontramos una oferta oficial equivalente en Nu México. No contratar ni recomendar hasta confirmarlo.'
-  },
-  {
     name: 'Kueski Pay', domain: 'kueskipay.com', url: 'https://www.kueskipay.com/para-comercios', category: 'bnpl', type: 'Método alternativo (BNPL)',
     cost: 'Porcentaje + IVA por venta exitosa. Una guía para tienda física publica 5.90%; solicitar propuesta vigente.', hardware: 'Integración e-commerce, SDK o código de pago en tiendas físicas afiliadas.', requirements: 'Tienda en línea activa o afiliación; documentación fiscal y bancaria según el canal.', settlement: 'Pago completo al comercio según acuerdo.', review: 'Comisión sobre margen, requisitos de integración, elegibilidad y condiciones por canal. Kueski indica que asume fraude crediticio y contracargos.'
   },
@@ -142,9 +134,5 @@ window.COMPARISON_PROVIDERS = [
   {
     name: 'Banco Multiva', domain: 'multiva.com.mx', url: 'https://www.multiva.com.mx/empresas/soluciones-de-pago/tpv', category: 'banca', type: 'Banca tradicional',
     cost: 'Variable por giro y evaluación.', hardware: 'TPV fija, móvil o virtual bajo renta según producto.', requirements: 'Cuenta Multiva, RFC, comercio establecido y evaluación.', settlement: '24 a 48 horas como referencia.', review: 'Renta, afiliación, saldo de la cuenta, soporte y conveniencia para microempresas.'
-  },
-  {
-    name: 'Todito Pay', domain: 'todito.com', url: 'https://www.todito.com/', category: 'rapida', type: 'Opción rápida de cobro', status: 'Producto mPOS por confirmar',
-    cost: '3.5% + IVA aportado como referencia; confirmar oferta vigente.', hardware: 'mPOS básico descrito como compra única; disponibilidad actual no confirmada.', requirements: 'Identificación y registro en plataforma, sujeto a confirmación.', settlement: '24 horas aportadas como referencia; confirmar.', review: 'El sitio oficial consultado presenta servicios de Todito, pero no localizamos la oferta pública del mPOS descrito. Confirmar producto, soporte, comisión y contratación antes de recomendar.'
   }
 ];

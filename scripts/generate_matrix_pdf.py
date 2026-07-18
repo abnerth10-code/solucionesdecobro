@@ -188,7 +188,7 @@ def provider_card(provider: dict, card_width: float) -> Table:
 def build_story(providers: list[dict]):
     story = [Spacer(1, 18 * mm)]
     story.append(Paragraph("Matriz comparativa de soluciones de cobro en México", TITLE))
-    story.append(Paragraph("37 proveedores organizados para comparar costo, equipo, requisitos, liquidación y condiciones antes de contratar.", SUBTITLE))
+    story.append(Paragraph("34 proveedores organizados para comparar costo, equipo, requisitos, liquidación y condiciones antes de contratar.", SUBTITLE))
     story.append(Spacer(1, 8 * mm))
 
     overview = Table([
@@ -212,7 +212,7 @@ def build_story(providers: list[dict]):
     ]))
     story.append(overview)
     story.append(Spacer(1, 8 * mm))
-    warning = Table([[Paragraph("Importante", CARD_TITLE), Paragraph("Las cifras son referencias y pueden variar por giro, volumen, promoción, contrato o fecha. NuTap y el mPOS de Todito Pay requieren confirmar disponibilidad comercial actual en México.", COVER_NOTE)]], colWidths=[35 * mm, 208 * mm])
+    warning = Table([[Paragraph("Importante", CARD_TITLE), Paragraph("Las cifras son referencias y pueden variar por giro, volumen, promoción, contrato o fecha.", COVER_NOTE)]], colWidths=[35 * mm, 208 * mm])
     warning.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, -1), WARM),
         ("BOX", (0, 0), (-1, -1), 0.8, YELLOW),
