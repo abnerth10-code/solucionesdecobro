@@ -186,24 +186,28 @@
         <h2>Medios de pago disponibles según la terminal.</h2>
         <p class="lead payment-lead">La compatibilidad cambia por modelo y proveedor. Antes de comprar verificamos cuáles acepta el equipo que te interesa.</p>
         <p class="payment-drag-hint">Arrastra con el mouse o desliza con el dedo para explorar.</p>
-        <div class="payment-marquee" id="paymentMethodsCarousel" tabindex="0" aria-label="Ejemplos de redes, vales y billeteras digitales; arrastra o desliza horizontalmente para recorrerlos">
-          <div class="payment-track"><div class="payment-set">
-            <div class="logo-tile"><img src="assets/logos/visa01.svg" alt="Visa"></div>
-            <div class="logo-tile"><img src="assets/logos/mastercard1.svg" alt="Mastercard"></div>
-            <div class="logo-tile"><img src="assets/logos/amex1.svg" alt="American Express"></div>
-            <div class="logo-tile"><img src="assets/logos/carnet1.svg" alt="Carnet"></div>
-            <div class="logo-tile"><img src="assets/logos/googlepay.svg" alt="Google Pay"></div>
-            <div class="logo-tile"><img src="assets/logos/mercadopago.svg" alt="Mercado Pago"></div>
-            <div class="logo-tile"><img src="assets/logos/edenred.svg" alt="Edenred"></div>
-            <div class="logo-tile"><img src="assets/logos/sivale.svg" alt="Sí Vale"></div>
-            <div class="logo-tile payment-name"><strong>Pluxee</strong></div>
-            <div class="logo-tile"><img src="assets/logos/claro.svg" alt="Claro Pay"></div>
-            <div class="logo-tile"><img src="assets/logos/rappi.svg" alt="Rappi Pay"></div>
-            <div class="logo-tile payment-name"><strong>Total</strong></div>
-            <div class="logo-tile payment-name"><strong>Samsung Pay</strong></div>
-            <div class="logo-tile payment-name"><strong>Banco del Bienestar</strong></div>
-            <div class="logo-tile payment-name"><strong>TENGO!</strong></div>
-          </div></div>
+        <div class="payment-marquee-wrap">
+          <button class="payment-nav prev" type="button" data-payment-direction="previous" aria-label="Ver medios de pago anteriores">‹</button>
+          <div class="payment-marquee" id="paymentMethodsCarousel" tabindex="0" aria-label="Ejemplos de redes, vales y billeteras digitales; arrastra o desliza horizontalmente para recorrerlos">
+            <div class="payment-track"><div class="payment-set">
+              <div class="logo-tile"><img src="assets/logos/visa01.svg" alt="Visa"></div>
+              <div class="logo-tile"><img src="assets/logos/mastercard1.svg" alt="Mastercard"></div>
+              <div class="logo-tile"><img src="assets/logos/amex1.svg" alt="American Express"></div>
+              <div class="logo-tile"><img src="assets/logos/carnet1.svg" alt="Carnet"></div>
+              <div class="logo-tile"><img src="assets/logos/googlepay.svg" alt="Google Pay"></div>
+              <div class="logo-tile"><img src="assets/logos/mercadopago.svg" alt="Mercado Pago"></div>
+              <div class="logo-tile"><img src="assets/logos/edenred.svg" alt="Edenred"></div>
+              <div class="logo-tile"><img src="assets/logos/sivale.svg" alt="Sí Vale"></div>
+              <div class="logo-tile payment-name"><strong>Pluxee</strong></div>
+              <div class="logo-tile"><img src="assets/logos/claro.svg" alt="Claro Pay"></div>
+              <div class="logo-tile"><img src="assets/logos/rappi.svg" alt="Rappi Pay"></div>
+              <div class="logo-tile payment-name"><strong>Total</strong></div>
+              <div class="logo-tile payment-name"><strong>Samsung Pay</strong></div>
+              <div class="logo-tile payment-name"><strong>Banco del Bienestar</strong></div>
+              <div class="logo-tile payment-name"><strong>TENGO!</strong></div>
+            </div></div>
+          </div>
+          <button class="payment-nav next" type="button" data-payment-direction="next" aria-label="Ver más medios de pago">›</button>
         </div>
       </div>
     </section>
