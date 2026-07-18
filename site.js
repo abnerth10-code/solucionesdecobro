@@ -65,7 +65,7 @@
     .menu{gap:6px!important;}
     .menu a{font-size:16px!important;font-weight:900!important;color:#25384d!important;padding-inline:5px!important;}
     .menu a:hover{color:var(--blue)!important;}
-    .header-actions>.btn{height:52px!important;padding:0 20px!important;font-size:16px!important;border-radius:12px!important;}
+    .header-actions>.btn{height:52px!important;padding:0 22px!important;font-size:16px!important;border-radius:999px!important;}
     .mini-social{border-color:#d7e7f5!important;background:#fff!important;box-shadow:0 8px 18px rgba(7,29,54,.05)!important;}
 
     .hero-compact{padding-top:38px!important;padding-bottom:34px!important;background:radial-gradient(circle at 88% 12%,rgba(255,210,63,.08),transparent 29%),radial-gradient(circle at 8% 88%,rgba(0,115,230,.05),transparent 32%),#fff!important;}
@@ -203,7 +203,7 @@
     .compare-hero-visual img{display:block;width:100%;height:440px;object-fit:cover;}
     .article-hero-image img,.article-image img{height:auto!important;max-height:none!important;object-fit:contain!important;background:#fff;}
 
-    .top-link{width:54px!important;height:54px!important;border-radius:17px!important;background:rgba(7,29,54,.38)!important;color:#fff!important;border:1px solid rgba(255,255,255,.34)!important;box-shadow:0 14px 32px rgba(7,29,54,.18)!important;backdrop-filter:blur(12px)!important;font-size:0!important;display:grid!important;place-items:center!important;transition:transform .2s ease,opacity .2s ease,background .2s ease!important;}
+    .top-link{width:54px!important;height:54px!important;border-radius:50%!important;background:rgba(7,29,54,.38)!important;color:#fff!important;border:1px solid rgba(255,255,255,.34)!important;box-shadow:0 14px 32px rgba(7,29,54,.18)!important;backdrop-filter:blur(12px)!important;font-size:0!important;display:grid!important;place-items:center!important;transition:transform .2s ease,opacity .2s ease,background .2s ease!important;}
     .top-link:before{content:"";width:16px;height:16px;border-left:3px solid currentColor;border-top:3px solid currentColor;transform:rotate(45deg) translate(2px,2px);}
     .top-link:hover{transform:translateY(-4px)!important;background:rgba(0,115,230,.68)!important;}
     body.privacy-page .header{position:relative!important;top:auto!important;}
@@ -234,7 +234,7 @@
       .header-actions{margin-top:9px!important;transition:margin .34s ease!important;display:grid!important;grid-template-columns:minmax(180px,1fr) auto!important;align-items:center!important;gap:8px!important;}
       .header-actions>.btn{height:48px!important;min-height:48px!important;padding:0 14px!important;font-size:16px!important;line-height:1.05!important;}
       .mobile-social{display:flex!important;gap:7px!important;justify-content:flex-end!important;}
-      .mini-social{width:44px!important;height:44px!important;border-radius:10px!important;}
+      .mini-social{width:44px!important;height:44px!important;border-radius:50%!important;}
       .mini-social .brand-mask{width:22px!important;height:22px!important;}
       .header.compact{box-shadow:0 10px 28px rgba(7,29,54,.12)!important;background:rgba(255,255,255,.985)!important;}
       .header.compact .nav{padding:8px 14px!important;min-height:auto!important;gap:0!important;}
@@ -280,7 +280,7 @@
       .payment-section h2{font-size:34px!important;line-height:1.12!important;}
       .payment-marquee{margin-inline:-20px;padding-inline:20px}
       .payment-marquee .logo-tile{flex-basis:124px;width:124px;height:82px}.payment-marquee .logo-tile img{max-width:96px;max-height:48px}
-      .top-link{width:52px!important;height:52px!important;right:14px!important;bottom:84px!important;border-radius:16px!important;opacity:.72!important;}
+      .top-link{width:52px!important;height:52px!important;right:14px!important;bottom:84px!important;border-radius:50%!important;opacity:.72!important;}
       .cookie-banner{grid-template-columns:1fr;left:12px;right:12px;bottom:12px;gap:10px;padding:14px 16px;}
       .cookie-banner strong{font-size:16px;margin-bottom:2px;}
       .cookie-banner p{font-size:13px;line-height:1.38;}
@@ -737,7 +737,7 @@
         title: 'Recomendación: modelo híbrido',
         text: 'Revisa Getnet y Konfío. Puede servir si ya vendes más, quieres formalidad y buscas equilibrar tecnología con mejores condiciones.',
         tags: [
-          { label: 'Getnet', href: 'https://www.getnet.com.mx/', primary: true },
+          { label: 'Getnet', href: 'https://www.getnet.net/mx/', primary: true },
           { label: 'Konfío', href: 'https://konfio.mx/terminal-punto-de-venta/' },
           { label: 'Negocio en crecimiento' },
           { label: 'Contrato claro' }

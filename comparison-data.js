@@ -36,7 +36,7 @@ window.COMPARISON_PROVIDERS = [
     cost: '3.5% + IVA como referencia; confirmar plan vigente.', hardware: 'Smart POS y terminales según solución.', requirements: 'RFC, identificación, CLABE y validaciones fiscales según producto.', settlement: '24 horas o 365 días, según plan.', review: 'Licencias, software adicional, tarjetas internacionales, equipo y condiciones de red.'
   },
   {
-    name: 'Getnet', domain: 'getnet.com.mx', url: 'https://www.getnet.com.mx/', category: 'hibrida', type: 'Modelo híbrido',
+    name: 'Getnet', domain: 'getnet.net', url: 'https://www.getnet.net/mx/', category: 'hibrida', type: 'Modelo híbrido',
     cost: 'Variable o negociable por volumen.', hardware: 'Smart POS y TPV en renta o comodato, según contrato.', requirements: 'RFC, e.firma y evaluación comercial o bancaria.', settlement: 'Según esquema contratado.', review: 'Metas de facturación, renta, tasa, permanencia y cancelación anticipada.'
   },
   {
