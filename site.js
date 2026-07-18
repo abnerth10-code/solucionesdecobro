@@ -157,7 +157,13 @@
     .step-mode .q-card{display:none;max-width:720px;margin:0 auto;padding:28px;animation:questionIn .28s ease both;}
     .step-mode .q-card.active{display:block;}
     .step-mode .q-title{font-size:24px;line-height:1.25;margin-bottom:20px;}
-    .step-mode .option span{padding:16px 18px;font-size:18px;}
+    .step-mode .option span{position:relative;padding:16px 52px 16px 18px;font-size:18px;transition:border-color .16s ease,background .16s ease,transform .12s ease,box-shadow .16s ease;}
+    .step-mode .option span:hover{border-color:#8bc8f4;background:#f3faff;transform:translateY(-1px);box-shadow:0 8px 18px rgba(7,29,54,.07);}
+    .step-mode .option input:focus-visible+span{outline:3px solid #ffbf00;outline-offset:2px;}
+    .step-mode .option input:checked+span{box-shadow:0 10px 24px rgba(0,115,230,.14);}
+    .step-mode .option input:checked+span:after{content:"";position:absolute;right:18px;top:50%;width:24px;height:24px;margin-top:-12px;border-radius:999px;background:linear-gradient(135deg,#0073e6,#19aeea);box-shadow:0 4px 10px rgba(0,115,230,.32);animation:checkPop .2s ease both;}
+    .step-mode .option input:checked+span:before{content:"";position:absolute;right:26px;top:50%;width:9px;height:5px;margin-top:-2px;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg);z-index:1;animation:checkPop .22s ease both;}
+    @keyframes checkPop{from{opacity:0;transform:rotate(-45deg) scale(.4)}to{opacity:1;transform:rotate(-45deg) scale(1)}}
     .diagnostic-nav{display:flex;gap:12px;justify-content:center;margin-top:18px;}
     .diagnostic-nav .btn[disabled]{opacity:.45;cursor:not-allowed;}
     #diagnosticSubmit{display:inline-flex!important;}
@@ -547,6 +553,8 @@
   let progressSteps = [];
   let hasShownResult = false;
   let lastTrackedResult = '';
+  let autoAdvanceTimer = null;
+  const AUTO_ADVANCE_DELAY = 450;
 
   const buildProgress = () => {
     progress.innerHTML = `
@@ -764,6 +772,16 @@
     }
   };
 
+  const goToNextOrFinish = (index) => {
+    if (index === questionCards.length - 1) {
+      showRecommendation();
+    } else {
+      showStep(index + 1);
+      renderProgress();
+      questionCards[index + 1]?.querySelector('.q-title')?.focus?.();
+    }
+  };
+
   buildProgress();
   showStep(0);
   renderProgress();
@@ -784,10 +802,16 @@
       renderProgress();
       showStep(index);
     });
+
+    // Avanza sola a la siguiente pregunta poco después de elegir una opción,
+    // dejando ver brevemente la marca de seleccionado antes de cambiar.
+    window.clearTimeout(autoAdvanceTimer);
+    autoAdvanceTimer = window.setTimeout(() => goToNextOrFinish(index), AUTO_ADVANCE_DELAY);
   });
 
   const back = document.getElementById('diagnosticBack');
   if (back) back.addEventListener('click', () => {
+    window.clearTimeout(autoAdvanceTimer);
     showStep(currentStep - 1);
     renderProgress();
   });
@@ -797,12 +821,8 @@
       questionCards[currentStep].querySelector('.option input')?.focus();
       return;
     }
-    if (currentStep === questionCards.length - 1) showRecommendation();
-    else {
-      showStep(currentStep + 1);
-      renderProgress();
-      questionCards[currentStep].querySelector('.q-title')?.focus?.();
-    }
+    window.clearTimeout(autoAdvanceTimer);
+    goToNextOrFinish(currentStep);
   });
 
   form.addEventListener('submit', (event) => {
