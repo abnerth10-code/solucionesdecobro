@@ -157,13 +157,14 @@
     .step-mode .q-card{display:none;max-width:720px;margin:0 auto;padding:28px;animation:questionIn .28s ease both;}
     .step-mode .q-card.active{display:block;}
     .step-mode .q-title{font-size:24px;line-height:1.25;margin-bottom:20px;}
-    .step-mode .option span{position:relative;padding:16px 52px 16px 18px;font-size:18px;transition:border-color .16s ease,background .16s ease,transform .12s ease,box-shadow .16s ease;}
-    .step-mode .option span:hover{border-color:#8bc8f4;background:#f3faff;transform:translateY(-1px);box-shadow:0 8px 18px rgba(7,29,54,.07);}
-    .step-mode .option input:focus-visible+span{outline:3px solid #ffbf00;outline-offset:2px;}
-    .step-mode .option input:checked+span{box-shadow:0 10px 24px rgba(0,115,230,.14);}
-    .step-mode .option input:checked+span:after{content:"";position:absolute;right:18px;top:50%;width:24px;height:24px;margin-top:-12px;border-radius:999px;background:linear-gradient(135deg,#0073e6,#19aeea);box-shadow:0 4px 10px rgba(0,115,230,.32);animation:checkPop .2s ease both;}
-    .step-mode .option input:checked+span:before{content:"";position:absolute;right:26px;top:50%;width:9px;height:5px;margin-top:-2px;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg);z-index:1;animation:checkPop .22s ease both;}
-    @keyframes checkPop{from{opacity:0;transform:rotate(-45deg) scale(.4)}to{opacity:1;transform:rotate(-45deg) scale(1)}}
+    .step-mode .option{position:relative;padding:16px 18px;font-size:18px;transition:border-color .16s ease,background .16s ease,transform .12s ease,box-shadow .16s ease;}
+    .step-mode .option:hover{border-color:#8bc8f4;background:#f3faff;transform:translateY(-1px);box-shadow:0 8px 18px rgba(7,29,54,.07);}
+    .step-mode .option input:focus-visible+.mark{outline:3px solid #ffbf00;outline-offset:2px;}
+    .step-mode .option:has(input:checked){box-shadow:0 10px 24px rgba(0,115,230,.14);}
+    .step-mode .option .mark{width:26px;height:26px;}
+    .step-mode .option:has(input:checked) .mark{animation:markPop .2s ease both;}
+    .step-mode .option .label{font-size:18px;}
+    @keyframes markPop{from{transform:scale(.7)}to{transform:scale(1)}}
     .diagnostic-nav{display:flex;gap:12px;justify-content:center;margin-top:18px;}
     .diagnostic-nav .btn[disabled]{opacity:.45;cursor:not-allowed;}
     #diagnosticSubmit{display:inline-flex!important;}
@@ -274,7 +275,7 @@
       .step-mode{min-height:390px;}
       .step-mode .q-card{padding:22px;}
       .step-mode .q-title{font-size:21px;}
-      .step-mode .option span{font-size:16px;}
+      .step-mode .option .label{font-size:16px;}
       .diagnostic-nav{display:grid;grid-template-columns:1fr;}
       .payment-band{padding-top:42px!important;}
       .payment-section h2{font-size:34px!important;line-height:1.12!important;}
@@ -544,6 +545,9 @@
 
   const questionCards = Array.from(form.querySelectorAll('.q-card'));
   const next = document.getElementById('diagnosticSubmit');
+  const PHASE_NAMES = ['Tu negocio', 'Tu operación', 'Lo que necesitas'];
+  const phaseStepsHost = document.getElementById('phaseSteps');
+  const phaseNameEl = document.getElementById('phaseName');
   let currentStep = 0;
   let progressText;
   let progressPercent;
@@ -553,6 +557,7 @@
   let lastTrackedResult = '';
   let autoAdvanceTimer = null;
   const AUTO_ADVANCE_DELAY = 450;
+  const AUTO_ADVANCE_DELAY_CHECKBOX = 900;
 
   const isMultiCard = (card) => Boolean(card.querySelector('input[type="checkbox"]'));
   const cardRequiresAnswer = (card) => Boolean(card.querySelector('[required]'));
@@ -567,6 +572,20 @@
   };
   const visibleCards = () => questionCards.filter(isCardVisible);
   const getTotal = () => visibleCards().length;
+
+  const cardPhase = (card) => (card ? Number(card.dataset.phase || 0) : 0);
+  const cardsInPhase = (phaseIndex) => visibleCards().filter((card) => cardPhase(card) === phaseIndex);
+
+  const renderPhaseHead = () => {
+    if (!phaseStepsHost || !phaseNameEl) return;
+    const activePhase = cardPhase(questionCards[currentStep]);
+    phaseStepsHost.innerHTML = PHASE_NAMES.map((name, i) => {
+      const cls = i < activePhase ? 'done' : (i === activePhase ? 'active' : '');
+      const icon = i < activePhase ? '✓' : String(i + 1);
+      return `<div class="phase-dot ${cls}"><span class="n">${icon}</span></div>`;
+    }).join('');
+    phaseNameEl.textContent = `Fase ${activePhase + 1} de ${PHASE_NAMES.length}: ${PHASE_NAMES[activePhase] || ''}`;
+  };
 
   const nextVisibleIndex = (from) => {
     for (let i = from + 1; i < questionCards.length; i++) if (isCardVisible(questionCards[i])) return i;
@@ -616,11 +635,17 @@
     const total = getTotal();
     const percent = total ? Math.round((answered / total) * 100) : 0;
 
-    progressText.textContent = `${answered} de ${total} respuestas`;
+    const activeCard = questionCards[currentStep];
+    const phaseCards = cardsInPhase(cardPhase(activeCard));
+    const posInPhase = phaseCards.indexOf(activeCard);
+    progressText.textContent = posInPhase !== -1
+      ? `Pregunta ${posInPhase + 1} de ${phaseCards.length} en esta fase`
+      : `${answered} de ${total} respuestas`;
     progressPercent.textContent = `${percent}%`;
     progressFill.style.width = `${percent}%`;
     progressSteps.forEach((step, index) => step.classList.toggle('done', index < answered));
     questionCards.forEach((card) => card.classList.toggle('is-answered', Boolean(card.querySelector('input:checked'))));
+    renderPhaseHead();
   };
 
   const collectFormData = () => {
@@ -861,12 +886,15 @@
       showStep(index);
     });
 
-    // Avanza sola a la siguiente pregunta poco después de elegir una opción de radio,
-    // dejando ver brevemente la marca de seleccionado antes de cambiar. En preguntas
-    // de opción múltiple (checkbox) dejamos que el usuario avance con "Siguiente".
+    // Avanza sola a la siguiente pregunta poco después de elegir una opción, dejando ver
+    // brevemente la marca de seleccionado antes de cambiar. En preguntas de opción múltiple
+    // (checkbox) usamos un retraso mayor que se reinicia con cada clic, para que el usuario
+    // pueda marcar varias casillas antes de que avance solo.
     window.clearTimeout(autoAdvanceTimer);
-    if (event.target.type === 'radio') {
-      autoAdvanceTimer = window.setTimeout(() => goToNextOrFinish(index), AUTO_ADVANCE_DELAY);
+    const cardNeedsAnswer = cardRequiresAnswer(card) && !card.querySelector('input:checked');
+    if (!cardNeedsAnswer) {
+      const delay = event.target.type === 'radio' ? AUTO_ADVANCE_DELAY : AUTO_ADVANCE_DELAY_CHECKBOX;
+      autoAdvanceTimer = window.setTimeout(() => goToNextOrFinish(index), delay);
     }
   });
 
