@@ -883,7 +883,10 @@
 
     window.requestAnimationFrame(() => {
       renderProgress();
-      showStep(index);
+      // Si para cuando corre este frame el auto-avance ya movió currentStep hacia
+      // adelante (por ejemplo, si el navegador retrasó este frame), no lo pisemos
+      // reactivando la tarjeta vieja: solo refrescamos si seguimos en la misma pregunta.
+      if (currentStep === index) showStep(index);
     });
 
     // Avanza sola a la siguiente pregunta poco después de elegir una opción, dejando ver
