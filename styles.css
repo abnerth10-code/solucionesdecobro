@@ -234,3 +234,38 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
   .phase-head{flex-wrap:wrap;gap:8px}
   .phase-name{order:-1;width:100%}
 }
+
+/* Insignias de ícono con color por tarjeta (inspirado en el dashboard de Dribbble). */
+.home-page .media-card .icon{border-radius:50%!important}
+.home-page .media-hardware .icon{background:#dde9ff!important;color:#0758b5!important}
+.home-page .media-info .icon{background:#fff3d6!important;color:#8a5a00!important}
+.home-page .media-compare .icon{background:#e1f7ea!important;color:#128a4c!important}
+.home-page .media-growth .icon{background:#f3e8ff!important;color:#7a3fd6!important}
+
+/* "Así te asesoramos": tabs interactivos con imagen que cambia (inspirado en Mercado Pago). */
+.story-shell{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:var(--card-radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--card-shadow);background:#fff}
+.story-tabs{padding:28px 24px;display:flex;flex-direction:column;gap:2px}
+.story-tab{border:none;background:none;text-align:left;cursor:pointer;padding:13px 0 13px 16px;border-left:3px solid transparent;font:inherit;transition:border-color .2s ease}
+.story-tab .n{display:block;font-size:12px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.story-tab h3{margin:0;font-size:19px;color:#9fb0c0;transition:color .2s ease}
+.story-tab p{margin:8px 0 0;font-size:14px;color:var(--muted);max-height:0;overflow:hidden;opacity:0;transition:max-height .25s ease,opacity .2s ease}
+.story-tab.active{border-left-color:var(--yellow)}
+.story-tab.active h3{color:var(--ink)}
+.story-tab.active p{max-height:90px;opacity:1;margin-top:8px}
+.story-media{position:relative;min-height:340px;background:var(--ink)}
+.story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
+.story-media img.active{opacity:1}
+.story-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,29,54,.5),transparent 45%);pointer-events:none}
+.story-progress{position:absolute;left:20px;right:20px;bottom:18px;display:flex;gap:6px;z-index:2}
+.story-progress span{flex:1;height:3px;border-radius:99px;background:rgba(255,255,255,.35);overflow:hidden}
+.story-progress span i{display:block;height:100%;width:0;background:#fff;border-radius:99px}
+.story-progress span.done i{width:100%;transition:none}
+.story-progress span.active i{width:0%;animation:storyFill 4.2s linear forwards}
+@keyframes storyFill{from{width:0%}to{width:100%}}
+@media(max-width:900px){
+  .story-shell{grid-template-columns:1fr}
+  .story-media{min-height:240px}
+}
+@media(prefers-reduced-motion:reduce){
+  .story-progress span.active i{animation:none;width:100%}
+}

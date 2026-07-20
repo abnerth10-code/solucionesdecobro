@@ -487,9 +487,46 @@
     carousel.addEventListener('pointercancel', stopDrag);
   };
 
+  const initStoryTabs = () => {
+    const shell = document.querySelector('.story-shell');
+    if (!shell) return;
+    const tabs = Array.from(shell.querySelectorAll('.story-tab'));
+    const media = Array.from(shell.querySelectorAll('.story-media img'));
+    const progress = Array.from(shell.querySelectorAll('.story-progress span'));
+    if (!tabs.length || !media.length) return;
+
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let current = 0;
+    let timer = null;
+
+    const show = (index) => {
+      current = index;
+      tabs.forEach((tab) => tab.classList.toggle('active', Number(tab.dataset.storyIndex) === index));
+      media.forEach((img) => img.classList.toggle('active', Number(img.dataset.storyIndex) === index));
+      progress.forEach((bar, barIndex) => {
+        bar.classList.toggle('done', barIndex < index);
+        bar.classList.toggle('active', barIndex === index);
+      });
+    };
+    const next = () => show((current + 1) % tabs.length);
+    const restart = () => {
+      if (reduceMotion) return;
+      window.clearInterval(timer);
+      timer = window.setInterval(next, 4200);
+    };
+
+    tabs.forEach((tab) => tab.addEventListener('click', () => {
+      show(Number(tab.dataset.storyIndex));
+      restart();
+    }));
+    show(0);
+    restart();
+  };
+
   const initPagePolish = () => {
     applyVisualCopy();
     initPaymentMarquee();
+    initStoryTabs();
     injectPrivacyLinks();
     injectCookieBanner();
   };

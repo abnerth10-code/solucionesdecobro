@@ -139,11 +139,17 @@
           <p class="lead">Conocemos tu negocio, comparamos opciones y te explicamos por qué una alternativa puede convenirte.</p>
         </div>
         <div class="advice-list">
-          <div class="advice-video-shell" aria-label="Resumen visual del proceso de asesoría">
-            <div class="video-preview">
-              <div class="video-topline"><span class="video-badge">Así te asesoramos</span><span class="video-status">3 pasos</span></div>
-              <div class="video-story" aria-hidden="true"><span><b>1</b>Conocemos tu negocio</span><span><b>2</b>Comparamos opciones</span><span><b>3</b>Te explicamos por qué</span></div>
-              <div class="video-message"><small>Comparar. Entender. Elegir.</small><strong>Elige una solución adecuada para ti y entiende claramente por qué.</strong></div>
+          <div class="story-shell" aria-label="Así te asesoramos, en 3 pasos">
+            <div class="story-tabs" id="storyTabs">
+              <button type="button" class="story-tab active" data-story-index="0"><span class="n">Paso 1</span><h3>Conocemos tu negocio</h3><p>Platicamos cómo vendes hoy, qué necesitas y qué te preocupa antes de recomendar cualquier cosa.</p></button>
+              <button type="button" class="story-tab" data-story-index="1"><span class="n">Paso 2</span><h3>Comparamos opciones</h3><p>Ponemos lado a lado terminales, bancos y pasarelas reales, con costos y condiciones claras.</p></button>
+              <button type="button" class="story-tab" data-story-index="2"><span class="n">Paso 3</span><h3>Te explicamos por qué</h3><p>Eliges con una razón concreta detrás, no solo por precio o por moda.</p></button>
+            </div>
+            <div class="story-media">
+              <img src="assets/hero/asesoria-personalizada.webp" alt="Conocemos tu negocio" class="active" data-story-index="0">
+              <img src="assets/hero/comparativa-soluciones.webp" alt="Comparamos opciones" data-story-index="1">
+              <img src="assets/hero/diagnostico-cobro.webp" alt="Te explicamos por qué" data-story-index="2">
+              <div class="story-progress" id="storyProgress" aria-hidden="true"><span class="active"><i></i></span><span><i></i></span><span><i></i></span></div>
             </div>
           </div>
         </div>
