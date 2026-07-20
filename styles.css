@@ -182,7 +182,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 
 /* "Elige con claridad": 4 tarjetas compactas en una sola fila, con ilustración de marca de fondo. */
 .feature-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.feature-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:12px;min-height:264px;padding:20px 20px 22px;border-radius:18px;border:1px solid rgba(7,29,54,.08);background-color:#eef6ff;color:var(--ink);box-shadow:0 10px 26px rgba(7,29,54,.06);opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease,box-shadow .22s ease}
+.feature-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:9px;min-height:206px;padding:16px 17px 18px;border-radius:16px;border:1px solid rgba(7,29,54,.08);background-color:#eef6ff;color:var(--ink);box-shadow:0 10px 26px rgba(7,29,54,.06);opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease,box-shadow .22s ease}
 .feature-card.is-visible{opacity:1;transform:translateY(0)}
 .feature-card:hover{box-shadow:0 18px 34px rgba(7,29,54,.13);transform:translateY(-4px)}
 .feature-card.is-visible:hover{transform:translateY(-4px)}
@@ -190,16 +190,16 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 .feature-card:hover:after{transform:scale(1.06)}
 .feature-card:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.68) 44%,rgba(255,255,255,0) 70%)}
 .feature-card>*{position:relative;z-index:2}
-.feature-head{display:flex;align-items:center;gap:12px}
-.feature-icon{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:13px;background:#dde9ff;color:#0758b5;transition:background .22s ease,color .22s ease,transform .22s ease}
-.feature-icon svg{width:22px;height:22px}
+.feature-head{display:flex;align-items:center;gap:10px}
+.feature-icon{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:11px;background:#dde9ff;color:#0758b5;transition:background .22s ease,color .22s ease,transform .22s ease}
+.feature-icon svg{width:19px;height:19px}
 .feature-card:hover .feature-icon{transform:scale(1.08) rotate(-3deg)}
 .feature-info .feature-icon{background:#fff3d6;color:#8a5a00}
 .feature-compare .feature-icon{background:#e1f7ea;color:#128a4c}
 .feature-growth .feature-icon{background:#f3e8ff;color:#7a3fd6}
-.feature-kicker{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#0758b5}
-.feature-card h3{margin:0;font-size:18px;line-height:1.2;letter-spacing:-.01em;color:#0758b5}
-.feature-card p{margin:0;font-size:14px;line-height:1.5;color:#4d6277}
+.feature-kicker{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#0758b5}
+.feature-card h3{margin:0;font-size:16.5px;line-height:1.2;letter-spacing:-.01em;color:#0758b5}
+.feature-card p{margin:0;font-size:13.5px;line-height:1.45;color:#4d6277}
 .feature-info .feature-kicker,.feature-info h3{color:#8a5a00}
 .feature-compare .feature-kicker,.feature-compare h3{color:#128a4c}
 .feature-growth .feature-kicker,.feature-growth h3{color:#7a3fd6}
@@ -212,7 +212,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 }
 @media(max-width:560px){
   .feature-row{grid-template-columns:1fr;gap:14px}
-  .feature-card{padding:22px 20px}
+  .feature-card{padding:18px 18px 20px;min-height:0}
 }
 @media(prefers-reduced-motion:reduce){
   .feature-card{opacity:1;transform:none;transition:box-shadow .22s ease}
