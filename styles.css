@@ -65,6 +65,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 .comparison-guide-intro{margin:24px 0 0;color:var(--ink);font-size:18px;font-weight:900}
 .comparison-steps li{border-radius:var(--card-radius);background:#fff;box-shadow:var(--card-shadow)}
 .comparison-steps li>.comparison-step-icon{border-radius:12px;background:#eaf5ff;color:var(--blue-dark)}
+.comparison-step-icon svg{width:20px;height:20px}
 .comparison-toolbar{border-radius:var(--card-radius);padding:16px;grid-template-columns:minmax(250px,1.4fr) minmax(190px,.75fr) auto auto}
 .comparison-field input,.comparison-field select,.comparison-reset,.comparison-download{border-radius:12px}
 .comparison-scroll-hint{margin:4px 0 10px;color:#53687f;font-size:14px;font-weight:800}
