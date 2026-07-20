@@ -384,7 +384,6 @@
   const applyVisualCopy = () => {
     setText('.impact-copy h2', 'No limites cómo pueden pagarte.');
     setText('.impact-analogy', 'Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera al océano de clientes que prefieren pagar con tarjeta, link o billetera digital.');
-    setText('.impact-metric .metric-title', 'Crecer y tener más clientes no es suerte.');
     setText('.feature-section-title', 'Información clara para decidir mejor.');
     setText('.feature-intro .lead', 'Comparamos el equipo, los costos, las condiciones y la capacidad de crecer.');
     setText('.advisory-band h2', 'Elige con claridad, no solo por precio.');
