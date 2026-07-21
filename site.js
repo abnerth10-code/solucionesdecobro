@@ -276,6 +276,11 @@
   const questionCards = Array.from(form.querySelectorAll('.q-card'));
   const next = document.getElementById('diagnosticSubmit');
   const PHASE_NAMES = ['Tu negocio', 'Tu operación', 'Lo que necesitas'];
+  const PHASE_STAGE_TEXT = [
+    'Conociendo tu negocio',
+    'Revisando cómo vendes',
+    'Ajustando la recomendación a lo que necesitas'
+  ];
   const phaseStepsHost = document.getElementById('phaseSteps');
   const phaseNameEl = document.getElementById('phaseName');
   let currentStep = 0;
@@ -366,10 +371,11 @@
     const percent = total ? Math.round((answered / total) * 100) : 0;
 
     const activeCard = questionCards[currentStep];
-    const phaseCards = cardsInPhase(cardPhase(activeCard));
+    const activePhase = cardPhase(activeCard);
+    const phaseCards = cardsInPhase(activePhase);
     const posInPhase = phaseCards.indexOf(activeCard);
     progressText.textContent = posInPhase !== -1
-      ? `Pregunta ${posInPhase + 1} de ${phaseCards.length} en esta fase`
+      ? (PHASE_STAGE_TEXT[activePhase] || PHASE_NAMES[activePhase] || '')
       : `${answered} de ${total} respuestas`;
     progressPercent.textContent = `${percent}%`;
     progressFill.style.width = `${percent}%`;
