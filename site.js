@@ -291,7 +291,7 @@
   let lastTrackedResult = '';
   let autoAdvanceTimer = null;
   const AUTO_ADVANCE_DELAY = 450;
-  const AUTO_ADVANCE_DELAY_CHECKBOX = 900;
+  const AUTO_ADVANCE_DELAY_CHECKBOX = 1800;
 
   const isMultiCard = (card) => Boolean(card.querySelector('input[type="checkbox"]'));
   const cardRequiresAnswer = (card) => Boolean(card.querySelector('[required]'));

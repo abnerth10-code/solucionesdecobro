@@ -252,22 +252,22 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 @media(max-width:980px){
   .feature-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .feature-card{gap:8px;min-height:175px;padding:16px 17px 17px}
-  .feature-card:before{background:linear-gradient(180deg,rgba(255,255,255,.8) 0%,rgba(255,255,255,.7) 42%,rgba(255,255,255,.32) 70%,rgba(255,255,255,.02) 100%)}
+  .feature-card:before{background:linear-gradient(100deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.78) 45%,rgba(255,255,255,.28) 72%,rgba(255,255,255,.03) 100%)}
   .feature-icon{width:34px;height:34px;border-radius:10px}
   .feature-icon svg{width:17px;height:17px}
   .feature-kicker{font-size:11.5px}
-  .feature-card h3{font-size:17px}
-  .feature-card p{font-size:14px;line-height:1.45}
+  .feature-card h3{font-size:17px;max-width:66%;text-align:left}
+  .feature-card p{font-size:14px;line-height:1.45;max-width:66%;text-align:left}
 }
 @media(max-width:560px){
   .feature-row{grid-template-columns:1fr;gap:16px}
   .feature-card{gap:9px;min-height:235px;padding:22px 22px 24px}
-  .feature-card:before{background:linear-gradient(180deg,rgba(255,255,255,.76) 0%,rgba(255,255,255,.65) 38%,rgba(255,255,255,.28) 66%,rgba(255,255,255,.02) 100%)}
+  .feature-card:before{background:linear-gradient(100deg,rgba(255,255,255,.86) 0%,rgba(255,255,255,.7) 45%,rgba(255,255,255,.22) 72%,rgba(255,255,255,.02) 100%)}
   .feature-icon{width:42px;height:42px;border-radius:12px}
   .feature-icon svg{width:21px;height:21px}
   .feature-kicker{font-size:12.5px}
-  .feature-card h3{font-size:20px}
-  .feature-card p{font-size:15px;line-height:1.5}
+  .feature-card h3{font-size:20px;max-width:64%;text-align:left}
+  .feature-card p{font-size:15px;line-height:1.5;max-width:64%;text-align:left}
 }
 @media(prefers-reduced-motion:reduce){
   .feature-card{opacity:1;transform:none;transition:box-shadow .22s ease}
@@ -278,7 +278,11 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 /* "Así te asesoramos": tabs interactivos con imagen que cambia (inspirado en Mercado Pago). */
 .story-shell{display:grid;grid-template-columns:.72fr 1.28fr;border-radius:var(--card-radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--card-shadow);background:#fff}
 .story-tabs{padding:28px 24px;display:flex;flex-direction:column;gap:2px}
-.story-tab{border:none;background:none;text-align:left;cursor:pointer;padding:13px 0 13px 16px;border-left:3px solid transparent;font:inherit;transition:border-color .2s ease}
+.story-tab{display:flex;align-items:flex-start;gap:12px;border:none;background:none;text-align:left;cursor:pointer;padding:13px 14px 13px 16px;border-left:3px solid transparent;font:inherit;transition:border-color .2s ease}
+.story-tab-icon{flex:none;display:grid;place-items:center;width:36px;height:36px;margin-top:2px;border-radius:50%;background:#eef4fb;color:#8898ab;transition:background .25s ease,color .25s ease}
+.story-tab-icon svg{width:17px;height:17px}
+.story-tab.active .story-tab-icon{background:var(--blue);color:#fff}
+.story-tab-copy{min-width:0}
 .story-tab .n{display:block;font-size:12px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
 .story-tab h3{margin:0;font-size:19px;color:#9fb0c0;transition:color .3s ease}
 .story-tab p{margin:8px 0 0;font-size:14px;color:var(--muted);max-height:0;overflow:hidden;opacity:0;transition:max-height .45s cubic-bezier(.4,0,.2,1),opacity .35s ease .05s}
@@ -414,7 +418,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
   .feature-card,
   .benefit-card,
   .insight-card {
-    min-height: 34rem;
+    min-height: 15rem;
     overflow: hidden;
     border: 1px solid var(--desktop-line);
   }
