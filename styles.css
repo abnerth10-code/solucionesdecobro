@@ -188,7 +188,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 
 /* "Elige con claridad": 4 tarjetas compactas en una sola fila, con ilustración de marca de fondo. */
 .feature-row{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.feature-row-boat{position:absolute;top:-15px;left:-4%;width:44px;z-index:5;pointer-events:none;filter:drop-shadow(0 5px 7px rgba(7,29,54,.28));animation:sailAcrossCards 20s ease-in-out infinite;}
+.feature-row-boat{position:absolute;bottom:8px;left:-4%;width:40px;z-index:5;pointer-events:none;filter:drop-shadow(0 5px 7px rgba(7,29,54,.28));animation:sailAcrossCards 20s ease-in-out infinite;}
 .feature-row-boat svg{display:block;width:100%;height:auto}
 @keyframes sailAcrossCards{
   0%{left:-4%;transform:rotate(-4deg) translateY(0)}
