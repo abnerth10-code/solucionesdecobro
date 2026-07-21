@@ -287,7 +287,6 @@
   let progressText;
   let progressPercent;
   let progressFill;
-  let progressSteps = [];
   let hasShownResult = false;
   let lastTrackedResult = '';
   let autoAdvanceTimer = null;
@@ -339,12 +338,10 @@
         <span class="progress-percent" id="progressPercent">0%</span>
       </div>
       <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
-      <div class="progress-steps" id="progressSteps" aria-hidden="true">${Array.from({ length: total }).map(() => '<span></span>').join('')}</div>
     `;
     progressText = document.getElementById('progressText');
     progressPercent = document.getElementById('progressPercent');
     progressFill = document.getElementById('progressFill');
-    progressSteps = Array.from(document.querySelectorAll('#progressSteps span'));
   };
 
   const showStep = (index) => {
@@ -379,7 +376,6 @@
       : `${answered} de ${total} respuestas`;
     progressPercent.textContent = `${percent}%`;
     progressFill.style.width = `${percent}%`;
-    progressSteps.forEach((step, index) => step.classList.toggle('done', index < answered));
     questionCards.forEach((card) => card.classList.toggle('is-answered', Boolean(card.querySelector('input:checked'))));
     renderPhaseHead();
   };
@@ -399,6 +395,7 @@
     const canal = Array.isArray(data.canal) ? data.canal : [];
     const funciones = Array.isArray(data.funciones) ? data.funciones : [];
     const compromiso = Array.isArray(data.compromiso) ? data.compromiso : [];
+    const prioridad = Array.isArray(data.prioridad) ? data.prioridad : (data.prioridad ? [data.prioridad] : []);
 
     const compareLink = isBlogArticle ? '../compara.html#matriz' : 'compara.html#matriz';
     const categoryLink = (category) => `${compareLink.split('#')[0]}?tipo=${category}#matriz`;
@@ -430,7 +427,7 @@
 
     if (data.formalidad === 'sin_rfc') score.rapida += 6;
     if (data.formalidad === 'fisica') { score.rapida += 2; score.hibrida += 2; }
-    if (data.formalidad === 'moral') { score.banca += 4; score.hibrida += 3; }
+    if (data.formalidad === 'moral') { score.banca += 7; score.hibrida += 4; }
 
     if (data.volumen === 'bajo') score.rapida += 4;
     if (data.volumen === 'medio') { score.rapida += 2; score.hibrida += 3; }
@@ -453,17 +450,15 @@
     if (compromiso.includes('renta')) { score.hibrida += 2; score.banca += 2; }
     if (compromiso.includes('ninguno')) score.rapida += 4;
 
-    if (data.prioridad === 'costo') { score.banca += 5; score.hibrida += 2; }
-    if (data.prioridad === 'liquidez') score.rapida += 5;
-    if (data.prioridad === 'facilidad') score.rapida += 5;
-    if (data.prioridad === 'flexibilidad') score.rapida += 4;
-    if (data.prioridad === 'soporte') { score.hibrida += 3; score.banca += 2; }
-    if (data.prioridad === 'funciones') { score.hibrida += 2; score.pasarela += 3; }
+    if (prioridad.includes('costo')) { score.banca += 5; score.hibrida += 2; }
+    if (prioridad.includes('liquidez')) score.rapida += 5;
+    if (prioridad.includes('facilidad')) score.rapida += 5;
+    if (prioridad.includes('flexibilidad')) score.rapida += 4;
+    if (prioridad.includes('soporte')) { score.hibrida += 3; score.banca += 2; }
+    if (prioridad.includes('funciones')) { score.hibrida += 2; score.pasarela += 3; }
 
     if (data.plazos === 'msi_frecuente') score.banca += 4;
     if (data.plazos === 'msi_ocasional') score.hibrida += 2;
-
-    if (data.conectividad === 'senal_debil') score.rapida += 2;
 
     if (data.plataforma === 'si') score.pasarela += 3;
 
