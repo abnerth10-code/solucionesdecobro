@@ -138,8 +138,8 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 .home-page .payment-path .path-open{background:#fff!important;box-shadow:inset 4px 0 0 #0758b5!important}
 .home-page .payment-path .path-arrow{color:#0758b5!important}
 
-.home-page .feature-intro{max-width:800px;margin:0 0 34px}
-.home-page .feature-intro .eyebrow{margin-bottom:18px;border-radius:999px;background:#edf5fb;color:#0758b5}
+.home-page .feature-intro{max-width:800px;margin:10px 0 36px}
+.home-page .feature-intro:before{content:"";display:block;width:44px;height:4px;border-radius:2px;background:linear-gradient(90deg,#0758b5,#19aeea);margin-bottom:16px}
 .home-page .feature-section-title{max-width:760px;margin-bottom:14px;font-size:clamp(42px,5vw,66px);letter-spacing:-.045em}
 .home-page .feature-intro .lead{font-size:20px;color:#53687f}
 
@@ -182,7 +182,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 
 /* "Elige con claridad": 4 tarjetas compactas en una sola fila, con ilustración de marca de fondo. */
 .feature-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.feature-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:9px;min-height:206px;padding:16px 17px 18px;border-radius:16px;border:1px solid rgba(7,29,54,.08);background-color:#eef6ff;color:var(--ink);box-shadow:0 10px 26px rgba(7,29,54,.06);opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease,box-shadow .22s ease}
+.feature-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:7px;min-height:176px;padding:14px 15px 16px;border-radius:16px;border:1px solid rgba(7,29,54,.08);background-color:#eef6ff;color:var(--ink);box-shadow:0 10px 26px rgba(7,29,54,.06);opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease,box-shadow .22s ease}
 .feature-card.is-visible{opacity:1;transform:translateY(0)}
 .feature-card:hover{box-shadow:0 18px 34px rgba(7,29,54,.13);transform:translateY(-4px)}
 .feature-card.is-visible:hover{transform:translateY(-4px)}
@@ -276,6 +276,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
   .ocean-content{grid-template-columns:1fr;padding:34px}
   .ocean-stat{padding-left:0;border-left:0;padding-top:24px;border-top:1px solid rgba(7,29,54,.14)}
   .ocean-note{padding:12px 34px 26px}
+  .ocean-card:before{background-position:82% top}
 }
 @media(max-width:680px){
   .ocean-note{padding:12px 22px 24px}
