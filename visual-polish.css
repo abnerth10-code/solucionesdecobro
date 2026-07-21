@@ -10,7 +10,7 @@ body{color:var(--navy);}
 .menu{gap:6px!important;}
 .menu a{font-size:16px!important;font-weight:900!important;color:#25384d!important;padding-inline:5px!important;}
 .menu a:hover{color:var(--blue)!important;}
-.header-actions>.btn{height:52px!important;padding:0 22px!important;font-size:16px!important;border-radius:999px!important;}
+.header-actions>.btn{height:52px!important;padding:0 22px!important;font-size:16px!important;border-radius:14px!important;}
 .mini-social{border-color:#d7e7f5!important;background:#fff!important;box-shadow:0 8px 18px rgba(7,29,54,.05)!important;}
 
 .hero-compact{padding-top:38px!important;padding-bottom:34px!important;background:radial-gradient(circle at 88% 12%,rgba(255,210,63,.08),transparent 29%),radial-gradient(circle at 8% 88%,rgba(0,115,230,.05),transparent 32%),#fff!important;}
@@ -39,7 +39,8 @@ body{color:var(--navy);}
 
 .advisory-band{background:radial-gradient(circle at 94% 10%,rgba(255,210,63,.06),transparent 30%),radial-gradient(circle at 6% 90%,rgba(0,115,230,.035),transparent 32%),#fff!important;color:var(--navy)!important;padding-top:64px!important;padding-bottom:64px!important;}
 .advice-split{align-items:stretch!important;gap:22px!important;grid-template-columns:minmax(180px,.2fr) minmax(0,1.8fr)!important;}
-.advisory-band h2,.advisory-band h3{color:var(--navy)!important;}
+.advisory-band h3{color:var(--navy)!important;}
+.advisory-band h2{color:#0758b5!important;}
 .advisory-band .lead,.advice-list p{color:#40546a!important;}
 .advice-photo{position:relative;margin:22px 0 0!important;border-radius:28px!important;overflow:hidden!important;border:1px solid var(--line)!important;box-shadow:0 22px 50px rgba(7,29,54,.12)!important;min-height:330px!important;background:#fff!important;}
 .advice-photo img{display:block!important;width:100%!important;height:330px!important;object-fit:cover!important;}
@@ -76,7 +77,7 @@ body{color:var(--navy);}
 @keyframes optionIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.step-mode .option{opacity:1;animation:none}}
 .diagnostic-nav{display:flex;gap:12px;justify-content:center;margin-top:26px;}
-.diagnostic-nav .btn{min-width:150px;border-radius:999px;}
+.diagnostic-nav .btn{min-width:150px;border-radius:14px;}
 .diagnostic-nav .btn[disabled]{opacity:.45;cursor:not-allowed;}
 #diagnosticSubmit{display:inline-flex!important;}
 .diagnostic-stepper .result{border:1px solid #b9dcf7!important;border-radius:22px!important;padding:24px!important;background:radial-gradient(circle at 92% 10%,rgba(255,210,63,.22),transparent 24%),linear-gradient(135deg,#fff,#f6fbff 68%,#fff8df)!important;box-shadow:0 18px 44px rgba(7,29,54,.1)!important;}
