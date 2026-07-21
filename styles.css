@@ -285,10 +285,10 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
 .story-tab-copy{min-width:0}
 .story-tab .n{display:block;font-size:12px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
 .story-tab h3{margin:0;font-size:19px;color:#9fb0c0;transition:color .3s ease}
-.story-tab p{margin:8px 0 0;font-size:14px;color:var(--muted);max-height:0;overflow:hidden;opacity:0;transition:max-height .45s cubic-bezier(.4,0,.2,1),opacity .35s ease .05s}
+.story-tab p{margin:8px 0 0;font-size:14px;line-height:1.45;color:var(--muted);height:42px;overflow:hidden;opacity:0;transition:opacity .3s ease}
 .story-tab.active{border-left-color:var(--yellow);transition:border-color .3s ease}
 .story-tab.active h3{color:var(--ink)}
-.story-tab.active p{max-height:90px;min-height:60px;opacity:1;margin-top:8px}
+.story-tab.active p{opacity:1}
 .story-media{position:relative;min-height:430px;background:var(--ink)}
 .story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
 .story-media img.active{opacity:1}
