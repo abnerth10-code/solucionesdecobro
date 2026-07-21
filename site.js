@@ -393,7 +393,6 @@
     const canal = Array.isArray(data.canal) ? data.canal : [];
     const funciones = Array.isArray(data.funciones) ? data.funciones : [];
     const compromiso = Array.isArray(data.compromiso) ? data.compromiso : [];
-    const conectividad = Array.isArray(data.conectividad) ? data.conectividad : [];
 
     const compareLink = isBlogArticle ? '../compara.html#matriz' : 'compara.html#matriz';
     const categoryLink = (category) => `${compareLink.split('#')[0]}?tipo=${category}#matriz`;
@@ -432,9 +431,6 @@
     if (data.volumen === 'alto') { score.banca += 4; score.hibrida += 3; }
     if (data.volumen === 'muy_alto') score.banca += 6;
 
-    if (data.ticket === 'alto' || data.ticket === 'muy_alto') { score.banca += 1; score.hibrida += 1; }
-    if (data.ticket === 'bajo') score.rapida += 1;
-
     if (data.estabilidad === 'variable') score.rapida += 3;
     if (data.estabilidad === 'temporada') score.hibrida += 1;
     if (data.estabilidad === 'estable') { score.banca += 3; score.hibrida += 2; }
@@ -461,9 +457,9 @@
     if (data.plazos === 'msi_frecuente') score.banca += 4;
     if (data.plazos === 'msi_ocasional') score.hibrida += 2;
 
-    if (conectividad.includes('senal_debil')) score.rapida += 2;
+    if (data.conectividad === 'senal_debil') score.rapida += 2;
 
-    if (data.plataforma && data.plataforma !== 'ninguna' && data.plataforma !== 'no_seguro') score.pasarela += 3;
+    if (data.plataforma === 'si') score.pasarela += 3;
 
     // Filtros duros: descartamos categorías que hoy no puedes contratar o no aceptas.
     if (data.formalidad === 'sin_rfc') score.banca = -Infinity;
