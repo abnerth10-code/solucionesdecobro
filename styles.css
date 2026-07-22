@@ -418,7 +418,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
   .feature-card,
   .benefit-card,
   .insight-card {
-    min-height: 15rem;
+    min-height: 17rem;
     overflow: hidden;
     border: 1px solid var(--desktop-line);
   }
