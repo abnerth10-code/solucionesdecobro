@@ -249,7 +249,7 @@ body .note-card{background:rgba(7,29,54,.72)!important;backdrop-filter:blur(12px
   .feature-row-boat-track{animation:none;transform:translate(48%,50%)}
   .feature-row-boat{animation:none;transform:rotate(0deg);opacity:1}
 }
-.feature-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:4px;min-height:100px;padding:10px 12px 10px;border-radius:16px;border:1px solid rgba(7,29,54,.08);background-color:#eef6ff;color:var(--ink);box-shadow:0 10px 26px rgba(7,29,54,.06);opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease,box-shadow .22s ease}
+.feature-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:4px;min-height:100px;padding:10px 12px 10px;border-radius:16px;border:1px solid rgba(7,29,54,.08);background-color:#eef6ff;color:var(--ink);box-shadow:0 10px 26px rgba(7,29,54,.06);opacity:.01;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease,box-shadow .22s ease}
 .feature-card.is-visible{opacity:1;transform:translateY(0)}
 .feature-card:hover{box-shadow:0 18px 34px rgba(7,29,54,.13);transform:translateY(-4px)}
 .feature-card.is-visible:hover{transform:translateY(-4px)}
