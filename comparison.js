@@ -89,14 +89,20 @@
       providerText.append(status);
     }
     identity.append(logoBox, providerText);
+    cell.append(identity);
+    return cell;
+  };
 
+  const makeToggleCell = (index) => {
+    const cell = document.createElement('td');
+    cell.className = 'comparison-toggle-cell';
     const toggle = document.createElement('button');
     toggle.type = 'button';
     toggle.className = 'comparison-toggle';
     toggle.textContent = 'Ver detalles';
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', `provider-row-${index}`);
-    cell.append(identity, toggle);
+    cell.append(toggle);
     return cell;
   };
 
@@ -133,15 +139,16 @@
       makeCell('Hardware', provider.hardware, true),
       makeCell('Requisitos', provider.requirements, true),
       makeCell('Liquidación', provider.settlement),
-      makeCell('Qué revisar', provider.review, true)
+      makeCell('Qué revisar', provider.review, true),
+      makeToggleCell(index)
     );
 
-    row.querySelector('.comparison-toggle').addEventListener('click', () => {
-      const expanded = !row.classList.contains('mobile-expanded');
-      row.classList.toggle('mobile-expanded', expanded);
-      const toggle = row.querySelector('.comparison-toggle');
-      toggle.setAttribute('aria-expanded', String(expanded));
-      toggle.textContent = expanded ? 'Ocultar detalles' : 'Ver detalles';
+    const toggleBtn = row.querySelector('.comparison-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const expanded = row.classList.toggle('mobile-expanded');
+      toggleBtn.setAttribute('aria-expanded', String(expanded));
+      toggleBtn.textContent = expanded ? 'Ocultar detalles' : 'Ver detalles';
+      if (!expanded) toggleBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     });
     tbody.append(row);
     rows.push(row);
