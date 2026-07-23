@@ -144,11 +144,15 @@
     );
 
     const toggleBtn = row.querySelector('.comparison-toggle');
-    toggleBtn.addEventListener('click', () => {
-      const expanded = row.classList.toggle('mobile-expanded');
+    const setExpanded = (expanded) => {
+      row.classList.toggle('mobile-expanded', expanded);
       toggleBtn.setAttribute('aria-expanded', String(expanded));
       toggleBtn.textContent = expanded ? 'Ocultar detalles' : 'Ver detalles';
-      if (!expanded) toggleBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    };
+    toggleBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      setExpanded(!row.classList.contains('mobile-expanded'));
     });
     tbody.append(row);
     rows.push(row);
@@ -164,6 +168,14 @@
       const matchesText = !query || row.dataset.search.includes(query);
       const matchesCategory = selectedCategory === 'all' || row.dataset.filterCategory === selectedCategory;
       const show = matchesText && matchesCategory;
+      if (!show && row.classList.contains('mobile-expanded')) {
+        row.classList.remove('mobile-expanded');
+        const toggleBtn = row.querySelector('.comparison-toggle');
+        if (toggleBtn) {
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleBtn.textContent = 'Ver detalles';
+        }
+      }
       row.hidden = !show;
       if (show) {
         visible += 1;
