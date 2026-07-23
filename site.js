@@ -404,17 +404,16 @@
     if (data.plazos === 'bnpl') {
       return {
         key: 'pagos_plazos',
-        title: 'Ruta recomendada: pagos a plazos sin tarjeta',
-        text: 'Un esquema BNPL puede ampliar opciones para tus clientes, pero su comisión suele ser mayor. Evalúalo solo si tu margen puede absorber el costo.',
+        title: 'Pagos a plazos sin tarjeta',
+        text: 'Elegiste pagos a plazos sin tarjeta: un esquema BNPL puede ampliar opciones para tus clientes, pero su comisión suele ser mayor. Antes de contratar, calcula el margen neto, devoluciones, liquidación y elegibilidad de tus productos.',
+        primaryCtaText: 'Ir a Kueski Pay',
         tags: [
           { label: 'Kueski Pay', href: 'https://www.kueskipay.com/para-comercios', primary: true },
           { label: 'Aplazo', href: 'https://aplazo.mx/' },
           { label: 'Revisar margen' }
         ],
-        note: 'Por qué: elegiste pagos a plazos sin tarjeta. Antes de contratar calcula el margen neto, devoluciones, liquidación y elegibilidad de tus productos.',
         ctaText: 'Comparar opciones BNPL',
-        ctaHref: categoryLink('bnpl'),
-        ctaClass: 'btn btn-primary'
+        ctaHref: categoryLink('bnpl')
       };
     }
 
@@ -471,63 +470,59 @@
     return {
       rapida: {
         key: 'terminal_moderna',
-        title: 'Ruta recomendada: cobro rápido',
-        text: 'Tu perfil favorece una terminal de activación sencilla y sin renta obligatoria, incluida la opción de cobrar con el celular (Tap to Pay) si te mueves seguido. Compara costo total, tiempo de depósito, movilidad y soporte antes de elegir.',
+        title: 'Cobro rápido',
+        text: 'Tu perfil favorece una terminal de activación sencilla y sin renta obligatoria, con la opción de cobrar con el celular (Tap to Pay) si te mueves seguido. Confirma la tasa final con IVA, el plazo de depósito y si necesitas NFC antes de elegir.',
+        primaryCtaText: 'Comprar Mercado Pago Point',
         tags: [
-          { label: 'Mercado Pago Point', href: 'https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point', primary: true },
+          { label: 'Mercado Pago Point', href: 'https://mpago.li/2j1nqHG', primary: true },
           { label: 'Clip', href: 'https://www.clip.mx/' },
           { label: 'Ualá Bis', href: 'https://www.ualabis.com.mx/' },
           { label: 'Menos trámites' }
         ],
-        note: 'Por qué: tus respuestas priorizan facilidad, flexibilidad, rapidez o movilidad. Confirma la tasa final con IVA, los límites, el plazo de depósito y si necesitas NFC para cobrar con el celular.',
         ctaText: 'Comparar opciones rápidas',
-        ctaHref: categoryLink('rapida'),
-        ctaClass: 'btn btn-primary'
+        ctaHref: categoryLink('rapida')
       },
       hibrida: {
         key: 'modelo_hibrido',
-        title: 'Recomendación: modelo híbrido',
-        text: 'Revisa Getnet y Konfío. Puede servir si ya vendes más, quieres formalidad y buscas equilibrar tecnología con mejores condiciones.',
+        title: 'Modelo híbrido',
+        text: 'Revisa Getnet y Konfío: tu operación ya necesita más funciones, pero aún te conviene conservar flexibilidad. Revisa contrato, liquidación y costo total antes de decidir.',
+        primaryCtaText: 'Ir a Getnet',
         tags: [
           { label: 'Getnet', href: 'https://www.getnet.net/mx/', primary: true },
           { label: 'Konfío', href: 'https://konfio.mx/terminal-punto-de-venta/' },
           { label: 'Negocio en crecimiento' },
           { label: 'Contrato claro' }
         ],
-        note: 'Por qué: tu operación ya necesita más funciones, pero todavía importa conservar flexibilidad. Revisa contrato, liquidación y costo total.',
         ctaText: 'Ver opciones del mercado',
-        ctaHref: categoryLink('hibrida'),
-        ctaClass: 'btn btn-primary'
+        ctaHref: categoryLink('hibrida')
       },
       banca: {
         key: 'tpv_bancaria',
-        title: 'Recomendación: TPV bancaria',
-        text: 'Compara BBVA, Banorte y Citibanamex. Puede convenirte si tienes RFC, cuenta, ventas constantes y buscas negociar condiciones.',
+        title: 'TPV bancaria',
+        text: 'Compara BBVA, Banorte y Citibanamex: tu formalidad, volumen o estabilidad pueden ayudarte a negociar mejores condiciones. Revisa renta, mínimos, permanencia y costo de la cuenta vinculada.',
+        primaryCtaText: 'Ir a BBVA TPV',
         tags: [
           { label: 'BBVA TPV', href: 'https://www.bbva.mx/empresas/productos/cobros-y-pagos.html', primary: true },
           { label: 'Banorte TPV', href: 'https://www.banorte.com/' },
           { label: 'Citibanamex', href: 'https://www.banamex.com/es/pymes/productos-y-servicios/cobros/' },
           { label: 'Volumen estable' }
         ],
-        note: 'Por qué: tu formalidad, volumen o estabilidad pueden ayudarte a negociar. Revisa renta, mínimos, permanencia y costo de la cuenta vinculada.',
         ctaText: 'Ver comparativa bancaria',
-        ctaHref: categoryLink('banca'),
-        ctaClass: 'btn btn-primary'
+        ctaHref: categoryLink('banca')
       },
       pasarela: {
         key: 'pasarela_digital',
-        title: 'Ruta recomendada: pagos en línea',
-        text: 'Tu negocio necesita cobrar a distancia o integrar una tienda en línea. Compara pasarelas por costo por transacción, integración, antifraude, contracargos y liquidación.',
+        title: 'Pagos en línea',
+        text: 'Tu negocio necesita cobrar a distancia o integrar tu tienda en línea. Compara pasarelas por costo por transacción, integración, antifraude, contracargos y liquidación.',
+        primaryCtaText: 'Ir a Openpay',
         tags: [
           { label: 'Openpay', href: 'https://www.openpay.mx/', primary: true },
           { label: 'Conekta', href: 'https://www.conekta.com/' },
           { label: 'Stripe', href: 'https://stripe.com/mx' },
           { label: 'Venta digital' }
         ],
-        note: 'Por qué: indicaste que vendes en línea, por links o necesitas integración. Valida costos fijos, reservas, devoluciones y soporte técnico.',
         ctaText: 'Comparar pasarelas',
-        ctaHref: categoryLink('pasarela'),
-        ctaClass: 'btn btn-primary'
+        ctaHref: categoryLink('pasarela')
       },
     }[winner];
   };
@@ -545,29 +540,33 @@
     const res = document.getElementById('diagnosticResult');
     const title = document.getElementById('resultTitle');
     const text = document.getElementById('resultText');
+    const primaryCta = document.getElementById('resultPrimaryCta');
+    const secondaryLabel = document.getElementById('resultSecondaryLabel');
     const tags = document.getElementById('resultTags');
-    const cta = document.getElementById('resultWhatsapp');
+    const cta = document.getElementById('resultCompareLink');
 
     title.textContent = result.title;
     text.textContent = result.text;
-    tags.innerHTML = result.tags.map((tag) => {
-      const className = tag.primary ? ' class="tag-primary"' : '';
-      if (tag.href) return `<a${className} href="${tag.href}" target="_blank" rel="noopener">${tag.label}</a>`;
-      return `<span${className}>${tag.label}</span>`;
-    }).join('');
 
-    const existingNote = res.querySelector('.result-actions-note');
-    if (existingNote) existingNote.remove();
-    if (result.note) {
-      const note = document.createElement('p');
-      note.className = 'result-actions-note';
-      note.textContent = result.note;
-      cta.insertAdjacentElement('beforebegin', note);
+    const primaryTag = result.tags.find((tag) => tag.primary) || result.tags[0];
+    const secondaryTags = result.tags.filter((tag) => tag !== primaryTag);
+
+    if (primaryTag && primaryTag.href) {
+      primaryCta.hidden = false;
+      primaryCta.textContent = result.primaryCtaText || primaryTag.label;
+      primaryCta.href = primaryTag.href;
+    } else {
+      primaryCta.hidden = true;
     }
+
+    secondaryLabel.hidden = secondaryTags.length === 0;
+    tags.innerHTML = secondaryTags.map((tag) => {
+      if (tag.href) return `<a href="${tag.href}" target="_blank" rel="noopener">${tag.label}</a>`;
+      return `<span>${tag.label}</span>`;
+    }).join('');
 
     cta.textContent = result.ctaText;
     cta.href = result.ctaHref;
-    cta.className = result.ctaClass;
     res.classList.add('show');
 
     if (lastTrackedResult !== result.key) {
