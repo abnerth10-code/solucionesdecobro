@@ -410,7 +410,7 @@
       case 'bnpl':
         return `<g transform="translate(27 24)"><rect x="2" y="6" width="42" height="38" rx="6" fill="#fff"/><rect x="2" y="6" width="42" height="11" rx="6" fill="${c2}"/><rect x="2" y="11" width="42" height="6" fill="${c2}"/><rect x="11" y="2" width="4.5" height="9" rx="2.2" fill="#fff"/><rect x="30" y="2" width="4.5" height="9" rx="2.2" fill="#fff"/><circle cx="13" cy="27" r="3" fill="${c2}"/><circle cx="23" cy="27" r="3" fill="#ffd23f"/><circle cx="33" cy="27" r="3" fill="${c2}"/><circle cx="13" cy="37" r="3" fill="${c2}"/><circle cx="23" cy="37" r="3" fill="${c2}"/></g>`;
       default: // rapida
-        return `<g transform="translate(31 26)"><rect x="6" y="10" width="30" height="42" rx="6" fill="#fff"/><rect x="11" y="16" width="20" height="12" rx="2.5" fill="${c2}"/><rect x="11" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="19" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="27" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="11" y="41" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="19" y="41" width="6" height="6" rx="1.5" fill="#ffd23f"/><rect x="27" y="41" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><path d="M40 12 a10 10 0 0 1 0 14" fill="none" stroke="#ffd23f" stroke-width="3" stroke-linecap="round"/><path d="M44 8 a16 16 0 0 1 0 22" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>`;
+        return `<g transform="translate(31 26)"><rect x="6" y="10" width="30" height="42" rx="6" fill="#fff"/><rect x="11" y="16" width="20" height="12" rx="2.5" fill="${c2}"/><rect x="11" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="19" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="27" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="11" y="41" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><rect x="19" y="41" width="6" height="6" rx="1.5" fill="#ffd23f"/><rect x="27" y="41" width="6" height="6" rx="1.5" fill="#fff" opacity=".55"/><path class="emblem-wave" d="M40 12 a10 10 0 0 1 0 14" fill="none" stroke="#ffd23f" stroke-width="3" stroke-linecap="round"/><path class="emblem-wave emblem-wave-2" d="M44 8 a16 16 0 0 1 0 22" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>`;
     }
   };
 
@@ -559,12 +559,23 @@
     if (compromiso.includes('renta')) { score.hibrida += 2; score.banca += 2; }
     if (compromiso.includes('ninguno')) score.rapida += 4;
 
-    if (prioridad.includes('costo')) { score.banca += 5; score.hibrida += 2; }
-    if (prioridad.includes('liquidez')) score.rapida += 5;
-    if (prioridad.includes('facilidad')) score.rapida += 5;
-    if (prioridad.includes('flexibilidad')) score.rapida += 4;
-    if (prioridad.includes('soporte')) { score.hibrida += 3; score.banca += 2; }
-    if (prioridad.includes('funciones')) { score.hibrida += 2; score.pasarela += 3; }
+    // "¿Qué quieres priorizar?" es opción múltiple. Para que marcar muchas no
+    // domine el resultado, contamos solo las primeras 2 prioridades y con peso
+    // decreciente (la 1a al 100%, la 2a al 60%; el resto no suma).
+    const prioridadEffects = {
+      costo: { banca: 5, hibrida: 2 },
+      liquidez: { rapida: 5 },
+      facilidad: { rapida: 5 },
+      flexibilidad: { rapida: 4 },
+      soporte: { hibrida: 3, banca: 2 },
+      funciones: { hibrida: 2, pasarela: 3 }
+    };
+    prioridad.slice(0, 2).forEach((clave, indice) => {
+      const efecto = prioridadEffects[clave];
+      if (!efecto) return;
+      const factor = indice === 0 ? 1 : 0.6;
+      Object.entries(efecto).forEach(([categoria, puntos]) => { score[categoria] += puntos * factor; });
+    });
 
     if (data.plazos === 'msi_frecuente') score.banca += 4;
     if (data.plazos === 'msi_ocasional') score.hibrida += 2;
