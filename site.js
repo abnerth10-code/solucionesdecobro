@@ -449,6 +449,8 @@
     const inList = (list, value) => list.includes(value);
 
     const pool = [
+      { on: winner === 'banca', icon: 'shield', tone: 'green', text: 'Puede incluir seguro para tu negocio' },
+      { on: winner === 'banca', icon: 'headset', tone: 'blue', text: 'Soporte y respaldo de un banco' },
       { on: inList(prioridad, 'facilidad'), icon: 'check', tone: 'green', text: 'Empiezas sin trámites pesados' },
       { on: inList(prioridad, 'liquidez') || data.liquidez === 'mismo_dia', icon: 'clock', tone: 'blue', text: 'Recibes tu dinero muy rápido' },
       { on: inList(canal, 'movil'), icon: 'phone', tone: 'amber', text: 'Cobras con el celular (Tap to Pay)' },
@@ -483,9 +485,9 @@
         { icon: 'shield', tone: 'green', text: 'Herramientas antifraude' }
       ],
       bnpl: [
-        { icon: 'calendar', tone: 'pink', text: 'Tus clientes pagan a plazos' },
-        { icon: 'check', tone: 'green', text: 'Recibes el pago completo' },
-        { icon: 'tag', tone: 'blue', text: 'Puede ampliar tus ventas' }
+        { icon: 'building', tone: 'purple', text: 'Una empresa da el crédito a tu cliente' },
+        { icon: 'check', tone: 'green', text: 'Tú recibes el total, menos una comisión' },
+        { icon: 'calendar', tone: 'pink', text: 'Tu cliente paga a plazos, no tú' }
       ]
     };
 
@@ -514,8 +516,8 @@
         key: 'pagos_plazos',
         category: 'bnpl',
         title: 'Pagos a plazos sin tarjeta',
-        subtitle: 'Tus clientes pagan a plazos y tú recibes completo',
-        caveat: 'Antes de contratar, calcula el margen neto, devoluciones, liquidación y elegibilidad de tus productos.',
+        subtitle: 'Te asocias con una empresa que financia a tu cliente',
+        caveat: 'La empresa le da el crédito a tu cliente y te paga el importe total menos una comisión. Antes de contratar, calcula el margen, la comisión, devoluciones y la elegibilidad de tus productos.',
         primaryCtaText: 'Ir a Kueski Pay',
         tags: [
           { label: 'Kueski Pay', href: 'https://www.kueskipay.com/para-comercios', primary: true },
@@ -549,7 +551,9 @@
 
     if (data.liquidez === 'mismo_dia') score.rapida += 4;
     if (data.liquidez === 'siguiente_dia') { score.rapida += 1; score.hibrida += 1; }
-    if (data.liquidez === 'dos_dias') { score.banca += 1; score.hibrida += 1; }
+    // Poder esperar 2 días o más indica que la persona valora tasa y beneficios
+    // (seguro, soporte) por encima de la velocidad: eso encaja con la banca.
+    if (data.liquidez === 'dos_dias') { score.banca += 3; score.hibrida += 1; }
 
     if (funciones.includes('simple')) score.rapida += 3;
     if (funciones.includes('catalogo') || funciones.includes('multiusuario')) { score.hibrida += 2; score.banca += 1; }
@@ -683,8 +687,11 @@
     title.textContent = result.title;
     if (subtitle) subtitle.textContent = result.subtitle || '';
     if (caveat) {
-      caveat.textContent = result.caveat || '';
-      caveat.hidden = !result.caveat;
+      const quiereMsi = data.plazos === 'msi_frecuente' || data.plazos === 'msi_ocasional';
+      const msiNota = quiereMsi ? ' Ofrecer meses sin intereses agrega un costo: confirma la comisión o si tú absorbes el interés.' : '';
+      const textoCaveat = `${result.caveat || ''}${msiNota}`.trim();
+      caveat.textContent = textoCaveat;
+      caveat.hidden = !textoCaveat;
     }
 
     if (reasonsList) {
