@@ -22,9 +22,10 @@
     .article-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px;color:var(--muted);font-weight:800}.article-hero h1{font-size:clamp(38px,5vw,64px)}
     .article-hero-image,.article-image{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}.article-hero-image img,.article-image img{width:100%;height:auto;object-fit:contain;background:#fff;display:block}
     .article-layout{max-width:900px;margin:auto;padding:44px 20px;background:#fff}.article-content{font-size:19px;color:#2b3d50}.article-content h2{margin-top:38px;font-size:clamp(28px,3.4vw,40px)}.article-content p{margin:14px 0}.article-content ul{padding-left:24px}.article-content li{margin:7px 0}.article-content strong{color:var(--ink)}
-    .article-image{margin:26px 0;box-shadow:0 14px 34px rgba(7,29,54,.08)}.article-image figcaption{padding:10px 16px;color:var(--muted);font-size:14px;background:#fff}.article-callout{margin:26px 0;padding:22px;border:1px solid #cfeeff;border-radius:var(--r);background:linear-gradient(135deg,#f6fcff,#fff);box-shadow:0 10px 24px rgba(7,29,54,.05)}
+    .article-image{max-width:520px;margin:30px auto;box-shadow:0 14px 34px rgba(7,29,54,.08)}.article-image figcaption{padding:10px 16px;color:var(--muted);font-size:14px;background:#fff}.article-callout{margin:26px 0;padding:22px;border:1px solid #cfeeff;border-radius:var(--r);background:linear-gradient(135deg,#f6fcff,#fff);box-shadow:0 10px 24px rgba(7,29,54,.05)}
     .article-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}.article-mini{padding:18px;border:1px solid var(--line);border-radius:18px;background:#f8fbff}.article-mini h3{margin:0 0 8px}.article-mini p{font-size:16px;margin:0;color:var(--muted)}
     .article-quote{font-size:23px;line-height:1.35;color:var(--ink);font-weight:900;border-left:6px solid var(--yellow);padding-left:18px;margin:30px 0}.article-cta{margin-top:38px;padding:28px;border-radius:var(--r);background:linear-gradient(135deg,var(--ink),#0058ba);color:#fff}.article-cta h2{color:#fff;margin-top:0}.article-cta p{color:#dcecff}.article-cta .actions{margin-top:18px}.breadcrumb{max-width:var(--max);margin:auto;padding:16px 20px;color:var(--muted);font-size:14px;font-weight:800}.breadcrumb a{color:var(--blue-dark)}
+    .article-toc{margin:0 0 28px;padding:18px 22px;border:1px solid var(--line);border-radius:16px;background:#f8fbff}.article-toc-title{margin:0 0 10px;font-weight:900;color:var(--ink);font-size:13px;text-transform:uppercase;letter-spacing:.04em}.article-toc ul{margin:0;padding-left:18px}.article-toc li{margin:6px 0}.article-toc a{color:var(--blue-dark);font-weight:800;text-decoration:none}.article-toc a:hover{text-decoration:underline}
     @media(max-width:880px){.article-hero-inner{grid-template-columns:1fr}.article-layout{padding-top:34px}.article-content{font-size:18px}.article-grid{grid-template-columns:1fr}}
   </style>
   <link rel="stylesheet" href="../visual-polish.css">
@@ -69,11 +70,22 @@
       <div class="article-content">
         <p>Aceptar pagos digitales abre oportunidades, pero también obliga a revisar costos, requisitos y tiempos de depósito. Una buena decisión no empieza con la marca; empieza con tu forma real de vender.</p>
 
-        <h2>Antes de comparar tasas, entiende tu operación</h2>
+        <nav class="article-toc" aria-label="Contenido de la guía">
+          <p class="article-toc-title">En esta guía</p>
+          <ul>
+            <li><a href="#operacion">Entiende tu operación antes de comparar</a></li>
+            <li><a href="#rutas">Las cuatro rutas más comunes</a></li>
+            <li><a href="#pregunta">La pregunta que evita compras impulsivas</a></li>
+            <li><a href="#diagnostico">Convierte dudas en una ruta</a></li>
+            <li><a href="#regla">Regla práctica</a></li>
+          </ul>
+        </nav>
+
+        <h2 id="operacion">Antes de comparar tasas, entiende tu operación</h2>
         <p>Hazte estas preguntas: ¿cobras poco o mucho al mes?, ¿vendes en mostrador o en movimiento?, ¿necesitas el dinero al instante?, ¿tu margen soporta promociones o meses sin intereses?</p>
         <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.webp" alt="Elementos que conviene revisar antes de contratar una solución de cobro" width="1200" height="900" loading="lazy"><figcaption>Usa esta lista como filtro inicial: si una opción falla en liquidez, requisitos o soporte, no basta con que tenga buena promoción.</figcaption></figure>
 
-        <h2>Las cuatro rutas más comunes</h2>
+        <h2 id="rutas">Las cuatro rutas más comunes</h2>
         <p>La mayoría de negocios termina en una de estas rutas, o combinando dos de ellas conforme crece.</p>
         <div class="article-grid">
           <div class="article-mini"><h3>Terminal moderna</h3><p>Para empezar rápido, moverte y cobrar con menos trámites.</p></div>
@@ -81,17 +93,15 @@
           <div class="article-mini"><h3>Link de pago</h3><p>Para vender por WhatsApp, redes, catálogo o entregas.</p></div>
           <div class="article-mini"><h3>Modelo híbrido</h3><p>Para crecer con tecnología, contrato y operación más ordenada.</p></div>
         </div>
-        <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/4formasdecobrar.webp" alt="Cuatro formas de cobrar: terminal, banco, link de pago y modelo híbrido" width="1200" height="900" loading="lazy"><figcaption>La imagen resume el mapa; el punto importante es elegir por etapa del negocio, no por moda.</figcaption></figure>
-
-        <h2>La pregunta que evita compras impulsivas</h2>
+        <h2 id="pregunta">La pregunta que evita compras impulsivas</h2>
         <div class="article-quote">No preguntes “¿cuál terminal es mejor?”. Pregunta: “¿qué solución de cobro le conviene a mi negocio hoy?”.</div>
         <p>Un negocio nuevo suele valorar facilidad y rapidez. Un negocio con ventas constantes puede negociar mejor. Un negocio que vende por redes quizá necesita link de pago antes que una terminal de mostrador.</p>
 
-        <h2>Diagnóstico: convierte dudas en una ruta</h2>
+        <h2 id="diagnostico">Diagnóstico: convierte dudas en una ruta</h2>
         <p>Responder unas cuantas preguntas ayuda a detectar si conviene una terminal moderna, una opción híbrida o una TPV bancaria. No sustituye leer términos y condiciones, pero sí evita empezar a ciegas.</p>
         <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/diagnostico.webp" alt="Diagnóstico rápido para elegir solución de cobro" width="1200" height="900" loading="lazy"><figcaption>El diagnóstico no decide por ti: ordena la conversación para que compares con criterio.</figcaption></figure>
 
-        <h2>Regla práctica</h2>
+        <h2 id="regla">Regla práctica</h2>
         <ul>
           <li>Si quieres empezar rápido, revisa terminales modernas.</li>
           <li>Si ya tienes ventas constantes, compara opciones híbridas.</li>
