@@ -17,9 +17,19 @@
   <link rel="icon" type="image/webp" href="assets/logos/logo-isotipo-soluciones-cobro.webp">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .article-thumb{width:100%;height:190px;object-fit:cover;border-radius:8px;margin-bottom:16px;border:1px solid var(--line);background:#f8fbff}
-    .article-card.featured-post{grid-column:span 2;background:linear-gradient(135deg,#fff,#f5fbff)}
-    @media(max-width:680px){.article-card.featured-post{grid-column:auto}.article-thumb{height:210px}}
+    .featured-article{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(7,29,54,.07)}
+    .featured-media{display:block;overflow:hidden}
+    .featured-media img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block;transition:transform .45s ease}
+    .featured-media:hover img{transform:scale(1.03)}
+    .featured-body{padding:32px 36px;align-self:center}
+    .featured-body h3{font-size:clamp(24px,2.6vw,32px);margin:12px 0 10px;line-height:1.15}
+    .featured-body>p{color:var(--muted);font-size:17px;margin:0 0 14px}
+    .featured-meta{color:var(--muted);font-size:13px!important;font-weight:800;text-transform:uppercase;letter-spacing:.03em;margin:0 0 20px!important}
+    .coming-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;max-width:760px}
+    .coming-list li{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .coming-tag{flex:none;padding:5px 11px;border-radius:999px;background:#edf7ff;color:var(--blue-dark);font-weight:900;font-size:12px}
+    .coming-title{color:var(--ink);font-weight:800;font-size:16px}
+    @media(max-width:760px){.featured-article{grid-template-columns:1fr}.featured-media img{min-height:200px}.featured-body{padding:24px}.coming-list li{flex-direction:column;align-items:flex-start;gap:8px}}
   </style>
   <link rel="stylesheet" href="visual-polish.css">
 </head>
@@ -30,29 +40,29 @@
     <section class="hero"><div class="hero-inner" style="grid-template-columns:1fr"><div><span class="eyebrow">Blog</span><h1>Guías para cobrar mejor.</h1><p class="lead">Artículos simples y útiles sobre terminales, comisiones, pagos con tarjeta, links de pago, bancos y decisiones de cobro para negocios.</p></div></div></section>
 
     <section class="section">
-      <h2>Guías publicadas</h2>
-      <div class="blog-grid">
-        <article class="card article-card featured-post">
-          <img class="article-thumb" src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp" alt="Guía para elegir una solución de cobro para negocio" width="1200" height="675" loading="lazy">
+      <h2>Guía destacada</h2>
+      <article class="featured-article">
+        <a class="featured-media" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html" aria-label="Leer: ¿Qué solución de cobro le conviene a tu negocio?"><img src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp" alt="Guía para elegir una solución de cobro para tu negocio" width="1200" height="675" loading="lazy"></a>
+        <div class="featured-body">
           <span class="pill">Decisión</span>
           <h3>¿Qué solución de cobro le conviene a tu negocio?</h3>
-          <p class="muted">Guía sencilla para elegir entre terminal, banco, link de pago o una opción híbrida según ventas, requisitos, liquidez y forma de operar.</p>
-          <div class="actions"><a class="btn btn-primary" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">Leer guía</a><a class="btn btn-soft" href="index.html#diagnostico">Hacer mi diagnóstico gratis</a></div>
-        </article>
-        <article class="card article-card"><span class="pill">Compara</span><h3>Antes de comprar, entiende el costo real de cobrar</h3><p class="muted">La primera guía del blog conecta con la comparativa y el diagnóstico para ayudarte a tomar una decisión más clara.</p><div class="actions"><a class="btn btn-soft" href="compara.html">Ver comparativa</a></div></article>
-      </div>
+          <p>Cómo elegir entre terminal, banco, link de pago o una opción híbrida según tus ventas, requisitos, liquidez y forma de operar. Sin tecnicismos.</p>
+          <p class="featured-meta">Lectura 3 min · Decisión</p>
+          <a class="btn btn-primary" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">Leer la guía</a>
+        </div>
+      </article>
     </section>
 
     <section class="section section-tight">
-      <h2>Próximas guías</h2>
-      <div class="blog-grid">
-        <article class="card article-card"><span class="pill">Terminales</span><h3>Point Smart 2, Point Air o Point Mini: ¿cuál elegir?</h3><p class="muted">Una guía para entender qué terminal conviene según tu tipo de negocio, movilidad y necesidad de comprobantes.</p><div class="actions"><a class="btn btn-soft" href="terminales.html">Ver terminales</a></div></article>
-        <article class="card article-card"><span class="pill">Comisiones</span><h3>¿Qué significa 3.5% + IVA en una venta?</h3><p class="muted">Explicación sencilla de comisiones, IVA, depósito neto y costos que debes revisar antes de contratar.</p><div class="actions"><a class="btn btn-soft" href="compara.html">Ver comparativa</a></div></article>
-        <article class="card article-card"><span class="pill">Bancos</span><h3>Terminal moderna vs banco: regla rápida para decidir</h3><p class="muted">Cuándo conviene empezar rápido y cuándo vale la pena buscar una terminal bancaria tradicional.</p><div class="actions"><a class="btn btn-soft" href="index.html#diagnostico">Hacer mi diagnóstico gratis</a></div></article>
-      </div>
+      <h2>Próximamente</h2>
+      <p class="lead">Guías en las que estamos trabajando.</p>
+      <ul class="coming-list">
+        <li><span class="coming-tag">Comisiones</span><span class="coming-title">¿Qué significa 3.5% + IVA en una venta?</span></li>
+        <li><span class="coming-tag">Terminales</span><span class="coming-title">Point Smart 2, Point Air o Point Mini: ¿cuál elegir?</span></li>
+        <li><span class="coming-tag">Bancos</span><span class="coming-title">Terminal moderna vs banco: regla rápida para decidir</span></li>
+      </ul>
     </section>
 
-    <section class="blue-band"><div class="section split"><div><h2>¿Por qué tener blog?</h2><p class="lead">El blog ayudará a que Google entienda la página, resolverá dudas frecuentes y dará confianza a clientes que todavía no están listos para comprar.</p></div><div class="list"><div class="list-item"><div class="icon">1</div><div><h3>Educa antes de vender</h3><p>La gente compra con más calma cuando entiende costos y requisitos.</p></div></div><div class="list-item"><div class="icon">2</div><div><h3>Mejora posicionamiento</h3><p>Cada guía puede atraer búsquedas como “qué terminal me conviene” o “comisiones de terminales”.</p></div></div><div class="list-item"><div class="icon">3</div><div><h3>Genera confianza</h3><p>Una página que explica bien se siente menos improvisada y más profesional.</p></div></div></div></div></section>
   </main>
   <footer><div class="footer-links"><a href="index.html">Inicio</a><a href="compara.html">Compara</a><a href="terminales.html">Terminales</a></div>Soluciones de Cobro · Blog.</footer>
   <script src="site.js"></script>
