@@ -15,19 +15,32 @@
   <meta property="og:url" content="https://solucionesdecobro.com/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/webp" href="../assets/logos/logo-isotipo-soluciones-cobro.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
-    .article-hero{background:linear-gradient(135deg,#fff 0%,#edf8ff 62%,#fff8dd 100%);border-bottom:1px solid var(--line)}
-    .article-hero-inner{max-width:var(--max);margin:auto;padding:48px 20px 38px;display:grid;grid-template-columns:1fr .92fr;gap:36px;align-items:center}
-    .article-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px;color:var(--muted);font-weight:800}.article-hero h1{font-size:clamp(38px,5vw,64px)}
-    .article-hero-image,.article-image{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}.article-hero-image img,.article-image img{width:100%;height:auto;object-fit:contain;background:#fff;display:block}
-    .article-layout{max-width:900px;margin:auto;padding:44px 20px;background:#fff}.article-content{font-size:19px;color:#2b3d50}.article-content h2{margin-top:38px;font-size:clamp(28px,3.4vw,40px)}.article-content p{margin:14px 0}.article-content ul{padding-left:24px}.article-content li{margin:7px 0}.article-content strong{color:var(--ink)}
-    .article-image{max-width:520px;margin:30px auto;box-shadow:0 14px 34px rgba(7,29,54,.08)}.article-image figcaption{padding:10px 16px;color:var(--muted);font-size:14px;background:#fff}.article-callout{margin:26px 0;padding:22px;border:1px solid #cfeeff;border-radius:var(--r);background:linear-gradient(135deg,#f6fcff,#fff);box-shadow:0 10px 24px rgba(7,29,54,.05)}
-    .article-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}.article-mini{padding:18px;border:1px solid var(--line);border-radius:18px;background:#f8fbff}.article-mini h3{margin:0 0 8px}.article-mini p{font-size:16px;margin:0;color:var(--muted)}
-    .article-quote{font-size:23px;line-height:1.35;color:var(--ink);font-weight:900;border-left:6px solid var(--yellow);padding-left:18px;margin:30px 0}.article-cta{margin-top:38px;padding:28px;border-radius:var(--r);background:linear-gradient(135deg,var(--ink),#0058ba);color:#fff}.article-cta h2{color:#fff;margin-top:0}.article-cta p{color:#dcecff}.article-cta .actions{margin-top:18px}.breadcrumb{max-width:var(--max);margin:auto;padding:16px 20px;color:var(--muted);font-size:14px;font-weight:800}.breadcrumb a{color:var(--blue-dark)}
-    .article-toc{margin:0 0 28px;padding:18px 22px;border:1px solid var(--line);border-radius:16px;background:#f8fbff}.article-toc-title{margin:0 0 10px;font-weight:900;color:var(--ink);font-size:13px;text-transform:uppercase;letter-spacing:.04em}.article-toc ul{margin:0;padding-left:18px}.article-toc li{margin:6px 0}.article-toc a{color:var(--blue-dark);font-weight:800;text-decoration:none}.article-toc a:hover{text-decoration:underline}
-    .article-next{margin-top:36px;padding:20px 22px;border-radius:16px;background:#f8fbff;border:1px solid var(--line)}.article-next p{margin:0;font-size:16px;color:#40546a}.article-next a{color:var(--blue-dark);font-weight:800}
-    @media(max-width:880px){.article-hero-inner{grid-template-columns:1fr}.article-layout{padding-top:34px}.article-content{font-size:18px}.article-grid{grid-template-columns:1fr}}
+    :root{--serif:'Newsreader',Georgia,'Times New Roman',serif}
+    .breadcrumb{max-width:680px;margin:auto;padding:24px 20px 0;color:var(--muted);font-size:13.5px;font-weight:800}.breadcrumb a{color:var(--blue-dark)}
+    .article-header{max-width:680px;margin:0 auto;padding:18px 20px 0}
+    .article-eyebrow{display:inline-block;color:var(--blue-dark);font-size:12.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+    .article-header h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5vw,48px);line-height:1.12;letter-spacing:-.01em;color:#0d1b28;margin:0 0 18px}
+    .article-lead{font-size:clamp(19px,2.2vw,22px);line-height:1.5;color:#516073;margin:0 0 22px}
+    .article-byline{font-size:13.5px;color:#8695a3;font-weight:700;padding-bottom:26px;border-bottom:1px solid #ececec;margin:0}
+    .article-lead-image{max-width:680px;margin:28px auto 0;padding:0 20px}.article-lead-image img{display:block;width:100%;height:auto;border-radius:16px}.article-lead-image figcaption{padding:10px 2px 0;color:#9aa7b4;font-style:italic;font-size:14px}
+    .article-layout{max-width:680px;margin:auto;padding:34px 20px 60px;background:#fff}
+    .article-content{font-size:19px;line-height:1.75;color:#26333f}
+    .article-content h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3vw,30px);line-height:1.2;letter-spacing:-.005em;color:#0d1b28;margin:46px 0 12px}
+    .article-content p{margin:16px 0}.article-content ul{padding-left:22px;margin:16px 0}.article-content li{margin:9px 0}.article-content strong{color:#0d1b28}
+    .article-content a{color:var(--blue-dark);text-decoration:underline;text-underline-offset:2px}
+    .article-content h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.25;color:#0d1b28;margin:30px 0 8px}
+    .article-disclaimer{font-size:14px!important;color:#9aa7b4!important;font-style:italic;line-height:1.55}
+    .article-image{margin:34px 0;border-radius:14px;overflow:hidden}.article-image img{display:block;width:100%;height:auto}.article-image figcaption{padding:10px 2px 0;color:#9aa7b4;font-style:italic;font-size:14px}
+    .article-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}.article-mini{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fafbfc}.article-mini h3{font-family:var(--serif);font-weight:600;margin:0 0 6px;font-size:19px;color:#0d1b28}.article-mini p{font-size:15.5px;margin:0;color:var(--muted)}
+    .article-quote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(21px,2.6vw,24px);line-height:1.4;color:#0d1b28;border-left:3px solid var(--blue);padding-left:22px;margin:36px 0}
+    .article-toc{margin:26px 0 0;padding:18px 20px;border:1px solid #ececec;border-radius:14px;background:#fafbfc}.article-toc-title{margin:0 0 10px;font-weight:900;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.05em}.article-toc ul{margin:0;padding-left:18px}.article-toc li{margin:6px 0;font-size:15.5px}.article-toc a{color:var(--blue-dark);font-weight:700;text-decoration:none}.article-toc a:hover{text-decoration:underline}
+    .article-next{margin-top:40px;padding:22px 24px;border-radius:14px;background:#fafbfc;border:1px solid #ececec}.article-next p{margin:0;font-size:16.5px;line-height:1.6;color:#40546a}.article-next a{color:var(--blue-dark);font-weight:800}
+    @media(max-width:680px){.article-content{font-size:18px}.article-grid{grid-template-columns:1fr}}
   </style>
   <link rel="stylesheet" href="../visual-polish.css">
   <script type="application/ld+json">
@@ -54,54 +67,80 @@
 
   <main id="inicio">
     <div class="breadcrumb"><a href="../blog.html">Blog</a> / Guía de decisión</div>
-    <section class="article-hero">
-      <div class="article-hero-inner">
-        <div>
-          <span class="eyebrow">Guía sencilla</span>
-          <div class="article-meta"><span>Soluciones de Cobro</span><span>22 de junio de 2026</span><span>Lectura: 3 min</span></div>
-          <h1>¿Qué solución de cobro le conviene a tu negocio?</h1>
-          <p class="lead">No se trata de comprar la terminal más famosa. Se trata de elegir la forma de cobro que encaja con tus ventas, tus requisitos y tu operación diaria.</p>
-          <div class="actions"><a class="btn btn-primary" href="../index.html#diagnostico">Hacer mi diagnóstico gratis</a><a class="btn btn-white" href="../compara.html">Ver comparativa</a></div>
-        </div>
-        <figure class="article-hero-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp" alt="Opciones de cobro para elegir la solución adecuada para un negocio" width="1200" height="675" fetchpriority="high"></figure>
-      </div>
-    </section>
+    <header class="article-header">
+      <span class="article-eyebrow">Guía · Decisión</span>
+      <h1>¿Qué solución de cobro le conviene a tu negocio?</h1>
+      <p class="article-lead">No se trata de comprar la terminal más famosa, sino de elegir la forma de cobro que encaja con tus ventas, tus requisitos y tu operación diaria.</p>
+      <p class="article-byline">Por Soluciones de Cobro · 22 de junio de 2026 · 6 min de lectura</p>
+    </header>
+    <figure class="article-lead-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp" alt="Opciones de cobro para elegir la solución adecuada para un negocio" width="1200" height="670" fetchpriority="high"><figcaption>Elegir bien empieza por entender cómo vende tu negocio.</figcaption></figure>
 
     <article class="article-layout">
       <div class="article-content">
-        <p>Aceptar pagos digitales abre oportunidades, pero también obliga a revisar costos, requisitos y tiempos de depósito. Una buena decisión no empieza con la marca; empieza con tu forma real de vender.</p>
+        <p>Aceptar pagos con tarjeta abre puertas: más ventas, tickets más grandes y clientes que ya casi no cargan efectivo. Pero también obliga a revisar costos, requisitos y tiempos de depósito. Una buena decisión no empieza con la marca de moda; empieza con tu forma real de vender.</p>
 
         <nav class="article-toc" aria-label="Contenido de la guía">
           <p class="article-toc-title">En esta guía</p>
           <ul>
             <li><a href="#operacion">Entiende tu operación antes de comparar</a></li>
+            <li><a href="#costo">El costo real no es solo la tasa</a></li>
             <li><a href="#rutas">Las cuatro rutas más comunes</a></li>
+            <li><a href="#ejemplo">Un ejemplo para aterrizarlo</a></li>
             <li><a href="#pregunta">La pregunta que evita compras impulsivas</a></li>
-            <li><a href="#diagnostico">Convierte dudas en una ruta</a></li>
             <li><a href="#regla">Regla práctica</a></li>
             <li><a href="#resumen">En resumen</a></li>
           </ul>
         </nav>
 
         <h2 id="operacion">Antes de comparar tasas, entiende tu operación</h2>
-        <p>Hazte estas preguntas: ¿cobras poco o mucho al mes?, ¿vendes en mostrador o en movimiento?, ¿necesitas el dinero al instante?, ¿tu margen soporta promociones o meses sin intereses?</p>
-        <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.webp" alt="Elementos que conviene revisar antes de contratar una solución de cobro" width="1200" height="900" loading="lazy"><figcaption>Usa esta lista como filtro inicial: si una opción falla en liquidez, requisitos o soporte, no basta con que tenga buena promoción.</figcaption></figure>
+        <p>Antes de mirar una sola comisión, conviene tener claro cómo funciona tu negocio. Cuatro preguntas te ahorran errores:</p>
+        <ul>
+          <li><strong>¿Cuánto cobras al mes con tarjeta?</strong> El volumen lo cambia todo: con poco, pesa la facilidad; con mucho, pesa la tasa.</li>
+          <li><strong>¿Dónde cobras?</strong> En mostrador, a domicilio, por WhatsApp o en una tienda en línea. No todas las soluciones sirven para todos los canales.</li>
+          <li><strong>¿Qué tan rápido necesitas el dinero?</strong> Hay opciones que depositan el mismo día y otras que tardan uno o dos días hábiles.</li>
+          <li><strong>¿Puedes contratar formalmente?</strong> Tener o no RFC y cuenta de negocio abre o cierra opciones desde el inicio.</li>
+        </ul>
+        <p>Con esas respuestas, comparar deja de ser una lista de precios y se vuelve una decisión con criterio.</p>
+        <figure class="article-image"><img src="../assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.webp" alt="Elementos que conviene revisar antes de contratar una solución de cobro" width="1200" height="900" loading="lazy"><figcaption>Si una opción falla en liquidez, requisitos o soporte, no basta con que tenga buena promoción.</figcaption></figure>
+
+        <h2 id="costo">El costo real no es solo la tasa</h2>
+        <p>Es fácil elegir por el número más llamativo —«3.5%»— y llevarte una sorpresa a fin de mes. El costo real de cobrar con tarjeta suma varias cosas:</p>
+        <ul>
+          <li><strong>Comisión + IVA.</strong> La comisión casi siempre es <em>más IVA</em>. Un 3.5% en realidad te cuesta alrededor de 4.06% sobre cada venta.</li>
+          <li><strong>Renta del equipo.</strong> Los agregadores suelen vender la terminal una sola vez; muchos bancos la rentan cada mes, uses o no la terminal.</li>
+          <li><strong>Tiempo de depósito.</strong> Recibir el dinero el mismo día no es lo mismo que esperar 48 horas: afecta directo tu flujo.</li>
+          <li><strong>Meses sin intereses.</strong> Ofrecer MSI suma una comisión extra que crece con el plazo. Como referencia, puede ir de alrededor de 4% a 3 meses hasta cerca de 13% a 12 meses (más IVA), <em>además</em> de tu comisión normal.</li>
+          <li><strong>Permanencia y penalizaciones.</strong> Algunos contratos te atan por un plazo mínimo o cobran por bajo uso.</li>
+        </ul>
+        <p>La pregunta correcta no es «¿cuál tiene la tasa más baja?», sino «¿cuánto me cuesta en total cobrar $100 en mi negocio?».</p>
 
         <h2 id="rutas">Las cuatro rutas más comunes</h2>
-        <p>La mayoría de negocios termina en una de estas rutas, o combinando dos de ellas conforme crece.</p>
-        <div class="article-grid">
-          <div class="article-mini"><h3>Terminal moderna</h3><p>Para empezar rápido, moverte y cobrar con menos trámites.</p></div>
-          <div class="article-mini"><h3>Banca tradicional</h3><p>Para negocios formales con volumen y búsqueda de mejores condiciones.</p></div>
-          <div class="article-mini"><h3>Link de pago</h3><p>Para vender por WhatsApp, redes, catálogo o entregas.</p></div>
-          <div class="article-mini"><h3>Modelo híbrido</h3><p>Para crecer con tecnología, contrato y operación más ordenada.</p></div>
-        </div>
+        <p>La mayoría de negocios termina en una de estas cuatro rutas, o combinando dos conforme crece.</p>
+
+        <h3>Terminal moderna (cobro rápido)</h3>
+        <p>Ideal para empezar: activación sencilla, poca burocracia y muchas veces sin RFC. Compras el lector una sola vez y cobras con una tasa fija (como referencia, alrededor de 3.5% + IVA, igual para débito y crédito). A cambio, esa tasa fija suele ser más alta que la de un banco. <strong>Encaja si</strong> vas empezando, te mueves o vendes de volumen bajo a medio. <strong>Revisa</strong> la tasa final, el tiempo de depósito y si acepta las tarjetas de tus clientes.</p>
+
+        <h3>Banca tradicional (TPV)</h3>
+        <p>Un banco te da una terminal, casi siempre en renta mensual, con una tasa negociada por giro (como referencia, entre 1.5% y 2.5%, más baja en débito). Requiere RFC, cuenta y evaluación. <strong>Encaja si</strong> ya tienes ventas constantes, formalidad y volumen para negociar; además suele incluir soporte y, en algunos casos, seguros para el negocio. <strong>Revisa</strong> la renta, los mínimos de facturación, la permanencia y las penalizaciones.</p>
+
+        <h3>Link de pago</h3>
+        <p>Cobras a distancia enviando un enlace por WhatsApp, redes o correo; tu cliente paga desde su teléfono, sin terminal física. <strong>Encaja si</strong> vendes por catálogo, redes o a domicilio. <strong>Revisa</strong> la comisión por transacción, los contracargos y qué tan fácil resulta para tu cliente.</p>
+
+        <h3>Modelo híbrido</h3>
+        <p>Une un cobro sencillo con funciones de negocio: inventario, reportes, varios usuarios o sucursales. <strong>Encaja si</strong> ya creciste y quieres orden sin irte de lleno a la banca. <strong>Revisa</strong> el contrato, el costo total y qué funciones vas a usar de verdad.</p>
+
+        <h2 id="ejemplo">Un ejemplo para aterrizarlo</h2>
+        <p>Imagina una cafetería que vende $40,000 al mes con tarjeta, casi todo en mostrador, y necesita el dinero rápido para pagar a proveedores.</p>
+        <ul>
+          <li>Una <strong>terminal moderna</strong> la activa en pocos días, deposita al día siguiente y le cobra una tasa fija. Perfecta para arrancar.</li>
+          <li>Si en un año sube a $150,000 mensuales, empieza a tener sentido cotizar <strong>banca</strong>: aunque el trámite es mayor, bajar de 3.5% a 2% son varios miles de pesos al año.</li>
+          <li>Y si comienza a vender café en grano por Instagram, un <strong>link de pago</strong> le abre ese canal sin comprar otra terminal.</li>
+        </ul>
+        <p>La solución «correcta» cambió con el negocio. Por eso conviene revisar cada cierto tiempo, no elegir una vez y olvidarlo.</p>
 
         <h2 id="pregunta">La pregunta que evita compras impulsivas</h2>
-        <div class="article-quote">No preguntes “¿cuál terminal es mejor?”. Pregunta: “¿qué solución de cobro le conviene a mi negocio hoy?”.</div>
-        <p>Un negocio nuevo suele valorar facilidad y rapidez. Un negocio con ventas constantes puede negociar mejor. Un negocio que vende por redes quizá necesita link de pago antes que una terminal de mostrador.</p>
-
-        <h2 id="diagnostico">Diagnóstico: convierte dudas en una ruta</h2>
-        <p>Responder unas cuantas preguntas ayuda a detectar si conviene una terminal moderna, una opción híbrida o una TPV bancaria. No sustituye leer términos y condiciones, pero sí evita empezar a ciegas.</p>
+        <div class="article-quote">No preguntes «¿cuál terminal es mejor?». Pregunta: «¿qué solución de cobro le conviene a mi negocio hoy?».</div>
+        <p>Un negocio nuevo suele valorar facilidad y rapidez. Uno con ventas constantes puede negociar mejor. Uno que vende por redes quizá necesita un link de pago antes que una terminal de mostrador.</p>
 
         <h2 id="regla">Regla práctica</h2>
         <p>Si tuvieras que resumirlo en tres líneas:</p>
@@ -112,7 +151,8 @@
         </ul>
 
         <h2 id="resumen">En resumen</h2>
-        <p>No existe «la mejor terminal»; existe la que encaja con tu negocio hoy. Fíjate en el costo total, no solo en la tasa: comisión, IVA, renta, tiempo de depósito y penalizaciones también cuentan. Revisa el contrato antes de firmar y elige por la etapa en la que estás, no por la marca más conocida.</p>
+        <p>No existe «la mejor terminal»; existe la que encaja con tu negocio hoy. Fíjate en el costo total, no solo en la tasa: comisión, IVA, renta, tiempo de depósito, MSI y penalizaciones también cuentan. Revisa el contrato antes de firmar y elige por la etapa en la que estás, no por la marca más conocida.</p>
+        <p class="article-disclaimer">Las cifras de esta guía son de referencia y cambian por proveedor, giro y fecha. Confírmalas siempre antes de contratar.</p>
 
         <div class="article-next">
           <p>¿Buscas un punto de partida? El <a href="../index.html#diagnostico">diagnóstico gratuito</a> te sugiere una ruta según tus respuestas, y en la <a href="../compara.html">comparativa</a> puedes ver los proveedores lado a lado.</p>
