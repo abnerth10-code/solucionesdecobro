@@ -35,6 +35,10 @@
     .coming-list li{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff}
     .coming-tag{flex:none;padding:5px 11px;border-radius:999px;background:#edf7ff;color:var(--blue-dark);font-weight:900;font-size:12px}
     .coming-title{color:var(--ink);font-weight:800;font-size:16px}
+    .guide-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;max-width:760px}
+    .guide-list a{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;text-decoration:none;transition:border-color .18s ease,box-shadow .18s ease}
+    .guide-list a:hover{border-color:#9bd8ff;box-shadow:0 10px 24px rgba(7,29,54,.07)}
+    .guide-arrow{margin-left:auto;color:var(--blue-dark);font-weight:900;font-size:18px}
     @media(max-width:760px){.featured-article{grid-template-columns:1fr}.featured-media img{min-height:200px}.featured-body{padding:24px}.coming-list li{flex-direction:column;align-items:flex-start;gap:8px}}
   </style>
   <link rel="stylesheet" href="visual-polish.css">
@@ -57,6 +61,13 @@
           <a class="btn btn-primary" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">Leer la guía</a>
         </div>
       </article>
+    </section>
+
+    <section class="section section-tight">
+      <h2>Más guías</h2>
+      <ul class="guide-list">
+        <li><a href="blog/requisitos-terminal-bancaria.html"><span class="coming-tag">Bancos</span><span class="coming-title">¿Qué requisitos pide un banco para darte una terminal?</span><span class="guide-arrow" aria-hidden="true">→</span></a></li>
+      </ul>
     </section>
 
     <section class="section section-tight">
