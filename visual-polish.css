@@ -336,3 +336,10 @@ body,
 .social-rail--anim.in-view a:nth-child(3){animation-delay:.26s}
 @keyframes socialRailIn{from{opacity:0;transform:translateX(16px) scale(.85)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.social-rail--anim a{opacity:1;animation:none}}
+/* iconos de redes del header móvil: misma interacción que la barra lateral */
+.mobile-social a{--btn-color:var(--blue);transition:background-color .15s ease,border-color .15s ease,color .15s ease}
+.mobile-social a.facebook{--btn-color:var(--facebook)}
+.mobile-social a.instagram{--btn-color:var(--instagram)}
+.mobile-social a.whatsapp{--btn-color:var(--whatsapp)}
+.mobile-social a:hover,.mobile-social a:active{background:var(--btn-color);border-color:var(--btn-color);color:#fff}
+.mobile-social a:focus-visible{outline:2px solid var(--btn-color);outline-offset:2px}
