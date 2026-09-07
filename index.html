@@ -1,318 +1,518 @@
 <!doctype html>
 <html lang="es-MX">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Soluciones de Cobro | Venta y asesoría integral</title>
-  <meta name="description" content="Asesoría para elegir terminales, bancos, links de pago y soluciones de cobro para negocios en Oaxaca y México.">
-  <link rel="canonical" href="https://solucionesdecobro.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_MX">
-  <meta property="og:site_name" content="Soluciones de Cobro">
-  <meta property="og:title" content="Soluciones de Cobro | Venta y asesoría integral">
-  <meta property="og:description" content="Asesoría para elegir terminales, bancos, links de pago y soluciones de cobro para negocios en Oaxaca y México.">
-  <meta property="og:image" content="https://solucionesdecobro.com/assets/hero/hero-principal-v2.webp">
-  <meta property="og:url" content="https://solucionesdecobro.com/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/webp" href="assets/logos/logo-isotipo-soluciones-cobro.webp">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .home-page .top-link{background:rgba(7,29,54,.30);border:1px solid rgba(255,255,255,.56);box-shadow:0 12px 26px rgba(7,29,54,.11);backdrop-filter:blur(12px);opacity:.64}
-    .home-page .top-link:hover{background:rgba(7,29,54,.58);opacity:.9}
-    .home-page .header .brand{gap:14px}
-    .home-page .header .brand-logo{width:56px;height:56px;border-radius:14px;padding:6px;background:#fff;box-shadow:0 10px 24px rgba(7,29,54,.08)}
-    .home-page .header .nav{grid-template-columns:minmax(320px,.9fr) auto auto;gap:22px}
-    .home-page .header .brand-name{font-size:clamp(27px,2vw,32px);line-height:.98;letter-spacing:.01em;font-weight:950;color:#071d36}
-    .home-page .header .brand-name small{font-size:clamp(14px,.95vw,16px);font-weight:850;color:#6a7a8c;margin-top:5px}
-    .home-page .header .menu{gap:12px}.home-page .header .menu a{font-size:17px;font-weight:900;padding-inline:7px}
-    .home-page .hero{border-bottom:0;background:radial-gradient(circle at 88% 12%,rgba(255,210,63,.08),transparent 29%),radial-gradient(circle at 8% 88%,rgba(0,115,230,.05),transparent 32%),#fff}
-    .home-page .hero-inner{grid-template-columns:.9fr 1.1fr;padding-top:42px;padding-bottom:40px;gap:42px}
-    .home-page .hero h1{max-width:740px;letter-spacing:0;text-wrap:balance;color:#0758b5}.home-page .hero .lead{max-width:700px;color:#3f5268}
-    .home-page .hero-photo-card,.home-page .hero-photo-card img{min-height:460px}
-    .home-page .hero-photo-card{box-shadow:0 18px 42px rgba(7,29,54,.1)}
-    .home-page .growth-section{padding-top:16px;padding-bottom:54px;background:radial-gradient(circle at 94% 8%,rgba(255,210,63,.07),transparent 31%),radial-gradient(circle at 4% 72%,rgba(0,115,230,.04),transparent 34%),#fff}
-    .home-page .growth-section>h2{color:#0758b5}
-    .home-page .advisory-band{background:radial-gradient(circle at 94% 10%,rgba(255,210,63,.06),transparent 30%),radial-gradient(circle at 6% 90%,rgba(0,115,230,.035),transparent 32%),#fff;color:var(--text);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.home-page .advisory-band h2{color:var(--ink)}.home-page .advisory-band .lead{color:#40546a!important;opacity:1!important}.home-page .advice-photo{margin:24px 0 0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 16px 36px rgba(7,29,54,.09)}.home-page .advice-photo img{display:block;width:100%;height:330px;object-fit:cover;opacity:1}.home-page .advice-list .list-item{align-items:start;border:1px solid var(--line);border-radius:18px;padding:18px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);box-shadow:0 12px 28px rgba(7,29,54,.06)}.home-page .advice-list h3{color:var(--ink)}.home-page .advice-list p{color:#617386}
-    .home-page .diagnostic{padding-top:52px}.home-page .payment-section{padding-top:56px}.home-page .payment-band{background:#fbfdff!important}.home-page .compact-notice .section{padding-top:28px;padding-bottom:28px}
-    @media(max-width:980px){.home-page .advice-photo img{height:auto}}
-    @media(max-width:680px){.home-page .hero-inner{padding-top:18px;padding-bottom:24px;gap:18px}.home-page .hero h1{font-size:44px;line-height:1}.home-page .hero .lead{font-size:18px;line-height:1.45}.home-page .hero .actions{margin-top:18px}.home-page .hero .actions .btn{display:inline-flex}.home-page .visual-card,.home-page .visual-card img{min-height:270px}.home-page .growth-section{padding-top:14px;padding-bottom:42px}.home-page .advisory-band .section{padding-top:42px;padding-bottom:42px}.home-page .diagnostic{padding-top:40px}.home-page .top-link{width:42px;height:42px;opacity:.52}}
-    @media(max-width:680px){body.home-page .header .nav{padding:8px 14px 9px!important}body.home-page .header .brand{gap:10px!important;align-items:center!important}body.home-page .header .brand-logo{width:40px!important;height:40px!important;max-width:40px!important;border-radius:12px!important;padding:5px!important}body.home-page .header .brand-name{font-size:26px!important;line-height:.94!important;letter-spacing:.01em!important;white-space:normal!important;max-width:285px!important}body.home-page .header .brand-name small{font-size:13px!important;margin-top:4px!important}body.home-page .header .menu{gap:15px!important;padding-top:4px!important}body.home-page .header .menu a{font-size:14.5px!important}body.home-page .header .header-actions{gap:8px!important}body.home-page .header .header-actions>.btn{height:40px!important;min-height:40px!important}body.home-page .header .mini-social{width:34px!important;height:34px!important}}
-  </style>
-  <link rel="stylesheet" href="visual-polish.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Soluciones de Cobro",
-    "url": "https://solucionesdecobro.com/",
-    "logo": "https://solucionesdecobro.com/assets/logos/logo-isotipo-soluciones-cobro.webp",
-    "description": "Asesoría para elegir terminales, bancos, links de pago y soluciones de cobro para negocios en México.",
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61582373169392",
-      "https://www.instagram.com/solucionesdecobrooax/"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué es una solución de cobro?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Es cualquier herramienta que permite recibir pagos: terminal física, link de pago, pasarela, cuenta bancaria, billetera o cobranza recurrente." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué es una opción rápida de cobro?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Es una alternativa que permite empezar con menos requisitos que una terminal bancaria tradicional. Suele ser más fácil de activar, pero la comisión puede ser mayor." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuándo conviene la banca tradicional?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cuando tu negocio ya tiene formalidad fiscal, ventas constantes y busca negociar mejores condiciones, cuidando rentas, saldos mínimos y penalizaciones." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Me ayudan aunque no esté en Oaxaca?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. La página está pensada para orientar a cualquier negocio que quiera comparar soluciones de cobro antes de comprar o contratar." }
-      }
-    ]
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kizuna | Soluciones de cobro</title>
+<meta name="description" content="Compara terminales, bancos y pasarelas para cobrar con tarjeta en México. Diagnóstico gratis y asesoría honesta antes de comprar o contratar.">
+<link rel="canonical" href="https://kizunapay.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Kizuna">
+<meta property="og:title" content="Kizuna | Soluciones de cobro">
+<meta property="og:description" content="Compara terminales, bancos y pasarelas para cobrar con tarjeta en México. Diagnóstico gratis y asesoría honesta antes de comprar o contratar.">
+<meta property="og:image" content="https://kizunapay.com/assets/hero/hero-principal-v2.webp">
+<meta property="og:url" content="https://kizunapay.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/logos/kizuna-isotipo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kizuna-base.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Kizuna",
+"alternateName":"Kizuna Soluciones de Cobro","url":"https://kizunapay.com/",
+"logo":"https://kizunapay.com/assets/logos/kizuna-logo.svg",
+"description":"Asesoría y comparación de soluciones de cobro con tarjeta para negocios en México.",
+"telephone":"+52-951-182-5881","areaServed":"MX",
+"sameAs":["https://www.facebook.com/profile.php?id=61582373169392","https://www.instagram.com/solucionesdecobrooax/"]}
+</script>
 </head>
-<body class="home-page">
-  <header class="header">
-    <div class="nav">
-      <a class="brand" href="index.html#inicio">
-        <img class="brand-logo" src="assets/logos/logo-isotipo-soluciones-cobro.webp" alt="Logo de Soluciones de Cobro" width="400" height="400">
-        <span class="brand-name">Soluciones de Cobro <small>Venta y asesoría integral</small></span>
-      </a>
-      <nav class="menu" aria-label="Navegación principal">
-        <a href="index.html#inicio">Inicio</a>
-        <a class="diagnostic-menu-link" href="index.html#diagnostico" aria-label="Hacer mi diagnóstico gratis"><span class="label-full">Diagnóstico gratis</span><span class="label-short">Diagnóstico gratis</span></a>
-        <a href="compara.html">Compara</a>
-        <a href="terminales.html">Terminales</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
-        <div class="mobile-social" aria-label="Redes sociales">
-          <a class="mini-social facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><span class="brand-mask" style="--logo:url('assets/logos/facebook.svg')"></span></a>
-          <a class="mini-social instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><span class="brand-mask" style="--logo:url('assets/logos/instagram.svg')"></span></a>
-          <a class="mini-social whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20y%20quiero%20asesoria." target="_blank" rel="noopener" aria-label="WhatsApp"><span class="brand-mask" style="--logo:url('assets/logos/whatsapp.svg')"></span></a>
+<body>
+
+<aside class="rail" aria-label="Redes sociales">
+  <a class="fb" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="#0866FF" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+  <a class="ig" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="#FF0069" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.13-1.38.66-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.93 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg></a>
+  <a class="wa" href="https://wa.me/529511825881?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20asesor%C3%ADa." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path fill="#25D366" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.02a9.75 9.75 0 0 1-4.96-1.36l-.36-.21-3.69.97.98-3.6-.23-.37a9.72 9.72 0 0 1-1.49-5.2c0-5.38 4.38-9.76 9.77-9.76 2.61 0 5.06 1.02 6.9 2.87a9.7 9.7 0 0 1 2.86 6.9c0 5.38-4.38 9.76-9.76 9.76zM20.52 3.5A11.78 11.78 0 0 0 12.05 0C5.5 0 .18 5.32.17 11.86c0 2.09.55 4.13 1.6 5.93L.07 24l6.35-1.66a11.85 11.85 0 0 0 5.67 1.44h.01c6.54 0 11.86-5.32 11.87-11.86a11.8 11.8 0 0 0-3.45-8.42z"/></svg></a>
+</aside>
+
+<a class="top" href="#" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <svg width="46" height="46" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke-width="13" stroke-linejoin="round"><rect x="20" y="30" width="52" height="52" rx="17" stroke="#0073e6"/><rect x="48" y="30" width="52" height="52" rx="17" stroke="#071d36"/></g></svg>
+      <span class="bn"><b>kizuna</b><small>Soluciones de cobro</small></span>
+    </a>
+    <nav class="menu">
+      <a class="key" href="#comparador">Compara</a>
+      <a class="key" href="#diagnostico">Diagnóstico</a>
+      <a href="#terminales">Terminales</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-copy">
+    <h1>Acepta tarjetas sin complicarte.</h1>
+    <p class="lead">Comparamos terminales, bancos y pasarelas por ti, y te acompañamos a decidir con claridad antes de comprar o contratar.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#comparador">Compara y elige</a>
+      <a class="btn btn-ghost" href="#diagnostico">Mi diagnóstico gratis</a>
+    </div>
+    <div class="pills">
+      <span class="ok">✓ Sin costo</span><span class="ok">✓ Sin compromiso</span>
+      <span class="muted">Hacemos equipo para que cobres.</span>
+    </div>
+  </div>
+  <div class="hero-shot">
+    <img src="assets/hero/hero-principal-v2.webp" alt="Dueña de un negocio cobrando con terminal de tarjeta">
+    <div class="note"><b>Antes de elegir, compara.</b><span>Comisiones, depósitos, conectividad y soporte cambian entre opciones.</span></div>
+  </div>
+</section>
+
+<!-- INFORMACIÓN CLARA -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Por qué Kizuna</span>
+      <h2>Información clara para decidir bien.</h2>
+      <p>No empezamos por venderte: primero entendemos cómo vendes y luego te decimos qué forma de cobrar le conviene a tu negocio.</p>
+    </div>
+    <div class="grid g4 fgrid reveal">
+      <article class="fcard" style="--art:url('assets/cards/ilustracion-terminal-ideal.webp')">
+        <div class="kick">Equipo</div><h3>La terminal ideal</h3>
+        <p>Se adapta a cómo vendes: mostrador, movilidad o volumen.</p>
+      </article>
+      <article class="fcard" style="--art:url('assets/cards/ilustracion-informacion-clara.webp')">
+        <div class="kick">Costos y condiciones</div><h3>El costo real</h3>
+        <p>Comisión, depósito, renta y requisitos, antes de firmar.</p>
+      </article>
+      <article class="fcard" style="--art:url('assets/cards/ilustracion-comparacion-real.webp')">
+        <div class="kick">Decisión informada</div><h3>Comparación real</h3>
+        <p>Tasa, depósito y contrato, lado a lado.</p>
+      </article>
+      <article class="fcard" style="--art:url('assets/cards/ilustracion-de-menos-a-mas.webp')">
+        <div class="kick">Escalabilidad</div><h3>De menos a más</h3>
+        <p>Empieza simple y escala cuando lo justifique.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OCÉANO: parte de la página, puesta de sol y olas -->
+<section class="ocean" style="padding-bottom:0">
+  <svg class="ocean-waves" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <g class="w1"><path d="M-60,58 C180,104 360,14 540,50 C720,86 900,16 1080,52 C1240,81 1380,46 1500,58 L1500,170 L-60,170 Z" fill="#c4e2f8" opacity=".8"/></g>
+    <g class="w2"><path d="M-60,92 C200,140 380,50 580,86 C780,122 960,54 1160,88 C1300,110 1400,84 1500,92 L1500,170 L-60,170 Z" fill="#93c8ed" opacity=".85"/></g>
+    <g class="w3"><path d="M-60,124 C220,168 420,98 640,124 C860,150 1040,104 1240,124 C1340,133 1430,130 1500,126 L1500,170 L-60,170 Z" fill="#0073e6" opacity=".3"/></g>
+  </svg>
+  <svg class="sailboat" viewBox="0 0 72 90" aria-hidden="true"><path d="M26 78 L40 40 L40 78 Z" fill="#071d36"/><path d="M44 78 L44 20 L72 78 Z" fill="#fff" opacity=".95"/><rect x="0" y="78" width="72" height="12" rx="6" fill="#071d36"/></svg>
+  <div class="wrap">
+    <div class="ocean-grid">
+      <div>
+        <span class="eyebrow">De la orilla al mar abierto</span>
+        <h2>No limites cómo pueden pagarte.</h2>
+        <p>Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera al océano de clientes que prefieren pagar con tarjeta, link o billetera digital.</p>
+      </div>
+      <div class="sun-stat">
+        <span>Incrementa tus ventas hasta un</span>
+        <b>30%</b>
+      </div>
+    </div>
+    <div class="src">El incremento es estimado y depende de muchos factores. <a href="https://www.eleconomista.com.mx/finanzaspersonales/tarjetazo-llega-tiendita-mayores-ventas-deudas-cartera-20260331-806275.html" target="_blank" rel="noopener">Fuente: El Economista</a></div>
+  </div>
+</section>
+
+<!-- COMPARADOR (pilar 1) -->
+<section id="comparador">
+  <div class="wrap">
+    <div class="compare reveal">
+      <div>
+        <span class="eyebrow" style="color:#8fc4ff">El comparador</span>
+        <h2>Todas tus opciones, lado a lado.</h2>
+        <p>Terminales, bancos, pasarelas y compra a plazos con su tasa, requisitos, tiempo de depósito, renta y contrato. Comparación honesta, del lado de tu negocio.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="compara.html#matriz">Comparar opciones</a>
+          <a class="btn btn-ghost" href="assets/downloads/matriz-comparativa-soluciones-de-cobro-mexico.pdf" target="_blank" rel="noopener">Descargar PDF</a>
+        </div>
+      </div>
+      <div class="matrix">
+        <div class="num">34</div>
+        <span class="matrix-label">proveedores comparados y actualizados</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNÓSTICO INTERACTIVO -->
+<section id="diagnostico">
+  <div class="wrap">
+    <div class="head" style="max-width:640px">
+      <span class="eyebrow">Diagnóstico gratis</span>
+      <h2>¿Cuál te conviene a ti?</h2>
+      <p>Responde unas preguntas breves y te decimos tu mejor opción, con las razones reales para tu negocio.</p>
+    </div>
+
+    <div class="dx reveal" id="dx">
+      <!-- Intro -->
+      <div class="dx-panel" id="dxIntro">
+        <div class="dx-intro">
+          <span class="dx-cta-wrap">
+            <button class="btn btn-primary btn-xl" id="dxStart" type="button">Empezar mi diagnóstico</button>
+          </span>
+          <p class="dx-note">Gratis · 2 minutos · Sin registro</p>
+        </div>
+      </div>
+
+      <!-- Preguntas -->
+      <div class="dx-panel" id="dxQuiz" hidden>
+        <div class="dx-top">
+          <div class="dx-phase"><b id="dxPhase">Tu negocio</b><span id="dxCount">Pregunta 1 de 10</span></div>
+          <div class="dx-remaining"><b id="dxLeft">34</b><span>opciones compatibles</span></div>
+        </div>
+        <div class="dx-bar"><i id="dxBar"></i></div>
+
+        <div class="dx-q" id="dxQ">
+          <h3 id="dxTitle"></h3>
+          <p class="dx-help muted" id="dxHelp"></p>
+          <div class="dx-opts" id="dxOpts" role="group"></div>
+        </div>
+
+        <div class="dx-nav">
+          <button class="btn btn-ghost" id="dxBack" type="button">Atrás</button>
+          <button class="btn btn-primary" id="dxNext" type="button">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Resultado -->
+      <div class="dx-panel" id="dxResult" hidden>
+        <div class="dx-res-head">
+          <span class="eyebrow">Tu mejor opción</span>
+          <h3 id="dxResTitle"></h3>
+          <p id="dxResSub" class="muted"></p>
+        </div>
+        <div class="dx-res-body">
+          <p class="dx-res-label">Por qué encaja contigo</p>
+          <ul class="dx-reasons" id="dxReasons"></ul>
+          <div class="dx-res-cta" id="dxResCta"></div>
+          <p class="dx-res-alt" id="dxResAlt"></p>
+          <button class="dx-restart" id="dxRestart" type="button">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+            Volver a evaluar
+          </button>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <aside class="social-rail" aria-label="Redes sociales">
-    <a class="facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><span class="brand-mask" style="--logo:url('assets/logos/facebook.svg')"></span></a>
-    <a class="instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><span class="brand-mask" style="--logo:url('assets/logos/instagram.svg')"></span></a>
-    <a class="whatsapp" href="https://wa.me/529511825881?text=Hola%2C%20vi%20tu%20pagina%20de%20Soluciones%20de%20Cobro%20y%20quiero%20informacion." target="_blank" rel="noopener" aria-label="WhatsApp"><span class="brand-mask" style="--logo:url('assets/logos/whatsapp.svg')"></span></a>
-  </aside>
-  <script>
-  (function(){var r=document.querySelector('.social-rail');if(!r)return;r.classList.add('social-rail--anim');requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.add('in-view');});});})();
-  </script>
-
-  <main id="inicio">
-    <section class="hero hero-compact">
-      <div class="hero-inner">
-        <div>
-          <h1>Acepta tarjetas sin complicarte.</h1>
-          <p class="lead">Compara opciones de cobro con tarjeta y decide con claridad antes de comprar o contratar.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="compara.html#matriz">Comparar opciones</a>
-            <a class="btn btn-soft" href="#diagnostico">Hacer mi diagnóstico gratis</a>
-          </div>
-        </div>
-        <div class="visual-card photo-card hero-photo-card">
-          <img src="assets/hero/hero-principal-v2.webp" alt="Dueña de un negocio cobrando con terminal de tarjeta a un cliente" width="1700" height="949" fetchpriority="high">
-          <div class="note-card">
-            <span class="note-icon" aria-hidden="true"><svg viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><line x1="60" y1="0" x2="60" y2="100"/><path d="M20 20 L0 55 L40 55 Z"/><path d="M100 20 L80 55 L120 55 Z"/><path d="M0 55 Q20 75 40 55"/><path d="M80 55 Q100 75 120 55"/><line x1="30" y1="100" x2="90" y2="100"/></svg></span>
-            <span class="note-copy"><strong>Antes de elegir, compara.</strong><span>Comisiones, depósitos, conectividad y soporte cambian entre opciones.</span></span>
-          </div>
-        </div>
+<!-- COMPRA (pilar 2) -->
+<section id="terminales">
+  <div class="wrap buy reveal">
+    <div>
+      <img src="assets/hero/catalogo-terminales.webp" alt="Terminales Point de Mercado Pago">
+    </div>
+    <div>
+      <span class="eyebrow">Compra tu terminal</span>
+      <h2 style="font-size:clamp(26px,3.2vw,36px);margin:12px 0 12px">Lista para cobrar hoy.</h2>
+      <p class="muted">Vendemos terminales Point de Mercado Pago: sin renta, sin contrato forzoso y con depósito rápido. Si tu diagnóstico apunta a otra ruta, te lo decimos con honestidad.</p>
+      <div class="models">
+        <div class="model"><span class="dot"></span><div><b>Point Smart 2</b><span>Pantalla táctil, ticket impreso y todo integrado</span></div></div>
+        <div class="model"><span class="dot"></span><div><b>Point Air</b><span>Ligera y con batería, ideal para moverte</span></div></div>
+        <div class="model"><span class="dot"></span><div><b>Point Mini</b><span>La más económica para empezar a cobrar</span></div></div>
       </div>
-    </section>
+      <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-buy" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar ahora</a>
+        <a class="btn btn-ghost" href="terminales.html">Ver modelos</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section growth-section">
-      <div class="ocean-card" aria-label="Impacto de aceptar pagos con tarjeta">
-        <div class="ocean-content">
-          <div class="ocean-copy">
-            <span class="eyebrow">De la orilla al mar abierto</span>
-            <h2>No limites cómo pueden pagarte.</h2>
-            <p class="impact-analogy">Quedarte solo con efectivo es mirar el mar desde la orilla: ves una parte, pero dejas fuera al océano de clientes que prefieren pagar con tarjeta, link o billetera digital.</p>
-            <div class="payment-path" aria-label="Comparación entre aceptar solo efectivo y ofrecer más formas de pago">
-              <span class="path-limited"><span class="path-icon" aria-hidden="true"><svg viewBox="0 0 38 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="36" height="22" rx="4"/><circle cx="19" cy="12" r="5.5"/><path d="M7 7h2M7 7v2"/><path d="M31 17h-2M31 17v-2"/></svg></span><span class="path-text"><b>Solo efectivo</b><small>Menos clientes potenciales</small></span></span>
-              <span class="path-arrow" aria-hidden="true">→</span>
-              <span class="path-open"><span class="path-icon" aria-hidden="true"><svg viewBox="0 0 34 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="0" width="30" height="20" rx="3.2"/><rect x="0" y="8" width="30" height="20" rx="3.2" fill="#fff"/><line x1="0" y1="15" x2="30" y2="15"/></svg></span><span class="path-text"><b>Más formas de pago</b><small>Más ventas</small></span></span>
-            </div>
-          </div>
-          <div class="ocean-stat">
-            <span class="ocean-stat-kicker">Incrementa tus ventas hasta un</span>
-            <div class="ocean-stat-number"><strong>30%</strong></div>
-          </div>
+<!-- MEDIOS DE PAGO -->
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="head" style="max-width:none;text-align:center;margin-bottom:26px">
+      <span class="eyebrow">Compatibilidad</span>
+      <h2 style="font-size:clamp(24px,3vw,32px)">Medios de pago según la terminal.</h2>
+    </div>
+    <div class="pay">
+      <div class="tile"><img src="assets/logos/visa01.svg" alt="Visa"></div>
+      <div class="tile"><img src="assets/logos/mastercard1.svg" alt="Mastercard"></div>
+      <div class="tile"><img src="assets/logos/amex1.svg" alt="American Express"></div>
+      <div class="tile"><img src="assets/logos/carnet1.svg" alt="Carnet"></div>
+      <div class="tile"><img src="assets/logos/googlepay.svg" alt="Google Pay"></div>
+      <div class="tile"><img src="assets/logos/mercadopago.svg" alt="Mercado Pago"></div>
+      <div class="tile"><img src="assets/logos/edenred.svg" alt="Edenred"></div>
+      <div class="tile"><img src="assets/logos/sivale.svg" alt="Sí Vale"></div>
+      <div class="tile"><img src="assets/logos/claro.svg" alt="Claro Pay"></div>
+      <div class="tile"><img src="assets/logos/rappi.svg" alt="Rappi Pay"></div>
+      <div class="tile"><b>Pluxee</b></div>
+      <div class="tile"><b>Samsung Pay</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" style="padding-top:8px">
+  <div class="wrap" style="max-width:840px">
+    <div class="head"><span class="eyebrow">Dudas frecuentes</span><h2>Preguntas frecuentes.</h2></div>
+    <details open><summary>¿Qué es una solución de cobro?</summary><p>Cualquier herramienta para recibir pagos: terminal física, link de pago, pasarela, cuenta bancaria, billetera o cobranza recurrente.</p></details>
+    <details><summary>¿Qué es una opción rápida de cobro?</summary><p>Una alternativa que permite empezar con menos requisitos que una terminal bancaria. Más fácil de activar, aunque la comisión puede ser mayor.</p></details>
+    <details><summary>¿Cuándo conviene la banca tradicional?</summary><p>Cuando tu negocio ya tiene formalidad fiscal, ventas constantes y busca negociar mejores condiciones, cuidando rentas, mínimos y penalizaciones.</p></details>
+    <details><summary>¿Me ayudan aunque no esté en Oaxaca?</summary><p>Sí. Orientamos a cualquier negocio en México que quiera comparar antes de comprar o contratar.</p></details>
+  </div>
+</section>
+
+<!-- AVISO -->
+<section style="padding-top:0">
+  <div class="wrap"><div class="legal">
+    <b style="font-family:var(--display)">Aviso sobre marcas y referencias.</b> Los nombres, logotipos y marcas de terceros pertenecen a sus respectivos propietarios y se usan con fines informativos o comparativos. Mencionarlos no implica patrocinio ni respaldo oficial, salvo donde se indique una relación comercial, como la venta de terminales Mercado Pago. Comisiones y condiciones pueden cambiar sin previo aviso; confirma siempre con cada proveedor.
+  </div></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <svg width="42" height="42" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke-width="13" stroke-linejoin="round"><rect x="20" y="30" width="52" height="52" rx="17" stroke="#4aa3ff"/><rect x="48" y="30" width="52" height="52" rx="17" stroke="#fff"/></g></svg>
+          <span class="bn"><b>kizuna</b></span>
         </div>
-        <div class="ocean-note">
-          <small>El incremento es estimado y depende de muchos factores. <a class="source-link" href="https://www.eleconomista.com.mx/finanzaspersonales/tarjetazo-llega-tiendita-mayores-ventas-deudas-cartera-20260331-806275.html" target="_blank" rel="noopener">Fuente: El Economista</a></small>
-        </div>
+        <p style="color:#8fb4d8;max-width:270px;font-size:14.5px">Hacemos equipo para que cobres. Asesorías y venta de terminales.</p>
       </div>
+      <div class="cols">
+        <div><h4>Explora</h4><a href="#comparador">Compara</a><a href="#diagnostico">Diagnóstico</a><a href="terminales.html">Terminales</a><a href="blog.html">Blog</a></div>
+        <div><h4>Contacto</h4><a href="https://wa.me/529511825881">WhatsApp</a><a href="https://www.instagram.com/solucionesdecobrooax/">Instagram</a><a href="https://www.facebook.com/profile.php?id=61582373169392">Facebook</a></div>
+      </div>
+    </div>
+    <div class="base">Kizuna · Soluciones de cobro · 951 182 5881</div>
+  </div>
+</footer>
 
-      <div class="feature-intro">
-        <h2 class="feature-section-title">Información clara.</h2>
-      </div>
-      <div class="feature-row">
-        <article class="feature-card feature-hardware">
-          <div class="feature-head">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 90 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="80" height="100" rx="12"/><rect x="14" y="14" width="52" height="34" rx="4"/><line x1="16" y1="64" x2="30" y2="64"/><line x1="38" y1="64" x2="52" y2="64"/><line x1="60" y1="64" x2="74" y2="64"/><line x1="16" y1="78" x2="30" y2="78"/><line x1="38" y1="78" x2="52" y2="78"/><line x1="60" y1="78" x2="74" y2="78"/></svg></span>
-            <span class="feature-kicker">Equipo</span>
-          </div>
-          <h3>La terminal ideal</h3>
-          <p>El equipo debe adaptarse a cómo vendes: mostrador, movilidad, conectividad y volumen.</p>
-        </article>
-        <article class="feature-card feature-info">
-          <div class="feature-head">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 90 110" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="90" height="110" rx="8"/><line x1="18" y1="28" x2="72" y2="28"/><line x1="18" y1="46" x2="72" y2="46"/><line x1="18" y1="64" x2="50" y2="64"/><circle cx="68" cy="86" r="16" fill="#ffd23f" stroke="none"/><g stroke="#071d36" stroke-width="2.6"><line x1="61" y1="93" x2="75" y2="79"/><circle cx="62.5" cy="80.5" r="2.6" fill="#071d36" stroke="none"/><circle cx="73.5" cy="91.5" r="2.6" fill="#071d36" stroke="none"/></g></svg></span>
-            <span class="feature-kicker">Costos y condiciones</span>
-          </div>
-          <h3>Información clara</h3>
-          <p>Comisión, depósito, renta, soporte y requisitos: el costo real antes de contratar.</p>
-        </article>
-        <article class="feature-card feature-compare">
-          <div class="feature-head">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><line x1="60" y1="0" x2="60" y2="100"/><path d="M20 20 L0 55 L40 55 Z"/><path d="M100 20 L80 55 L120 55 Z"/><path d="M0 55 Q20 75 40 55"/><path d="M80 55 Q100 75 120 55"/><line x1="30" y1="100" x2="90" y2="100"/></svg></span>
-            <span class="feature-kicker">Decisión informada</span>
-          </div>
-          <h3>Comparación real</h3>
-          <p>Tasa, liquidación, conectividad, meses sin intereses, soporte y contrato en un solo lugar.</p>
-        </article>
-        <article class="feature-card feature-growth">
-          <div class="feature-head">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 110 105" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><polyline points="0,95 30,60 55,75 110,15"/><polyline points="80,15 110,15 110,45"/><line x1="0" y1="105" x2="110" y2="105" stroke-width="4"/></svg></span>
-            <span class="feature-kicker">Escalabilidad</span>
-          </div>
-          <h3>De menos a más</h3>
-          <p>Empieza con lo necesario y suma terminales o mejores planes cuando lo justifique.</p>
-        </article>
-        <div class="feature-row-boat-track" aria-hidden="true">
-          <div class="feature-row-boat">
-            <svg viewBox="0 0 72 90" xmlns="http://www.w3.org/2000/svg">
-              <path d="M26 78 L40 40 L40 78 Z" fill="#071d36"/>
-              <path d="M44 78 L44 20 L72 78 Z" fill="#fff" opacity=".92"/>
-              <rect x="0" y="78" width="72" height="12" rx="6" fill="#071d36"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
+<script>
+/* ============ DIAGNÓSTICO INTERACTIVO ============
+   Una pregunta a la vez, tarjetas grandes, contador honesto de opciones.
+   NOTA: los pesos replican la matriz de decisión documentada; al integrarlo
+   al sitio se reutiliza profileResult() de site.js para conservar el puntaje. */
+(function(){
+  var PROV={rapida:8,hibrida:2,banca:15,pasarela:7,bnpl:2};   // 34 en total
+  var Q=[
+  {ph:"Tu negocio",id:"canal",multi:true,t:"¿Dónde necesitas cobrar?",h:"Elige todas las que realmente usarás.",o:[
+    {v:"mostrador",l:"En un mostrador o local",s:{rapida:1,banca:1},r:"Cobras en mostrador"},
+    {v:"movil",l:"A domicilio, en eventos o en movimiento",s:{rapida:2},r:"Necesitas movilidad"},
+    {v:"links",l:"Por link, redes sociales o WhatsApp",s:{rapida:1,pasarela:1},r:"Cobras por link o redes"},
+    {v:"ecommerce",l:"En una tienda en línea",s:{pasarela:3},r:"Vendes en línea"}]},
+  {ph:"Tu negocio",id:"formalidad",t:"¿Con qué documentación puedes contratar hoy?",h:"Solo sirve para descartar procesos que hoy no podrías completar.",o:[
+    {v:"sin_rfc",l:"Identificación, pero todavía no RFC",s:{rapida:3},r:"Puedes empezar sin RFC"},
+    {v:"fisica",l:"Persona física con RFC",s:{rapida:1,hibrida:1,banca:1},r:"Tienes RFC como persona física"},
+    {v:"moral",l:"Persona moral",s:{banca:3,hibrida:2},r:"Eres persona moral, te abre la banca"},
+    {v:"no_seguro",l:"No estoy seguro",s:{rapida:1},r:""}]},
+  {ph:"Tus números",id:"volumen",t:"En un mes normal, ¿cuánto esperas cobrar con tarjeta?",h:"Una estimación está bien.",o:[
+    {v:"bajo",l:"Menos de $10,000",s:{rapida:2},r:"Tu volumen todavía es bajo"},
+    {v:"medio",l:"Entre $10,000 y $30,000",s:{rapida:1,hibrida:1},r:"Volumen medio"},
+    {v:"alto",l:"Entre $30,000 y $100,000",s:{banca:2,hibrida:1},r:"Tu volumen ya permite negociar"},
+    {v:"muy_alto",l:"Más de $100,000",s:{banca:3},r:"Con tu volumen conviene negociar tasa"},
+    {v:"no_seguro",l:"No estoy seguro",s:{},r:""}]},
+  {ph:"Tus números",id:"estabilidad",t:"¿Tus ventas cambian mucho de un mes a otro?",h:"",o:[
+    {v:"estable",l:"Son bastante constantes",s:{banca:2},r:"Tus ventas son constantes"},
+    {v:"temporada",l:"Tienen temporadas altas y bajas",s:{hibrida:1,rapida:1},r:"Tienes temporadas"},
+    {v:"variable",l:"Son muy variables o apenas voy a empezar",s:{rapida:2},r:"Necesitas flexibilidad"},
+    {v:"no_seguro",l:"No estoy seguro",s:{},r:""}]},
+  {ph:"Tus números",id:"liquidez",t:"¿Cuándo necesitas el dinero de tus ventas?",h:"",o:[
+    {v:"mismo_dia",l:"El mismo día",s:{rapida:2},r:"Necesitas el dinero el mismo día"},
+    {v:"siguiente_dia",l:"Al día siguiente",s:{rapida:1,hibrida:1},r:"Te sirve el depósito al día siguiente"},
+    {v:"dos_dias",l:"Puedo esperar dos días o más",s:{banca:1},r:"Puedes esperar el depósito"},
+    {v:"no_seguro",l:"No estoy seguro",s:{},r:""}]},
+  {ph:"Tus prioridades",id:"funciones",multi:true,t:"¿Qué necesitas además de aceptar el pago?",h:"Elige solo lo que usarás desde el inicio.",o:[
+    {v:"simple",l:"Solo cobrar",s:{rapida:2},r:"Quieres algo simple"},
+    {v:"catalogo",l:"Catálogo, inventario o reportes",s:{hibrida:3},r:"Necesitas funciones de negocio"},
+    {v:"multiusuario",l:"Varios usuarios, cajas o sucursales",s:{hibrida:2,banca:1},r:"Operas con varias cajas"},
+    {v:"integracion",l:"Conectarla con otro sistema",s:{pasarela:2,hibrida:1},r:"Necesitas integrarla"}]},
+  {ph:"Tus prioridades",id:"compromiso",multi:true,t:"¿Qué compromiso te resulta aceptable?",h:"No hay respuesta mejor; queremos respetar cómo prefieres operar.",o:[
+    {v:"comprar",l:"Comprar el equipo una sola vez",s:{rapida:2},r:"Prefieres comprar el equipo"},
+    {v:"renta",l:"Pagar renta si el costo total conviene",s:{banca:2},r:"Aceptas renta si conviene"},
+    {v:"ninguno",l:"Sin renta, mínimos ni permanencia",s:{rapida:3},r:"No quieres ataduras"}]},
+  {ph:"Tus prioridades",id:"prioridad",multi:true,t:"¿Qué quieres priorizar?",h:"Puedes elegir más de una.",o:[
+    {v:"costo",l:"Menor costo total",s:{banca:1,hibrida:1},r:"Priorizas el costo total"},
+    {v:"liquidez",l:"Recibir el dinero rápido",s:{rapida:2},r:"Priorizas la rapidez del depósito"},
+    {v:"facilidad",l:"Contratar y empezar fácilmente",s:{rapida:2},r:"Quieres empezar fácil"},
+    {v:"flexibilidad",l:"Evitar rentas y compromisos",s:{rapida:2},r:"Quieres flexibilidad"},
+    {v:"soporte",l:"Tener soporte y continuidad",s:{banca:2},r:"Valoras soporte y respaldo"},
+    {v:"funciones",l:"Más funciones e integraciones",s:{hibrida:2,pasarela:1},r:"Quieres más funciones"}]},
+  {ph:"Tus prioridades",id:"plazos",t:"¿Necesitas que tus clientes paguen a plazos?",h:"Estas opciones pueden aumentar tu costo por venta.",o:[
+    {v:"no",l:"No",s:{},r:""},
+    {v:"msi_ocasional",l:"Meses sin intereses de vez en cuando",s:{banca:1},r:"Ofrecerás meses sin intereses"},
+    {v:"msi_frecuente",l:"Meses sin intereses con frecuencia",s:{banca:2},r:"Usarás mucho los meses sin intereses"},
+    {v:"bnpl",l:"Financiamiento a mis clientes, sin banco",s:{bnpl:4},r:"Quieres financiar a tus clientes"},
+    {v:"no_seguro",l:"Quiero entender las diferencias",s:{},r:""}]}
+  ];
 
-    <section class="blue-band advisory-band">
-      <div class="section advice-split">
-        <div class="advice-copy">
-          <span class="advice-bird" aria-hidden="true"><svg viewBox="0 0 48 24" fill="none"><path class="bird-wing bird-wing-l" d="M24 13 Q14 3 4 11" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path class="bird-wing bird-wing-r" d="M24 13 Q34 3 44 11" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span>
-          <h2>Nunca decidas solo.</h2>
-          <div class="advice-trust">
-            <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 2.5H4A1.5 1.5 0 0 0 2.5 4v6.5L10 18l7.5-7.5z"/><circle cx="6.3" cy="6.3" r="1.1"/></svg>Sin costo</span>
-            <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="12" height="9" rx="2"/><path d="M7.3 9V6.4a2.6 2.6 0 0 1 5-1"/></svg>Sin compromiso</span>
-            <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 1.5L3 11.5h6l-1 7 8-10.5h-6z"/></svg>Rápido</span>
-          </div>
-        </div>
-        <div class="advice-list">
-          <div class="story-shell" aria-label="Así te asesoramos, en 3 pasos">
-            <div class="story-tabs" id="storyTabs">
-              <button type="button" class="story-tab active" data-story-index="0"><span class="story-tab-icon" aria-hidden="true"><svg viewBox="0 0 22 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h12v8H8l-3 3v-3H2z"/><path d="M20 8v7h-3v3l-3-3h-3"/></svg></span><span class="story-tab-copy"><span class="n">Paso 1</span><h3>Conocemos tu negocio</h3><p>Platicamos cómo vendes hoy, qué necesitas y qué te preocupa antes de recomendar cualquier cosa.</p></span></button>
-              <button type="button" class="story-tab" data-story-index="1"><span class="story-tab-icon" aria-hidden="true"><svg viewBox="0 0 22 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="11" y1="1" x2="11" y2="18"/><path d="M4 4L1 9h6z"/><path d="M18 4l-3 5h6z"/><path d="M1 9q3 3 6 0"/><path d="M15 9q3 3 6 0"/><line x1="6" y1="18" x2="16" y2="18"/></svg></span><span class="story-tab-copy"><span class="n">Paso 2</span><h3>Comparamos opciones</h3><p>Ponemos lado a lado terminales, bancos y pasarelas reales, con costos y condiciones claras.</p></span></button>
-              <button type="button" class="story-tab" data-story-index="2"><span class="story-tab-icon" aria-hidden="true"><svg viewBox="0 0 16 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1a6 6 0 0 0-3 11.2V15h6v-2.8A6 6 0 0 0 8 1z"/><line x1="6" y1="17.5" x2="10" y2="17.5"/><line x1="6.5" y1="20" x2="9.5" y2="20"/></svg></span><span class="story-tab-copy"><span class="n">Paso 3</span><h3>Te explicamos por qué</h3><p>Eliges con una razón concreta detrás, no solo por precio o por moda.</p></span></button>
-            </div>
-            <div class="story-media">
-              <img src="assets/hero/asesoria-personalizada.webp" alt="Conocemos tu negocio" class="active" data-story-index="0" width="1700" height="949">
-              <img src="assets/hero/comparativa-soluciones.webp" alt="Comparamos opciones" data-story-index="1" width="1700" height="949" loading="lazy">
-              <img src="assets/hero/diagnostico-cobro.webp" alt="Te explicamos por qué" data-story-index="2" width="1700" height="949" loading="lazy">
-              <div class="story-progress" id="storyProgress" aria-hidden="true"><span class="active"><i></i></span><span><i></i></span><span><i></i></span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  var RES={
+    rapida:{t:"Terminal de cobro rápido",s:"Empiezas pronto, con pocos requisitos y sin ataduras. Es la ruta más ágil para tu negocio hoy.",cta:[{l:"Comprar mi terminal",h:"https://mpago.li/2j1nqHG",c:"btn-buy"},{l:"Comparar opciones",h:"compara.html?tipo=rapida#matriz",c:"btn-ghost"}]},
+    hibrida:{t:"Modelo híbrido",s:"Cobras fácil y además sumas funciones de negocio como inventario, reportes o varios usuarios.",cta:[{l:"Comparar opciones",h:"compara.html?tipo=hibrida#matriz",c:"btn-primary"}]},
+    banca:{t:"Terminal bancaria (TPV)",s:"Tu perfil te permite negociar condiciones. Revisa bien renta, mínimos y permanencia antes de firmar.",cta:[{l:"Comparar opciones",h:"compara.html?tipo=banca#matriz",c:"btn-primary"}]},
+    pasarela:{t:"Pasarela digital",s:"Cobras en línea sin equipo físico: tienda, app o link de pago.",cta:[{l:"Comparar opciones",h:"compara.html?tipo=pasarela#matriz",c:"btn-primary"}]},
+    bnpl:{t:"Compra ahora, paga después",s:"Tu cliente paga a plazos y tú recibes el total menos comisión.",cta:[{l:"Comparar opciones",h:"compara.html?tipo=bnpl#matriz",c:"btn-primary"}]}
+  };
+  var NAMES={rapida:"cobro rápido",hibrida:"modelo híbrido",banca:"banca",pasarela:"pasarela digital",bnpl:"compra ahora, paga después"};
 
-    <section class="section diagnostic" id="diagnostico">
-      <div class="diagnostic-shell diagnostic-stepper diagnostic-with-image">
-        <div>
-          <h2>Diagnóstico</h2>
-          <p class="lead">Responde unas preguntas breves pero importantes. Al final recibirás la mejor opción y las razones reales para ti.</p>
-          <figure class="diagnostic-visual"><img src="assets/hero/diagnostico-personal.webp" alt="Dueña de un negocio pensando con calma antes de decidir" width="1700" height="949" loading="lazy"></figure>
-        </div>
-        <form id="diagnosticForm">
-          <div class="phase-head" id="phaseHead"><div class="phase-steps" id="phaseSteps"></div><span class="phase-name" id="phaseName"></span></div>
-          <div class="diagnostic-progress" id="diagnosticProgress">0 de 9 respuestas</div>
-          <div class="question-grid step-mode">
-            <fieldset class="q-card" data-step="1" data-phase="0"><legend class="q-title"><span class="q-num">1</span>¿Dónde necesitas cobrar?</legend><p class="q-help">Elige todas las que realmente usarás.</p><div class="options"><label class="option checkbox"><input type="checkbox" name="canal" value="mostrador" required><span class="mark"></span><span class="label">En un mostrador o local</span></label><label class="option checkbox"><input type="checkbox" name="canal" value="movil"><span class="mark"></span><span class="label">A domicilio, en eventos o en movimiento</span></label><label class="option checkbox"><input type="checkbox" name="canal" value="links"><span class="mark"></span><span class="label">Por link, redes sociales o WhatsApp</span></label><label class="option checkbox"><input type="checkbox" name="canal" value="ecommerce"><span class="mark"></span><span class="label">En una tienda en línea</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="2" data-phase="0"><legend class="q-title"><span class="q-num">2</span>¿Con qué documentación puedes contratar hoy?</legend><p class="q-help">No cambia tus obligaciones fiscales; solo ayuda a descartar procesos que hoy no puedes completar.</p><div class="options"><label class="option radio"><input type="radio" name="formalidad" value="sin_rfc" required><span class="mark"></span><span class="label">Identificación, pero todavía no RFC</span></label><label class="option radio"><input type="radio" name="formalidad" value="fisica"><span class="mark"></span><span class="label">Persona física con RFC</span></label><label class="option radio"><input type="radio" name="formalidad" value="moral"><span class="mark"></span><span class="label">Persona moral</span></label><label class="option radio"><input type="radio" name="formalidad" value="no_seguro"><span class="mark"></span><span class="label">No estoy seguro</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="3" data-phase="1"><legend class="q-title"><span class="q-num">3</span>En un mes normal, ¿cuánto esperas cobrar con tarjeta?</legend><p class="q-help">Una estimación está bien.</p><div class="options"><label class="option radio"><input type="radio" name="volumen" value="bajo" required><span class="mark"></span><span class="label">Menos de $10,000</span></label><label class="option radio"><input type="radio" name="volumen" value="medio"><span class="mark"></span><span class="label">Entre $10,000 y $30,000</span></label><label class="option radio"><input type="radio" name="volumen" value="alto"><span class="mark"></span><span class="label">Entre $30,000 y $100,000</span></label><label class="option radio"><input type="radio" name="volumen" value="muy_alto"><span class="mark"></span><span class="label">Más de $100,000</span></label><label class="option radio"><input type="radio" name="volumen" value="no_seguro"><span class="mark"></span><span class="label">No estoy seguro</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="4" data-phase="1"><legend class="q-title"><span class="q-num">4</span>¿Tus ventas cambian mucho de un mes a otro?</legend><div class="options"><label class="option radio"><input type="radio" name="estabilidad" value="estable" required><span class="mark"></span><span class="label">Son bastante constantes</span></label><label class="option radio"><input type="radio" name="estabilidad" value="temporada"><span class="mark"></span><span class="label">Tienen temporadas altas y bajas</span></label><label class="option radio"><input type="radio" name="estabilidad" value="variable"><span class="mark"></span><span class="label">Son muy variables o apenas voy a empezar</span></label><label class="option radio"><input type="radio" name="estabilidad" value="no_seguro"><span class="mark"></span><span class="label">No estoy seguro</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="5" data-phase="1"><legend class="q-title"><span class="q-num">5</span>¿Cuándo necesitas tener disponible el dinero de tus ventas?</legend><div class="options"><label class="option radio"><input type="radio" name="liquidez" value="mismo_dia" required><span class="mark"></span><span class="label">El mismo día</span></label><label class="option radio"><input type="radio" name="liquidez" value="siguiente_dia"><span class="mark"></span><span class="label">Al día siguiente</span></label><label class="option radio"><input type="radio" name="liquidez" value="dos_dias"><span class="mark"></span><span class="label">Puedo esperar dos días o más</span></label><label class="option radio"><input type="radio" name="liquidez" value="no_seguro"><span class="mark"></span><span class="label">No estoy seguro</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="6" data-phase="2"><legend class="q-title"><span class="q-num">6</span>¿Qué necesitas además de aceptar el pago?</legend><p class="q-help">Elige solo lo que usarás desde el inicio.</p><div class="options"><label class="option checkbox"><input type="checkbox" name="funciones" value="simple" required><span class="mark"></span><span class="label">Solo cobrar</span></label><label class="option checkbox"><input type="checkbox" name="funciones" value="catalogo"><span class="mark"></span><span class="label">Catálogo, inventario o reportes</span></label><label class="option checkbox"><input type="checkbox" name="funciones" value="multiusuario"><span class="mark"></span><span class="label">Varios usuarios, cajas o sucursales</span></label><label class="option checkbox"><input type="checkbox" name="funciones" value="integracion"><span class="mark"></span><span class="label">Conectarla con otro sistema</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="7" data-phase="2"><legend class="q-title"><span class="q-num">7</span>¿Qué compromiso te resulta aceptable?</legend><p class="q-help">No hay una respuesta mejor; queremos respetar cómo prefieres operar.</p><div class="options"><label class="option checkbox"><input type="checkbox" name="compromiso" value="comprar" required><span class="mark"></span><span class="label">Comprar el equipo una sola vez</span></label><label class="option checkbox"><input type="checkbox" name="compromiso" value="renta"><span class="mark"></span><span class="label">Pagar renta si el costo total conviene</span></label><label class="option checkbox"><input type="checkbox" name="compromiso" value="ninguno"><span class="mark"></span><span class="label">No quiero renta, mínimos ni permanencia</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="8" data-phase="2"><legend class="q-title"><span class="q-num">8</span>¿Qué quieres priorizar?</legend><p class="q-help">Puedes elegir más de una.</p><div class="options"><label class="option checkbox"><input type="checkbox" name="prioridad" value="costo" required><span class="mark"></span><span class="label">Menor costo total</span></label><label class="option checkbox"><input type="checkbox" name="prioridad" value="liquidez"><span class="mark"></span><span class="label">Recibir el dinero rápido</span></label><label class="option checkbox"><input type="checkbox" name="prioridad" value="facilidad"><span class="mark"></span><span class="label">Contratar y empezar fácilmente</span></label><label class="option checkbox"><input type="checkbox" name="prioridad" value="flexibilidad"><span class="mark"></span><span class="label">Evitar rentas y compromisos</span></label><label class="option checkbox"><input type="checkbox" name="prioridad" value="soporte"><span class="mark"></span><span class="label">Tener soporte y continuidad</span></label><label class="option checkbox"><input type="checkbox" name="prioridad" value="funciones"><span class="mark"></span><span class="label">Contar con más funciones e integraciones</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="9" data-show-if="canal:ecommerce" data-phase="2"><legend class="q-title"><span class="q-num">9</span>¿Ya tienes dónde vender en línea?</legend><p class="q-help">Si todavía no la tienes, también podemos orientarte.</p><div class="options"><label class="option radio"><input type="radio" name="plataforma" value="si"><span class="mark"></span><span class="label">Sí, ya tengo tienda o página para vender</span></label><label class="option radio"><input type="radio" name="plataforma" value="ninguna"><span class="mark"></span><span class="label">Todavía no tengo tienda en línea</span></label><label class="option radio"><input type="radio" name="plataforma" value="no_seguro"><span class="mark"></span><span class="label">No estoy seguro</span></label></div></fieldset>
-            <fieldset class="q-card" data-step="10" data-phase="2"><legend class="q-title"><span class="q-num">10</span>¿Necesitas que tus clientes paguen a plazos?</legend><p class="q-help">Estas opciones pueden aumentar el costo para el negocio.</p><div class="options"><label class="option radio"><input type="radio" name="plazos" value="no" required><span class="mark"></span><span class="label">No</span></label><label class="option radio"><input type="radio" name="plazos" value="msi_ocasional"><span class="mark"></span><span class="label">Meses sin intereses de vez en cuando</span></label><label class="option radio"><input type="radio" name="plazos" value="msi_frecuente"><span class="mark"></span><span class="label">Meses sin intereses con frecuencia</span></label><label class="option radio"><input type="radio" name="plazos" value="bnpl"><span class="mark"></span><span class="label">Ofrecer financiamiento a mis clientes, sin un banco de por medio</span></label><label class="option radio"><input type="radio" name="plazos" value="no_seguro"><span class="mark"></span><span class="label">Quiero entender las diferencias</span></label></div></fieldset>
-          </div>
-          <div class="diagnostic-nav"><button class="btn btn-white" type="button" id="diagnosticBack">Anterior</button><button class="btn btn-primary" type="button" id="diagnosticSubmit">Siguiente</button></div>
-          <div class="result result-v2" id="diagnosticResult" data-category="rapida" aria-live="polite"><div class="result-hero"><span class="result-eyebrow">Tu mejor opción</span><span class="result-emblem" id="resultEmblem" aria-hidden="true"></span><h3 id="resultTitle"></h3><p class="result-subtitle" id="resultSubtitle"></p></div><div class="result-body"><p class="result-reasons-label">Por qué encaja contigo</p><ul class="result-reasons" id="resultReasons"></ul><a class="result-primary-cta" id="resultPrimaryCta" target="_blank" rel="noopener"></a><p class="result-caveat" id="resultCaveat"></p><p class="result-secondary-label" id="resultSecondaryLabel">También puedes considerar</p><div class="result-options" id="resultTags"></div><div class="result-footer"><a class="result-compare-link" id="resultCompareLink" target="_blank" rel="noopener"></a><button type="button" class="result-restart" id="resultRestart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Volver a evaluar</button></div></div></div>
-        </form>
-      </div>
-    </section>
+  var el=function(id){return document.getElementById(id)};
+  var A={},i=0,order=[];
+  var intro=el('dxIntro'),quiz=el('dxQuiz'),res=el('dxResult');
+  if(!intro)return;
 
-    <section class="band payment-band">
-      <div class="section payment-section">
-        <span class="eyebrow">Compatibilidad</span>
-        <h2>Medios de pago disponibles según la terminal.</h2>
-        <p class="lead payment-lead">La compatibilidad cambia por modelo y proveedor. Antes de comprar verificamos cuáles acepta el equipo que te interesa.</p>
-        <p class="payment-drag-hint">Arrastra con el mouse o desliza con el dedo para explorar.</p>
-        <div class="payment-marquee-wrap">
-          <button class="payment-nav prev" type="button" data-payment-direction="previous" aria-label="Ver medios de pago anteriores">‹</button>
-          <div class="payment-marquee" id="paymentMethodsCarousel" tabindex="0" aria-label="Ejemplos de redes, vales y billeteras digitales; arrastra o desliza horizontalmente para recorrerlos">
-            <div class="payment-track"><div class="payment-set">
-              <div class="logo-tile"><img src="assets/logos/visa01.svg" alt="Visa" width="92" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/mastercard1.svg" alt="Mastercard" width="93" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/amex1.svg" alt="American Express" width="93" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/carnet1.svg" alt="Carnet" width="92" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/googlepay.svg" alt="Google Pay" width="56" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/mercadopago.svg" alt="Mercado Pago" width="56" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/edenred.svg" alt="Edenred" width="93" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/sivale.svg" alt="Sí Vale" width="93" height="56" loading="lazy"></div>
-              <div class="logo-tile payment-name"><strong>Pluxee</strong></div>
-              <div class="logo-tile"><img src="assets/logos/claro.svg" alt="Claro Pay" width="92" height="56" loading="lazy"></div>
-              <div class="logo-tile"><img src="assets/logos/rappi.svg" alt="Rappi Pay" width="92" height="56" loading="lazy"></div>
-              <div class="logo-tile payment-name"><strong>Total</strong></div>
-              <div class="logo-tile payment-name"><strong>Samsung Pay</strong></div>
-              <div class="logo-tile payment-name"><strong>Banco del Bienestar</strong></div>
-              <div class="logo-tile payment-name"><strong>TENGO!</strong></div>
-            </div></div>
-          </div>
-          <button class="payment-nav next" type="button" data-payment-direction="next" aria-label="Ver más medios de pago">›</button>
-        </div>
-      </div>
-    </section>
+  function visible(){return Q.filter(function(q){
+    if(!q.only)return true;
+    var p=q.only.split(':'),a=A[p[0]];
+    return Array.isArray(a)&&a.indexOf(p[1])>-1;});}
 
-    <section class="band faq" id="preguntas">
-      <div class="section">
-        <h2>Preguntas frecuentes.</h2>
-        <details><summary>¿Qué es una solución de cobro?</summary><p>Es cualquier herramienta que permite recibir pagos: terminal física, link de pago, pasarela, cuenta bancaria, billetera o cobranza recurrente.</p></details>
-        <details><summary>¿Qué es una opción rápida de cobro?</summary><p>Es una alternativa que permite empezar con menos requisitos que una terminal bancaria tradicional. Suele ser más fácil de activar, pero la comisión puede ser mayor.</p></details>
-        <details><summary>¿Cuándo conviene la banca tradicional?</summary><p>Cuando tu negocio ya tiene formalidad fiscal, ventas constantes y busca negociar mejores condiciones, cuidando rentas, saldos mínimos y penalizaciones.</p></details>
-        <details><summary>¿Me ayudan aunque no esté en Oaxaca?</summary><p>Sí. La página está pensada para orientar a cualquier negocio que quiera comparar soluciones de cobro antes de comprar o contratar.</p></details>
-      </div>
-    </section>
+  /* REGLAS DURAS: hay rutas que simplemente no se pueden contratar.
+     Sin RFC no hay TPV bancaria (piden RFC, domicilio fiscal y comprobantes),
+     así que la banca queda descartada por más puntos que acumule. */
+  function excluidas(){
+    var x={};
+    if(A.formalidad==='sin_rfc') x.banca=true;
+    return x;}
 
-    <section class="notice compact-notice"><div class="section"><h2>Aviso sobre marcas y referencias</h2><p>Los nombres, logotipos y marcas de terceros mencionados en este sitio pertenecen a sus respectivos propietarios y se usan únicamente con fines informativos o comparativos. Mencionarlos no implica patrocinio, afiliación ni respaldo oficial, salvo en los casos donde se indique expresamente una relación comercial, como la venta de terminales Mercado Pago. Comisiones, condiciones, promociones y requisitos pueden cambiar sin previo aviso; confirma siempre la información vigente directamente con cada proveedor.</p></div></section>
-  </main>
+  function score(){var s={rapida:0,hibrida:0,banca:0,pasarela:0,bnpl:0};
+    Q.forEach(function(q){var a=A[q.id];if(!a)return;var vals=Array.isArray(a)?a:[a];
+      vals.forEach(function(v){var o=q.o.filter(function(x){return x.v===v})[0];
+        if(o&&o.s)for(var k in o.s)s[k]+=o.s[k];});});
+    var x=excluidas();for(var k in x){if(x[k])s[k]=-1;}
+    return s;}
 
-  <a class="top-link" href="#inicio" aria-label="Subir al inicio">↑</a>
-  <footer><div class="footer-links"><a href="terminales.html">Terminales</a><a href="compara.html">Compara</a><a href="blog.html">Blog</a><a href="#diagnostico">Diagnóstico gratis</a></div>Soluciones de Cobro · Venta y asesoría integral.</footer>
-  <script src="site.js"></script>
+  /* El contador baja de forma gradual y honesta: mezcla el total (34) con el
+     conjunto ya descartado, ponderado por cuánto has avanzado. Así no se
+     desploma con una sola respuesta. */
+  function remaining(){
+    var s=score(),ans=Object.keys(A).length,total=visible().length||10;
+    var max=Math.max.apply(null,Object.keys(s).map(function(k){return s[k]}));
+    var tope=34;var xx=excluidas();for(var c in xx){if(xx[c])tope-=PROV[c];}
+    if(max===0||ans===0)return tope;
+    var x=excluidas();
+    var narrow=0;for(var k in s){if(!x[k]&&s[k]>=max*0.55)narrow+=PROV[k];}
+    narrow=Math.max(narrow,2);
+    var p=Math.min(ans/total,1);
+    return Math.max(Math.round(tope-(tope-narrow)*p),narrow);}
+
+  function render(){
+    order=visible();
+    var q=order[i];if(!q)return finish();
+    el('dxPhase').textContent=q.ph;
+    el('dxCount').textContent='Pregunta '+(i+1)+' de '+order.length;
+    el('dxBar').style.width=((i)/order.length*100)+'%';
+    el('dxTitle').textContent=q.t;
+    var help=el('dxHelp');help.textContent=q.h||'';help.style.display=q.h?'':'none';
+    var box=el('dxOpts');box.innerHTML='';
+    var cur=A[q.id];
+    q.o.forEach(function(o,n){
+      var b=document.createElement('button');
+      b.type='button';b.className='opt';
+      b.innerHTML='<span class="k">'+(n+1)+'</span><span class="t"></span>';
+      b.querySelector('.t').textContent=o.l;
+      var on=q.multi?(Array.isArray(cur)&&cur.indexOf(o.v)>-1):(cur===o.v);
+      if(on)b.classList.add('sel');
+      b.addEventListener('click',function(){pick(q,o.v)});
+      box.appendChild(b);
+    });
+    el('dxBack').disabled=(i===0);
+    el('dxNext').textContent=(i===order.length-1)?'Ver mi resultado':'Siguiente';
+    el('dxNext').disabled=!answered(q);
+    bump();
+  }
+
+  function answered(q){var a=A[q.id];return q.multi?(Array.isArray(a)&&a.length>0):!!a;}
+
+  function pick(q,v){
+    if(q.multi){var a=Array.isArray(A[q.id])?A[q.id]:[];var k=a.indexOf(v);
+      if(k>-1)a.splice(k,1);else a.push(v);A[q.id]=a;render();}
+    else{A[q.id]=v;render();setTimeout(next,420);}
+    save();
+  }
+
+  var lastLeft=34;
+  function bump(){var n=Math.min(remaining(),lastLeft),b=el('dxLeft');lastLeft=n;
+    if(b.textContent!=String(n)){b.textContent=n;b.classList.add('pulse');
+      setTimeout(function(){b.classList.remove('pulse')},320);}}
+
+  function go(step){
+    var q=el('dxQ');q.classList.add('out');
+    setTimeout(function(){q.classList.remove('out');step();},180);
+  }
+  function next(){order=visible();
+    if(i>=order.length-1)return go(finish);
+    go(function(){i++;render()});}
+  function back(){if(i>0)go(function(){i--;render()});}
+
+  var done=false;
+  function finish(){
+    if(done)return;done=true;
+    var s=score(),best='rapida',max=-1;
+    for(var k in s){if(s[k]>max){max=s[k];best=k;}}
+    var alts=Object.keys(s).filter(function(k){return k!==best&&s[k]>=max*0.55&&s[k]>0})
+                .sort(function(a,b){return s[b]-s[a]}).slice(0,2);
+    var r=RES[best];
+    el('dxResTitle').textContent=r.t;el('dxResSub').textContent=r.s;
+    var ul=el('dxReasons');ul.innerHTML='';
+    var reasons=[];
+    Q.forEach(function(q){var a=A[q.id];if(!a)return;var vals=Array.isArray(a)?a:[a];
+      vals.forEach(function(v){var o=q.o.filter(function(x){return x.v===v})[0];
+        if(o&&o.r&&o.s&&o.s[best])reasons.push(o.r);});});
+    if(!reasons.length)reasons=['Encaja con la mayoría de tus respuestas'];
+    reasons.slice(0,4).forEach(function(t){var li=document.createElement('li');li.textContent=t;ul.appendChild(li);});
+    var cta=el('dxResCta');cta.innerHTML='';
+    r.cta.forEach(function(c){var a=document.createElement('a');a.className='btn '+c.c;a.href=c.h;
+      a.target='_blank';a.rel='noopener';a.textContent=c.l;cta.appendChild(a);});
+    el('dxResAlt').textContent=alts.length?('También podrías considerar: '+alts.map(function(k){return NAMES[k]}).join(' y ')+'.'):'';
+    quiz.hidden=true;res.hidden=false;el('dxBar').style.width='100%';
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  function save(){try{localStorage.setItem('kz_dx',JSON.stringify(A))}catch(e){}}
+  function load(){try{var v=localStorage.getItem('kz_dx');if(v)A=JSON.parse(v)||{}}catch(e){}}
+
+  el('dxStart').addEventListener('click',function(){
+    load();intro.hidden=true;quiz.hidden=false;i=0;lastLeft=34;render();
+    quiz.scrollIntoView({behavior:'smooth',block:'center'});});
+  el('dxNext').addEventListener('click',next);
+  el('dxBack').addEventListener('click',back);
+  el('dxRestart').addEventListener('click',function(){
+    A={};i=0;done=false;lastLeft=34;try{localStorage.removeItem('kz_dx')}catch(e){}
+    res.hidden=true;quiz.hidden=false;render();
+    quiz.scrollIntoView({behavior:'smooth',block:'center'});});
+
+  document.addEventListener('keydown',function(e){
+    if(quiz.hidden)return;var n=parseInt(e.key,10);
+    var q=order[i];if(!q||isNaN(n)||n<1||n>q.o.length)return;
+    pick(q,q.o[n-1].v);});
+})();
+
+
+/* Aparición suave de secciones al hacer scroll */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!els.length)return;
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){
+    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+/* La barra de redes aparece cuando ya recorriste buena parte de la página */
+(function(){
+  var rail=document.querySelector('.rail');if(!rail)return;
+  function check(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    rail.classList.toggle('show', h>0 && (y/h)>0.55);
+  }
+  window.addEventListener('scroll',check,{passive:true});check();
+})();
+</script>
 </body>
 </html>

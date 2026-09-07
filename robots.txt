@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /legacy/
+Disallow: /output/
 
-Sitemap: https://solucionesdecobro.com/sitemap.xml
+Sitemap: https://kizunapay.com/sitemap.xml

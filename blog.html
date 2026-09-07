@@ -1,87 +1,167 @@
 <!doctype html>
 <html lang="es-MX">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog | Soluciones de Cobro</title>
-  <meta name="description" content="Guías prácticas sobre terminales, comisiones, bancos, links de pago y soluciones de cobro para negocios.">
-  <link rel="canonical" href="https://solucionesdecobro.com/blog.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_MX">
-  <meta property="og:site_name" content="Soluciones de Cobro">
-  <meta property="og:title" content="Blog | Soluciones de Cobro">
-  <meta property="og:description" content="Guías prácticas sobre terminales, comisiones, bancos, links de pago y soluciones de cobro para negocios.">
-  <meta property="og:image" content="https://solucionesdecobro.com/assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp">
-  <meta property="og:url" content="https://solucionesdecobro.com/blog.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/webp" href="assets/logos/logo-isotipo-soluciones-cobro.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    :root{--serif:'Newsreader',Georgia,'Times New Roman',serif}
-    .blog-page .hero h1{font-family:var(--serif);font-weight:600;letter-spacing:-.01em}
-    .blog-page .section>h2{font-family:var(--serif);font-weight:600;letter-spacing:-.005em}
-    .featured-article{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(7,29,54,.07)}
-    .featured-media{display:block;overflow:hidden}
-    .featured-media img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block;transition:transform .45s ease}
-    .featured-media:hover img{transform:scale(1.03)}
-    .featured-body{padding:32px 36px;align-self:center}
-    .featured-body h3{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.6vw,32px);margin:12px 0 10px;line-height:1.15;letter-spacing:-.005em}
-    .featured-body>p{color:var(--muted);font-size:17px;margin:0 0 14px}
-    .featured-meta{color:var(--muted);font-size:13px!important;font-weight:800;text-transform:uppercase;letter-spacing:.03em;margin:0 0 20px!important}
-    .coming-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;max-width:760px}
-    .coming-list li{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff}
-    .coming-tag{flex:none;padding:5px 11px;border-radius:999px;background:#edf7ff;color:var(--blue-dark);font-weight:900;font-size:12px}
-    .coming-title{color:var(--ink);font-weight:800;font-size:16px}
-    .guide-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;max-width:760px}
-    .guide-list a{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;text-decoration:none;transition:border-color .18s ease,box-shadow .18s ease}
-    .guide-list a:hover{border-color:#9bd8ff;box-shadow:0 10px 24px rgba(7,29,54,.07)}
-    .guide-arrow{margin-left:auto;color:var(--blue-dark);font-weight:900;font-size:18px}
-    @media(max-width:760px){.featured-article{grid-template-columns:1fr}.featured-media img{min-height:200px}.featured-body{padding:24px}.coming-list li{flex-direction:column;align-items:flex-start;gap:8px}}
-  </style>
-  <link rel="stylesheet" href="visual-polish.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Kizuna</title>
+<meta name="description" content="Guías claras para elegir cómo cobrar con tarjeta en México: comisiones, requisitos, depósitos y contratos sin tecnicismos.">
+<link rel="canonical" href="https://kizunapay.com/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Kizuna">
+<meta property="og:title" content="Blog | Kizuna">
+<meta property="og:description" content="Guías claras para elegir cómo cobrar con tarjeta en México: comisiones, requisitos, depósitos y contratos sin tecnicismos.">
+<meta property="og:image" content="https://kizunapay.com/assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp">
+<meta property="og:url" content="https://kizunapay.com/blog.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/logos/kizuna-isotipo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kizuna-base.css">
+<style>
+  .blog-hero h1{font-family:'Newsreader',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+  .feat{display:grid;grid-template-columns:1.05fr .95fr;gap:0;background:var(--papel);border:1px solid var(--linea);border-radius:22px;overflow:hidden;align-items:center;margin-bottom:34px}
+  .feat img{width:100%;height:100%;min-height:290px;object-fit:cover}
+  .feat-body{padding:34px}
+  .feat h2{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:clamp(25px,3vw,34px);margin:10px 0 12px}
+  .feat p{color:var(--muted);font-size:16.5px;margin-bottom:20px}
+  .post h3{font-family:'Newsreader',Georgia,serif;font-weight:600}
+  .soon{background:#eaf3ff;border:1px dashed #b9d6f5;border-radius:18px;padding:26px}
+  .soon ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+  .soon li{display:flex;gap:10px;color:#3f5468;font-size:15px}
+  .soon li::before{content:"○";color:var(--azul)}
+  @media(max-width:760px){.feat{grid-template-columns:1fr}.feat img{min-height:210px}.feat-body{padding:26px}}
+</style>
 </head>
-<body class="blog-page">
-  <header class="header"><div class="nav"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logos/logo-isotipo-soluciones-cobro.webp" alt="Logo de Soluciones de Cobro" width="400" height="400"><span class="brand-name">Soluciones de Cobro <small>Venta y asesoría integral</small></span></a><nav class="menu"><a href="index.html">Inicio</a><a class="diagnostic-menu-link" href="index.html#diagnostico" aria-label="Hacer mi diagnóstico gratis"><span class="label-full">Diagnóstico gratis</span><span class="label-short">Diagnóstico gratis</span></a><a href="compara.html">Compara</a><a href="terminales.html">Terminales</a><a href="blog.html">Blog</a></nav><div class="header-actions"><a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a><div class="mobile-social"><a class="mini-social facebook" href="https://www.facebook.com/profile.php?id=61582373169392" target="_blank" rel="noopener" aria-label="Facebook"><span class="brand-mask" style="--logo:url('assets/logos/facebook.svg')"></span></a><a class="mini-social instagram" href="https://www.instagram.com/solucionesdecobrooax/" target="_blank" rel="noopener" aria-label="Instagram"><span class="brand-mask" style="--logo:url('assets/logos/instagram.svg')"></span></a><a class="mini-social whatsapp" href="https://wa.me/529511825881" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="brand-mask" style="--logo:url('assets/logos/whatsapp.svg')"></span></a></div></div></div></header>
+<body>
 
-  <main>
-    <section class="hero"><div class="hero-inner" style="grid-template-columns:1fr"><div><span class="eyebrow">Blog</span><h1>Guías para cobrar mejor.</h1><p class="lead">Artículos simples y útiles sobre terminales, comisiones, pagos con tarjeta, links de pago, bancos y decisiones de cobro para negocios.</p></div></div></section>
+<a class="top" href="#top" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
 
-    <section class="section">
-      <h2>Guía destacada</h2>
-      <article class="featured-article">
-        <a class="featured-media" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html" aria-label="Leer: ¿Qué solución de cobro le conviene a tu negocio?"><img src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp" alt="Guía para elegir una solución de cobro para tu negocio" width="1200" height="675" loading="lazy"></a>
-        <div class="featured-body">
-          <span class="pill">Decisión</span>
-          <h3>¿Qué solución de cobro le conviene a tu negocio?</h3>
-          <p>Cómo elegir entre terminal, banco, link de pago o una opción híbrida según tus ventas, requisitos, liquidez y forma de operar. Sin tecnicismos.</p>
-          <p class="featured-meta">Lectura 3 min · Decisión</p>
-          <a class="btn btn-primary" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">Leer la guía</a>
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <svg width="46" height="46" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke-width="13" stroke-linejoin="round"><rect x="20" y="30" width="52" height="52" rx="17" stroke="#0073e6"/><rect x="48" y="30" width="52" height="52" rx="17" stroke="#071d36"/></g></svg>
+      <span class="bn"><b>kizuna</b><small>Soluciones de cobro</small></span>
+    </a>
+    <nav class="menu">
+      <a class="key" href="compara.html#matriz">Compara</a>
+      <a class="key" href="index.html#diagnostico">Diagnóstico</a>
+      <a href="terminales.html">Terminales</a>
+      <a href="#guias">Blog</a>
+    </nav>
+    <a class="btn btn-primary" href="https://mpago.li/2j1nqHG" target="_blank" rel="noopener">Comprar terminal</a>
+  </div>
+</header>
+
+<section class="page-hero blog-hero">
+  <div class="wrap">
+    <span class="eyebrow">Guías</span>
+    <h1>Entender antes de contratar.</h1>
+    <p class="lead">Explicamos comisiones, requisitos, depósitos y contratos sin tecnicismos, para que decidas con criterio y no por presión.</p>
+  </div>
+</section>
+
+<section id="guias" style="padding-top:16px">
+  <div class="wrap">
+    <span class="eyebrow">Guía destacada</span>
+    <div class="feat reveal" style="margin-top:14px">
+      <img src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/queconviene.webp" alt="Comparando soluciones de cobro">
+      <div class="feat-body">
+        <div class="post-meta" style="font-family:var(--display);font-weight:600;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--azul)">Guía completa · 7 min</div>
+        <h2>¿Qué solución de cobro le conviene a tu negocio?</h2>
+        <p>Las cuatro rutas para cobrar con tarjeta, cuánto cuesta realmente cada una (con cifras de referencia) y la regla simple para decidir sin equivocarte.</p>
+        <a class="btn btn-primary" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html">Leer la guía</a>
+      </div>
+    </div>
+
+    <div class="head" style="margin-top:44px;margin-bottom:22px"><h2 style="font-size:26px">Más guías</h2></div>
+    <div class="grid g3 reveal">
+      <article class="post">
+        <img src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/revisaesto.webp" alt="Requisitos de una terminal bancaria">
+        <div class="body">
+          <div class="meta">Requisitos · 5 min</div>
+          <h3>¿Qué requisitos pide un banco para darte una terminal?</h3>
+          <p>RFC, documentos, evaluación y qué hacer si todavía no cumples.</p>
+          <a class="card-link" href="blog/requisitos-terminal-bancaria.html">Leer →</a>
         </div>
       </article>
-    </section>
+      <article class="post">
+        <img src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/4formasdecobrar.webp" alt="Cuatro formas de cobrar">
+        <div class="body">
+          <div class="meta">Costos · 6 min</div>
+          <h3>Las 4 formas de cobrar con tarjeta en México</h3>
+          <p>Terminal, link de pago, pasarela y banca: para quién es cada una.</p>
+          <a class="card-link" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html#rutas">Leer →</a>
+        </div>
+      </article>
+      <article class="post">
+        <img src="assets/blog/que-solucion-de-cobro-le-conviene-a-tu-negocio/diagnostico.webp" alt="Diagnóstico de cobro">
+        <div class="body">
+          <div class="meta">Decisión · 4 min</div>
+          <h3>El costo real: más allá de la tasa</h3>
+          <p>Comisión, IVA, renta, depósito y meses sin intereses, con ejemplos.</p>
+          <a class="card-link" href="blog/que-solucion-de-cobro-le-conviene-a-tu-negocio.html#costo">Leer →</a>
+        </div>
+      </article>
+    </div>
 
-    <section class="section section-tight">
-      <h2>Más guías</h2>
-      <ul class="guide-list">
-        <li><a href="blog/requisitos-terminal-bancaria.html"><span class="coming-tag">Bancos</span><span class="coming-title">¿Qué requisitos pide un banco para darte una terminal?</span><span class="guide-arrow" aria-hidden="true">→</span></a></li>
+    <div class="soon reveal" style="margin-top:34px">
+      <div class="kick-b">Próximamente</div>
+      <ul>
+        <li>Cómo negociar tu tasa con un banco</li>
+        <li>Meses sin intereses: cuándo conviene ofrecerlos</li>
+        <li>Cobrar por WhatsApp y redes sin tienda en línea</li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section section-tight">
-      <h2>Próximamente</h2>
-      <p class="lead">Guías en las que estamos trabajando.</p>
-      <ul class="coming-list">
-        <li><span class="coming-tag">Comisiones</span><span class="coming-title">¿Qué significa 3.5% + IVA en una venta?</span></li>
-        <li><span class="coming-tag">Terminales</span><span class="coming-title">Point Smart 2, Point Air o Point Mini: ¿cuál elegir?</span></li>
-        <li><span class="coming-tag">Bancos</span><span class="coming-title">Terminal moderna vs banco: regla rápida para decidir</span></li>
-      </ul>
-    </section>
+<section style="padding-top:36px">
+  <div class="wrap">
+    <div class="compare reveal">
+      <div>
+        <span class="eyebrow" style="color:#8fc4ff">¿Prefieres el atajo?</span>
+        <h2>Te decimos cuál te conviene.</h2>
+        <p>En vez de leerlo todo, responde unas preguntas y te damos tu mejor opción con sus razones.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="index.html#diagnostico">Empezar mi diagnóstico</a>
+          <a class="btn btn-ghost" href="compara.html#matriz">Comparar opciones</a>
+        </div>
+      </div>
+      <div class="matrix"><div class="num">34</div><span class="matrix-label">proveedores comparados y actualizados</span></div>
+    </div>
+  </div>
+</section>
 
-  </main>
-  <footer><div class="footer-links"><a href="index.html">Inicio</a><a href="compara.html">Compara</a><a href="terminales.html">Terminales</a></div>Soluciones de Cobro · Blog.</footer>
-  <script src="site.js"></script>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <svg width="42" height="42" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke-width="13" stroke-linejoin="round"><rect x="20" y="30" width="52" height="52" rx="17" stroke="#4aa3ff"/><rect x="48" y="30" width="52" height="52" rx="17" stroke="#fff"/></g></svg>
+          <span class="bn"><b>kizuna</b></span>
+        </div>
+        <p style="color:#8fb4d8;max-width:270px;font-size:14.5px">Hacemos equipo para que cobres. Asesorías y venta de terminales.</p>
+      </div>
+      <div class="cols">
+        <div><h4>Explora</h4><a href="index.html">Inicio</a><a href="compara.html#matriz">Compara</a><a href="terminales.html">Terminales</a><a href="#guias">Blog</a></div>
+        <div><h4>Contacto</h4><a href="https://wa.me/529511825881">WhatsApp</a><a href="https://www.instagram.com/solucionesdecobrooax/">Instagram</a><a href="https://www.facebook.com/profile.php?id=61582373169392">Facebook</a></div>
+      </div>
+    </div>
+    <div class="base">Kizuna · Soluciones de cobro · 951 182 5881</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!els.length)return;
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){
+    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

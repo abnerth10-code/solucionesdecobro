@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" role="img" aria-label="Kizuna — Soluciones de cobro" font-family="'Poppins','Trebuchet MS',Helvetica,Arial,sans-serif">
+  <g fill="none" stroke-width="13" stroke-linejoin="round">
+    <rect x="10" y="34" width="56" height="56" rx="18" stroke="#0073e6"/>
+    <rect x="46" y="34" width="56" height="56" rx="18" stroke="#071d36"/>
+  </g>
+  <text x="122" y="72" font-size="58" font-weight="700" fill="#071d36" letter-spacing="1">kizuna</text>
+  <text x="126" y="99" font-size="15" font-weight="600" fill="#0073e6" letter-spacing="5">SOLUCIONES DE COBRO</text>
+</svg>

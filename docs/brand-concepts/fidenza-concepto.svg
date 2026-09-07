@@ -1,0 +1,87 @@
+<svg viewBox="0 0 1000 660" xmlns="http://www.w3.org/2000/svg" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif">
+  <rect width="1000" height="660" fill="#fffdf6"/>
+  <rect x="0" y="0" width="1000" height="6" fill="#071d36"/>
+
+  <!-- Header -->
+  <text x="60" y="66" font-size="15" letter-spacing="3" fill="#53687f">CONCEPTO DE MARCA · FINALISTA</text>
+  <text x="60" y="104" font-size="26" fill="#071d36">Fidenza <tspan fill="#53687f" font-size="18">· del latín </tspan><tspan fill="#0058ba" font-size="18" font-style="italic">fidentia</tspan><tspan fill="#53687f" font-size="18">: “confianza, seguridad”</tspan></text>
+
+  <!-- Main lockup -->
+  <g transform="translate(60,150)">
+    <!-- Icon: sello/escudo con palomita = aval, confianza verificada -->
+    <g transform="translate(0,6)">
+      <path d="M62 8 L112 26 V78 C112 108 90 126 62 138 C34 126 12 108 12 78 V26 Z"
+            fill="#071d36"/>
+      <path d="M40 76 L56 92 L88 54" fill="none" stroke="#ffd23f" stroke-width="11"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <!-- Wordmark (más editorial, serif) -->
+    <text x="150" y="92" font-size="72" fill="#071d36" font-family="Georgia,'Times New Roman',serif" letter-spacing="1">Fidenza</text>
+    <text x="154" y="124" font-size="17" fill="#0058ba" letter-spacing="5">CONFIANZA PARA COBRAR</text>
+  </g>
+
+  <!-- Variations row -->
+  <g transform="translate(60,320)">
+    <text x="0" y="0" font-size="13" letter-spacing="2" fill="#53687f">VARIACIONES</text>
+
+    <!-- sello solo -->
+    <g transform="translate(0,16)">
+      <path d="M46 6 L84 20 V60 C84 82 67 96 46 105 C25 96 8 82 8 60 V20 Z" fill="#071d36"/>
+      <path d="M30 58 L42 70 L66 42" fill="none" stroke="#ffd23f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- monograma F -->
+    <g transform="translate(130,16)">
+      <rect x="0" y="0" width="96" height="105" rx="16" fill="#ffffff" stroke="#dce7f1"/>
+      <text x="26" y="76" font-size="70" fill="#071d36" font-family="Georgia,serif">F</text>
+    </g>
+
+    <!-- reversed on dark -->
+    <g transform="translate(300,10)">
+      <rect x="0" y="0" width="250" height="86" rx="14" fill="#071d36"/>
+      <g transform="translate(18,14)">
+        <path d="M30 4 L58 14 V44 C58 60 45 71 30 78 C15 71 2 60 2 44 V14 Z" fill="#0e2f52"/>
+        <path d="M18 42 L27 51 L45 30" fill="none" stroke="#ffd23f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="92" y="56" font-size="36" fill="#ffffff" font-family="Georgia,serif">Fidenza</text>
+    </g>
+  </g>
+
+  <!-- Palette -->
+  <g transform="translate(60,470)">
+    <text x="0" y="0" font-size="13" letter-spacing="2" fill="#53687f">PALETA</text>
+    <g transform="translate(0,16)">
+      <rect x="0" y="0" width="90" height="54" rx="10" fill="#071d36"/>
+      <rect x="104" y="0" width="90" height="54" rx="10" fill="#0058ba"/>
+      <rect x="208" y="0" width="90" height="54" rx="10" fill="#ffd23f"/>
+      <rect x="312" y="0" width="90" height="54" rx="10" fill="#fff8e6" stroke="#dce7f1"/>
+      <rect x="416" y="0" width="90" height="54" rx="10" fill="#ffffff" stroke="#dce7f1"/>
+      <text x="0" y="72" font-size="12" fill="#53687f">#071d36</text>
+      <text x="104" y="72" font-size="12" fill="#53687f">#0058ba</text>
+      <text x="208" y="72" font-size="12" fill="#53687f">#ffd23f</text>
+      <text x="312" y="72" font-size="12" fill="#53687f">#fff8e6</text>
+      <text x="416" y="72" font-size="12" fill="#53687f">#ffffff</text>
+    </g>
+  </g>
+
+  <!-- Idea / tagline -->
+  <g transform="translate(600,150)">
+    <rect x="0" y="0" width="340" height="360" rx="16" fill="#ffffff" stroke="#dce7f1"/>
+    <text x="24" y="42" font-size="14" letter-spacing="2" fill="#0058ba">LA IDEA</text>
+    <text x="24" y="78" font-size="17" fill="#071d36">Un <tspan font-weight="bold">sello con palomita</tspan>:</text>
+    <text x="24" y="102" font-size="17" fill="#071d36">aval y confianza</text>
+    <text x="24" y="126" font-size="17" fill="#071d36">verificada. El nombre</text>
+    <text x="24" y="150" font-size="17" fill="#071d36">ya <tspan font-style="italic">significa</tspan> confianza.</text>
+
+    <line x1="24" y1="176" x2="316" y2="176" stroke="#dce7f1"/>
+
+    <text x="24" y="212" font-size="14" letter-spacing="2" fill="#0058ba">TAGLINE</text>
+    <text x="24" y="246" font-size="20" font-weight="bold" fill="#071d36">“Cobra con la</text>
+    <text x="24" y="272" font-size="20" font-weight="bold" fill="#071d36">confianza de siempre.”</text>
+
+    <line x1="24" y1="298" x2="316" y2="298" stroke="#dce7f1"/>
+
+    <text x="24" y="332" font-size="14" fill="#53687f">Dominios libres:</text>
+    <text x="24" y="354" font-size="15" fill="#18a058">fidenzapay.com · holafidenza.com</text>
+  </g>
+</svg>

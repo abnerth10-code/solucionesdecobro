@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-label="Terminal de cobro aceptando un pago con tarjeta sin contacto">
+  <defs>
+    <clipPath id="kzCardClip"><rect x="0" y="0" width="196" height="122" rx="16"/></clipPath>
+    <linearGradient id="kzScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/><stop offset="1" stop-color="#e3effc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo suave -->
+  <rect x="28" y="34" width="664" height="470" rx="60" fill="#eaf3ff"/>
+  <circle cx="120" cy="452" r="58" fill="#dcebfb"/>
+  <circle cx="640" cy="118" r="34" fill="#dcebfb"/>
+
+  <!-- Motivo de marca: dos aros entrelazados -->
+  <g fill="none" stroke="#c9e0fa" stroke-width="14" stroke-linejoin="round">
+    <rect x="486" y="392" width="86" height="86" rx="28"/>
+    <rect x="530" y="392" width="86" height="86" rx="28"/>
+  </g>
+
+  <!-- Sombra base -->
+  <ellipse cx="318" cy="470" rx="140" ry="20" fill="#cbdff3" opacity=".75"/>
+
+  <!-- Terminal -->
+  <g transform="translate(212,132) rotate(-5 105 160)">
+    <rect x="0" y="0" width="212" height="322" rx="32" fill="#071d36"/>
+    <rect x="12" y="12" width="188" height="298" rx="24" fill="#0d2b4d"/>
+    <!-- pantalla -->
+    <rect x="30" y="30" width="152" height="112" rx="16" fill="url(#kzScreen)"/>
+    <circle cx="106" cy="72" r="22" fill="#18a058"/>
+    <path d="M96 72 l7 8 14 -16" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="62" y="106" width="88" height="9" rx="4.5" fill="#b9d3ee"/>
+    <!-- teclado -->
+    <g fill="#1b4a7d">
+      <rect x="34" y="170" width="42" height="30" rx="9"/><rect x="85" y="170" width="42" height="30" rx="9"/><rect x="136" y="170" width="42" height="30" rx="9"/>
+      <rect x="34" y="210" width="42" height="30" rx="9"/><rect x="85" y="210" width="42" height="30" rx="9"/><rect x="136" y="210" width="42" height="30" rx="9"/>
+      <rect x="34" y="250" width="42" height="30" rx="9"/><rect x="85" y="250" width="42" height="30" rx="9"/><rect x="136" y="250" width="42" height="30" rx="9"/>
+    </g>
+    <rect x="72" y="294" width="68" height="10" rx="5" fill="#1b4a7d"/>
+  </g>
+
+  <!-- Ondas contactless -->
+  <g fill="none" stroke="#0073e6" stroke-width="9" stroke-linecap="round" opacity=".9">
+    <path d="M436 176 a44 44 0 0 1 0 62"/>
+    <path d="M458 160 a72 72 0 0 1 0 94"/>
+  </g>
+
+  <!-- Tarjeta -->
+  <g transform="translate(454,112) rotate(14 98 61)">
+    <g clip-path="url(#kzCardClip)">
+      <rect x="0" y="0" width="196" height="122" rx="16" fill="#ffd23f"/>
+      <rect x="0" y="30" width="196" height="24" fill="#eab700"/>
+    </g>
+    <rect x="0" y="0" width="196" height="122" rx="16" fill="none" stroke="#e2ba1f" stroke-width="2"/>
+    <rect x="22" y="70" width="34" height="26" rx="6" fill="#fff8e6"/>
+    <rect x="70" y="76" width="52" height="8" rx="4" fill="#fff8e6" opacity=".95"/>
+    <rect x="70" y="90" width="34" height="8" rx="4" fill="#fff8e6" opacity=".8"/>
+  </g>
+
+  <!-- Insignia de éxito -->
+  <g transform="translate(540,290)">
+    <circle cx="0" cy="0" r="42" fill="#fff"/>
+    <circle cx="0" cy="0" r="34" fill="#18a058"/>
+    <path d="M-13 1 l9 10 18 -21" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Monedas / detalles -->
+  <circle cx="150" cy="180" r="26" fill="#fff"/>
+  <circle cx="150" cy="180" r="19" fill="#ffd23f"/>
+  <path d="M144 172 v16 M144 176 h9 a4 4 0 0 1 0 8 h-9" fill="none" stroke="#8a6a00" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="596" cy="212" r="14" fill="#19aeea"/>
+  <circle cx="120" cy="300" r="10" fill="#0073e6" opacity=".55"/>
+</svg>

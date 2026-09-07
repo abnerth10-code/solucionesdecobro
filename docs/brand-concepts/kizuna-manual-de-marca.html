@@ -1,0 +1,254 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kizuna — Manual de marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --tinta:#071d36; --azul:#0073e6; --azul-osc:#0058ba; --cielo:#19aeea;
+    --amarillo:#ffd23f; --verde:#18a058; --fondo:#f7fbff; --papel:#ffffff;
+    --linea:#dce7f1; --muted:#53687f;
+    --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --display:'Poppins',var(--sans);
+    --serif:'Newsreader',Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header.cover{background:linear-gradient(160deg,#08213f 0%,#071d36 55%,#0a2b52 100%);color:#fff;padding:72px 0 64px}
+  header.cover .wrap{display:flex;flex-direction:column;gap:20px}
+  .brandline{display:flex;align-items:center;gap:20px}
+  .logo-knot{flex:none}
+  .wordmark{font-family:var(--display);font-weight:700;font-size:54px;letter-spacing:.5px;line-height:1}
+  .descriptor{font-family:var(--display);font-weight:500;letter-spacing:6px;font-size:14px;color:#8fc4ff;text-transform:uppercase;margin-top:6px}
+  .cover h1{font-family:var(--display);font-weight:600;font-size:28px;margin:24px 0 4px}
+  .cover p.k{color:#b9d4f2;max-width:640px;margin:0;font-size:17px}
+  .cover .kanji{font-size:15px;color:#8fc4ff;letter-spacing:1px}
+  section{padding:56px 0;border-bottom:1px solid var(--linea)}
+  .eyebrow{font-family:var(--display);font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:12px;color:var(--azul);margin:0 0 10px}
+  h2{font-family:var(--display);font-weight:600;font-size:30px;margin:0 0 8px;letter-spacing:-.01em}
+  h3{font-family:var(--display);font-weight:600;font-size:18px;margin:26px 0 8px}
+  p{margin:0 0 14px;max-width:70ch}
+  .lead{font-size:19px;color:#2c4056}
+  .grid{display:grid;gap:18px}
+  .cols-2{grid-template-columns:1fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:22px}
+  /* swatches */
+  .swatch{border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:#fff}
+  .swatch .chip{height:96px}
+  .swatch .meta{padding:12px 14px}
+  .swatch .name{font-weight:600;font-family:var(--display);font-size:15px}
+  .swatch .hex{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+  .swatch .role{font-size:12.5px;color:var(--muted);margin-top:4px}
+  /* type specimen */
+  .type-specimen{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:26px}
+  .scale div{border-top:1px dashed var(--linea);padding:10px 0}
+  .scale div:first-child{border-top:0}
+  .tag{display:inline-block;font-size:12px;color:var(--muted);font-family:var(--display);letter-spacing:1px;min-width:120px}
+  .do{border-left:4px solid var(--verde)}
+  .dont{border-left:4px solid #e2574c}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;font-family:var(--display)}
+  .pill.g{background:#e9f8ef;color:#127a42}.pill.r{background:#fdecea;color:#c0392b}
+  .mock{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:0;overflow:hidden}
+  .mock .cap{padding:12px 16px;font-size:13px;color:var(--muted);border-top:1px solid var(--linea)}
+  .mockpad{padding:22px}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:14px}
+  @media(max-width:720px){.cols-2,.cols-3{grid-template-columns:1fr}.wordmark{font-size:42px}}
+</style>
+
+<!-- reusable knot icon -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="knot">
+      <rect x="6" y="8" width="60" height="60" rx="20" fill="none" stroke="#0073e6" stroke-width="12"/>
+      <rect x="42" y="8" width="60" height="60" rx="20" fill="none" stroke="#071d36" stroke-width="12"/>
+    </g>
+    <g id="knot-light">
+      <rect x="6" y="8" width="60" height="60" rx="20" fill="none" stroke="#4aa3ff" stroke-width="12"/>
+      <rect x="42" y="8" width="60" height="60" rx="20" fill="none" stroke="#ffffff" stroke-width="12"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="brandline">
+      <svg class="logo-knot" width="112" height="80" viewBox="0 0 112 80"><use href="#knot-light"/></svg>
+      <div>
+        <div class="wordmark">kizuna</div>
+        <div class="descriptor">Soluciones de cobro</div>
+      </div>
+    </div>
+    <h1>Manual de marca</h1>
+    <p class="k">La guía para usar Kizuna de forma consistente: qué significa, cómo se ve y cómo suena.</p>
+    <p class="kanji">絆 · <em>kizuna</em> (japonés): vínculo, lazo de confianza entre personas.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">La marca</p>
+    <h2>Por qué Kizuna</h2>
+    <p class="lead">Kizuna no vende aparatos: crea el <strong>vínculo</strong> entre un negocio y la posibilidad de cobrar bien. Ese es el corazón de la marca.</p>
+    <p>En japonés, <strong>絆 (kizuna)</strong> significa el lazo profundo de confianza entre personas. Es la palabra exacta para lo que hace el negocio: acompañar a cada comerciante a elegir, comparar y comprar su solución de cobro con confianza, sin venderle lo primero. En un mercado saturado de nombres que gritan “pay/pago”, Kizuna dice algo distinto y humano: <em>hacemos equipo contigo</em>.</p>
+    <p>Además se lee natural en español mexicano —<em>ki-su-na</em>— y no choca con ninguna fintech de pagos en México, lo que la hace registrable y propia.</p>
+    <div class="grid cols-3" style="margin-top:22px">
+      <div class="card"><h3 style="margin-top:0">Personalidad</h3><p style="margin:0">Cercana, clara y confiable. Un aliado experto que explica sin tecnicismos.</p></div>
+      <div class="card"><h3 style="margin-top:0">Promesa</h3><p style="margin:0">Que elijas cómo cobrar con una razón concreta detrás, no por moda ni presión.</p></div>
+      <div class="card"><h3 style="margin-top:0">Diferenciador</h3><p style="margin:0">Comparación honesta + asesoría. Del lado del negocio, no del proveedor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Nombre + descriptor + slogan</p>
+    <h2>La arquitectura verbal</h2>
+    <div class="grid cols-3">
+      <div class="card"><div class="tag">NOMBRE</div><p style="font-family:var(--display);font-weight:700;font-size:26px;margin:6px 0 0">kizuna</p><p style="margin:6px 0 0;color:var(--muted)">Siempre en minúsculas en el logotipo. Es permanente.</p></div>
+      <div class="card"><div class="tag">DESCRIPTOR</div><p style="font-family:var(--display);font-weight:600;font-size:20px;margin:6px 0 0">Soluciones de cobro</p><p style="margin:6px 0 0;color:var(--muted)">Da claridad y SEO. Se puede ampliar el día que el negocio crezca a más servicios.</p></div>
+      <div class="card"><div class="tag">SLOGAN</div><p style="font-family:var(--serif);font-style:italic;font-size:21px;margin:6px 0 0">“Hacemos equipo para que cobres.”</p><p style="margin:6px 0 0;color:var(--muted)">Traduce el significado de <em>kizuna</em> a un beneficio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Logotipo</p>
+    <h2>El símbolo: dos aros entrelazados</h2>
+    <p>El ícono son <strong>dos aros que se enlazan</strong>: el vínculo entre tu negocio y cobrar con confianza. Uno en azul acción, otro en azul tinta. Funciona junto al nombre o solo, como ícono de app y avatar.</p>
+    <div class="grid cols-2" style="margin-top:8px">
+      <div class="mock">
+        <div class="mockpad" style="display:flex;align-items:center;gap:18px">
+          <svg width="98" height="70" viewBox="0 0 112 80"><use href="#knot"/></svg>
+          <div><div style="font-family:var(--display);font-weight:700;font-size:40px;line-height:1">kizuna</div><div style="font-family:var(--display);letter-spacing:5px;font-size:12px;color:var(--azul)">SOLUCIONES DE COBRO</div></div>
+        </div>
+        <div class="cap">Lockup principal (horizontal)</div>
+      </div>
+      <div class="mock">
+        <div class="mockpad" style="background:var(--tinta);display:flex;align-items:center;gap:18px">
+          <svg width="98" height="70" viewBox="0 0 112 80"><use href="#knot-light"/></svg>
+          <div><div style="font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:#fff">kizuna</div><div style="font-family:var(--display);letter-spacing:5px;font-size:12px;color:#8fc4ff">SOLUCIONES DE COBRO</div></div>
+        </div>
+        <div class="cap">Versión sobre fondo oscuro (reversa)</div>
+      </div>
+    </div>
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="card do"><span class="pill g">SÍ</span><h3 style="margin-top:12px">Buenas prácticas</h3>
+        <p style="margin:0">Deja aire alrededor (mínimo la altura de un aro). Úsalo en azul sobre fondo claro o en reversa sobre tinta. Mantén el nombre en minúsculas.</p></div>
+      <div class="card dont"><span class="pill r">NO</span><h3 style="margin-top:12px">Evita</h3>
+        <p style="margin:0">No lo deformes ni lo gires, no cambies sus colores, no lo pongas sobre fondos saturados, no uses el nombre en mayúsculas ni con otra tipografía.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Color</p>
+    <h2>Paleta</h2>
+    <p>Base clara y luminosa, azul dosificado como color de confianza y acción, y amarillo/verde como acentos funcionales. El azul manda; nunca ahogar la página en azul fuerte.</p>
+    <div class="grid cols-3">
+      <div class="swatch"><div class="chip" style="background:#071d36"></div><div class="meta"><div class="name">Azul tinta</div><div class="hex">#071d36</div><div class="role">Texto principal, fondos oscuros, un aro del logo.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#0073e6"></div><div class="meta"><div class="name">Azul acción</div><div class="hex">#0073e6</div><div class="role">Botones, enlaces, el otro aro del logo.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#19aeea"></div><div class="meta"><div class="name">Azul cielo</div><div class="hex">#19aeea</div><div class="role">Acento fresco, gráficos, detalles.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#ffd23f"></div><div class="meta"><div class="name">Amarillo</div><div class="hex">#ffd23f</div><div class="role">Acento cálido, destacar un dato o promo.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#18a058"></div><div class="meta"><div class="name">Verde</div><div class="hex">#18a058</div><div class="role">WhatsApp, confirmaciones, éxito.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#f7fbff;border-bottom:1px solid var(--linea)"></div><div class="meta"><div class="name">Fondo claro</div><div class="hex">#f7fbff</div><div class="role">Fondo general de páginas.</div></div></div>
+    </div>
+    <p style="margin-top:18px;color:var(--muted);font-size:14px">Neutros de apoyo: blanco <b>#ffffff</b>, línea suave <b>#dce7f1</b>, texto secundario <b>#53687f</b>. <br>Accesibilidad: usa <b>azul tinta</b> para textos largos; el <b>azul acción</b> lleva texto blanco encima en botones. Evita texto amarillo sobre blanco.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Tipografía</p>
+    <h2>Sistema tipográfico</h2>
+    <p>Dos familias hacen todo el trabajo, más una serif editorial para el blog.</p>
+    <div class="type-specimen scale">
+      <div><span class="tag">DISPLAY · Poppins</span><span style="font-family:var(--display);font-weight:700;font-size:34px">Acepta tarjetas sin complicarte</span></div>
+      <div><span class="tag">TÍTULOS · Poppins 600</span><span style="font-family:var(--display);font-weight:600;font-size:24px">Compara, decide, cobra</span></div>
+      <div><span class="tag">CUERPO · Inter</span><span style="font-family:var(--sans);font-size:17px">Texto de lectura: claro, neutro y legible en pantallas chicas. Ideal para explicar sin tecnicismos.</span></div>
+      <div><span class="tag">EDITORIAL · Newsreader</span><span style="font-family:var(--serif);font-style:italic;font-size:20px">Para el blog y frases con voz humana.</span></div>
+    </div>
+    <div class="grid cols-3" style="margin-top:18px">
+      <div class="card"><h3 style="margin-top:0">Poppins</h3><p style="margin:0">Geométrica y amable. Logotipo, títulos y botones. El nombre <b>kizuna</b> va en minúsculas, peso Bold.</p></div>
+      <div class="card"><h3 style="margin-top:0">Inter</h3><p style="margin:0">Neutra y muy legible. Todo el texto de cuerpo, formularios e interfaz.</p></div>
+      <div class="card"><h3 style="margin-top:0">Newsreader</h3><p style="margin:0">Serif editorial (ya usada en el blog). Solo para artículos y citas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Aplicaciones</p>
+    <h2>La marca en acción</h2>
+    <div class="grid cols-2">
+      <!-- header web -->
+      <div class="mock">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:#fff;border-bottom:1px solid var(--linea)">
+          <div style="display:flex;align-items:center;gap:10px">
+            <svg width="46" height="33" viewBox="0 0 112 80"><use href="#knot"/></svg>
+            <div style="font-family:var(--display);font-weight:700;font-size:22px">kizuna</div>
+          </div>
+          <div style="background:var(--azul);color:#fff;font-family:var(--display);font-weight:600;font-size:13px;padding:8px 14px;border-radius:10px">Comprar terminal</div>
+        </div>
+        <div class="cap">Encabezado del sitio web</div>
+      </div>
+      <!-- avatar -->
+      <div class="mock">
+        <div class="mockpad" style="display:flex;align-items:center;gap:16px">
+          <div style="width:76px;height:76px;border-radius:20px;background:var(--tinta);display:flex;align-items:center;justify-content:center">
+            <svg width="52" height="37" viewBox="0 0 112 80"><use href="#knot-light"/></svg>
+          </div>
+          <div style="font-family:var(--display);font-weight:600;color:var(--muted)">@kizuna.mx<br><span style="font-weight:400;font-size:14px">Avatar de redes / app</span></div>
+        </div>
+        <div class="cap">Ícono de app y foto de perfil</div>
+      </div>
+      <!-- business card -->
+      <div class="mock">
+        <div class="mockpad" style="background:linear-gradient(160deg,#0a2b52,#071d36);color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:space-between">
+          <svg width="60" height="43" viewBox="0 0 112 80"><use href="#knot-light"/></svg>
+          <div>
+            <div style="font-family:var(--display);font-weight:700;font-size:22px">Abner · Asesor</div>
+            <div style="color:#8fc4ff;font-size:13px">kizuna.mx · 951 182 5881</div>
+          </div>
+        </div>
+        <div class="cap">Tarjeta de presentación</div>
+      </div>
+      <!-- whatsapp -->
+      <div class="mock">
+        <div class="mockpad" style="background:#e9f8ef">
+          <div style="background:#fff;border-radius:12px 12px 12px 4px;padding:12px 14px;max-width:80%;box-shadow:0 1px 2px rgba(0,0,0,.06)">
+            <div style="font-family:var(--display);font-weight:700;color:var(--tinta)">Kizuna</div>
+            <div style="font-size:14px">¡Hola! Te ayudo a elegir cómo cobrar. <b>Hacemos equipo para que cobres.</b> 💳</div>
+          </div>
+        </div>
+        <div class="cap">Mensaje de WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Voz y tono</p>
+    <h2>Cómo habla Kizuna</h2>
+    <div class="grid cols-2">
+      <div class="card do"><span class="pill g">ASÍ SÍ</span>
+        <p style="margin:12px 0 0">Claro y cercano. Explica sin tecnicismos. Habla de <em>tú</em>. Da la razón detrás de cada recomendación. Ejemplo: “Con esta terminal recibes tu dinero al día siguiente y sin renta.”</p></div>
+      <div class="card dont"><span class="pill r">ASÍ NO</span>
+        <p style="margin:12px 0 0">Frío, técnico o vendedor agresivo. Nada de “solución omnicanal de adquirencia”. No presionar. No prometer lo que no se cumple.</p></div>
+    </div>
+    <h3>Tres reglas</h3>
+    <p>1) Primero el negocio del cliente, luego el producto. 2) Una idea por frase. 3) Si algo tiene letras chiquitas, dilas.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Kizuna · Soluciones de cobro — Manual de marca v1 · 絆<br>
+    Dominios reservados sugeridos: kizuna.mx · kizunapay.com · holakizuna.com · Contacto: 951 182 5881
+  </div>
+</footer>
