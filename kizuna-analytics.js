@@ -3,6 +3,7 @@
    - No carga Google Analytics hasta que la persona acepta.
    - Guarda la decisión en el navegador (kz_cookie_consent).
    - Registra clics salientes valiosos: compra, WhatsApp, PDF.
+   - Encabezado móvil: repliega la fila del menú al bajar, la regresa al subir.
    ============================================================ */
 (function () {
   'use strict';
@@ -105,11 +106,32 @@
     }, true);
   }
 
+  /* ---------- Encabezado móvil que se repliega al bajar ----------
+     En pantallas chicas el encabezado ocupa dos filas. Mantenerlo fijo
+     completo se come la pantalla; esconderlo del todo obliga a subir hasta
+     arriba para navegar. La fila del menú se oculta al bajar y regresa al
+     subir: es el patrón que usan los sitios de contenido en móvil. */
+  function encabezado() {
+    var h = document.querySelector('.site-header');
+    if (!h || getComputedStyle(h).position !== 'sticky') return;
+    var ultimo = window.scrollY || 0, tick = false;
+    function ver() {
+      var y = window.scrollY || document.documentElement.scrollTop;
+      if (y > 140 && y > ultimo + 6) h.classList.add('compacto');
+      else if (y < ultimo - 6 || y < 140) h.classList.remove('compacto');
+      ultimo = y; tick = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!tick) { tick = true; requestAnimationFrame(ver); }
+    }, { passive: true });
+  }
+
   /* ---------- Arranque ---------- */
   function iniciar() {
     if (acepto()) cargarGA();
     banner();
     seguimiento();
+    encabezado();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', iniciar);

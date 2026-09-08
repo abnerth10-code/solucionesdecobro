@@ -362,12 +362,51 @@ footer{background:var(--tinta);color:#cfe0f2;margin-top:24px}
 .promesa{margin:26px 0 0;max-width:100%;
   font-family:'Newsreader',Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;
   font-size:clamp(20px,2.3vw,27px);line-height:1.35;letter-spacing:-.005em;color:var(--azul-hondo)}
-.promesa em{font-style:italic;font-weight:600;color:var(--tinta);
-  background-image:linear-gradient(transparent 60%,rgba(255,210,63,.9) 60%);
-  background-repeat:no-repeat;background-size:0% 100%;
-  animation:kzSubraya 1.1s cubic-bezier(.2,.7,.2,1) .7s forwards}
-@keyframes kzSubraya{to{background-size:100% 100%}}
-@media(prefers-reduced-motion:reduce){
-  .promesa em{animation:none;background-size:100% 100%}
-}
+.promesa em{font-style:italic;font-weight:600;color:var(--azul)}
 @media(max-width:560px){.promesa{margin-top:22px;font-size:20px}}
+
+
+/* ============================================================
+   AJUSTES FINALES — móvil real (iPhone 16 Pro Max, Safari)
+   ============================================================ */
+
+/* El comparador ya no compite con el 30%: sin numeral, una sola columna */
+/* Comparador sin numeral: una sola columna, centrada y con aire.
+   Se quitó el "34" gigante porque chocaba con el 30% de la sección de arriba. */
+.compare-solo{grid-template-columns:1fr;max-width:820px;margin:0 auto;text-align:center;padding:52px 48px}
+.compare-solo p{max-width:600px;margin-left:auto;margin-right:auto}
+.compare-solo .cta{justify-content:center}
+@media(max-width:560px){.compare-solo{padding:34px 22px;text-align:left}.compare-solo .cta{justify-content:stretch}.compare-solo .cta .btn{flex:1;justify-content:center}}
+
+@media(max-width:900px){
+  /* Encabezado: se mantiene fijo, pero la fila del menú se repliega al bajar
+     y regresa al subir. Así no come pantalla sin perder la navegación. */
+  .site-header .menu{max-height:60px;opacity:1;overflow-x:auto;
+    transition:max-height .28s ease,opacity .22s ease,padding .28s ease,border-color .28s ease}
+  .site-header.compacto .menu{max-height:0;opacity:0;padding-top:0;border-top-color:transparent;overflow:hidden}
+
+  /* Hero: la imagen deja de comerse la pantalla */
+  .hero-shot img{height:240px}
+
+  /* La tarjeta "Antes de elegir, compara" ya no se encima con la foto:
+     queda debajo, con aire, como una nota aparte */
+  .note{position:static;margin:16px var(--pad) 0;max-width:none;
+        box-shadow:0 10px 26px rgba(7,29,54,.10)}
+
+  /* El comparador ya no cabalga sobre las olas en móvil */
+  #comparador{margin-top:0;padding-top:20px}
+  .ocean-grid{padding-bottom:80px}
+}
+@media(max-width:560px){
+  .hero-shot img{height:220px}
+  .btn-xl{width:100%;padding:19px 20px;font-size:15px;min-height:56px}
+  .dx-note{font-size:13px}
+}
+
+
+/* Foco visible en todo lo navegable con teclado.
+   Antes solo lo tenían las opciones del diagnóstico. */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+summary:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--azul);outline-offset:3px;border-radius:6px}
+.compare a:focus-visible,footer a:focus-visible{outline-color:#fff}
