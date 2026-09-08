@@ -100,8 +100,10 @@ section{padding:72px 0}
 
 /* Océano: parte de la página, con puesta de sol y olas continuas */
 .ocean{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--fondo) 0%,#f0f8fd 34%,#e4f1fb 70%,#dbedfa 100%);padding:70px 0 0;margin:20px 0 0}
-/* El comparador emerge del mar: se integra con la sección anterior */
-#comparador{padding-top:0;margin-top:-54px;padding-bottom:96px;position:relative;z-index:4}
+/* El comparador ya no se mete debajo de las olas: respira aparte.
+   Las olas cierran la sección del mar, y el bloque azul empieza después,
+   con aire suficiente para que se lean como dos escenas distintas. */
+#comparador{padding-top:92px;margin-top:0;padding-bottom:104px;position:relative;z-index:4}
 #comparador .compare{box-shadow:0 34px 70px rgba(7,29,54,.28)}
 .ocean::before{content:"";position:absolute;top:40px;right:-30px;width:560px;height:420px;z-index:0;
   background:radial-gradient(closest-side,rgba(255,205,60,.40) 0%,rgba(255,214,96,.20) 48%,rgba(255,229,150,.07) 68%,transparent 82%)}
@@ -452,7 +454,7 @@ footer{background:var(--tinta);color:#cfe0f2;margin-top:24px}
         box-shadow:0 10px 26px rgba(7,29,54,.10)}
 
   /* El comparador ya no cabalga sobre las olas en móvil */
-  #comparador{margin-top:0;padding-top:34px;padding-bottom:64px}
+  #comparador{margin-top:0;padding-top:64px;padding-bottom:72px}
   .ocean-grid{padding-bottom:112px}
 }
 @media(max-width:560px){
