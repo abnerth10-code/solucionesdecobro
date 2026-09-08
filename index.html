@@ -130,15 +130,19 @@
 <!-- COMPARADOR (pilar 1) -->
 <section id="comparador">
   <div class="wrap">
-    <div class="compare compare-solo reveal">
+    <div class="compare reveal-late">
       <div>
         <span class="eyebrow" style="color:#8fc4ff">El comparador</span>
-        <h2>Compara 34 opciones, lado a lado.</h2>
+        <h2>Todas las opciones, lado a lado.</h2>
         <p>Terminales, bancos, pasarelas y compra a plazos con su tasa, requisitos, tiempo de depósito, renta y contrato. Comparación honesta, del lado de tu negocio.</p>
         <div class="cta">
           <a class="btn btn-primary" href="compara.html#matriz">Comparar opciones</a>
           <a class="btn btn-ghost" href="assets/downloads/matriz-comparativa-soluciones-de-cobro-mexico.pdf" target="_blank" rel="noopener">Descargar PDF</a>
         </div>
+      </div>
+      <div class="matrix">
+        <div class="num">34</div>
+        <span class="matrix-label">opciones comparadas en una sola tabla</span>
       </div>
     </div>
   </div>
@@ -157,10 +161,39 @@
       <!-- Intro -->
       <div class="dx-panel" id="dxIntro">
         <div class="dx-intro">
-          <span class="dx-cta-wrap">
-            <button class="btn btn-primary btn-xl" id="dxStart" type="button">Ver mi mejor opción</button>
-          </span>
-          <p class="dx-note">9 preguntas · 2 minutos · Sin registro ni datos personales</p>
+
+          <div class="dx-pitch">
+            <span class="dx-kicker">En 2 minutos vas a saber</span>
+            <ul class="dx-gains">
+              <li><b>Qué tipo de solución te conviene</b> — terminal propia, banco, pasarela o una mezcla.</li>
+              <li><b>Cuánto te costaría de verdad</b> — comisión, renta mensual y contrato.</li>
+              <li><b>Qué requisitos te van a pedir</b> — y cuáles todavía no cumples.</li>
+            </ul>
+            <span class="dx-cta-wrap">
+              <button class="btn btn-primary btn-xl" id="dxStart" type="button">Ver mi mejor opción</button>
+            </span>
+            <p class="dx-note">9 preguntas · 2 minutos · Sin registro ni datos personales</p>
+          </div>
+
+          <div class="dx-preview" aria-hidden="true">
+            <span class="dx-preview-tag">Así se ve tu resultado</span>
+            <div class="dx-card">
+              <div class="dx-card-head">
+                <span>Tu mejor opción</span>
+                <b>Terminal de cobro rápido</b>
+              </div>
+              <div class="dx-card-body">
+                <span class="dx-card-label">Por qué encaja contigo</span>
+                <i style="width:94%"></i><i style="width:76%"></i><i style="width:88%"></i>
+                <div class="dx-card-foot"><span class="dx-card-btn">Ver opciones</span><span class="dx-card-ghost"></span></div>
+              </div>
+              <div class="dx-card-veil">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg>
+                Responde y lo desbloqueas
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -489,14 +522,24 @@
 })();
 
 
-/* Aparición suave de secciones al hacer scroll */
+/* Aparición suave de secciones al hacer scroll.
+   .reveal      -> entra apenas asoma.
+   .reveal-late -> entra cuando ya está bien dentro de la pantalla; sirve para que
+                   el bloque azul del comparador no compita con el 30% del mar. */
 (function(){
-  var els=[].slice.call(document.querySelectorAll('.reveal'));
-  if(!els.length)return;
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
-  var io=new IntersectionObserver(function(en){en.forEach(function(x){
-    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.15});
-  els.forEach(function(e){io.observe(e)});
+  var normales=[].slice.call(document.querySelectorAll('.reveal'));
+  var tardias =[].slice.call(document.querySelectorAll('.reveal-late'));
+  var todos=normales.concat(tardias);
+  if(!todos.length)return;
+  if(!('IntersectionObserver' in window)){todos.forEach(function(e){e.classList.add('in')});return;}
+  function mirar(lista,opts){
+    if(!lista.length)return;
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){
+      if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},opts);
+    lista.forEach(function(e){io.observe(e)});
+  }
+  mirar(normales,{threshold:.15});
+  mirar(tardias ,{threshold:.10,rootMargin:'-22% 0px -12% 0px'});
 })();
 
 /* La barra de redes aparece cuando ya recorriste buena parte de la página */

@@ -101,12 +101,12 @@ section{padding:72px 0}
 /* Océano: parte de la página, con puesta de sol y olas continuas */
 .ocean{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--fondo) 0%,#f0f8fd 34%,#e4f1fb 70%,#dbedfa 100%);padding:70px 0 0;margin:20px 0 0}
 /* El comparador emerge del mar: se integra con la sección anterior */
-#comparador{padding-top:0;margin-top:-54px;position:relative;z-index:4}
+#comparador{padding-top:0;margin-top:-54px;padding-bottom:96px;position:relative;z-index:4}
 #comparador .compare{box-shadow:0 34px 70px rgba(7,29,54,.28)}
 .ocean::before{content:"";position:absolute;top:40px;right:-30px;width:560px;height:420px;z-index:0;
   background:radial-gradient(closest-side,rgba(255,205,60,.40) 0%,rgba(255,214,96,.20) 48%,rgba(255,229,150,.07) 68%,transparent 82%)}
 .ocean .wrap{position:relative;z-index:3}
-.ocean-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding-bottom:96px}
+.ocean-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding-bottom:150px}
 .ocean h2{font-size:clamp(28px,3.6vw,40px);margin:12px 0 14px}
 .ocean p{color:#40566d;max-width:520px}
 .sun-stat{text-align:center}
@@ -136,6 +136,12 @@ section{padding:72px 0}
 /* Aparición suave al hacer scroll */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+/* El comparador entra más tarde y desde más abajo: llega como escena nueva,
+   cuando el 30% de la sección del mar ya salió de la pantalla. */
+.reveal-late{opacity:0;transform:translateY(64px) scale(.985);
+  transition:opacity .8s ease,transform .9s cubic-bezier(.16,.84,.28,1)}
+.reveal-late.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal-late{opacity:1;transform:none;transition:none}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .compare .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .compare .btn-ghost{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
@@ -150,15 +156,56 @@ section{padding:72px 0}
 /* ===== Diagnóstico interactivo ===== */
 .dx{background:var(--papel);border:1px solid var(--linea);border-radius:24px;box-shadow:0 20px 50px rgba(7,29,54,.07);overflow:hidden}
 .dx-panel{padding:34px}
-.dx-intro{max-width:520px;margin:0 auto;text-align:center;padding:22px 0}
-/* Intro minimalista: un solo botón que invita */
-.dx-intro{padding:46px 0 40px}
+/* --- Entrada del diagnóstico: la promesa a la izquierda, el premio a la derecha.
+   Mostrar cómo se ve el resultado antes de preguntar sube la tasa de inicio:
+   la persona sabe qué recibe a cambio de su tiempo. --- */
+.dx-intro{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;padding:44px 40px}
+.dx-kicker{display:block;font-family:var(--display);font-weight:600;font-size:12.5px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--azul);margin-bottom:18px}
+.dx-gains{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:14px}
+.dx-gains li{position:relative;padding-left:34px;font-size:16px;line-height:1.5;color:#42566a}
+.dx-gains li b{color:var(--tinta);font-weight:600}
+.dx-gains li::before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;
+  background:var(--azul) center/12px 12px no-repeat;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5.5 5.5L20 6.5'/%3E%3C/svg%3E")}
 .dx-cta-wrap{position:relative;display:inline-block}
 .dx-cta-wrap::before{content:"";position:absolute;inset:-9px;border-radius:20px;border:2px solid rgba(0,115,230,.32);animation:halo 2.8s ease-out infinite;pointer-events:none}
 @keyframes halo{0%{transform:scale(.97);opacity:.75}70%{transform:scale(1.09);opacity:0}100%{opacity:0}}
 .btn-xl{font-size:15.5px;padding:21px 42px;border-radius:14px}
-.dx-note{margin-top:18px;font-size:13.5px;color:var(--muted);letter-spacing:.2px}
-@media(prefers-reduced-motion:reduce){.dx-cta-wrap::before{animation:none;opacity:.4}}
+.dx-note{margin-top:16px;font-size:13.5px;color:var(--muted);letter-spacing:.2px}
+
+/* Vista previa del resultado: la misma tarjeta que verá, difuminada */
+.dx-preview{position:relative;padding-top:18px}
+.dx-preview-tag{position:absolute;top:-8px;left:0;font-family:var(--display);font-weight:600;font-size:11.5px;
+  letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
+.dx-card{position:relative;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--linea);
+  box-shadow:0 24px 50px rgba(7,29,54,.16);transform:rotate(-1.4deg);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.dx:hover .dx-card{transform:rotate(0deg) translateY(-3px)}
+.dx-card-head{background:linear-gradient(160deg,#0a2b52,#071d36);color:#fff;padding:22px 24px 20px}
+.dx-card-head span{display:block;font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:2px;
+  text-transform:uppercase;color:#8fc4ff;margin-bottom:7px}
+.dx-card-head b{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.2}
+.dx-card-body{padding:20px 24px 24px}
+.dx-card-label{display:block;font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--azul);margin-bottom:14px}
+.dx-card-body i{display:block;height:9px;border-radius:99px;background:#e8f0f8;margin-bottom:10px}
+.dx-card-foot{display:flex;align-items:center;gap:10px;margin-top:20px}
+.dx-card-btn{background:var(--azul);color:#fff;font-family:var(--display);font-weight:600;font-size:12.5px;
+  padding:10px 16px;border-radius:10px}
+.dx-card-ghost{flex:1;height:36px;border-radius:10px;border:1.5px solid var(--linea)}
+.dx-card-veil{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--display);font-weight:600;font-size:13.5px;color:var(--tinta);
+  background:linear-gradient(180deg,rgba(247,251,255,.10) 0%,rgba(247,251,255,.80) 46%,rgba(247,251,255,.97) 100%);
+  backdrop-filter:blur(2.5px);-webkit-backdrop-filter:blur(2.5px);padding-top:64px}
+
+@media(prefers-reduced-motion:reduce){.dx-cta-wrap::before{animation:none;opacity:.4}.dx-card{transform:none}}
+@media(max-width:900px){
+  .dx-intro{grid-template-columns:1fr;gap:32px;padding:34px 26px}
+  .dx-preview{order:-1;max-width:340px;margin:0 auto;width:100%}
+  .dx-card{transform:none}
+  .dx-cta-wrap,.dx-cta-wrap .btn{display:block;width:100%}
+  .dx-note{text-align:center}
+}
 .dx-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
 .dx-phase b{display:block;font-family:var(--display);font-weight:600;font-size:17px}
 .dx-phase span{font-size:13.5px;color:var(--muted)}
@@ -371,12 +418,6 @@ footer{background:var(--tinta);color:#cfe0f2;margin-top:24px}
    ============================================================ */
 
 /* El comparador ya no compite con el 30%: sin numeral, una sola columna */
-/* Comparador sin numeral: una sola columna, centrada y con aire.
-   Se quitó el "34" gigante porque chocaba con el 30% de la sección de arriba. */
-.compare-solo{grid-template-columns:1fr;max-width:820px;margin:0 auto;text-align:center;padding:52px 48px}
-.compare-solo p{max-width:600px;margin-left:auto;margin-right:auto}
-.compare-solo .cta{justify-content:center}
-@media(max-width:560px){.compare-solo{padding:34px 22px;text-align:left}.compare-solo .cta{justify-content:stretch}.compare-solo .cta .btn{flex:1;justify-content:center}}
 
 @media(max-width:900px){
   /* Encabezado: se mantiene fijo, pero la fila del menú se repliega al bajar
@@ -394,8 +435,8 @@ footer{background:var(--tinta);color:#cfe0f2;margin-top:24px}
         box-shadow:0 10px 26px rgba(7,29,54,.10)}
 
   /* El comparador ya no cabalga sobre las olas en móvil */
-  #comparador{margin-top:0;padding-top:20px}
-  .ocean-grid{padding-bottom:80px}
+  #comparador{margin-top:0;padding-top:34px;padding-bottom:64px}
+  .ocean-grid{padding-bottom:112px}
 }
 @media(max-width:560px){
   .hero-shot img{height:220px}
