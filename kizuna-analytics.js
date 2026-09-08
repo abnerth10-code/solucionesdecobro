@@ -39,25 +39,25 @@
     if (document.getElementById('kzCookieCss')) return;
     var css = document.createElement('style');
     css.id = 'kzCookieCss';
+    /* Compacto, abajo a la izquierda, sin tapar el contenido.
+       Ambos botones con el MISMO peso visual: rechazar debe ser tan fácil
+       como aceptar (requisito legal y coherente con la marca). */
     css.textContent =
-      '.kz-cookie{position:fixed;left:20px;right:20px;bottom:20px;z-index:200;max-width:660px;margin:0 auto;' +
-      'background:#fff;border:1px solid #e4edf6;border-radius:18px;padding:20px 24px;' +
-      'box-shadow:0 24px 60px rgba(7,29,54,.18);display:flex;gap:20px;align-items:center;flex-wrap:wrap;' +
+      '.kz-cookie{position:fixed;left:20px;bottom:20px;z-index:200;width:min(360px,calc(100vw - 40px));' +
+      'background:#fff;border:1px solid #e4edf6;border-radius:14px;padding:16px 18px;' +
+      'box-shadow:0 14px 36px rgba(7,29,54,.14);' +
       "font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;" +
-      'transform:translateY(18px);opacity:0;transition:opacity .35s ease,transform .35s ease}' +
+      'transform:translateY(14px);opacity:0;transition:opacity .3s ease,transform .3s ease}' +
       '.kz-cookie.show{opacity:1;transform:none}' +
-      '.kz-cookie p{margin:0;flex:1 1 300px;font-size:14.5px;line-height:1.5;color:#42566a}' +
-      '.kz-cookie b{font-family:\'Poppins\',sans-serif;color:#071d36;display:block;margin-bottom:3px;font-size:15px}' +
-      '.kz-cookie a{color:#0073e6;font-weight:600;text-decoration:none}' +
-      '.kz-cookie-btns{display:flex;gap:10px;flex-wrap:wrap}' +
-      ".kz-cookie button{font-family:'Poppins',sans-serif;font-weight:600;font-size:12.5px;text-transform:uppercase;" +
-      'letter-spacing:.07em;padding:13px 20px;border-radius:11px;border:1.5px solid #e4edf6;background:#fff;' +
-      'color:#071d36;cursor:pointer;transition:.15s}' +
-      '.kz-cookie button:hover{border-color:#0073e6;color:#0073e6}' +
-      '.kz-cookie button.kz-ok{background:#0073e6;border-color:#0073e6;color:#fff}' +
-      '.kz-cookie button.kz-ok:hover{background:#0058ba;border-color:#0058ba;color:#fff}' +
-      '@media(max-width:560px){.kz-cookie{padding:18px;left:12px;right:12px;bottom:12px}' +
-      '.kz-cookie-btns{width:100%}.kz-cookie button{flex:1}}';
+      '.kz-cookie p{margin:0 0 12px;font-size:14px;line-height:1.45;color:#42566a}' +
+      '.kz-cookie a{color:#0073e6;font-weight:600;text-decoration:underline}' +
+      '.kz-cookie-btns{display:flex;gap:8px}' +
+      ".kz-cookie button{flex:1;font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;" +
+      'padding:11px 12px;border-radius:9px;border:1.5px solid #cfe0f2;background:#fff;' +
+      'color:#0058ba;cursor:pointer;transition:.15s}' +
+      '.kz-cookie button:hover{background:#eaf3ff;border-color:#0073e6}' +
+      '.kz-cookie button:focus-visible{outline:2px solid #0073e6;outline-offset:2px}' +
+      '@media(max-width:560px){.kz-cookie{left:12px;right:12px;bottom:12px;width:auto;padding:14px 16px}}';
     document.head.appendChild(css);
   }
 
@@ -69,11 +69,11 @@
     caja.setAttribute('role', 'dialog');
     caja.setAttribute('aria-label', 'Aviso de cookies');
     caja.innerHTML =
-      '<p><b>Ayúdanos a mejorar la página</b>Usamos datos anónimos de navegación para saber qué información te resulta útil. ' +
-      'Puedes aceptar o seguir solo con lo necesario. <a href="privacidad.html">Aviso de privacidad</a></p>' +
+      '<p>Usamos datos anónimos para mejorar la página. ' +
+      '<a href="privacidad.html">Cómo tratamos tus datos</a></p>' +
       '<div class="kz-cookie-btns">' +
-      '<button type="button" data-kz="denied">Solo necesarias</button>' +
-      '<button type="button" class="kz-ok" data-kz="granted">Aceptar</button>' +
+      '<button type="button" data-kz="denied">Rechazar</button>' +
+      '<button type="button" data-kz="granted">Aceptar</button>' +
       '</div>';
     document.body.appendChild(caja);
     requestAnimationFrame(function () {
