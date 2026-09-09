@@ -165,3 +165,39 @@ Carpeta: `assets/marca-kizuna/fotos-listas/` — todas a 1080×1350 (4:5), rotad
 1. **Tu foto** — de frente, luz de ventana, medio cuerpo. Es tu foto de perfil real y el pilar de confianza depende de ella.
 2. **Las tres terminales encendidas juntas** sobre un mostrador. Las que tienes son de las cajas, no del equipo funcionando. Esa foto también reemplaza el render del sitio.
 3. **El Reel de presentación** — 40 segundos diciendo quién eres y qué haces.
+
+---
+
+# Plantilla: foto de calle + dato
+
+`dato-calle-nube.jpg` · `dato-calle-farol.jpg`
+
+Una foto tuya de Oaxaca, oscurecida con un degradado de la marca y un dato encima. Convierte una foto de ambiente en contenido educativo: cuenta como pilar de **Educar**, no como relleno.
+
+Se genera con el mismo script que los carruseles. Cualquier foto de calle sirve — solo hay que darle un dato verdadero.
+
+**Pie para `dato-calle-nube`:**
+> Camino por el centro y voy contando puertas.
+>
+> Papelerías, fondas, boutiques, refaccionarias. Cada una es un negocio, y buena parte todavía cobra solo en efectivo. No por falta de ganas: por no saber cuál les conviene ni cuánto les va a costar de verdad.
+>
+> Eso es lo que hago. Comparo las 34 opciones que hay en México y te digo cuál va con tu negocio. Aunque a veces la respuesta sea "todavía no".
+
+**Pie para `dato-calle-farol`:**
+> Ya cerraron. Y hoy hubo quien no pudo cobrar una venta porque el cliente no traía efectivo.
+>
+> No se nota en el momento. Se nota a fin de mes, cuando las cuentas no cuadran y no sabes dónde se fue.
+
+---
+
+# Ambiente disponible (control de inventario)
+
+| Archivo | Formatos | Estado |
+|---|---|---|
+| `ambiente-lluvia` | feed + historia | Sin usar |
+| `ambiente-luna` | feed + historia | Sin usar |
+| `ambiente-comida` | feed + historia | Sin usar |
+| `ambiente-calle-nube` | feed + historia | Sin usar |
+| `ambiente-calle-farol` | feed + historia | Sin usar |
+
+**Cinco piezas de ambiente sin publicar.** A razón de una de cada seis en el feed, alcanzan para treinta publicaciones — o sea, dos meses y medio. **Ya no hace falta más ambiente.** Lo que falta es lo de la lista de abajo.
