@@ -172,21 +172,26 @@ def frase(texto_a, resaltado, texto_b, indice, total):
 # ---------------------------------------------------------------- carruseles
 
 def carrusel_comision():
+    """Venta de $500 · 3.5% = $17.50 · IVA 16% de la comisión = $2.80 · llegan $479.70
+       Mensual: $10,000 en ventas con tarjeta -> $350 de comisión ($406 con IVA)."""
     n = 6
     return [
         portada('Educar', 'Qué significa de verdad 3.5% + IVA.',
-                'Te lo desgloso con una venta de $1,000.', total=n),
-        dato('En una venta de $1,000, la comisión del 3.5% es:', '$35',
+                'Te lo desgloso con una venta de $500.', total=n),
+        dato('En una venta de $500, la comisión del 3.5% es:', '$17.50',
              'Pero ahí no termina la cuenta. Falta el IVA.', 2, n),
-        dato('El IVA se cobra sobre la comisión, no sobre la venta:', '$5.60',
-             '16% de $35. Es el error más común al calcular.', 3, n, color=AMAR),
-        dato('Lo que realmente te llega a la cuenta:', '$959.40',
-             'De cada $1,000 que cobras con tarjeta.', 4, n, color=VERDE),
-        dato('Si vendes 100 veces al mes, te quedas sin:', '$4,060',
-             'Al año son $48,720. Por eso medio punto de diferencia sí importa.', 5, n),
-        cierre('¿Estás pagando de más?',
-               'Comparé 34 opciones en México. Las tasas van de 1.39% a 6.33% más IVA. '
-               'Te digo cuál le conviene a tu negocio, gratis.',
+        dato('El IVA se cobra sobre la comisión, no sobre la venta:', '$2.80',
+             '16% de $17.50. Es el error más común al calcular.', 3, n, color=AMAR),
+        dato('Lo que realmente te llega a la cuenta:', '$479.70',
+             'De cada $500 que cobras con tarjeta.', 4, n, color=VERDE),
+        dato('Si vendes $10,000 al mes con tarjeta, pagas:', '$350',
+             'De comisión al mes ($406 con IVA). Y varía mucho: comparé 34 opciones '
+             'en México y van de 1.39% a 6.33% más IVA.', 5, n),
+        cierre('No es un gasto. Es lo que inviertes para vender más.',
+               'Los negocios que empiezan a aceptar tarjeta suelen vender hasta un 30% más, '
+               'porque dejan de perder al cliente que llega sin efectivo. Para ganar más hay '
+               'que invertir en ciertos costos — la clave es pagar el correcto. Te digo cuál '
+               'te conviene, gratis.',
                'Escríbeme por WhatsApp', 6, n),
     ]
 

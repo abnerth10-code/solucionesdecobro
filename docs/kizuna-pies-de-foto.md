@@ -12,19 +12,20 @@
 
 > Cuando te dicen "3.5% más IVA", ¿sabes cuánto es de verdad?
 >
-> Te lo desgloso con una venta de $1,000:
-> · Comisión: $35
-> · IVA sobre la comisión: $5.60
-> · Te llega: $959.40
+> Te lo desgloso con una venta de $500:
+> · Comisión: $17.50
+> · IVA sobre la comisión: $2.80
+> · Te llegan: $479.70
 >
-> Parece poco. Pero si vendes 100 veces al mes son $4,060 que no ves. Al año, $48,720.
+> Si vendes $10,000 al mes con tarjeta, son $350 de comisión ($406 con IVA).
 >
-> Por eso comparar solo la tasa no sirve: hay que sumar renta, contrato y tiempo de depósito. Comparé 34 opciones en México y las tasas van de 1.39% a 6.33% más IVA.
+> Y aquí está lo que casi nadie te dice: eso no es un gasto, es lo que inviertes para vender más. Los negocios que empiezan a aceptar tarjeta suelen vender hasta un 30% más, porque dejan de perder al cliente que llega sin efectivo.
+>
+> Para ganar más hay que invertir en ciertos costos. La clave es pagar el correcto: comparé 34 opciones en México y las tasas van de 1.39% a 6.33% más IVA. La diferencia entre una y otra es real.
 >
 > ¿Quieres saber cuál le conviene a tu negocio? Escríbeme, la asesoría no tiene costo.
 >
-> 📍 Oaxaca, para todo México
-> 🔗 kizunapay.com
+> Oaxaca, para todo México · kizunapay.com
 
 **Hashtags · set A**
 `#Oaxaca #NegociosOaxaca #ComercioLocalOaxaca #CobrarConTarjeta #TerminalPuntoDeVenta #EmprendedoresMexico #PymesMexico #TiendaDeBarrio #FinanzasParaNegocios`
