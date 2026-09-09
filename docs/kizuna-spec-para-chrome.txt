@@ -1,0 +1,288 @@
+ESPECIFICACIÓN PARA PROGRAMAR — KIZUNA
+=====================================
+
+DESTINO (las 11, en ambas redes):
+  · Página de Facebook: "Kizuna Soluciones de cobro"  (facebook.com/kizuna.pay)
+  · Instagram: @kizuna.pay
+  En Meta Business Suite deben aparecer las dos en "Publicar en".
+
+HORA: 19:00 (zona horaria Ciudad de México) para todas.
+
+TOTAL: 11 publicaciones programadas.
+
+TIPO: publicaciones de feed. Ningún Reel ni Story — esos se suben a mano.
+
+ORDEN DE LAS IMÁGENES: dentro de cada carpeta los archivos están numerados
+01, 02, 03... y ese orden es OBLIGATORIO en los carruseles: la diapositiva 01
+es el gancho y la última es la llamada a la acción.
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 1 de 11
+FECHA Y HORA: viernes 11 de septiembre de 2026, 19:00
+IMÁGENES (1), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/01_vie-11-sep_cliente-boutique/01.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Mini-me Baby Boutique ya cobra con tarjeta.
+
+Antes vendía solo en efectivo y perdía la venta cuando alguien llegaba sin cambio. Le hice el comparativo, escogimos juntos y en dos días estaba cobrando.
+
+No le vendí la más cara. Le vendí la que le sale a cuenta con su volumen.
+
+Si tienes un negocio en Oaxaca y no sabes por dónde empezar, escríbeme. La asesoría no cuesta.
+
+#Oaxaca #NegociosOaxaca #ComercioLocalOaxaca #CobrarConTarjeta #TerminalPuntoDeVenta #EmprendedoresMexico #PymesMexico #TiendaDeBarrio
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 2 de 11
+FECHA Y HORA: lunes 14 de septiembre de 2026, 19:00
+IMÁGENES (6), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/02_lun-14-sep_carrusel-comision/01.png
+  2. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/02_lun-14-sep_carrusel-comision/02.png
+  3. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/02_lun-14-sep_carrusel-comision/03.png
+  4. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/02_lun-14-sep_carrusel-comision/04.png
+  5. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/02_lun-14-sep_carrusel-comision/05.png
+  6. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/02_lun-14-sep_carrusel-comision/06.png
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Cuando te dicen "3.5% más IVA", ¿sabes cuánto es de verdad?
+
+Te lo desgloso con una venta de $1,000:
+· Comisión: $35
+· IVA sobre la comisión: $5.60
+· Te llega: $959.40
+
+Parece poco. Pero si vendes 100 veces al mes son $4,060 que no ves. Al año, $48,720.
+
+Por eso comparar solo la tasa no sirve: hay que sumar renta, contrato y tiempo de depósito. Comparé 34 opciones en México y las tasas van de 1.39% a 6.33% más IVA.
+
+¿Quieres saber cuál le conviene a tu negocio? Escríbeme, la asesoría no tiene costo.
+
+Oaxaca, para todo México · kizunapay.com
+
+#Oaxaca #NegociosOaxaca #ComercioLocalOaxaca #CobrarConTarjeta #TerminalPuntoDeVenta #EmprendedoresMexico #PymesMexico #FinanzasParaNegocios
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 3 de 11
+FECHA Y HORA: miércoles 16 de septiembre de 2026, 19:00
+IMÁGENES (1), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/03_mie-16-sep_dato-calle/01.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Camino por el centro y voy contando puertas.
+
+Papelerías, fondas, boutiques, refaccionarias. Cada una es un negocio, y buena parte todavía cobra solo en efectivo. No por falta de ganas: por no saber cuál les conviene ni cuánto les va a costar de verdad.
+
+Eso es lo que hago. Comparo las 34 opciones que hay en México y te digo cuál va con tu negocio. Aunque a veces la respuesta sea "todavía no".
+
+kizunapay.com
+
+#Oaxaca #NegociosOaxaca #ComercioLocal #CobrarConTarjeta #EmprendedoresMexico #PymesMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 4 de 11
+FECHA Y HORA: viernes 18 de septiembre de 2026, 19:00
+IMÁGENES (1), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/04_vie-18-sep_cliente-cobro/01.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Así se ve una venta que no se perdió.
+
+Cada cliente que llega sin efectivo y se va sin comprar es dinero que no vuelve. No se nota en el momento: se nota a fin de mes, cuando las cuentas no cuadran y no sabes dónde se fue.
+
+Aceptar tarjeta no es un gasto. Es dejar de perder.
+
+#Oaxaca #NegociosOaxaca #CobrarConTarjeta #TiendaDeBarrio #EmprendedoresMexico #PymesMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 5 de 11
+FECHA Y HORA: lunes 21 de septiembre de 2026, 19:00
+IMÁGENES (6), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/05_lun-21-sep_carrusel-sin-rfc/01.png
+  2. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/05_lun-21-sep_carrusel-sin-rfc/02.png
+  3. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/05_lun-21-sep_carrusel-sin-rfc/03.png
+  4. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/05_lun-21-sep_carrusel-sin-rfc/04.png
+  5. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/05_lun-21-sep_carrusel-sin-rfc/05.png
+  6. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/05_lun-21-sep_carrusel-sin-rfc/06.png
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+"¿Necesito RFC para tener una terminal?"
+
+Es la pregunta que más me hacen. La respuesta corta: depende de cuál.
+
+Para una terminal bancaria sí, y piden bastante más: alta fiscal vigente, cuenta empresarial en ese banco, e.firma en varios casos, comprobante de domicilio del negocio y una evaluación comercial que puedes no pasar.
+
+Con una terminal de cobro rápido arrancas con identificación, una cuenta a tu nombre y validación de perfil. La flexibilidad se paga con comisión, pero al menos existe.
+
+De las 34 opciones que comparo, 13 son bancarias. Si no tienes RFC, recomendártelas sería hacerte perder el tiempo — por eso mi diagnóstico las descarta solo.
+
+9 preguntas, 2 minutos, sin registro. El enlace está en mi perfil.
+
+#RFC #NegociosOaxaca #Oaxaca #TerminalBancaria #CobrarConTarjeta #EmprendedorMexicano #SATMexico #PymesMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 6 de 11
+FECHA Y HORA: miércoles 23 de septiembre de 2026, 19:00
+IMÁGENES (3), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/06_mie-23-sep_las-tres-point/01.jpg
+  2. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/06_mie-23-sep_las-tres-point/02.jpg
+  3. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/06_mie-23-sep_las-tres-point/03.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Point Mini, Air y Smart 2.
+
+· Mini — la más económica para empezar. Se conecta a tu celular.
+· Air — con batería, para moverte por el local o salir a entregar.
+· Smart 2 — pantalla táctil e imprime ticket. Todo integrado.
+
+¿Cuál te toca? Depende de cómo vendes, no de cuál me deja más a mí. Pregúntame antes de comprar.
+
+#TerminalPuntoDeVenta #MercadoPagoPoint #Oaxaca #NegociosOaxaca #CobrarConTarjeta #PymesMexico #EmprendedoresMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 7 de 11
+FECHA Y HORA: viernes 25 de septiembre de 2026, 19:00
+IMÁGENES (1), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/07_vie-25-sep_cliente/01.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Un cobro más que sí se pudo.
+
+La dueña de esta boutique me dijo algo que se me quedó: "yo pensaba que era complicadísimo". Le tomó dos días.
+
+Lo complicado no es la terminal. Es elegir bien entre 34 opciones que suenan todas parecidas.
+
+#Oaxaca #NegociosOaxaca #ComercioLocalOaxaca #CobrarConTarjeta #EmprendedoresMexico #TiendaDeBarrio
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 8 de 11
+FECHA Y HORA: lunes 28 de septiembre de 2026, 19:00
+IMÁGENES (5), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/08_lun-28-sep_carrusel-deposito/01.png
+  2. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/08_lun-28-sep_carrusel-deposito/02.png
+  3. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/08_lun-28-sep_carrusel-deposito/03.png
+  4. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/08_lun-28-sep_carrusel-deposito/04.png
+  5. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/08_lun-28-sep_carrusel-deposito/05.png
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+El dato que casi nadie revisa antes de firmar: cuándo llega tu dinero.
+
+De las 34 opciones que comparo, solo dos depositan el mismo día. El resto del cobro rápido va a 24 horas, la banca entre 24 y 48, y las pasarelas hasta 72.
+
+Y ojo con la letra chiquita: "24 horas" casi siempre significa 24 horas hábiles. Sábado y domingo no cuentan. Un cobro del viernes puede caer hasta el lunes. Varias opciones te cobran extra por adelantarlo.
+
+Si compras insumos a diario, esto pesa más que medio punto de comisión.
+
+¿Cada cuánto necesitas tu dinero? Cuéntame y te digo qué opción aguanta ese ritmo.
+
+kizunapay.com
+
+#CobrarConTarjeta #NegociosOaxaca #Oaxaca #FlujoDeEfectivo #TerminalPuntoDeVenta #PymesMexico #EmprendedoresMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 9 de 11
+FECHA Y HORA: miércoles 30 de septiembre de 2026, 19:00
+IMÁGENES (1), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/09_mie-30-sep_dato-calle-noche/01.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Ya cerraron. Y hoy hubo quien no pudo cobrar una venta porque el cliente no traía efectivo.
+
+No se nota en el momento. Se nota a fin de mes, cuando las cuentas no cuadran y no sabes dónde se fue.
+
+#Oaxaca #NegociosOaxaca #ComercioLocal #CobrarConTarjeta #PymesMexico #EmprendedoresMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 10 de 11
+FECHA Y HORA: viernes 2 de octubre de 2026, 19:00
+IMÁGENES (1), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/10_vie-2-oct_cliente/01.jpg
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+Cobrar con tarjeta no cambia tu negocio de golpe. Cambia las ventas que antes se te iban.
+
+Ese es el cálculo honesto: no es magia, es dejar de perder clientes que llegan sin efectivo.
+
+Si quieres saber cuánto te costaría a ti, escríbeme. Te lo saco con tus números.
+
+#Oaxaca #NegociosOaxaca #CobrarConTarjeta #TiendaDeBarrio #EmprendedoresMexico #PymesMexico
+"""
+
+
+─────────────────────────────────────────
+PUBLICACIÓN 11 de 11
+FECHA Y HORA: lunes 5 de octubre de 2026, 19:00
+IMÁGENES (7), en este orden exacto:
+  1. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/01.png
+  2. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/02.png
+  3. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/03.png
+  4. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/04.png
+  5. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/05.png
+  6. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/06.png
+  7. /Users/abnr/Documents/GitHub/solucionesdecobro/assets/marca-kizuna/programar/11_lun-5-oct_carrusel-costo-real/07.png
+
+TEXTO (pegar tal cual, incluyendo los hashtags):
+"""
+La tasa más baja no siempre es la más barata. Te lo demuestro con números.
+
+Una tienda que cobra $36,000 al mes con tarjeta, tres rutas posibles:
+· 3.5% sin renta → $1,260
+· 2.5% + renta de $500 → $1,400
+· 1.9% + renta de $900 → $1,584
+
+Gana la de la tasa más alta, por $324 al mes. $3,888 al año.
+
+¿Por qué? Porque con ese volumen la renta pesa más que la tasa. La renta empieza a convenir arriba de $50,000 mensuales cobrados con tarjeta. Abajo de eso, se come el ahorro.
+
+Por eso desconfía de quien te vende "la tasa más baja del mercado" sin preguntarte cuánto vendes.
+
+Hago este ejercicio contigo, con tus ventas reales y sin costo.
+
+#Oaxaca #NegociosOaxaca #ComercioLocal #CobrarConTarjeta #ComisionesBancarias #EmprendedoresMexico #PymesMexico
+"""
+
+
+─────────────────────────────────────────
+NOTAS PARA QUIEN EJECUTE
+
+1. El 16 de septiembre es fiesta nacional en México. Si el alcance importa,
+   la publicación 3 puede moverse al jueves 17 sin perder nada.
+
+2. ADVERTENCIA TÉCNICA: al pulsar "Agregar foto/video", Meta Business Suite
+   abre el selector de archivos NATIVO de macOS. No existe ningún elemento
+   input[type=file] en la página — lo verifiqué en el DOM, en iframes y en
+   shadow DOM. Tampoco acepta eventos sintéticos de arrastrar y soltar, y su
+   política de seguridad bloquea traer imágenes desde una URL externa.
+   Si tu herramienta de subida trabaja sobre un input de la página, va a
+   fallar igual. Conviene probarlo con UNA publicación antes de intentar las 11.
+
+3. Confirmar con Abner antes de programar cada una, como él pidió.
