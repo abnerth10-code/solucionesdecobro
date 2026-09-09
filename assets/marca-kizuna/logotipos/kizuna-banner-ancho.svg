@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 608">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0.35" y2="1">
+    <stop offset="0" stop-color="#071d36"/><stop offset="1" stop-color="#0a2f5a"/></linearGradient>
+    <radialGradient id="sol" cx="88%" cy="14%" r="46%">
+      <stop offset="0" stop-color="#ffd23f" stop-opacity=".22"/>
+      <stop offset="55%" stop-color="#ffd23f" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#ffd23f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1080" height="608" fill="url(#g)"/>
+  <rect width="1080" height="608" fill="url(#sol)"/>
+  <g transform="translate(0,512) scale(0.75,0.62)"><g opacity=".5"><path d="M-60,58 C180,104 360,14 540,50 C720,86 900,16 1080,52 C1240,81 1380,46 1500,58 L1500,170 L-60,170 Z" fill="#123f6f"/></g><g opacity=".65"><path d="M-60,92 C200,140 380,50 580,86 C780,122 960,54 1160,88 C1300,110 1400,84 1500,92 L1500,170 L-60,170 Z" fill="#0b2e57"/></g><g opacity=".45"><path d="M-60,124 C220,168 420,98 640,124 C860,150 1040,104 1240,124 C1340,133 1430,130 1500,126 L1500,170 L-60,170 Z" fill="#4aa3ff"/></g></g>
+  <g transform="translate(128.8,165.5) scale(1.75)"><g fill="none" stroke-width="13" stroke-linejoin="round"><rect x="10" y="30" width="56" height="56" rx="18" stroke="#4aa3ff"/><rect x="46" y="30" width="56" height="56" rx="18" stroke="#ffffff"/></g><text x="122" y="72" font-family="Poppins" font-size="58" font-weight="700" fill="#ffffff" letter-spacing="1">kizuna</text><text x="126" y="99" font-family="Poppins" font-size="15" font-weight="600" fill="#4aa3ff" letter-spacing="5">SOLUCIONES DE COBRO</text></g>
+</svg>

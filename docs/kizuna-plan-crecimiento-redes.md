@@ -151,6 +151,124 @@ Tres publicaciones por semana. Cada una con **texto, imagen y cómo conseguirla*
 
 ---
 
+## 4-bis. La sesión de fotos: todo en una tarde
+
+No tomes las fotos post por post. **Junta todo en una sola sesión** y te alcanza para dos meses. Aparta una mañana de 9 a 12, que es cuando la luz sirve.
+
+### Lista de tomas — imprímela y ve tachando
+
+**En tu espacio de trabajo (30 min)**
+
+| # | Toma | Cómo |
+|---|---|---|
+| 1 | Tú de frente, medio cuerpo, mirando a cámara | Ventana a tu izquierda o derecha, nunca atrás. Fondo: tu librero o pared con algo de vida. Esta es tu foto de perfil real. |
+| 2 | Tú hablando, tres cuartos de perfil | Para portadas de Reel |
+| 3 | Cenital de tu mesa: laptop con el comparador abierto, libreta con anotaciones a mano, café | Párate en una silla y dispara hacia abajo |
+| 4 | Tus manos sobre el teclado, pantalla con la matriz visible | Enfoca la pantalla, no las manos |
+| 5 | Tú de espaldas viendo la pantalla grande con la comparativa | Es tu credencial: 34 opciones revisadas |
+
+**Las terminales (25 min)**
+
+| # | Toma | Cómo |
+|---|---|---|
+| 6 | Las tres Point en diagonal sobre mostrador de madera | **Ésta reemplaza el render de IA del sitio.** Fondo neutro, luz de ventana, sin flash |
+| 7 | Cada terminal sola, de frente | Tres fotos, una por modelo |
+| 8 | Terminal en tu mano, escala real | Se nota el tamaño, que es lo que la gente pregunta |
+| 9 | Detalle: pantalla encendida con un monto | Acércate, que se lea |
+| 10 | Terminal junto a una tarjeta y un celular | Para hablar de medios de pago |
+
+**En la calle, con un cliente (45 min)**
+
+| # | Toma | Cómo |
+|---|---|---|
+| 11 | El mostrador del negocio con la terminal puesta | Pide permiso primero |
+| 12 | El dueño cobrando, manos y terminal | Si no quiere salir de cara, solo manos |
+| 13 | El dueño de frente en su negocio | La foto de testimonio. Oro puro |
+| 14 | Tú explicándole algo, los dos en cuadro | Pídele a alguien que dispare |
+| 15 | Fachada del negocio | Contexto, y al dueño le gusta |
+
+**Guarda todo en una carpeta por fecha.** Con estas quince tienes material para las doce publicaciones del mes y sobra.
+
+### Cómo pedir permiso
+
+Textual, funciona: *"¿Me dejarías tomar unas fotos aquí para mi Instagram? Pongo el nombre de tu negocio y la etiqueta, así también te ven a ti."* La mayoría acepta cuando entiende que gana visibilidad. Si duda, ofrece mandarle las fotos para que las use él.
+
+---
+
+## 4-ter. Video y audio
+
+### Los tres formatos que vas a usar
+
+**① Hablando a cámara (40–60 seg)**
+- Celular en vertical, apoyado en libros a la **altura de tus ojos** — nunca desde abajo.
+- Ventana de frente o de lado. Tu cara iluminada, no a contraluz.
+- Distancia: brazo extendido. Más lejos, el micrófono del celular pierde.
+- **Sin guion memorizado.** Ten tres puntos anotados y habla. Tres tomas, usa la segunda.
+
+**② Grabación de pantalla (20–40 seg)**
+- iPhone: Ajustes → Centro de Control → agrega Grabación de pantalla. Mantén presionado el botón y **activa el micrófono** para narrar mientras grabas.
+- Graba tu propio comparador o el diagnóstico. Tu producto como protagonista.
+
+**③ Tomas de apoyo, sin voz (5 seg cada una)**
+- Cinco clips cortos que luego montas: caminar al negocio, el mostrador, la terminal cobrando, el apretón de manos.
+- Es lo más fácil de producir y lo que más rinde.
+
+### Audio
+
+- **Tu voz siempre gana.** El micrófono del celular basta en interior y cerca. Evita cuartos con eco: si hay cortinas o un sillón, mejor.
+- **Música solo de fondo, al 10–15% de volumen**, y únicamente en las tomas de apoyo sin voz. Nunca música épica sobre datos financieros: choca con el tono de honestidad.
+- Usa el **catálogo de audio de Instagram**, no música de tu biblioteca — así evitas bloqueos por derechos y además el algoritmo favorece los audios de la plataforma.
+- **Subtítulos siempre.** La mayoría ve sin sonido. Instagram los genera solos: al publicar el Reel, activa "Subtítulos automáticos" y **revísalos** — se comen los números y las cifras son justo lo tuyo.
+
+### Especificaciones
+
+| Qué | Valor |
+|---|---|
+| Reels y Stories | Vertical 9:16 · 1080×1920 |
+| Carruseles y estáticos | Vertical 4:5 · 1080×1350 |
+| Duración de Reel | 20–60 seg (los de 30 rinden más) |
+| Formato | MP4, el que graba el celular está bien |
+
+### Apps gratis que sí valen
+
+- **CapCut** — corte, subtítulos automáticos, plantillas. Es el estándar y es gratis.
+- **Instagram nativo** — para Stories y ediciones simples; publicar desde la app da mejor alcance que subir desde escritorio.
+- **Snapseed** — corrección de fotos: sube brillo, endereza, y ya. Nada de filtros pesados.
+
+---
+
+## 4-quáter. Cómo programar las publicaciones
+
+**Meta Business Suite, gratis y nativo.** No uses Make para esto: tu conexión de Instagram ahí ya falló antes con errores de media y token, y para tres publicaciones semanales no compensa mantener esa plomería.
+
+**La rutina quincenal, 20 minutos:**
+
+1. Entra a `business.facebook.com` → **Planificador**.
+2. Botón **Crear publicación** → elige Instagram y Facebook a la vez.
+3. Sube la imagen o el video, pega el texto y los hashtags.
+4. **Programar** → fija día y hora.
+5. Repite para las seis de la quincena y revisa el calendario visual antes de cerrar.
+
+**Horarios, con tus datos reales de Meta:**
+
+| Red | Hora |
+|---|---|
+| Facebook | 22:00 |
+| Instagram | 19:00 |
+
+**Lo que no se puede programar:** las Stories hay que subirlas a mano desde el celular, y los Reels conviene publicarlos desde la app —el alcance es mejor que programándolos desde escritorio—. Así que programa carruseles y estáticos, y los Reels súbelos tú el día que toca.
+
+**El orden real de trabajo:**
+
+1. Sesión de fotos (una tarde) → tienes el material.
+2. Yo te armo los gráficos de datos de los carruseles.
+3. Tú grabas los tres Reels del mes.
+4. Programamos los seis de la quincena en una sentada.
+
+Si quieres, la programación la hago yo con el navegador y tú solo apruebas antes de que se agende.
+
+---
+
 ## 5. La rutina diaria (30 minutos, no negociables)
 
 El contenido es la mitad. La otra mitad es esto, y es lo que casi nadie hace:
