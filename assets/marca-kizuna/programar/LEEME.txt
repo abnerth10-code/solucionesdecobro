@@ -1,0 +1,19 @@
+CÓMO PROGRAMAR — 11 publicaciones, ~2 minutos cada una
+
+Cada carpeta es UNA publicación. El nombre trae la fecha.
+Dentro están las imágenes ya numeradas en el orden correcto (01, 02, 03...)
+y TEXTO.txt con el pie y los hashtags listos para copiar.
+
+PARA CADA CARPETA:
+ 1. business.facebook.com  ->  Planificador  ->  Crear publicación
+ 2. Verifica que en "Publicar en" estén las dos cuentas
+ 3. Agregar foto/video  ->  abre esta carpeta  ->  Cmd+A para seleccionar todo  ->  Abrir
+    (ignora el archivo TEXTO.txt si aparece; solo se seleccionan imágenes)
+ 4. Abre TEXTO.txt, copia todo y pégalo en el campo de texto
+ 5. Programar  ->  activa "Establecer fecha y hora"  ->  la fecha del nombre de la carpeta, 19:00
+ 6. Programar publicación
+
+Al terminar, entra al Planificador y revisa la vista de calendario:
+deben aparecer las 11 en su día.
+
+NOTA: el 16 de septiembre es fiesta nacional. Si prefieres, mueve esa al jueves 17.
