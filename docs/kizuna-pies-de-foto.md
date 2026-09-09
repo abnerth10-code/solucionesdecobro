@@ -111,3 +111,57 @@
 ## Lo que no se programa
 
 Los **Reels** y las **Stories** conviene subirlos desde la app el día que tocan: el alcance es mejor que programándolos desde escritorio. Programa solo carruseles y estáticos.
+
+---
+
+# Fotos reales listas para publicar
+
+Carpeta: `assets/marca-kizuna/fotos-listas/` — todas a 1080×1350 (4:5), rotadas, recortadas y niveladas.
+
+## Cliente real · boutique Mini-me / Yani
+
+`cliente-01` a `cliente-08`. Es tu material del pilar de confianza. **Antes de publicarlas, avísale a la dueña y etiquétala** — le sirve a ella también, y es lo correcto.
+
+**Pie sugerido (cliente-05, la de la tarjeta acercándose):**
+> Mini-me Baby Boutique ya cobra con tarjeta.
+>
+> Antes vendía solo en efectivo y perdía la venta cuando alguien llegaba sin cambio. Le hice el comparativo, escogimos juntos y en dos días estaba cobrando.
+>
+> No le vendí la más cara. Le vendí la que le sale a cuenta con su volumen.
+>
+> Si tienes un negocio en Oaxaca y no sabes por dónde empezar, escríbeme. La asesoría no cuesta.
+
+**Pie sugerido (cliente-08, terminal con el cobro en pantalla):**
+> Así se ve una venta que no se perdió.
+>
+> Cada cliente que llega sin efectivo y se va sin comprar es dinero que no vuelve. Aceptar tarjeta no es un gasto: es dejar de perder.
+
+## Producto · las tres Point
+
+`producto-point-mini`, `producto-point-air`, `producto-point-smart2`. Sirven para el carrusel de modelos.
+
+> Point Mini, Air y Smart 2.
+>
+> · **Mini** — la más económica para empezar. Se conecta a tu celular.
+> · **Air** — con batería, para moverte por el local o salir a entregar.
+> · **Smart 2** — pantalla táctil e imprime ticket. Todo integrado.
+>
+> ¿Cuál te toca? Depende de cómo vendes, no de cuál me deja más. Pregúntame.
+
+## Ambiente · para respirar
+
+`ambiente-lluvia` y `ambiente-luna`, cada una en versión feed (4:5) y historia (9:16).
+
+**Máximo una de cada seis publicaciones del feed.** En Stories, libre.
+
+> **Lluvia:** Lunes de lluvia y los negocios abren igual. Esa terquedad es la que respeto. Que la semana les rinda.
+
+> **Luna:** Cerré el día con dos asesorías. A una le dije que todavía no le conviene comprar terminal. Mañana seguimos.
+
+---
+
+## Lo que todavía falta y solo puedes hacer tú
+
+1. **Tu foto** — de frente, luz de ventana, medio cuerpo. Es tu foto de perfil real y el pilar de confianza depende de ella.
+2. **Las tres terminales encendidas juntas** sobre un mostrador. Las que tienes son de las cajas, no del equipo funcionando. Esa foto también reemplaza el render del sitio.
+3. **El Reel de presentación** — 40 segundos diciendo quién eres y qué haces.
