@@ -265,6 +265,8 @@
           <div class="dx-opts" id="dxOpts" role="group"></div>
         </div>
 
+        <p class="dx-teclado">Puedes responder con el teclado: <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>… y <kbd>Enter</kbd> para avanzar.</p>
+
         <div class="dx-nav">
           <button class="btn btn-ghost" id="dxBack" type="button">Atrás</button>
           <button class="btn btn-primary" id="dxNext" type="button">Siguiente</button>
@@ -599,11 +601,50 @@
     quiz.scrollIntoView({behavior:'smooth',block:'center'});});
 
   document.addEventListener('keydown',function(e){
-    if(quiz.hidden)return;var n=parseInt(e.key,10);
+    if(quiz.hidden)return;
+    /* Enter avanza si la pregunta ya está contestada */
+    if(e.key==='Enter'){var b=el('dxNext');
+      if(b&&!b.disabled){e.preventDefault();next();} return;}
+    var n=parseInt(e.key,10);
     var q=order[i];if(!q||isNaN(n)||n<1||n>q.o.length)return;
     pick(q,q.o[n-1].v);});
 })();
 
+
+/* ============ MODO INMERSIVO DEL DIAGNÓSTICO ============
+   Al empezar, la pregunta se adueña de la pantalla — sin encabezado, sin
+   secciones alrededor. Es lo que hace que un cuestionario largo se sienta
+   corto: quitar todo lo que compite por la atención. Se sale con la × o Esc. */
+(function(){
+  var dx=document.getElementById('dx'); if(!dx)return;
+  var inicio=document.getElementById('dxStart');
+  var abierto=false, scrollY=0;
+
+  var cerrar=document.createElement('button');
+  cerrar.type='button'; cerrar.className='dx-cerrar'; cerrar.setAttribute('aria-label','Salir del diagnóstico');
+  cerrar.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" '+
+    'stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+
+  function abrir(){
+    if(abierto)return; abierto=true;
+    scrollY=window.scrollY||0;
+    dx.classList.add('inmersivo');
+    document.body.classList.add('dx-abierto');
+    dx.appendChild(cerrar);
+  }
+  function salir(){
+    if(!abierto)return; abierto=false;
+    dx.classList.remove('inmersivo');
+    document.body.classList.remove('dx-abierto');
+    if(cerrar.parentNode)cerrar.parentNode.removeChild(cerrar);
+    window.scrollTo(0,scrollY);
+    var s=document.getElementById('diagnostico');
+    if(s)s.scrollIntoView({block:'start'});
+  }
+  cerrar.addEventListener('click',salir);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape')salir(); });
+  if(inicio)inicio.addEventListener('click',abrir);
+})();
 
 /* ============ DEMOSTRACIÓN DEL DIAGNÓSTICO ============
    El contador baja en bucle para enseñar el mecanismo antes de que

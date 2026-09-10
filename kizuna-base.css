@@ -227,7 +227,14 @@ section{padding:72px 0}
 .opt .t{font-size:15.5px;font-weight:500}
 .opt.sel{border-color:var(--azul);background:#eaf3ff;box-shadow:0 0 0 3px rgba(0,115,230,.12)}
 .opt.sel .k{background:var(--azul);color:#fff}
-.dx-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+/* Pista de teclado: la función ya existía, faltaba anunciarla.
+   Se oculta en táctil, donde no aplica. */
+.dx-teclado{margin:22px 0 0;font-size:13.5px;color:var(--muted)}
+.dx-teclado kbd{display:inline-block;font-family:var(--display);font-size:12px;font-weight:600;
+  color:var(--tinta);background:#fff;border:1px solid var(--linea);border-bottom-width:2px;
+  border-radius:6px;padding:2px 7px;margin:0 1px}
+@media(hover:none),(max-width:820px){.dx-teclado{display:none}}
+.dx-nav{display:flex;justify-content:space-between;gap:12px;margin-top:20px}
 .dx-nav .btn{min-width:132px}
 .dx-nav .btn:disabled{opacity:.4;cursor:not-allowed}
 /* resultado */
@@ -578,4 +585,35 @@ summary:focus-visible,[tabindex]:focus-visible{
 }
 @media(prefers-reduced-motion:reduce){
   .calc-cifra.rodando #cEntero,.calc-cifra.rodando .calc-cent{opacity:1;color:var(--tinta)}
+}
+
+
+/* ============================================================
+   DIAGNÓSTICO A PANTALLA COMPLETA
+   Quitar lo que compite por la atención es lo que hace que un
+   cuestionario de nueve preguntas se sienta corto.
+   ============================================================ */
+body.dx-abierto{overflow:hidden}
+.dx.inmersivo{position:fixed;inset:0;z-index:200;border:0;border-radius:0;box-shadow:none;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  background:linear-gradient(170deg,#f7fbff 0%,#eef6fe 100%);
+  display:flex;flex-direction:column;justify-content:center;
+  animation:dxEntra .28s cubic-bezier(.2,.7,.2,1) both}
+@keyframes dxEntra{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+.dx.inmersivo .dx-panel{max-width:720px;width:100%;margin:0 auto;padding:40px 32px}
+.dx.inmersivo .dx-q h3{font-size:clamp(26px,3.4vw,38px)}
+.dx.inmersivo .opt{padding:20px 22px}
+.dx.inmersivo .opt .t{font-size:16.5px}
+.dx.inmersivo .dx-res-head{border-radius:20px}
+.dx-cerrar{position:fixed;top:20px;right:20px;z-index:201;width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;border:1px solid var(--linea);background:#fff;color:var(--muted);
+  cursor:pointer;transition:.15s;box-shadow:0 6px 18px rgba(7,29,54,.10)}
+.dx-cerrar:hover{color:var(--tinta);border-color:var(--azul-osc);transform:rotate(90deg)}
+@media(max-width:820px){
+  .dx.inmersivo .dx-panel{padding:80px 20px 32px}
+  .dx-cerrar{top:14px;right:14px;width:42px;height:42px}
+}
+@media(prefers-reduced-motion:reduce){
+  .dx.inmersivo{animation:none}
+  .dx-cerrar:hover{transform:none}
 }
