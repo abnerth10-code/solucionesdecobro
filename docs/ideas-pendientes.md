@@ -4,7 +4,15 @@ Cosas que valen la pena y todavía no se han hecho. Sin fecha, sin compromiso.
 
 ---
 
-## 1. Calculadora de costo real ⭐ la más útil
+## 0. PENDIENTE INMEDIATO · reemplazar el carrusel del lunes 14 ⚠️
+
+El carrusel de comisión (publicación 2, `02_lun-14-sep_carrusel-comision`) traía la tasa mala de Ualá en la diapositiva 5 y en el pie de foto. **Ya está regenerado en la carpeta**, pero si se programó con la versión anterior hay que reemplazarlo en Meta antes del 14 de septiembre.
+
+Lo que cambió: "las tasas van de 1.39% a 6.33%" → "las tasas de entrada van de 2.99% a 6.33%".
+
+---
+
+## 1. Calculadora de costo real ✅ hecha el 9 de septiembre
 
 **El problema que resuelve:** varios pies de foto prometen *"te lo saco con tus números"*, y hoy eso depende de que Abner haga la cuenta a mano. Una promesa que cuesta trabajo cumplir se termina incumpliendo.
 

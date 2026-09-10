@@ -176,11 +176,24 @@
         </label>
 
         <fieldset class="calc-campo calc-rfc">
-          <span>¿Tienes RFC activo?</span>
+          <span>¿Tienes RFC activo y local establecido?</span>
           <div class="calc-si-no">
             <button type="button" class="calc-op" data-rfc="1">Sí</button>
             <button type="button" class="calc-op on" data-rfc="0">Todavía no</button>
           </div>
+        </fieldset>
+
+        <fieldset class="calc-campo calc-giro" id="cGiroCampo" hidden>
+          <span>¿Tu giro está entre los que pagan menos?</span>
+          <div class="calc-si-no">
+            <button type="button" class="calc-op" data-giro="1">Sí, o creo que sí</button>
+            <button type="button" class="calc-op on" data-giro="0">No sé</button>
+          </div>
+          <details class="calc-giros">
+            <summary>Ver qué giros aplican</summary>
+            <p>Agencias de viajes · Educación básica · Médicos y dentistas · Refacciones y ferreterías · Salones de belleza · Supermercados · Ventas al detalle — y otros que Ualá no publica.</p>
+            <p class="calc-giros-ojo">La lista completa no es pública: hay que consultarla con ellos. Si marcas que sí, la calculadora te muestra el escenario con la tasa preferencial — pero <b>no está garantizada hasta que la aprueben</b>.</p>
+          </details>
         </fieldset>
       </div>
 
@@ -641,14 +654,14 @@
   var pct=el('cPct'), pctVal=el('cPctVal'), conT=el('cConTarjeta'),
       cifra=el('cCifra'), entero=el('cEntero'), cent=el('cCent'),
       nota=el('cNota'), lista=el('cLista'), wa=el('cWa');
-  var rfc=false;
+  var rfc=false, giro=false;
 
   /* TASA DE ENTRADA: la que pagas el día uno, sin negociar ni tramitar
      reducciones. Varias anuncian tasas menores que exigen solicitud,
      documentación y CSF — y la CSF supone RFC, así que no aplican a
      todos. Usar esas cifras sería justo lo que criticamos. */
   var OPCIONES=[
-    {n:'Ualá Bis',            tasa:0.0299, renta:0,   rfc:false},
+    {n:'Ualá Bis',            tasa:0.0299, renta:0,   rfc:false, dif:0.0139},
     {n:'KiWi',                tasa:0.0320, renta:0,   rfc:false},
     {n:'Mercado Pago Point',  tasa:0.0350, renta:0,   rfc:false},
     {n:'Clip',                tasa:0.0360, renta:0,   rfc:false},
@@ -669,12 +682,17 @@
       ((pct.value-10)/90*100)+'%,#e4edf6 '+((pct.value-10)/90*100)+'%)';
 
     var vivas=OPCIONES.filter(function(o){return rfc||!o.rfc});
-    vivas.forEach(function(o){o.costo=V*o.tasa*1.16+o.renta});
+    vivas.forEach(function(o){
+      /* La tasa diferencial solo entra con RFC + CSF + giro participante. */
+      var t=(rfc&&giro&&o.dif)?o.dif:o.tasa;
+      o.tasaUsada=t; o.preferencial=(t!==o.tasa);
+      o.costo=V*t*1.16+o.renta;});
     vivas.sort(function(a,b){return a.costo-b.costo});
 
     lista.innerHTML=vivas.slice(0,4).map(function(o,i){
       return '<li'+(i===0?' class="mejor"':'')+'><span class="n">'+o.n+
              (o.renta?' <small>(+ renta $'+miles(o.renta)+')</small>':'')+
+             (o.preferencial?' <em class="pref">tasa preferencial</em>':'')+
              '</span><span class="m">'+pesos(o.costo)+'</span></li>';}).join('');
 
     nota.textContent = V===0 ? 'Escribe cuánto vendes al mes'
@@ -714,12 +732,23 @@
     calcular();
   });
   pct.addEventListener('input',calcular);
-  [].forEach.call(document.querySelectorAll('.calc-op'),function(b){
-    b.addEventListener('click',function(){
-      [].forEach.call(document.querySelectorAll('.calc-op'),function(x){x.classList.remove('on')});
-      b.classList.add('on'); rfc=b.getAttribute('data-rfc')==='1'; calcular();
+  function grupo(sel,fn){
+    [].forEach.call(document.querySelectorAll(sel),function(b){
+      b.addEventListener('click',function(){
+        [].forEach.call(document.querySelectorAll(sel),function(x){x.classList.remove('on')});
+        b.classList.add('on'); fn(b); calcular();
+      });
     });
+  }
+  var campoGiro=el('cGiroCampo');
+  grupo('[data-rfc]',function(b){
+    rfc=b.getAttribute('data-rfc')==='1';
+    campoGiro.hidden=!rfc;
+    if(!rfc){giro=false;
+      [].forEach.call(document.querySelectorAll('[data-giro]'),function(x){
+        x.classList.toggle('on', x.getAttribute('data-giro')==='0');});}
   });
+  grupo('[data-giro]',function(b){ giro=b.getAttribute('data-giro')==='1'; });
   calcular();
 })();
 
