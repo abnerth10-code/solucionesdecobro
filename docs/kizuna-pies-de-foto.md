@@ -21,7 +21,7 @@
 >
 > Y aquí está lo que casi nadie te dice: eso no es un gasto, es lo que inviertes para vender más. Los negocios que empiezan a aceptar tarjeta suelen vender hasta un 30% más, porque dejan de perder al cliente que llega sin efectivo.
 >
-> Para ganar más hay que invertir en ciertos costos. La clave es pagar el correcto: comparé 34 opciones en México y las tasas van de 1.39% a 6.33% más IVA. La diferencia entre una y otra es real.
+> Para ganar más hay que invertir en ciertos costos. La clave es pagar el correcto: comparé 34 opciones en México y las tasas de entrada van de 2.99% a 6.33% más IVA. La diferencia entre una y otra es real.
 >
 > ¿Quieres saber cuál le conviene a tu negocio? Escríbeme, la asesoría no tiene costo.
 >

@@ -185,8 +185,8 @@ def carrusel_comision():
         dato('Lo que realmente te llega a la cuenta:', '$479.70',
              'De cada $500 que cobras con tarjeta.', 4, n, color=VERDE),
         dato('Si vendes $10,000 al mes con tarjeta, pagas:', '$350',
-             'De comisión al mes ($406 con IVA). Y varía mucho: comparé 34 opciones '
-             'en México y van de 1.39% a 6.33% más IVA.', 5, n),
+             'De comisión al mes ($406 con IVA). Y varía mucho: las tasas de entrada '
+             'de las 34 opciones van de 2.99% a 6.33% más IVA.', 5, n),
         cierre('No es un gasto. Es lo que inviertes para vender más.',
                'Los negocios que empiezan a aceptar tarjeta suelen vender hasta un 30% más, '
                'porque dejan de perder al cliente que llega sin efectivo. Para ganar más hay '

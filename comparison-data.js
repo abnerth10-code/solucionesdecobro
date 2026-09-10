@@ -25,7 +25,7 @@ window.COMPARISON_PROVIDERS = [
   },
   {
     name: 'Ualá Bis', domain: 'ualabis.com.mx', url: 'https://www.ualabis.com.mx/', category: 'rapida', type: 'Opción rápida de cobro',
-    cost: 'Desde 1.39% + IVA según tu giro, según sitio oficial. Registro 100% digital y activación rápida.', hardware: 'Terminal mPOS y POS Pro; compra única.', requirements: 'Identificación y registro digital en Ualá Bis.', settlement: 'Inmediata a cuenta Ualá, según condiciones.', review: 'Tasa exacta según giro, límites, términos y condiciones vigentes.'
+    cost: 'Tasa de entrada 2.99% + IVA para todos. Puede bajar hasta 1.39% con comisión diferencial, solicitándola con documentación y CSF si tu giro participa.', hardware: 'Terminal mPOS y POS Pro; compra única.', requirements: 'Identificación y registro digital en Ualá Bis.', settlement: 'Inmediata a cuenta Ualá, según condiciones.', review: 'Tasa exacta según giro, límites, términos y condiciones vigentes.'
   },
   {
     name: 'Feenicia', domain: 'feenicia.com', url: 'https://feenicia.com/', category: 'rapida', type: 'Opción rápida de cobro',
