@@ -3,3 +3,7 @@
 node_modules/
 .claude/
 output/
+
+# Videos de trabajo: pesan mucho y no van al sitio
+assets/marca-kizuna/videos/*.mp4
+assets/marca-kizuna/videos/*.mov
