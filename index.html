@@ -153,6 +153,50 @@
   </div>
 </section>
 
+<!-- CALCULADORA · cuánto te cuesta cobrar -->
+<section id="calculadora">
+  <div class="wrap">
+    <div class="head" style="max-width:620px">
+      <span class="eyebrow">Calculadora</span>
+      <h2>¿Cuánto te cuesta cobrar con tarjeta?</h2>
+      <p>Con tus números, no con un ejemplo. Tres datos y te digo lo que pagarías al mes en las opciones que sí puedes contratar.</p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc-form">
+        <label class="calc-campo">
+          <span>¿Cuánto vendes al mes?</span>
+          <div class="calc-input"><i>$</i><input id="cVentas" type="text" inputmode="numeric" value="30,000" autocomplete="off"></div>
+        </label>
+
+        <label class="calc-campo">
+          <span>¿Qué parte te pagarían con tarjeta? <b id="cPctVal">40%</b></span>
+          <input id="cPct" class="calc-rango" type="range" min="10" max="100" step="5" value="40">
+          <small id="cConTarjeta">$12,000 al mes con tarjeta</small>
+        </label>
+
+        <fieldset class="calc-campo calc-rfc">
+          <span>¿Tienes RFC activo?</span>
+          <div class="calc-si-no">
+            <button type="button" class="calc-op" data-rfc="1">Sí</button>
+            <button type="button" class="calc-op on" data-rfc="0">Todavía no</button>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="calc-panel">
+        <span class="calc-kicker">Pagarías al mes</span>
+        <div class="calc-cifra" id="cCifra"><span class="calc-moneda">$</span><span id="cEntero">0</span><span class="calc-cent" id="cCent">00</span></div>
+        <p class="calc-nota" id="cNota">En la opción más barata que puedes contratar</p>
+        <div class="calc-linea"></div>
+        <ul class="calc-lista" id="cLista"></ul>
+        <a class="calc-btn" id="cWa" href="https://wa.me/529511825881" target="_blank" rel="noopener">Que lo revisemos juntos</a>
+        <p class="calc-fine">Tasas de referencia de la comparativa. Confirma siempre con cada proveedor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DIAGNÓSTICO INTERACTIVO -->
 <section id="diagnostico">
   <div class="wrap">
@@ -349,7 +393,7 @@
         <p style="color:#8fb4d8;max-width:270px;font-size:14.5px">Hacemos equipo para que cobres. Asesorías y venta de terminales.</p>
       </div>
       <div class="cols">
-        <div><h4>Explora</h4><a href="#comparador">Compara</a><a href="#diagnostico">Diagnóstico</a><a href="#asesoria">Asesoría</a><a href="terminales.html">Terminales</a><a href="blog.html">Blog</a></div>
+        <div><h4>Explora</h4><a href="#comparador">Compara</a><a href="#calculadora">Calculadora</a><a href="#diagnostico">Diagnóstico</a><a href="#asesoria">Asesoría</a><a href="terminales.html">Terminales</a><a href="blog.html">Blog</a></div>
         <div><h4>Contacto</h4><a href="https://wa.me/529511825881">WhatsApp</a><a href="https://www.instagram.com/solucionesdecobrooax/">Instagram</a><a href="https://www.facebook.com/profile.php?id=61582373169392">Facebook</a></div>
       </div>
     </div>
@@ -555,6 +599,94 @@
     pick(q,q.o[n-1].v);});
 })();
 
+
+/* ============ CALCULADORA DE COSTO ============
+   Tres datos y el costo mensual de lo que sí puede contratar.
+   Costo = ventas con tarjeta x tasa x 1.16 (el IVA va sobre la comisión) + renta.
+   Tasas de referencia tomadas de la comparativa; las bancarias se ocultan sin RFC. */
+(function(){
+  var el=function(i){return document.getElementById(i)};
+  var ventas=el('cVentas'); if(!ventas)return;
+  var pct=el('cPct'), pctVal=el('cPctVal'), conT=el('cConTarjeta'),
+      cifra=el('cCifra'), entero=el('cEntero'), cent=el('cCent'),
+      nota=el('cNota'), lista=el('cLista'), wa=el('cWa');
+  var rfc=false;
+
+  var OPCIONES=[
+    {n:'Ualá Bis',            tasa:0.0139, renta:0, rfc:false},
+    {n:'Mercado Pago Point',  tasa:0.0350, renta:0, rfc:false},
+    {n:'KiWi',                tasa:0.0320, renta:0, rfc:false},
+    {n:'Clip',                tasa:0.0360, renta:0, rfc:false},
+    {n:'Billpocket',          tasa:0.0350, renta:0, rfc:true },
+    {n:'BBVA TPV',            tasa:0.0200, renta:400, rfc:true},
+    {n:'Banorte TPV',         tasa:0.0250, renta:350, rfc:true}
+  ];
+
+  function num(s){var n=parseFloat(String(s).replace(/[^0-9.]/g,''));return isNaN(n)?0:n}
+  function miles(n){return n.toLocaleString('es-MX')}
+  function pesos(n){return '$'+n.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}
+
+  function calcular(){
+    var v=num(ventas.value), p=+pct.value/100, V=Math.round(v*p);
+    pctVal.textContent=pct.value+'%';
+    conT.textContent='$'+miles(V)+' al mes con tarjeta';
+    pct.style.background='linear-gradient(90deg,var(--azul) 0%,var(--azul) '+
+      ((pct.value-10)/90*100)+'%,#e4edf6 '+((pct.value-10)/90*100)+'%)';
+
+    var vivas=OPCIONES.filter(function(o){return rfc||!o.rfc});
+    vivas.forEach(function(o){o.costo=V*o.tasa*1.16+o.renta});
+    vivas.sort(function(a,b){return a.costo-b.costo});
+
+    lista.innerHTML=vivas.slice(0,4).map(function(o,i){
+      return '<li'+(i===0?' class="mejor"':'')+'><span class="n">'+o.n+
+             (o.renta?' <small>(+ renta $'+miles(o.renta)+')</small>':'')+
+             '</span><span class="m">'+pesos(o.costo)+'</span></li>';}).join('');
+
+    nota.textContent = V===0 ? 'Escribe cuánto vendes al mes'
+      : 'En '+vivas[0].n+', la más barata que puedes contratar'+(rfc?'':' sin RFC');
+    rodar(vivas[0]?vivas[0].costo:0);
+
+    wa.href='https://wa.me/529511825881?text='+encodeURIComponent(
+      'Hola Abner. Vendo alrededor de $'+miles(v)+' al mes y como '+pct.value+
+      '% sería con tarjeta'+(rfc?', sí tengo RFC':', todavía no tengo RFC')+
+      '. ¿Me ayudas a ver cuál me conviene?');
+  }
+
+  /* La cifra rueda unos instantes antes de asentarse, como en el anuncio que
+     le gustó a Abner. Se respeta prefers-reduced-motion. */
+  var timer=null;
+  var quieto=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function pinta(n){
+    var p=n.toFixed(2).split('.');
+    entero.textContent=(+p[0]).toLocaleString('es-MX');
+    cent.textContent=p[1];
+  }
+  function rodar(destino){
+    if(timer){clearInterval(timer);timer=null}
+    if(quieto||destino===0){cifra.classList.remove('rodando');pinta(destino);return}
+    cifra.classList.add('rodando');
+    var t=0, pasos=9;
+    timer=setInterval(function(){
+      t++;
+      if(t>=pasos){clearInterval(timer);timer=null;cifra.classList.remove('rodando');pinta(destino);return}
+      pinta(destino*(0.55+Math.random()*0.95));
+    },55);
+  }
+
+  ventas.addEventListener('input',function(){
+    var n=num(this.value);
+    this.value=n?miles(n):'';
+    calcular();
+  });
+  pct.addEventListener('input',calcular);
+  [].forEach.call(document.querySelectorAll('.calc-op'),function(b){
+    b.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.calc-op'),function(x){x.classList.remove('on')});
+      b.classList.add('on'); rfc=b.getAttribute('data-rfc')==='1'; calcular();
+    });
+  });
+  calcular();
+})();
 
 /* Aparición suave de secciones al hacer scroll.
    .reveal      -> entra apenas asoma.
