@@ -198,12 +198,12 @@
       </div>
 
       <div class="calc-panel">
-        <span class="calc-kicker">Venderías al mes</span>
+        <span class="calc-kicker">Venderías de más al mes</span>
         <div class="calc-cifra" id="cCifra"><span class="calc-moneda">+$</span><span id="cEntero">0</span><span class="calc-cent" id="cCent">00</span></div>
-        <p class="calc-nota" id="cNota">Ventas adicionales, ya descontada la comisión</p>
+        <p class="calc-nota" id="cNota">Antes de comisión</p>
         <div class="calc-desglose">
-          <div><span>Venderías de más</span><b id="cBruto">$0</b></div>
-          <div><span>Comisión sobre esas ventas <em id="cQuien"></em></span><b id="cComision">−$0</b></div>
+          <div class="calc-fila-comision"><span>Comisión sobre esas ventas <em id="cQuien"></em></span><b id="cComision">−$0</b></div>
+          <div class="calc-fila-neto"><span>Te quedan netos</span><b id="cNeto">$0</b></div>
         </div>
         <p class="calc-remate" id="cRemate"></p>
         <div class="calc-linea"></div>
@@ -232,9 +232,9 @@
           <div class="dx-pitch">
             <span class="dx-kicker">Al terminar vas a saber</span>
             <ul class="dx-gains">
-              <li><b>Cuál te toca</b> — terminal propia, banco, pasarela o una mezcla.</li>
-              <li><b>Por qué esa y no otra</b> — las razones aplicadas a tu caso.</li>
-              <li><b>Qué te van a pedir</b> — y qué requisito todavía no cumples.</li>
+              <li><b>Cuál te toca</b> — terminal propia, banco, pasarela o una mezcla, según cómo y cuánto vendes.</li>
+              <li><b>Por qué esa y no otra</b> — las razones aplicadas a tu caso, no una regla general para cualquiera.</li>
+              <li><b>Qué te van a pedir</b> — documentos, RFC o garantías, y qué requisito todavía no cumples.</li>
             </ul>
             <span class="dx-cta-wrap">
               <button class="btn btn-primary btn-xl" id="dxStart" type="button">Ver mi mejor opción</button>
@@ -708,7 +708,6 @@
      todos. Usar esas cifras sería justo lo que criticamos. */
   var OPCIONES=[
     {n:'Ualá Bis',            tasa:0.0299, renta:0,   rfc:false, dif:0.0139},
-    {n:'KiWi',                tasa:0.0320, renta:0,   rfc:false},
     {n:'Mercado Pago Point',  tasa:0.0350, renta:0,   rfc:false},
     {n:'Clip',                tasa:0.0360, renta:0,   rfc:false},
     {n:'Billpocket',          tasa:0.0350, renta:0,   rfc:true },
@@ -744,8 +743,8 @@
              (o.preferencial?' <em class="pref">tasa preferencial</em>':'')+
              '</span><span class="m">'+pesos(o.neto)+'</span></li>';}).join('');
 
-    el('cBruto').textContent=pesos(nuevas);
     el('cComision').textContent='−'+pesos(mejor?mejor.comision:0);
+    el('cNeto').textContent=pesos(mejor?Math.max(mejor.neto,0):0);
     el('cQuien').textContent=mejor?'· '+mejor.n:'';
 
   /* El remate compara la comisión contra la venta nueva, en ese orden.
@@ -762,13 +761,13 @@
     } else if(mejor && nuevas>mejor.comision){
       rem.textContent='Por cada peso de comisión, entran $'+(nuevas/mejor.comision).toFixed(2)+' de venta nueva.';
       rem.className='calc-remate';
-      nota.textContent='Ventas adicionales, ya descontada la comisión';
+      nota.textContent='Antes de comisión';
     } else {
       rem.textContent='Con ese crecimiento la comisión se come la venta nueva. Habría que crecer más, o cobrar menos por tarjeta.';
       rem.className='calc-remate calc-remate-ojo';
       nota.textContent='La comisión supera lo que ganarías de más';
     }
-    rodar(mejor?Math.max(mejor.neto,0):0);
+    rodar(nuevas>0?nuevas:0);
 
     wa.href='https://wa.me/529511825881?text='+encodeURIComponent(
       'Hola Abner. Vendo alrededor de $'+miles(v)+' al mes'+
