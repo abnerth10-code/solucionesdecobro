@@ -172,13 +172,7 @@
         <label class="calc-campo">
           <span>¿Cuánto más crees que venderías? <b id="cIncVal">30%</b></span>
           <input id="cInc" class="calc-rango" type="range" min="0" max="50" step="5" value="30">
-          <small id="cIncNota">Los negocios que empiezan a aceptar tarjeta suelen crecer hasta un 30%. Es un estimado: muévelo a lo que creas.</small>
-        </label>
-
-        <label class="calc-campo">
-          <span>¿Qué parte te pagarían con tarjeta? <b id="cPctVal">40%</b></span>
-          <input id="cPct" class="calc-rango" type="range" min="10" max="100" step="5" value="40">
-          <small id="cConTarjeta">$15,600 al mes con tarjeta</small>
+          <small id="cIncNota">Los negocios que empiezan a aceptar tarjeta suelen crecer hasta un 30%. Es un estimado — muévelo a lo que tú creas.</small>
         </label>
 
         <fieldset class="calc-campo calc-rfc">
@@ -209,13 +203,13 @@
         <p class="calc-nota" id="cNota">Ventas adicionales, ya descontada la comisión</p>
         <div class="calc-desglose">
           <div><span>Venderías de más</span><b id="cBruto">$0</b></div>
-          <div><span>Comisión + IVA <em id="cQuien"></em></span><b id="cComision">−$0</b></div>
+          <div><span>Comisión sobre esas ventas <em id="cQuien"></em></span><b id="cComision">−$0</b></div>
         </div>
         <p class="calc-remate" id="cRemate"></p>
         <div class="calc-linea"></div>
         <ul class="calc-lista" id="cLista"></ul>
         <a class="calc-btn" id="cWa" href="https://wa.me/529511825881" target="_blank" rel="noopener">Que lo revisemos juntos</a>
-        <p class="calc-fine"><b>El 30% es un estimado</b> del incremento típico al empezar a aceptar tarjeta; depende del giro, la zona y muchos factores. <b>Usamos la tasa de entrada</b>, la que pagas desde el primer día. Varias opciones anuncian tasas menores, pero exigen solicitud, documentación y CSF. Si calificas puedes pagar menos — te ayudo a tramitarlo. Confirma siempre con cada proveedor.</p>
+        <p class="calc-fine"><b>Ojo con una cosa:</b> además pagarás comisión por las ventas que hoy cobras en efectivo y se pasen a tarjeta. Cuánto, depende de tu negocio — eso lo vemos juntos. <b>El 30% es un estimado</b> del incremento típico al empezar a aceptar tarjeta; depende del giro, la zona y muchos factores. <b>Usamos la tasa de entrada</b>, la que pagas desde el primer día. Varias opciones anuncian tasas menores, pero exigen solicitud, documentación y CSF. Si calificas puedes pagar menos — te ayudo a tramitarlo. Confirma siempre con cada proveedor.</p>
       </div>
     </div>
   </div>
@@ -703,8 +697,7 @@
 (function(){
   var el=function(i){return document.getElementById(i)};
   var ventas=el('cVentas'); if(!ventas)return;
-  var pct=el('cPct'), pctVal=el('cPctVal'), conT=el('cConTarjeta'),
-      incr=el('cInc'), incrVal=el('cIncVal'),
+  var incr=el('cInc'), incrVal=el('cIncVal'),
       cifra=el('cCifra'), entero=el('cEntero'), cent=el('cCent'),
       nota=el('cNota'), lista=el('cLista'), wa=el('cWa');
   var rfc=false, giro=false;
@@ -728,27 +721,19 @@
   function pesos(n){return '$'+n.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}
 
   function calcular(){
-    var v=num(ventas.value), inc=+incr.value/100, p=+pct.value/100;
-    var nuevas = v*inc;                 /* ingreso adicional por vender más */
-    var totalV = v*(1+inc);             /* ventas del mes ya con el aumento */
-    var conTar = Math.round(totalV*p);  /* lo que pasaría por la terminal */
+    var v=num(ventas.value), inc=+incr.value/100;
+    var nuevas = v*inc;   /* venta nueva: clientes que hoy se van sin comprar */
 
     incrVal.textContent=incr.value+'%';
-    pctVal.textContent=pct.value+'%';
-    conT.textContent='$'+miles(conTar)+' al mes con tarjeta';
-    [[incr,0,50],[pct,10,100]].forEach(function(r){
-      var pos=(r[0].value-r[1])/(r[2]-r[1])*100;
-      r[0].style.background='linear-gradient(90deg,var(--azul) 0%,var(--azul) '+pos+'%,#e4edf6 '+pos+'%)';});
+    var pos=incr.value/50*100;
+    incr.style.background='linear-gradient(90deg,var(--azul) 0%,var(--azul) '+pos+'%,#e4edf6 '+pos+'%)';
 
     var vivas=OPCIONES.filter(function(o){return rfc||!o.rfc});
     vivas.forEach(function(o){
       /* La tasa diferencial solo entra con RFC + CSF + giro participante. */
       var t=(rfc&&giro&&o.dif)?o.dif:o.tasa;
       o.tasaUsada=t; o.preferencial=(t!==o.tasa);
-      /* La comisión se paga sobre TODO lo que pase por tarjeta, no solo
-         sobre la venta nueva: el cliente que antes pagaba en efectivo
-         también empieza a usar plástico. Omitir eso infla el resultado. */
-      o.comision=conTar*t*1.16+o.renta;
+      o.comision=nuevas*t*1.16+o.renta;
       o.neto=nuevas-o.comision;});
     vivas.sort(function(a,b){return b.neto-a.neto});
     var mejor=vivas[0];
@@ -763,7 +748,7 @@
     el('cComision').textContent='−'+pesos(mejor?mejor.comision:0);
     el('cQuien').textContent=mejor?'· '+mejor.n:'';
 
-    /* El remate compara la comisión contra la venta nueva, en ese orden.
+  /* El remate compara la comisión contra la venta nueva, en ese orden.
        Al revés —comisión partida entre venta nueva— sale un porcentaje que
        se lee como si la tasa fuera del 15%, y no lo es. */
     var rem=el('cRemate');
@@ -786,9 +771,9 @@
     rodar(mejor?Math.max(mejor.neto,0):0);
 
     wa.href='https://wa.me/529511825881?text='+encodeURIComponent(
-      'Hola Abner. Vendo alrededor de $'+miles(v)+' al mes y como '+pct.value+
-      '% sería con tarjeta'+(rfc?', sí tengo RFC':', todavía no tengo RFC')+
-      '. ¿Me ayudas a ver cuál me conviene?');
+      'Hola Abner. Vendo alrededor de $'+miles(v)+' al mes'+
+      (rfc?', sí tengo RFC':', todavía no tengo RFC')+
+      '. Vi la calculadora y quiero que veamos mi caso.');
   }
 
   /* La cifra rueda unos instantes antes de asentarse, como en el anuncio que
@@ -817,7 +802,6 @@
     this.value=n?miles(n):'';
     calcular();
   });
-  pct.addEventListener('input',calcular);
   incr.addEventListener('input',calcular);
   function grupo(sel,fn){
     [].forEach.call(document.querySelectorAll(sel),function(b){
