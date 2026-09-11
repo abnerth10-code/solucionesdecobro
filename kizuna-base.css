@@ -556,7 +556,15 @@ summary:focus-visible,[tabindex]:focus-visible{
 .calc-cent{font-size:30px;margin-top:8px;margin-left:3px;color:var(--muted);font-variant-numeric:tabular-nums}
 .calc-cifra.rodando #cEntero,.calc-cifra.rodando .calc-cent{color:var(--azul);opacity:.55}
 .calc-nota{margin:14px 0 0;font-size:15px;color:var(--muted)}
-.calc-linea{height:1px;background:var(--linea);margin:26px 0 22px}
+.calc-desglose{margin:22px 0 0;display:grid;gap:9px}
+.calc-desglose div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:15px}
+.calc-desglose span{color:#3f5468}
+.calc-desglose em{font-style:normal;font-size:12.5px;color:var(--muted)}
+.calc-desglose b{font-family:var(--display);font-weight:700;color:var(--tinta);font-variant-numeric:tabular-nums}
+.calc-desglose div:last-child b{color:#c25a2e}
+.calc-remate{margin:18px 0 0;font-size:14.5px;line-height:1.5;color:var(--azul-hondo);
+  background:#eaf3ff;border-radius:12px;padding:13px 16px}
+.calc-linea{height:1px;background:var(--linea);margin:24px 0 20px}
 .calc-lista{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:11px}
 .calc-lista li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:15px}
 .calc-lista .n{color:#3f5468;font-weight:500}

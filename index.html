@@ -158,8 +158,8 @@
   <div class="wrap">
     <div class="head" style="max-width:620px">
       <span class="eyebrow">Calculadora</span>
-      <h2>¿Cuánto te cuesta cobrar con tarjeta?</h2>
-      <p>Con tus números, no con un ejemplo. Tres datos y te digo lo que pagarías al mes en las opciones que sí puedes contratar.</p>
+      <h2>¿Cuánto podrías vender si aceptaras tarjeta?</h2>
+      <p>Con tus números, no con un ejemplo. Mueve los datos y te digo cuánto más venderías al mes, ya descontada la comisión.</p>
     </div>
 
     <div class="calc reveal">
@@ -170,9 +170,15 @@
         </label>
 
         <label class="calc-campo">
+          <span>¿Cuánto más crees que venderías? <b id="cIncVal">30%</b></span>
+          <input id="cInc" class="calc-rango" type="range" min="0" max="50" step="5" value="30">
+          <small id="cIncNota">Los negocios que empiezan a aceptar tarjeta suelen crecer hasta un 30%. Es un estimado: muévelo a lo que creas.</small>
+        </label>
+
+        <label class="calc-campo">
           <span>¿Qué parte te pagarían con tarjeta? <b id="cPctVal">40%</b></span>
           <input id="cPct" class="calc-rango" type="range" min="10" max="100" step="5" value="40">
-          <small id="cConTarjeta">$12,000 al mes con tarjeta</small>
+          <small id="cConTarjeta">$15,600 al mes con tarjeta</small>
         </label>
 
         <fieldset class="calc-campo calc-rfc">
@@ -198,13 +204,18 @@
       </div>
 
       <div class="calc-panel">
-        <span class="calc-kicker">Pagarías al mes</span>
-        <div class="calc-cifra" id="cCifra"><span class="calc-moneda">$</span><span id="cEntero">0</span><span class="calc-cent" id="cCent">00</span></div>
-        <p class="calc-nota" id="cNota">En la opción más barata que puedes contratar</p>
+        <span class="calc-kicker">Venderías al mes</span>
+        <div class="calc-cifra" id="cCifra"><span class="calc-moneda">+$</span><span id="cEntero">0</span><span class="calc-cent" id="cCent">00</span></div>
+        <p class="calc-nota" id="cNota">Ventas adicionales, ya descontada la comisión</p>
+        <div class="calc-desglose">
+          <div><span>Venderías de más</span><b id="cBruto">$0</b></div>
+          <div><span>Comisión + IVA <em id="cQuien"></em></span><b id="cComision">−$0</b></div>
+        </div>
+        <p class="calc-remate" id="cRemate"></p>
         <div class="calc-linea"></div>
         <ul class="calc-lista" id="cLista"></ul>
         <a class="calc-btn" id="cWa" href="https://wa.me/529511825881" target="_blank" rel="noopener">Que lo revisemos juntos</a>
-        <p class="calc-fine"><b>Usamos la tasa de entrada</b>, la que pagas desde el primer día. Varias opciones anuncian tasas menores, pero exigen solicitud, documentación y CSF. Si calificas puedes pagar menos — te ayudo a tramitarlo. Confirma siempre con cada proveedor.</p>
+        <p class="calc-fine"><b>El 30% es un estimado</b> del incremento típico al empezar a aceptar tarjeta; depende del giro, la zona y muchos factores. <b>Usamos la tasa de entrada</b>, la que pagas desde el primer día. Varias opciones anuncian tasas menores, pero exigen solicitud, documentación y CSF. Si calificas puedes pagar menos — te ayudo a tramitarlo. Confirma siempre con cada proveedor.</p>
       </div>
     </div>
   </div>
@@ -693,6 +704,7 @@
   var el=function(i){return document.getElementById(i)};
   var ventas=el('cVentas'); if(!ventas)return;
   var pct=el('cPct'), pctVal=el('cPctVal'), conT=el('cConTarjeta'),
+      incr=el('cInc'), incrVal=el('cIncVal'),
       cifra=el('cCifra'), entero=el('cEntero'), cent=el('cCent'),
       nota=el('cNota'), lista=el('cLista'), wa=el('cWa');
   var rfc=false, giro=false;
@@ -716,29 +728,51 @@
   function pesos(n){return '$'+n.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}
 
   function calcular(){
-    var v=num(ventas.value), p=+pct.value/100, V=Math.round(v*p);
+    var v=num(ventas.value), inc=+incr.value/100, p=+pct.value/100;
+    var nuevas = v*inc;                 /* ingreso adicional por vender más */
+    var totalV = v*(1+inc);             /* ventas del mes ya con el aumento */
+    var conTar = Math.round(totalV*p);  /* lo que pasaría por la terminal */
+
+    incrVal.textContent=incr.value+'%';
     pctVal.textContent=pct.value+'%';
-    conT.textContent='$'+miles(V)+' al mes con tarjeta';
-    pct.style.background='linear-gradient(90deg,var(--azul) 0%,var(--azul) '+
-      ((pct.value-10)/90*100)+'%,#e4edf6 '+((pct.value-10)/90*100)+'%)';
+    conT.textContent='$'+miles(conTar)+' al mes con tarjeta';
+    [[incr,0,50],[pct,10,100]].forEach(function(r){
+      var pos=(r[0].value-r[1])/(r[2]-r[1])*100;
+      r[0].style.background='linear-gradient(90deg,var(--azul) 0%,var(--azul) '+pos+'%,#e4edf6 '+pos+'%)';});
 
     var vivas=OPCIONES.filter(function(o){return rfc||!o.rfc});
     vivas.forEach(function(o){
       /* La tasa diferencial solo entra con RFC + CSF + giro participante. */
       var t=(rfc&&giro&&o.dif)?o.dif:o.tasa;
       o.tasaUsada=t; o.preferencial=(t!==o.tasa);
-      o.costo=V*t*1.16+o.renta;});
-    vivas.sort(function(a,b){return a.costo-b.costo});
+      /* La comisión se paga sobre TODO lo que pase por tarjeta, no solo
+         sobre la venta nueva: el cliente que antes pagaba en efectivo
+         también empieza a usar plástico. Omitir eso infla el resultado. */
+      o.comision=conTar*t*1.16+o.renta;
+      o.neto=nuevas-o.comision;});
+    vivas.sort(function(a,b){return b.neto-a.neto});
+    var mejor=vivas[0];
 
     lista.innerHTML=vivas.slice(0,4).map(function(o,i){
       return '<li'+(i===0?' class="mejor"':'')+'><span class="n">'+o.n+
              (o.renta?' <small>(+ renta $'+miles(o.renta)+')</small>':'')+
              (o.preferencial?' <em class="pref">tasa preferencial</em>':'')+
-             '</span><span class="m">'+pesos(o.costo)+'</span></li>';}).join('');
+             '</span><span class="m">'+pesos(o.neto)+'</span></li>';}).join('');
 
-    nota.textContent = V===0 ? 'Escribe cuánto vendes al mes'
-      : 'En '+vivas[0].n+', la más barata que puedes contratar'+(rfc?'':' sin RFC');
-    rodar(vivas[0]?vivas[0].costo:0);
+    el('cBruto').textContent=pesos(nuevas);
+    el('cComision').textContent='−'+pesos(mejor?mejor.comision:0);
+    el('cQuien').textContent=mejor?'· '+mejor.n:'';
+
+    if(nuevas>0 && mejor){
+      var porCien=mejor.comision/nuevas*100;
+      el('cRemate').textContent='De cada $100 que vendes de más, la comisión se lleva $'+porCien.toFixed(2)+'.';
+      nota.textContent='Ventas adicionales, ya descontada la comisión';
+    } else {
+      el('cRemate').textContent='';
+      nota.textContent = v===0 ? 'Escribe cuánto vendes al mes'
+                               : 'Mueve el incremento para ver el efecto';
+    }
+    rodar(mejor?Math.max(mejor.neto,0):0);
 
     wa.href='https://wa.me/529511825881?text='+encodeURIComponent(
       'Hola Abner. Vendo alrededor de $'+miles(v)+' al mes y como '+pct.value+
@@ -773,6 +807,7 @@
     calcular();
   });
   pct.addEventListener('input',calcular);
+  incr.addEventListener('input',calcular);
   function grupo(sel,fn){
     [].forEach.call(document.querySelectorAll(sel),function(b){
       b.addEventListener('click',function(){
