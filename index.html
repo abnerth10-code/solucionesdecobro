@@ -763,14 +763,25 @@
     el('cComision').textContent='−'+pesos(mejor?mejor.comision:0);
     el('cQuien').textContent=mejor?'· '+mejor.n:'';
 
-    if(nuevas>0 && mejor){
-      var porCien=mejor.comision/nuevas*100;
-      el('cRemate').textContent='De cada $100 que vendes de más, la comisión se lleva $'+porCien.toFixed(2)+'.';
+    /* El remate compara la comisión contra la venta nueva, en ese orden.
+       Al revés —comisión partida entre venta nueva— sale un porcentaje que
+       se lee como si la tasa fuera del 15%, y no lo es. */
+    var rem=el('cRemate');
+    if(v===0){
+      rem.textContent=''; rem.className='calc-remate';
+      nota.textContent='Escribe cuánto vendes al mes';
+    } else if(nuevas<=0){
+      rem.textContent='Sin crecimiento, la comisión es un costo neto. Por eso el dato de arriba importa: si aceptar tarjeta no te trae ventas nuevas, no te conviene.';
+      rem.className='calc-remate calc-remate-ojo';
+      nota.textContent='Mueve el incremento para ver el efecto';
+    } else if(mejor && nuevas>mejor.comision){
+      rem.textContent='Por cada peso de comisión, entran $'+(nuevas/mejor.comision).toFixed(2)+' de venta nueva.';
+      rem.className='calc-remate';
       nota.textContent='Ventas adicionales, ya descontada la comisión';
     } else {
-      el('cRemate').textContent='';
-      nota.textContent = v===0 ? 'Escribe cuánto vendes al mes'
-                               : 'Mueve el incremento para ver el efecto';
+      rem.textContent='Con ese crecimiento la comisión se come la venta nueva. Habría que crecer más, o cobrar menos por tarjeta.';
+      rem.className='calc-remate calc-remate-ojo';
+      nota.textContent='La comisión supera lo que ganarías de más';
     }
     rodar(mejor?Math.max(mejor.neto,0):0);
 
